@@ -1,0 +1,22 @@
+v 3
+file . "CARTA.vhd" "20180605013312.000" "20180604204404.048":
+  entity carta at 1( 0) + 0 on 21;
+  architecture programa of carta at 19( 388) + 0 on 22;
+file . "CONTROL.vhd" "20180605013458.000" "20180604204335.429":
+  entity control at 1( 0) + 0 on 17;
+  architecture unidad of control at 14( 180) + 0 on 18;
+file . "REGISTRO.vhd" "20180605013432.000" "20180604204324.756":
+  entity registro at 1( 0) + 0 on 13;
+  architecture practica of registro at 17( 226) + 0 on 14;
+file . "CONTADOR.vhd" "20180605013440.000" "20180604204317.783":
+  entity contador at 1( 0) + 0 on 11;
+  architecture practica of contador at 19( 293) + 0 on 12;
+file . "BCD.vhd" "20180605013412.000" "20180604204328.857":
+  entity bcd at 1( 0) + 0 on 15;
+  architecture practica of bcd at 16( 187) + 0 on 16;
+file . "MI_PAQUETE.vhd" "20180605013334.000" "20180604204343.146":
+  package mi_paquete at 10( 235) + 0 on 19;
+  package body mi_paquete at 72( 1550) + 0 on 20;
+file . "CARTA_TB.vhd" "20180605014538.000" "20180604204541.839":
+  entity carta_tb at 28( 911) + 0 on 25;
+  architecture behavior of carta_tb at 38( 1142) + 0 on 26;

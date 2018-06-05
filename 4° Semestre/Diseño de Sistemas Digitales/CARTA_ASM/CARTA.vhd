@@ -1,0 +1,69 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE WORK.MI_PAQUETE.ALL;
+
+ENTITY CARTA IS
+
+	PORT ( 
+		CLK : IN  STD_LOGIC;
+		CLR : IN  STD_LOGIC;
+		INI : IN  STD_LOGIC;
+		DA : IN  STD_LOGIC_VECTOR (7 DOWNTO 0);
+		AN : OUT STD_LOGIC_VECTOR (3 DOWNTO 0); -- 4 displays
+		DISPLAY : OUT  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		QA : INOUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+	);
+
+END CARTA;
+
+ARCHITECTURE PROGRAMA OF CARTA IS
+
+	SIGNAL B : STD_LOGIC_VECTOR (3 DOWNTO 0);
+	SIGNAL CODIGO : STD_LOGIC_VECTOR (6 DOWNTO 0);
+	SIGNAL LB, EB, Z, LA, EA, EC : STD_LOGIC;
+
+	BEGIN
+
+	CONT : CONTADOR PORT MAP ( 
+		DB => X"0", 
+		B => B, 
+		CLK => CLK, 
+		CLR => CLR, 
+		LB => LB, 
+		EB => EB 
+	);
+	
+	CTRL : CONTROL PORT MAP ( 
+		INI => INI, 
+		CLK => CLK, 
+		CLR => CLR, 
+		Z => Z, 
+		A0 => QA(0), 
+		LB => LB, 
+		EB => EB, 
+		LA => LA, 
+		EA => EA, 
+		EC => EC 
+	);
+	
+	BCD27SEG : BCD PORT MAP ( 
+		B => B,
+		CODIGO => CODIGO
+	);
+	
+	REG : REGISTRO PORT MAP ( 
+		CLK => CLK, 
+		CLR => CLR, 
+		LA => LA, 
+		EA => EA, 
+		D => DA, 
+		A => QA 
+	);
+	
+	Z <= '1' WHEN( QA = X"00" )ELSE '0';
+	
+	DISPLAY <=
+		CODIGO WHEN ( EC = '1' ) ELSE "1111110";
+	
+
+END PROGRAMA;
