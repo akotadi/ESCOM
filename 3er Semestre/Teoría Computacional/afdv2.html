@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<hl>Automata Finito Deterministico</hl>
+		<p><button onclick="afd()">Run 
+		</button><BR><BR>Presiona el boton <B>Run</B> para iniciar el programa.<BR><BR>
+		Escribe los simbolos del alfabeto y el numero de estados<BR><BR>
+		En este programa se asume el estado cero como el inicial.
+		</p>
+		<script>
+			function afd(){
+				var dato = prompt("Escribe los símbolos del alfabeto separados con comas:","");
+				var sigma = dato.split(",");
+				alert("Indicaste "+sigma.length+" símbolos");
+
+				var dato = prompt("Escribe el número de estados:","");
+				var n=parseInt(dato); // CONVIERTE UN STRING EN ENTERO
+
+				var dato=prompt("Escribe los estados finales separados con comas:","");
+				var edosFinales = dato.split(",");
+				alert("Indicaste "+edosFinales.length+" estados finales.");
+				finales = new Array(edosFinales.length).fill(0);
+
+				for (var i = 0; i < edosFinales.length; i++) {
+					finales[i] = parseInt(edosFinales[i]);
+				}
+
+				// INICIALIZA LA MATRIZ DE TRANSICIONES CON -1 (ESTADO ERRÓNEO)
+				var delta = new Array(n); // EL NÚMERO DE ESTADOS n SON LOS RENGLONES
+				for (var edo = 0; edo < n; edo++) {
+					delta[edo] = new Array(sigma.length).fill(-1); // NÚMERO DE COLUMNAS IGUAL AL NÚMERO DE SÍMBOLOS
+				}
+
+				// LEE LAS TRANSICIONES
+				for (var i = 0; i < n; i++) {
+					for (var j = 0; j < sigma.length; j++) {
+						var dato = prompt("Si el autómata está en el estado "+i+" y llega el símbolo "+sigma[j]+" pasa al estado:","");
+						delta[i][j]=parseInt(dato);
+					}
+				}
+				var terminar = false;
+				while(terminar==false){
+					var cadena = prompt("Escribe la cadena a  reconocer (FIN para terminar):","");
+					if (cadena.localeCompare("FIN")==0) {
+						terminar = true;
+						continue;
+					}
+					var estado = 0; // ESTE ES EL ESTADO INICIAL
+					var sigue = true;
+					var posicion = 0; // POSICION EN LA CADENA
+
+					// EJECUTA EL AUTÓMATA
+					while(sigue){
+						//SI SE ACABARON LOS SÍMBOLOS Y LLEGÓ A UN ESTADO FINAL ENTONCES HUBO ÉXITO SINO ERROR
+						if (posicion==cadena.length) {
+							// BUSCA EL estado EN LOS FINALES
+							var encontrado = false; // SUPONEMOS QUE NO ESTÁ
+							for (var ef = 0; (ef<finales.length) && (encontrado == false); ef++) {
+								if (estado==finales[ef]) {
+									encontrado = true;
+								}
+							}
+							if (encontrado) {
+								alert("La cadena "+cadena+" SÍ se reconoce");
+							}
+							else{
+								alert("NO fue posible reconocer la cadena "+cadena);
+							}
+							sigue = false;
+							continue;
+						}
+
+						// BUSCA EL SÍMBOLO DE posición EN EL ALFABETO
+						var simbolo = cadena.charAt(posicion);
+						var indice = -1; // SUPONEMOS QUE NO ESTÁ
+						for (var iSigma = 0; (iSigma<sigma.length) && (indice == -1); iSigma++) {
+							if (sigma[iSigma].charAt(0)==simbolo) {
+								indice = iSigma;
+								continue;
+							}						
+						}
+
+						if(indice == -1){
+							alert("El simbolo "+ simbolo + " es desconocido");
+							sigue = false;
+							continue;
+						}
+						nuevoestado=delta[estado][indice];
+						if (nuevoestado==-1) {
+							alert("No tengo transición con el símbolo "+simbolo);
+							sigue = false;
+							continue;
+						}
+						estado=nuevoestado;
+						posicion=posicion+1;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

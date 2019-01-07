@@ -1,0 +1,8 @@
+ENTITY variables IS
+    PORT (
+	a : in std_logic_vector (3 downto 0) ; 
+	b : in std_logic_vector (3 downto 0) ; 
+	salida : inout std_logic_vector (3 downto 0) ; 
+	cout : inout std_logic 
+    ) ;
+END variables ;

@@ -1,0 +1,14 @@
+Cypress Package: palc22v10d-25pc  PinOut File: multiplicador.pin
+
+This file was created on 10/16/2017 at 10:53:38 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+b(1) in <> Enabled Normal 1 <> [Auto] 
+b(0) in <> Enabled Normal 2 <> [Auto] 
+a(1) in <> Enabled Normal 3 <> [Auto] 
+a(0) in <> Enabled Normal 4 <> [Auto] 
+p(3) out <> Enabled Normal 15 <> [User] 
+p(2) out <> Enabled Normal 16 <> [User] 
+p(1) out <> Enabled Normal 17 <> [User] 
+p(0) out <> Enabled Normal 18 <> [User] 

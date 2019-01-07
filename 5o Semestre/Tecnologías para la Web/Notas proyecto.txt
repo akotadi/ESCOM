@@ -1,0 +1,74 @@
+Funciones:
+	- Login
+		* Recuperar contraseña
+		(?) Consultar QR
+	- Consultar QR
+	- CRUD Usuarios
+		> Cambiar contraseña
+		* Admin -> Organizador
+		* Organizador -> Staff front, staff back, maestro de ceremonias
+	- CRUD Invitados
+	- Generar invitación
+		* PDF
+	- Enviar invitación
+	- Confirmar asistencia
+		* Comentarios
+	- Enviar avisos por correo
+	- CRUD asistencias
+		* C = Pasar asistencia (QR)
+		* R = Consultar lista asistencia
+		* U = Añadir comentarios
+		* D = Cancelar asistencia
+	- Avisos back event
+		* Alerts sobre acciones
+		* Impresión diplomas nuevos asistentes
+			> PDF
+	- Generar speech
+		* PDF
+	- Reporte asistencia final
+		* PDF
+	- Estadísticas asistencia final
+
+Pantallas:
+	- Index
+		* Todos
+	- Consultar QR
+		* Sin login
+	- Login
+		* Todos
+	- Recuperar contraseña
+		* Todos
+	- Home Users
+		* Usuarios
+	- CRUD users
+		* Admin
+		* Organizador
+	- CRUD invitados
+		* Organizador
+	- Confirmar asistencia
+		* Invitados
+	- CRUD asistencias
+		* Staff front
+	- Pantalla avisos
+		* Staff back
+	- Reporte y estadísticas
+		* Organizador
+	- Perfil
+		* Todos los usuarios
+
+Usuarios:
+	- Admin
+	- Organizador
+	- Staff front
+	- Staff back
+	- Maestro ceremonias (?)
+
+Comentarios:
+	- Invidente
+	- Silla ruedas
+	- Representante
+		* Abrir text para el nombre
+	- Se retira temprano
+	- Acompañante (ayudante)
+	- Otro...
+		* Abrir text para especificar

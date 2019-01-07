@@ -1,0 +1,62 @@
+create table Reactivo(
+idReactivo int not null auto_increment,
+pregunta varchar(50),
+opcionA varchar(50),
+opcionB varchar(50),
+opcionC varchar(50),
+opcionD varchar(50),
+primary key(idReactivo)
+);
+
+create table Examen(
+idExamen int not null auto_increment,
+tituloExamen varchar(50),
+idReactivo1 int not null,
+idReactivo2 int not null,
+idReactivo3 int not null,
+idReactivo4 int not null,
+idReactivo5 int not null,
+idReactivo6 int not null,
+idReactivo7 int not null,
+idReactivo8 int not null,
+idReactivo9 int not null,
+idReactivo10 int not null,
+primary key(idExamen),
+foreign key(idReactivo1) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo2) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo3) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo4) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo5) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo6) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo7) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo8) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo9) references Reactivo(idReactivo) on delete cascade on update cascade,
+foreign key(idReactivo10) references Reactivo(idReactivo) on delete cascade on update cascade
+);
+
+create table EU(
+idUsuario int not null,
+idExamen int not null,
+fechaPresentacion date,
+ultimaPregunta int,
+calificacion int,
+primary key(idUsuario, idExamen),
+foreign key(idUsuario) references Usuario(idUsuario) on delete cascade on update cascade,
+foreign key(idExamen) references Examen(idExamen) on delete cascade on update cascade
+);
+
+create table Usuario(
+idUsuario int not null auto_increment,
+nombre varchar(50) not null,
+email varchar(50) not null,
+contraseña varchar(20) not null,
+primary key(idUsuario)
+);
+
+create table Administrador(
+idAdministrador int not null auto_increment,
+nombre varchar(50) not null,
+email varchar(50) not null,
+contraseña varchar(20) not null,
+primary key(idAdministrador)
+);

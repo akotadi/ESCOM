@@ -1,0 +1,86 @@
+try{
+  DatagramPacket p = new DatagramPacket(new byte[1500], 1500);
+
+  String msj = "Un mensaje";
+  p.setData(msj.getByte());
+  p.setLength(msj.getByte().length());
+  p.setAddress(InetAddress.getByName("1.2.3.4"));
+  p.setPort(1234);
+  InetSocketAddress dst = new InetSocketAddress("1.2.3.4", 4000);
+  p.setSocketAddress(dst);
+}
+
+
+
+try{
+  DatagramSocket s = new DatagramSocket(1234);
+  System.out.println("Servicio de datagrama iniciado... ");
+}
+
+
+
+int x = 4;
+DatagramSocket cl = new DatagramSocket();
+InetAddress dst = InetAddress.getByName("127.0.0.1");
+int pto = 9000;
+ByteArrayOutputStream baos = new ByteArrayOutputStream();
+DataOutputStream dos = new DataOutputStream(baos);
+dos.writeInt(x);
+dos.flush();
+byte[] b = baos.getByteArray();
+DatagramPacket p = new DatagramPacket(b, b.length, dst, pto);
+cl.send(p);
+
+
+
+struct addrinfo {
+ int ai_flags;      // AI_PASSIVE - Prendido para servidor, AI_CANONNAME, AI_NUMERIC_HOST,etc.
+ int ai_family;     // AF_INET,AF_INET6,AF_UNSPEC,AF_BTH, AF_IRDA,etc.
+ int ai_socktype;   // SOCK_STREAM, SOCK_DGRAM, SOCK_RAW, SOCK_RDM
+ int ai_protocol;   // 0, IPPROTO_TCP,IPPROTO_UDP
+ socklen_t ai_addrlen;  // sizeof(ai_addr)
+ struct sockaddr *ai_addr;  //struct sockaddr_in/sockarrd_in6 - Lista ligada de posibles direcciones a usar
+ char *ai_canonname;    // nombre canónico - Para bandera AI_CANONNAME
+ struct addrinfo *ai_next;  // sig. Nodo de lista ligada - Listado de protocolos habilitados en el sistema
+ };
+
+ int getaddrinfo(const char *nodo,  //ej. “www.pc1.net” ó “127.0.0.1” - En servidor se pone en null
+   const char *servicio,   //ej. “FTP”, ó “21” - Puerto a conectar (servidor) o servicio (cliente)
+   const struct addrinfo *i, // apunta a estructura con info importante
+   struct addrinfo **res);  //apuntador a lista ligada con el resultado de la consulta
+
+
+  Limpiar con bzero(&i, sizeof(i)) // string.h
+
+
+// Servidor
+int sd; 
+struct addrinfo i, *r, *p; 
+memset(&i, 0, sizeof (i)); //indicio 
+i.ai_family = AF_INET6; /* Permite IPv4 or IPv6 */ 
+i.ai_socktype = SOCK_STREAM; // socket de flujo
+i.ai_flags = AI_PASSIVE; // utilizado para hacer el bind
+i.ai_protocol = 0; /* Any protocol */ 
+i.ai_canonname = NULL; 
+i.ai_addr = NULL; 
+i.ai_next = NULL; 
+if ((rv = getaddrinfo(NULL, pto, &i, &r)) != 0) {
+    fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
+    return 1; 
+}//if
+ for(p = r; p != NULL; p = p->ai_next) { 
+    if ((sd = socket(p->ai_family, p->ai_socktype,p->ai_protocol)) == -1) { 
+         perror("server: socket");
+         continue;
+     }//if
+   break;
+}//for
+
+
+
+DatagramPacket(byte[] buf, int length, InetAddress adress, int port) // Si yo envío, especifíco a qué, cuánto y a dónde voy a mandar.
+DatagramPacket(byte[] buf, int length, SocketAddress address) // Si yo recibo, especifíco a qué, cuánto y de dónde voy a recibir.
+
+
+
+DatagramChannel es una clase de datagrama no bloqueante

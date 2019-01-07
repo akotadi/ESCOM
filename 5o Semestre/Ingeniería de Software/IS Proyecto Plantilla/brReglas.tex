@@ -1,0 +1,65 @@
+
+%---------------------------------------------------------
+\section{Reglas de Negocio}
+
+\begin{BussinesRule}{BR129}{Determinar si un Estudiante puede inscribir Seminario.} 
+	\BRitem[Descripción:] Un Estudiante requere del 80\% de créditos para inscribirse a un Seminario y no haber cursado y reprobado otro seminario.
+	\BRitem[Tipo:] Restricción de integridad.
+	\BRitem[Nivel:] Obligatorio.
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR130}{Determinar si un Estudiante puede inscribirse en un Seminario}
+	\BRitem[Descripción:] El Estudiante debe pertenecer a la Carrera del Seminario y debe haber Cupo en el grupo del Seminario.
+	\BRitem[Tipo:] Restricción de operación y de integridad.
+	\BRitem[Nivel:] Obligatorio.
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR143}{Validar el horario del estudiante}
+	\BRitem[Descripción:] Las Materias y Seminarios inscritos por el alumno, en un periodo específico, no pueden impartirse en el mismo día de la semana en horas traslapadas.
+	\BRitem[Tipo:] Restricción de operación.
+	\BRitem[Nivel:] Obligatorio.
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR180}{Calcular costos del Estudiante}
+	\BRitem[Descripción:] Los servicios se cobran de la siguiente forma:
+		\begin{Citemize}
+			\item {\em Estudiantes Regulares:} Se les Cobran todos los servicios al 100\% de su costo.
+			\item {\em Estudiantes becados:} Se les otorga un 80\% de descuento en el costo de todos los servicios (antes del IVA).
+			\item {\em Estudiantes extranjeros:} Se les cobran los servicios al 200\% del costo registrado.
+		\end{Citemize}
+	\BRitem[Sentencia:] $\forall~e~\in~\mathbb{E}\textrm{studiantes}~\land~\forall~s~\in \mathbb{S}\textrm{eminario}~\Rightarrow$
+		\begin{displaymath}
+			Costo(e,s) = \left\{ \begin{array}{ll}
+			s.costo & , si~e.tipo = \textrm{Estudiante regular}\\
+			{s.costo}\over{5} & , si~e.tipo = \textrm{Estudiante becado}\\
+			s.costo \cdot 2 & , si~e.tipo = \textrm{Estudiante extranjero}
+			\end{array} \right.
+		\end{displaymath}
+
+	\BRitem[Tipo:] Cálculo.
+	\BRitem[Nivel:] Obligatorio.
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR45}{Calcular impuestos por seminario}
+	\BRitem[Descripción:] Los impuestos corresponden al 16\% correspondientes al IVA.
+	\BRitem[Sentencia:] $Impuesto(e, s) = Costo(e, s)\cdot0.16$.
+	\BRitem[Tipo:] Cálculo.
+	\BRitem[Nivel:] Obligatorio.
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR100}{Recibo del Estudiante por inscripción a Seminario.}
+	\BRitem[Descripción:] El  Recibo del Estudiante debe mostrar el total del costo con el siguiente desglose:
+		\begin{displaymath}\begin{array}{lr}
+			Costo: & \$ XXX.XX\\
+			Descuento~aplicado~(YY\%): & \$ XXX.XX\\
+			Subtotal: & \$ XXX.XX\\
+			IVA~(16\%): & \$ XXX.XX\\\hline
+			Total: & \$ XXX.XX
+		\end{array}\end{displaymath}
+	\BRitem[Sentencia:] $CostoTotal = Costo(e, s) + Impuesto(e, s)$.
+	\BRitem[Tipo:] Restricción de operación/Cálculo.
+	\BRitem[Nivel:] Obligatorio.
+\end{BussinesRule}
+
+
+

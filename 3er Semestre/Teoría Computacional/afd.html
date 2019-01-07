@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<button onclick="afd()">Run 
+		</button>
+		<script>
+			function afd(){
+				var dato = prompt("Escribe Q","");
+				var Q = dato.split(",");
+				for (var i = 0; i < Q.length; i++) {
+					alert("El estado q" + i + " es: " + Q[i]);
+				}
+				var dato = prompt("Escribe el alfabeto","");
+				var sigma = dato.split(",");
+				for (var j = 0; j < sigma.length; j++) {
+					alert("El símbolo " + j + " es: " + sigma[j]);
+				}
+				for (var renglon = 0; renglon < Q.length; renglon++) {
+					for (var columna = 0; columna < sigma.length; columna++) {
+						var dato = prompt("(q" + renglon + "," + sigma[columna] + ", estado","");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

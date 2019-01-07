@@ -1,0 +1,132 @@
+create view v1 as
+Select m.idmixup as IDENTIFICADOR, s.nombre as NOMBRE
+from mixup m, sociomix sm, socio s
+where m.idmixup=sm.idmixup
+and sm.idsocio=s.idsocio
+order by 1,2;
+
+create view v2 as
+Select m.idmixup as IDENTIFICADOR, sm.idsocio as IDSOCIO
+from mixup m, sociomix sm
+where m.idmixup=sm.idmixup
+order by 1,2;
+
+create view v3 as
+select idarticulo, nombre
+from articulo
+order by 1; 
+
+create view v4 as
+select idsocio, nombre
+from socio
+order by 1;
+
+create view v5 as
+select idmixup, nombre
+from mixup
+order by 1;
+
+create view v6 as
+Select m.nombre as MIXUP, s.idsocio as IDSOCIO
+from mixup m, sociomix sm, socio s
+where m.idmixup=sm.idmixup
+and sm.idsocio=s.idsocio
+order by 1,2;
+
+create view v7 as
+Select idsocio, tel
+from socio
+order by 1;
+
+create view v8 as
+select idsocio, email
+from socio
+order by 1;
+
+create view v9 as
+select idarticulo, preciounitario
+from articulo
+order by 1;
+
+create view v10 as
+select a.idarticulo, d.nombre as DEPARTAMENTO
+from articulo a, departamento d
+where a.iddepto=d.iddepto
+order by 2,1;
+
+create view v11 as
+select nombre, ubicacion, dir
+from mixup
+order by 1;
+
+select * from v;
+
+desc v;
+
+Select v4.*, v6.mixup
+from v4, v6
+where v4.idsocio=v6.idsocio
+and v4.nombre like "%Hern_ndez%"
+order by 1;
+
+Select v4.*, v11.nombre
+from v4, v6, v11
+where v4.idsocio=v6.idsocio
+and v6.MIXUP=v11.nombre
+and v4.nombre like "%Mendoza%"
+order by 1;
+
+Select v10.*, v9.preciounitario
+from v10, v9
+where v10.idarticulo=v9.idarticulo
+and v9.preciounitario between 2000 and 3000
+order by 1;
+
+select ubicacion
+		from v11 
+		group by ubicacion;
+
+Select count(*)
+from v4
+where nombre like "%Silva%";
+
+Select v4.*, v6.mixup
+from v4, v6
+where v4.idsocio=v6.idsocio
+and v4.nombre like "%Silva%"
+order by 1;
+
+select count(*) 
+from v11
+where ubicacion like "%Monterrey%";
+
+select count(idarticulo), departamento
+from v10
+group by departamento;
+
+Select v4.nombre, v8.email
+from v4, v6, v11, v8
+where v8.idsocio=v4.idsocio
+and v4.idsocio=v6.idsocio
+and v6.MIXUP=v11.nombre
+and (v11.dir like "%14300%"
+or v11.dir like "%1090%"
+or v11.dir like "%53100%")
+order by 1;
+
+Select v4.nombre, v6.mixup
+from v4, v6, v11
+where v4.idsocio=v6.idsocio
+and v6.MIXUP=v11.nombre
+and (v11.dir like "%3020%"
+or v11.dir like "%44540%"
+or v11.dir like "%97115%")
+order by 1;
+
+select v3.nombre, v9.preciounitario, v10.departamento
+from v3, v9, v10
+where v3.idarticulo=v9.idarticulo
+and v9.idarticulo=v10.idarticulo
+and (v3.nombre like "%Green Prince%"
+or v3.nombre like "%La caba_a%"
+or v3.nombre like "%Touch 32gb%");

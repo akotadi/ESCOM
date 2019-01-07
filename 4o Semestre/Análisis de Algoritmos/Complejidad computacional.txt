@@ -1,0 +1,23 @@
+Complejidad computacional
+
+Un problema se puede resolver si una maquina de turing puede reconocer si una cadena pretenece a un lenguaje
+
+Teorema de golbac
+Teorema de fermat
+Teorema de paroc
+
+Grado de complejidad
+	Sobre qué vamos a medir
+	Contar el npumero de ejecucuiones (operaciones) - obviar operaciones constantes
+	Tres tipos de complijidad
+		Big O: peor de los casos - más usado		a<=b (El peor de los casos el algoritmo a será menor o igual a la función b)
+		Omega: mejor de los casos					a>=b
+		Teta: caso promedio							a=b
+	1 significa constante - se toma en cuenta a veces, dependiendo de la constante
+
+Eficiencia
+	Resolver en tiempo polinómico - polinomio asociado a la complejidad
+		Despreciamos los exponentes menores a menos que las constantes sean simbólicasj	
+
+
+Log N (Base 2)

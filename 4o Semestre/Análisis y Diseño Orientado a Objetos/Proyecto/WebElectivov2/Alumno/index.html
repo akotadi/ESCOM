@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>WebElectivo &mdash; Sistema de gestión de UAE</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {
+			font-family: "Lato", sans-serif
+		}
+		.mySlides {
+			display:none
+		}
+		.w3-tag, .fa {
+			cursor:pointer
+		}
+		.w3-tag {
+			height:15px;
+			width:15px;
+			padding:0;
+			margin-top:6px
+		}
+		.w3-bar,h1,button {
+			font-family: "Montserrat", sans-serif
+		}
+		.fa-anchor,.fa-coffee {
+			font-size:200px
+		}
+	</style>
+	
+	<body>
+		
+		<!-- Navbar -->
+		<div class="w3-top">
+			<div class="w3-bar w3-wine w3-card w3-left-align w3-large">
+				<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-wine" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu">
+					<i class="fa fa-bars"></i>
+				</a>
+				<a href="index.html" class="active w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inicio</a>
+				<div class="w3-dropdown-hover w3-right">
+					<button class="w3-button w3-hide-small w3-padding-large">Panel de Control</button>
+					<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+						<a href="constancia.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Subir Constancia</a>
+						<a href="contrasenia.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Cambiar Contraseña</a>
+						<a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Cerrar Sesión</a>
+					</div>
+				</div>
+				<a href="perfil.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Perfil</a>
+				<a href="votaciones.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Votaciones</a>
+				<div class="w3-dropdown-hover w3-right">
+					<button class="w3-button w3-hide-small w3-padding-large">Clubes</button>
+					<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+						<a href="inscribir.php?idclub=0" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inscribir Club</a>
+						<a href="clubes.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ver Clubes</a>
+						<a href="misclubes.php?idclub=0" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Mis Clubes</a>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- Navbar on small screens -->
+			<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+				<a href="misclubes.php" class="w3-bar-item w3-button w3-padding-large">Clubes</a>
+				<a href="votaciones.php" class="w3-bar-item w3-button w3-padding-large">Votaciones</a>
+				<a href="perfil.php" class="w3-bar-item w3-button w3-padding-large">Perfil</a>
+				<a href="../index.html" class="w3-bar-item w3-button w3-padding-large">Cerrar Sesión</a>
+			</div>
+		</div>
+
+		<!-- Header -->
+		<header class="w3-container w3-wine w3-center" >
+
+			<div style="padding:50px">
+				<img src="../img/HeaderFinal2.jpg" style="width:100%">
+			</div>
+
+			<!-- Slideshow -->
+			<div style="padding:25px 16px" class="w3-container">
+				<div class="w3-display-container mySlides">
+					<a href="http://www.escom.ipn.mx/expos2018/" target="blank"><img src="../img/Evento1.jpg" style="width:100%"></a>
+				</div>
+				<div class="w3-display-container mySlides">
+					<a href="https://bit.ly/2kLMpgC" target="blank"><img src="../img/Evento2.jpg" style="width:100%"></a>
+				</div>
+				<div class="w3-display-container mySlides">
+					<a href="http://universodeletras.unam.mx/new-creativity/" target="blank"><img src="../img/Evento3.jpg" style="width:100%"></a>
+				</div>
+
+				<!-- Slideshow next/previous buttons -->
+				<div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+					<div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+					<div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+
+					<div class="w3-center">
+						<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+						<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+						<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<dir style="text-align:center;">
+			<a href="tutorial.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tutorial</a>
+		</dir>
+
+		<!-- First Grid -->
+		<div class="w3-row-padding w3-padding-64 w3-container">
+			<div class="w3-content">
+				<div class="w3-half">
+					<h1>Premio de Ensayo Innovación Educativa 2018</h1>
+					<h5 class="w3-padding-32">Nivel Superior Y Posgrado: Dotación económica de $25,000 y diploma. Tienes hasta el 5 de septiembre de 2018</h5>
+
+					<p class="w3-text-cyan">
+						<a href="https://tinyurl.com/y8ygts4d" target="_blank">Web</a>
+					</p>
+				</div>
+
+				<div class="w3-half w3-right w3-center">
+					<img src="../img/Noticia5.png" style="width:100%">
+				</div>
+			</div>
+		</div>
+
+		<!-- Second Grid -->
+		<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+			<div class="w3-content">
+				<div class="w3-half w3-left w3-center">
+					<img src="../img/Noticia6.jpg" style="width:100%">
+				</div>
+
+				<div class="w3-half w3-right w3-right-align">
+					<h1>23a Olimpiada Mexicana de Informática</h1>
+					<h5 class="w3-padding-32">La ESCOM es anfitrión de la "23 Olimpiada Mexicana de Informática", los días 4 y 6 de mayo de 2018 recibiremos a cerca de 150 participantes y 50 asesores de toda la República Mexicana.</h5>
+
+					<p class="w3-text-cyan">
+						<a href="https://www.facebook.com/olimpiadadeinformatica/" target="_blank">Web</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Third Grid -->
+		<div class="w3-row-padding w3-padding-64 w3-container">
+			<div class="w3-content">
+				<div class="w3-half">
+					<h1>Becas para curso Java SE 8 Fundamentals</h1>
+					<h5 class="w3-padding-32">Como parte del Convenio de Colaboración Académica entre la Escuela Superior de Cómputo (ESCOM) y CertificaTIC, se tienen becas del 100% para distintos cursos y/o diplomados; en esta ocasión se otorgarán becas para el Curso Java SE 8 Fundamentals. Consulta detalles y requisitos en:</h5>
+
+					<p class="w3-text-cyan">
+						<a href="https://tinyurl.com/ybqaj9cc" target="_blank">Web</a>
+					</p>
+				</div>
+
+				<div class="w3-half w3-right w3-center">
+					<img src="../img/Noticia2.png" style="width:100%">
+				</div>
+			</div>
+		</div>
+
+		<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+			<h1 class="w3-margin w3-xlarge">Cita del día: </h1>
+			<p style="font-size: large;">“Puede que lo que hacemos no traiga siempre la felicidad, pero si no hacemos nada, no habrá felicidad”. (Albert Camus)</p>
+		</div>
+
+		<!-- Footer -->
+		<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+			
+			<!--
+			<div class="w3-xlarge w3-padding-32">
+				<i class="fa fa-facebook-official w3-hover-opacity"></i>
+				<i class="fa fa-instagram w3-hover-opacity"></i>
+				<i class="fa fa-snapchat w3-hover-opacity"></i>
+				<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+				<i class="fa fa-twitter w3-hover-opacity"></i>
+				<i class="fa fa-linkedin w3-hover-opacity"></i>
+			</div>
+			-->
+
+			<p>Powered by <a href="https://www.facebook.com/chadcarreto" target="_blank">"El Chad"</a></p>
+		</footer>
+
+		<script src="../js/main.js"></script>
+
+	</body>
+</html>

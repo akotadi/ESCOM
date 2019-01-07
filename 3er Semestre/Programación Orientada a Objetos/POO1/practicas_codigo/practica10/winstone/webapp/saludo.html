@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Boards Us</title>
+<script language="javascript" type="text/javascript">
+var request = null;
+function createRequest() {
+	try {
+		request = new XMLHttpRequest();
+	} catch (trymicrosoft) {
+	}
+}
+function getBoardsSold() {
+        var url = "/servlets/servlet/Hola";
+        var cadcons = "?name="+document.getElementById('name').value;
+	createRequest();  
+        request.open("GET", url+cadcons, true);
+        request.onreadystatechange = updatePage;
+        request.send(null);
+
+}
+function updatePage() {
+   var newTotal = request.responseText;
+   if(request.readyState == 4 && request.status == 200) {
+	var body = document.getElementsByTagName('body');
+	// remove, if exists
+	if (document.getElementById('recipe')) {
+		body[0].removeChild(document.getElementById('recipe'));
+	}
+	var recipe = document.createElement('div');
+	recipe.id = 'recipe';
+	recipe.className = 'recipe';
+	recipe.innerHTML = request.responseText;
+	body[0].appendChild(recipe);
+        if (document.getElementById('codigo')) {
+		body[0].removeChild(document.getElementById('codigo'));
+	}
+	//var codigo = document.createElement('input');
+    }
+}
+</script>
+</head>
+<body>
+<h1>Prueba</h1>
+<div id="boards">
+<form method="GET" action="/servlets/servlet/Hello">
+If you don't mind me asking, what es tu nombre?
+<INPUT TYPE=TEXT NAME="name" id="name"><P>
+<input type="button" value="Presiona"  onClick="javascript:getBoardsSold();">
+</form>
+</div>
+</body>
+</html>
+
+
+
+

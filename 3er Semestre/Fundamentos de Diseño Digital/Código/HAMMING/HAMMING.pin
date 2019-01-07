@@ -1,0 +1,17 @@
+Cypress Package: palc22v10d-25pc  PinOut File: HAMMING.pin
+
+This file was created on 10/23/2017 at 11:11:40 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+d in <> Enabled Normal 1 <> [Auto] 
+c in <> Enabled Normal 2 <> [Auto] 
+b in <> Enabled Normal 3 <> [Auto] 
+a in <> Enabled Normal 4 <> [Auto] 
+c0 out <> Enabled Normal 14 <> [User] 
+c1 out <> Enabled Normal 15 <> [User] 
+a1 out <> Enabled Normal 16 <> [User] 
+c2 out <> Enabled Normal 17 <> [User] 
+b1 out <> Enabled Normal 18 <> [User] 
+c11 out <> Enabled Normal 19 <> [User] 
+d1 out <> Enabled Normal 20 <> [User] 

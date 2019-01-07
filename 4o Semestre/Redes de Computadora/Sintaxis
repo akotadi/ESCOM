@@ -1,0 +1,49 @@
+Sintaxis
+
++router ospf [pid] // 1 -> 65535
++network [id red] [mascara comodin] area [id area]
++interface loopback [número]
++bandwidth [kbps]
++ip ospf authentication-key [contraseña]
++ip ospf hello-interval [segundos]
++ip ospf dead-interval [segundos]
++area [id area] authentication
++area [id area] authentication message-digest
++redistribute static
++area [id area] virtual-link [id enrutador]
++redistribute rip subnets
++show ip ospf interface
++show ip ospf database
++show ip ospf neighbor
++show ip route
+
+==========================================================
+
+R8>ena
+R8(config)#router ospf 10
+R8(config-router)#network 13.0.0.0 0.255.255.255 area 3
+#network 15.0.0.0 0.255.255.255 area 4
+
+// Máscara comodín = broadcast - Máscara subred => 255.255.255.255 - 255.0.0.0 = 0.255.255.255
+
+#area 3 virtual-link 11.255.255.254 // Si no queremos calcularlo, usamos +show ip ospf interface, o definiendo una interfaz con +interface loopback [número] y configurándola con 
+
+========================================================
+
+Conf. R5
+R5#conf t
+R5(config)#router ospf 5
+R5(config-router)#network 5.0.0.0 0.255.255.255 area 0
+	#network 6.0.0.0 0.255.255.255 area 0
+	#network 11.0.0.0 0.255.255.255 area 3
+	#area 3 virtual-link 15.255.255.254
+	#redistribute rip subnets
+	#exit
+R5(config)#router rip
+R5(config-router)#version 2
+	#network 130.1.0.0
+	#network 5.0.0.0
+	#network 6.0.0.0
+	#network 11.0.0.0
+	#redistribute ospf 5 metric 1
+	#^z

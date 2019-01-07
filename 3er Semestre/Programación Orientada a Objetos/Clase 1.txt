@@ -1,0 +1,71 @@
+Tipo nomArr[];
+nomArr = new Tipo[tamaño]; // Java
+
+Tipo nomArr = new Tipo[tamaño]; // Alter Java
+
+Tipo *nowArr;
+nomArr = (Tipo*)malloc(tamaño*sizeof(Tipo)); // C
+
+-------------------------------------------
+
+// C
+struct punto{
+	int x,y;
+}
+typedef struct punto Punto
+
+// Java
+import Java.awt.*;
+
+public class Punto{
+	private int x,y;
+	public Punto(){
+		x=0;
+		y=0;
+	}
+	public Punto(int x, int y){
+		this.x=x;
+		this.y=y;
+	}
+	public int getx(){
+		return x;
+	}
+	public int gety(){
+		return y;
+	}
+	public void setx(int x){
+		this.x=x;
+	}
+	public void sety(int y){
+		this.y=y;
+	}
+	public void dibujar(graphics g){
+		g.drawLine(x,y,this.x,this.y);
+	}
+}
+
+import Java.awt.*;
+import Java.applet.*;
+
+public class DibujaPunto extends Applet{ // DibujaPunto es subclase, Applet es superclase, se usa extend para indicar herencia
+	Punto p0,p1;
+	public void init(){
+		p0 = new Punto();
+		p1 = new Punto(5,5);	
+	}
+	public void paint(Graphics g){
+		p0.dibuja(g);
+		p1.dibuja(g);
+	}
+}
+
+// Constructor
+	1.- Sirven para inicializar los objetos de la clase
+	2.- Tienen el mismo nombre quue la clase
+	3.- Si hay mas de uno entonces está cargado
+	4.- No tiene tipo de retorno (ni siquiera void)
+
+Dos tipos de programas:
+	1.- Applets (extends Applet)
+		Se incrustan en páginas web
+	2. Aplicaciones (main)

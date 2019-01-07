@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Convex ESCOM</title>
+</head>
+
+<body>
+<div id="body">
+    <h2>ConvexHull</h2>
+    <div id="grid">
+      <div id="leftPanel">
+      <p>
+El Convex Hull Algorithm (Envolvente convexa) es un
+algoritmo voraz usado para encontrar el minimmo conjunto
+convexo que contenga un conjunto dado de puntos.
+      </p>
+      <h3>Aplicaciones</h3>
+      	<pre>
+  -Geometria
+  -Graficos de computadora
+  -Planeo de rutas para robot
+  -etc.
+      	</pre>
+      	<h3>Algoritmo</h3>
+      		<p id="p1">&#9830 Ordene los puntos de P por la coordenada x (en caso de un empate, ordene por coordenada y).</p>
+      		<p id="p2">&#9830 Inicialice U y L como listas vacías. Las listas contendrán los vértices de los cascos superior e inferior.</p>
+      		<p id="p3">&#9830 para i = 1, 2, ..., n:</p>
+      		<p id="p4">&#9830 mientras que L contiene al menos dos puntos y la secuencia de los dos últimos puntos de L y el punto P [i] no hace un giro en sentido antihorario:</p>
+      		<p id="p5">&#9830 eliminar el último punto de L</p>
+      		<p id="p6">&#9830 añadir P [i] a L</p>
+      		<p id="p7">&#9830 para i = n, n - 1, ..., 1:</p>
+      		<p id="p8">&#9830 mientras que U contiene al menos dos puntos y la secuencia de los dos últimos puntos de U y el punto P [i] no hace un giro en sentido antihorario:</p>
+      		<p id="p9">&#9830 eliminar el último punto de U</p>
+      		<p id="p10">&#9830 añadir P [i] a U</p>
+      		<p id="p11">&#9830 Elimine el último punto de cada lista (es el mismo que el primer punto de la otra lista).</p>
+			<p id="p12">&#9830 Concatenar L y U para obtener el casco convexo de P.</p>
+    </div>
+    <div id="canvas">
+    	<div id="botones">
+        	<button id="runbtn" type="button">Iniciar</button>
+        	<button id="randombtn" type="button">Aleatorio</button>
+        	<button id="clearbtn" type="button">Reiniciar</button>
+    	</div>
+	</div>
+    <div id="rightPanel">
+      <p>
+        <h2>Paso Actual</h2>
+        <p id="currentState"></p>
+        <h2>Puntos del ConvexHull</h2>
+        <ul id="PointsInCH">
+
+        </ul>
+      </p>
+    </div>
+    </div>
+    
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

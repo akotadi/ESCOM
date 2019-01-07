@@ -1,0 +1,10 @@
+1.#QO 1.#QO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO 
+1.#QO 1.#QO 1.#QO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO 
+1.#QO 1.#QO 1.#QO 1.#QO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO 
+1.#QO 1.#QO 1.#QO 1.#QO 1.#QO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO 
+1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO -1.#IO -1.#IO -1.#IO -1.#IO 
+1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO -1.#IO -1.#IO -1.#IO 
+1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO -1.#IO -1.#IO 
+1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO -1.#IO 
+1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 1.#QO 
+-1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO -1.#IO 

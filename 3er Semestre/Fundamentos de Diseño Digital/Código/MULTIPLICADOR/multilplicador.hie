@@ -1,0 +1,2 @@
+multiplicador.vhd #Entity suma 4
+multiplicador.vhd #Architecture behavioral suma 15

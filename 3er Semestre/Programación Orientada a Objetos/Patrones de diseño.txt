@@ -1,0 +1,8 @@
+Patrón de diseño: Arquitectura mvc (no es un patrón de diseño, es un patrón de patrones de diseño)
+MVC (Modelo: Objeto de aplicación - Vista: Presentación en pantalla - Controlador: Define como la GUI reacciona a una entrada de usuario)
+	- Observador
+	- Compuesto
+	- Estrategia
+	* Adaptador
+
+SmallTalk - primer lenguaje orientado a objetos

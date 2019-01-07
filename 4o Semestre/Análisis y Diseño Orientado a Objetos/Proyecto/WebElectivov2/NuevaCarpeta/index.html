@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>HTML5 File Drag &amp; Drop API</title>
+		<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+	</head>
+
+	<body>
+
+		<form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
+			<fieldset>
+				<legend>HTML File Upload</legend>
+				<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+				<div>
+					<label for="fileselect">Files to upload:</label>
+					<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+					<div id="filedrag">or drop files here</div>
+				</div>
+				<div id="submitbutton">
+					<button type="submit">Upload Files</button>
+				</div>
+			</fieldset>
+
+		</form>
+
+		<div id="messages">
+			<p>Status Messages</p>
+		</div>
+
+		<script src="filedrag.js"></script>
+	</body>
+</html>

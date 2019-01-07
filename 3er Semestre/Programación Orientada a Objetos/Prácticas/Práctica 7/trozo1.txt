@@ -1,0 +1,94 @@
+java -cp mysqlcon.jar:. Vista
+mysql -h localhost -u root --password=gatito classicmodels < sampledatabase.sql
+ LOAD DATA INFILE 'data.txt' INTO TABLE db2.my_table;
+try{
+switch (rmeta.getColumnType(i)){	
+		case Types.TINYINT:
+				//((Number)data).byteValue());
+			break;
+		case Types.SMALLINT:
+				//((Number)data).shortValue());
+			break;
+		case Types.INTEGER:
+				//((Number)data).intValue());
+			break;
+		case Types.BIGINT:
+				//((Number)data).longValue());
+			break;
+		case Types.REAL:
+				//((Number)data).floatValue());
+			break;
+		case Types.FLOAT:
+				//((Number)data).doubleValue());
+			break;
+		case Types.DOUBLE:
+				//((Number)data).doubleValue());
+			break;
+		case Types.DECIMAL:
+				//new java.math.BigDecimal(((Double)data).doubleValue()));
+			break;
+		case Types.NUMERIC:
+				//new java.math.BigDecimal(((Double)data).doubleValue()));
+			break;
+		case Types.BIT:
+				//((Boolean)data).booleanValue());
+			break;
+		case Types.CHAR:
+				//((String)data).trim());	// do trim() here so we don't get a truncation error from the server
+			break;
+		case Types.VARCHAR:
+			 	//((String)data).trim());
+			break;
+					/// skipping a few here
+		case Types.DATE:
+				//(java.sql.Date)data;
+			break;
+		case Types.TIME:
+				//(java.sql.Time)data;
+			break;
+		case Types.TIMESTAMP:		
+				//new java.sql.Timestamp(((java.util.Date)data).getTime()));
+			break;
+				// skipping a few here 
+		default:
+				m_resultSet.updateObject(column,data);
+			break;
+			}
+			m_resultSet.updateRow();
+		}	
+		catch(Exception e){
+			System.err.print("**ERROR: while updating with value: " + data.toString() + "  : " + e + "\n");
+			return false;
+		}
+
+getByte(int columnIndex) 
+public Vector listarTablas(){
+  Vector tablas = new Vector();
+  try {
+        DatabaseMetaData meta = con.getMetaData();
+        ResultSet res = meta.getTables(null, null, null, 
+         new String[] {"TABLE"});
+      //System.out.println("List of tables: "); 
+      while (res.next()) {
+         //System.out.println(res.getString("TABLE_NAME"));
+         tablas.add(res.getString("TABLE_NAME"));
+      }
+      res.close();
+   } catch (SQLException e) {
+      System.err.println("SQLException: "+e.getMessage());
+   }
+   return tablas;
+}
+
+private JPanel crearPanelTablas( modelo mod) {
+	JPanel pnlTablas = new JPanel();
+	pnlTablas.setLayout( new BorderLayout() );
+	JPanel pnlFila1 = new JPanel( new FlowLayout( FlowLayout.LEFT));
+	JLabel lblTablas = new JLabel( "Tablas:" );
+	
+	cbbTablas = new JComboBox( mod.listarTablas());
+	pnlFila1.add( lblTablas );
+	pnlFila1.add( cbbTablas );
+        pnlTablas.add( pnlFila1, BorderLayout.CENTER );
+	return pnlTablas;
+    }

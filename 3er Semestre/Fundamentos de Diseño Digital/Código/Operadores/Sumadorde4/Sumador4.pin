@@ -1,0 +1,20 @@
+Cypress Package: palc22v10d-25pc  PinOut File: Sumador4.pin
+
+This file was created on 10/09/2017 at 11:39:35 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+a4 in <> Enabled Normal 1 <> [User] 
+a3 in <> Enabled Normal 2 <> [User] 
+a2 in <> Enabled Normal 3 <> [User] 
+a1 in <> Enabled Normal 4 <> [User] 
+b4 in <> Enabled Normal 5 <> [User] 
+b3 in <> Enabled Normal 6 <> [User] 
+b2 in <> Enabled Normal 7 <> [User] 
+b1 in <> Enabled Normal 8 <> [User] 
+sel in <> Enabled Normal 9 <> [User] 
+s4 out <> Enabled Normal 14 <> [User] 
+s3 out <> Enabled Normal 15 <> [User] 
+s2 out <> Enabled Normal 16 <> [User] 
+s1 out <> Enabled Normal 17 <> [User] 
+cout out <> Enabled Normal 18 <> [User] 

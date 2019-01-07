@@ -1,0 +1,80 @@
+create table Genero(idGenero varchar(20) not null primary key, nombre varchar(50));
+
+create table Cancion(idCancion int not null primary key, titulo varchar(20), idGenero varchar(20), foreign key(idGenero) references Genero(idGenero) on delete cascade on update cascade);
+
+create table Autor(rfc varchar(20) not null primary key, nombre varchar(20), apPaterno varchar(20), apMaterno varchar(20));
+
+create table Registro(idRegistro int not null primary key, fechaComposicion date, fechaRegistro date, rfc varchar(20), idCancion int, foreign key(rfc) references Autor(rfc) on delete cascade on update cascade, foreign key(idCancion) references Cancion(idCancion) on delete cascade on update cascade);
+
+select nombre, ubicacion, tel
+from mixup
+where ubicacion like "%Quer_taro%";
+
+select count(*)
+from mixup
+where ubicacion like "%Guadalajara%";
+
+select a.nombre, m.nombre
+from mixup m, asociado a
+where a.idMixup=m.idmixup
+and a.nombre like "%S_nchez%";
+
+select a.nombre, m.nombre
+from mixup m, asociado a
+where a.idMixup=m.idmixup
+and m.nombre like "%Forum%";
+
+select a.nombre, a.preciounitario, d.nombre
+from articulo a, departamento d
+where a.iddepto = d.iddepto
+and a.preciounitario between 2000 and 3000;
+
+select idmixup, nombre
+from mixup
+where (dir like "%45020%"
+or dir like "%64000%"
+or dir like "%22320%");
+
+alter table mixup add column presupuestoMantenimiento double;
+
+create view v1 as
+select a.nombre, a.preciounitario
+from articulo a, departamento d
+where a.iddepto = d.iddepto
+and d.nombre like "%ishop%";
+
+create view v2 as
+select s.nombre, s.direccion, m.nombre as mixup, m.ubicacion
+from socio s, mixup m, sociomix sm
+where s.idsocio=sm.idsocio
+and sm.idmixup=m.idmixup
+and s.nombre like "%L_pez%";
+
+create view v3 as
+select m.nombre, d.nombre as depto
+from mixup m, departamento d, mixupdepto md
+where m.idmixup=md.idmixup
+and md.iddepto = d.iddepto
+and m.ubicacion like "%Guadalajara%";
+
+select * from v1;
+select * from v2;
+select * from v3;
+
+
+insert into socio values (9999,'Manuel Calva','Mi casa','55-55-55-55','manuel_7795@hotmail.com');
+insert into socio values (9998,'Juan Calva','Mi casa x2','55-55-55-56','jich_63@hotmail.com');
+
+select * from socio where idsocio in(9999,9998);
+
+update 
+UPDATE asociado SET idMixup=(select idmixup from mixup where ubicacion like "%Guerrero%") where idasociado = 83;
+
+UPDATE socio SET email='micorreo@hotmail.com' where idsocio in(50,110,201);
+
+UPDATE articulo SET preciounitario=preciounitario*1.30 where iddepto=(select nombre from departamento where nombre like "%vinyl%");
+
+select a.preciounitario, d.nombre from articulo a, departamento d where a.iddepto=d.iddepto and d.nombre like "%vinyl%";
+
+
+delete from socio where direccion like "desconocida";

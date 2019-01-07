@@ -1,0 +1,53 @@
+body{
+  background-color: #fff;
+  }
+  #body {
+    }
+    h3,h2{
+    	text-align: center;
+    }
+    #leftPanel{
+      max-width: 30%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px;
+      margin-left: 0px;
+    }
+    p{
+      text-align: justify;
+    }
+
+    #canvas {
+        height: 400px;
+        display: inline-block;  
+        width: 500px;
+        padding: 10px;
+        padding-bottom: 5px;
+        cursor: crosshair;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #rightPanel{
+      background-color: #fff;
+      border-color: #000;
+      max-width: 30%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px;
+      border: solid;
+    }
+
+    #body button {
+        font-size: 1.2em;
+        width: 120px;
+    }
+    #botones{
+    	text-align: center;
+    }
+    #p4,#p8,#p6,#p10{
+    	margin-left: 20px;
+    }
+    #p5,#p9{
+    	margin-left: 40px;	
+    }

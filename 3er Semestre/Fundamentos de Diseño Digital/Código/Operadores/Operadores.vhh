@@ -1,0 +1,18 @@
+ENTITY compuertas IS
+    PORT (
+	ams : in std_logic  ; 
+	bms : in std_logic  ; 
+	cinsc : in std_logic  ; 
+	cosc : inout std_logic  ; 
+	cms : inout std_logic  ; 
+	ssc : inout std_logic  ; 
+	sms : inout std_logic  ; 
+	amr : in std_logic  ; 
+	bmr : in std_logic  ; 
+	pirc : in std_logic  ; 
+	rmr : inout std_logic  ; 
+	pmr : inout std_logic  ; 
+	porc : inout std_logic  ; 
+	rrc : inout std_logic 
+    ) ;
+END compuertas ;

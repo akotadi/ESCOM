@@ -1,0 +1,48 @@
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp VHDL Synthesis Compiler: Version 6.3 IR 35
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  Practica1.vhd
+Options:    -m -yu -e10 -w100 -o2 -ygs -fP -v10 -dc22v10 -ppalce22v10-15pc -b Practica1.vhd -u Practica1.hie
+======================================================================
+
+vhdlfe V6.3 IR 35:  VHDL parser
+Sun Sep 24 20:46:11 2017
+
+Library 'work' => directory 'lc22v10'
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Library 'ieee' => directory 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work'
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+
+vhdlfe:  No errors.
+
+
+tovif V6.3 IR 35:  High-level synthesis
+Sun Sep 24 20:46:12 2017
+
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Practica1.vhd (line 17, col 40):  (E158) Too few values (6) for 'display' of size 7
+Practica1.vhd (line 18, col 40):  (E158) Too few values (6) for 'display' of size 7
+Practica1.vhd (line 19, col 40):  (E158) Too few values (6) for 'display' of size 7
+Practica1.vhd (line 20, col 40):  (E158) Too few values (6) for 'display' of size 7
+Practica1.vhd (line 21, col 40):  (E158) Too few values (6) for 'display' of size 7
+Practica1.vhd (line 22, col 40):  (E158) Too few values (6) for 'display' of size 7
+
+tovif:  6 errors.
+Output file not produced.
+

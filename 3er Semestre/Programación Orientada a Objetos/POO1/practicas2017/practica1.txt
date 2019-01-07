@@ -1,0 +1,47 @@
+P.O.O.
+
+
+
+Evaluacion
+1er y 2o departamental
+50% examenes   40% practicas   10% tareas
+3er departamental
+40% examenes 50% proyecto equipo (maximo 4 personas) 10% tareas
+
+Tareas y reportes de practicas (individuales para entregar impresos)
+Portada 
+  	nombre
+  	tema
+  	numero
+  	fecha
+  	grupo
+  	materia
+
+
+
+PRACTICA 1
+Realizar uno de los sigs. programas (como Applet o aplicacion)
+1.-Calculo de una edad
+Campo de entrada para introducir el anio de nacimiento y un boton para mostrar la edad calculada en una etiqueta.
+
+2.-Conversion de temperaturas
+	Campo de entrada para introducir la temperatura
+	boton para convertir de grados Centigrados a Kelvin y boton para convertir de grados Kelvin a Centigrados
+
+3.-Configurar un Reloj
+Establecer las horas y los minutos en un reloj
+	boton para incrementar las horas y boton para incrementar los minutos 
+
+4.-Control de la temperatura en una habitacion
+      Un boton para incrementar la temperatura y un boton para decrementar la temperatura
+	Etiqueta para mostrar la temperatura
+	abajo del intervalo poner la etiqueta en azul
+	dentro del intervalo poner la etiqueta en verde
+	arriba del intervalo poner la etiqueta en rojo
+
+5.-Album Fotografico (usando Swing para la IGU)
+	Etiqueta grafica para mostrar la imagen
+	boton para avanzar y boton para retroceder (de forma circular)
+
+
+

@@ -1,0 +1,18 @@
+IU.01
+	- Evaluación (si es práctica, obligar a colocar porcentaje a prácticas)
+	- Bibliografía clásica o completa
+IU.02
+	- Contabilizar horas aprendizaje autónomo (créditos SATCA)
+IU.03
+	- Control de horas temas (total UA, prácticas = suma de relación prácticas, distribución teórica/práctica)
+IU.04
+	- Lugares Prácticas (Catálogo ¿Gestión?/ Campo texto)... ¿Siempre es el mismo?
+
+
+
+Con horas que manda el plan, calculamos créditos TEPIC... ¿Mandan horas de autónomo?
+
+Secuenciar sistema de evaluación por periodos.
+
+
+Buscar laboratorios para llenar base de datos.

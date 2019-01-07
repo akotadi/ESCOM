@@ -1,0 +1,148 @@
+Requirements
+
+Good requirements ensure your system
+works like your customers expect.
+
+Make sure your requirements cover all the
+steps in the use cases for your system.
+
+Use your use cases to find out about
+things your customers forgot to tell you.
+
+Your use cases will reveal any incomplete
+or missing requirements that you might
+have to add to your system.
+
+Your requirements will always change (and
+grow) over time.
+
+
+OO basico
+
+Abstraccion
+Encapsulacion
+POLIMORFISMO
+Herencia
+
+
+Variables come in two flavors: primitive and reference.
+
+Las variables vienen en 2 sabores primitivas y referencias
+
+State affects behavior, behavior affects state. We know that objects
+have state and behavior, represented by instance variables and methods. Now we’ll look
+at how state and behavior are related. An object’s behavior uses an object’s unique state.
+In other words, methods use instance variable values.
+
+pass-by-value means
+pass-by-copy
+
+
+Static variables
+ar e shar ed by
+all instances of
+a class.
+
+Las variables estaticas son compartidas por todas las instancias de una clase.
+
+Objects have state and behavior.
+Behavior lives in the class, but state lives within each individual object.
+
+Conocer conceptos como Abstraccion, Encapsulacion,
+POLIMORFISMO y  no hacen a un buen disenador OO. Un
+Guru del diseno piensa sobre como crear disenos flexibles
+que sean mantenibles y puedan con el cambio
+
+Principios de OO
+
+Encapsular lo que varia
+
+Favorecer Composicion sobre herencia
+
+Programar para interfaces no implementaciones
+
+Luchar por disenos poco acoplados entre los objetos que interactuan
+
+
+
+Remember, knowing
+concepts like abstraction,
+inheritance, and polymorphism do
+not make you a good object oriented
+designer. A design guru thinks
+about how to create flexible
+designs that are maintainable
+and that can cope with
+change.
+
+
+OO Basics
+
+Abstraction
+Encapsulation
+Polymorphism
+Inheritance
+
+
+OO Principles
+
+Encapsulate what varies.
+
+Favor composition over inheritance.
+
+Program to interfaces, not
+implementations.
+
+Strive for loosely coupled designs
+between objects that interact.
+
+Classes should be open for
+extension but closed for
+modification.
+
+OO Patterns
+
+Strategy - defines a family of algorithms,
+encapsulates each one, and makes them
+interchangeable. Strategy lets the algorithm
+vary
+
+Observer - defines a one-to-many
+dependency between objects so that
+when one object changes state, all its
+dependents are notified and updated
+automatically
+
+
+
+Decorator - Attach additional
+responsibilities to an object dynamically.
+Decorators provide a flexible
+alternative to subclassing for extending
+functionality.
+
+And here’s our first pattern for creating designs
+that satisfy the Open-Closed Principle. Or was it
+really the first? Is there another pattern we’ve
+used that follows this principle as well?
+
+
+Abstract Factory - Provide an
+interface for creating families of
+related or depedent objects without
+specifying their concrete classes.
+
+Factory Method - Define an
+interface for creating an object, but
+let subclasses decide which class to instantiate.
+Factory Method lets a class
+defer instantiation to the subclasses.
+
+Singleton - Ensure a class only has
+one instance and provide a global point
+
+
+
+
+
+

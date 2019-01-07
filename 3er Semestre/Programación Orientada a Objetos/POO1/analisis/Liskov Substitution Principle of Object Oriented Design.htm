@@ -1,0 +1,358 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+a            { text-decoration: none }
+</style>
+
+<meta name="description" content="In class hierarchies, it should be possible to treat a specialized object as if it were a base class object.">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="keywords" content="oops, object oriented design, liskov substitution principle">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Liskov Substitution Principle of Object Oriented Design</title>
+<!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/eventhelix/even1000.css"><meta name="Microsoft Theme" content="eventhelix 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body topmargin="0" marginheight="0" leftmargin="0" marginwidth="0"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table1" background="../../EventStudio/image1/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bordercolor="#808080" width="1141">
+			<a title="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design" href="../../">
+			<img border="0" src="../../EventStudio/_borders/event_helix.jpg" width="242" height="92" alt="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design"></a>
+			<a name="top"></a></td>
+			<td bordercolor="#808080" width="238" nowrap>
+			<div align="center">
+				<table border="0" cellspacing="1" width="74%" id="table4" background="../../EventStudio/image1/w2gh.gif" align="left" height="36">
+					<tr>
+						<td width="20" style="text-align: center">
+						<a title="EventStudio 2.5: System Engineering CASE Tool" href="../../EventStudio">
+						<img border="0" src="../../EventStudio/eventstudio_icon.gif" width="32" height="32" alt="EventStudio 2.5: Sequence diagram based modeling"></a></td>
+						<td style="text-align: left" valign="top">
+						<span style="color: navy; font-weight: 700">
+						<font size="2">
+						<a title="Generate Sequence Diagrams, Message Sequence Charts and Collaboration Diagrams" href="../../EventStudio">
+						<font color="#000080">EventStudio 4.0</font></a></font></span><br>
+						<a title="System Architecture and System Engineering CASE Tool" href="../../EventStudio">
+						<font size="1" color="#707070">Sequence diagram based 
+						system design and modeling</font></a></td>
+					</tr>
+				</table>
+			</div>
+			<p>&nbsp;</td>
+		</tr>
+		<tr>
+			<td bgcolor="#E0E0E0" bordercolor="#808080" align="left" colspan="2" width="1270" valign="top" nowrap>
+			<font color="#000080" size="2" face="Arial">&nbsp;<b> </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b>
+			<font color="#666666" face="Arial" size="2">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<h1><font size="2">
+<a href="../../default.htm" style="text-decoration: none">Home</a> &gt; 
+<a href="../../RealtimeMantra">Real-time Mantra</a> &gt;<a href="../Object_Oriented"> Object Oriented Design</a><font color="#000000"> 
+&gt; The Liskov Substitution Principle<br>
+</font>
+</font>The Liskov Substitution Principle</h1>
+<p>The Liskov Substitution Principle of object oriented design states:</p>
+<p><font color="#000080"><b><i>In class hierarchies, it should be possible to
+treat a specialized object as if it were a base class object.</i></b></font></p>
+<p>The basic idea here is very simple. All code operating with a pointer or
+reference to the base class should be completely transparent to the type of the
+inherited object. It should be possible to substitute an object of one type with
+another within the same class hierarchy. Inheriting classes should not perform
+any actions that will invalidate the assumptions made by the base class.</p>
+<p>This is best explained with an example. The following example explains a case
+where enhancements to the code can violate the Liskov Substitution Principle.
+The discussion is divided into three steps:</p>
+<ul>
+  <li><a href="#Original Code">Original Code</a></li>
+  <li><a href="#Brand-C Support Code Enhancement">Brand-C Support Code Enhancements</a></li>
+  <li><a href="#Problems (Violates Liskov Substitution Principle)">Problems (Violates Liskov Substitution Principle)</a></li>
+</ul>
+<h2><a name="Original Code">Original Code</a></h2>
+<p>&nbsp;We will consider the design of software that manages the temperature in
+various chambers in a system. The software periodically reads the temperature
+from each chamber and then adjusts it to a reference temperature. The behavior
+is modeled as a Temperature Controller base class. Temperature controllers in
+different chambers differ in their programming interface. These differences are
+handled by individual classes that inherit from Temperature Controller base
+class.</p>
+<p>The Temperature Controller base class supports the following methods:</p>
+<ul>
+  <li><font color="#000080">Get/Set Reference: </font>These methods are used to
+    get and set the reference temperature for the chamber. This is not a virtual
+    method, as no device programming is involved.</li>
+  <li><font color="#000080">Get Temperature:</font> Reads the temperature from
+    the device. Since registers for reading the temperature differ from one
+    device to another, this method is pure virtual.</li>
+  <li><font color="#000080">Adjust Temperature:</font> Adjusts the temperature
+    by applying the adjustment specified in the parameter. Again, this method is
+    pure virtual as it involves device programming.</li>
+</ul>
+<p>The following code also shows two classes inheriting from the base class.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Temperature
+      Controller</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class <b>TemperatureController</b>
+{
+   // The chamber needs to be maintained at the reference temperature
+   int m_referenceTemperature;
+public:
+       
+   <b>int GetReferenceTemperature() const</b>
+   {
+      return m_referenceTemperature;
+   }
+   
+   <b>void SetReferenceTemperature(int referenceTemperature)</b>
+   {
+       m_referenceTemperature = referenceTemperature;
+   }
+   
+   <b>virtual int GetTemperature() const = 0;</b>
+
+   <b>virtual void AdjustTemperature(int temperature) = 0;</b>
+
+   <b>virtual void Initialize()</b>
+   {
+      // Initialize the device address here
+   }     
+};
+
+class <b>Brand_A_TemperatureController</b>
+{
+public:
+   
+   <b>int GetTemperature() const</b>
+   {
+      return (io_read(TEMP_REGISTER));
+   }
+
+  <b>void AdjustTemperature(int temperature);</b>
+  {
+      io_write(TEMP_CHANGE_REGISTER, temperature);
+  }  
+    
+};
+
+class <b>Brand_B_TemperatureController</b>
+{
+public:
+   
+   <b>int GetTemperature() const</b>
+   {
+      return (io_read(STATUS_REGISTER) &amp; TEMP_MASK);
+   }
+
+  <b>void AdjustTemperature(int temperature);</b>
+  {
+      // Device requires shifting by 5 bits before writing to the change
+      // register
+      io_write(CHANGE_REGISTER, temperature &lt;&lt; 5);
+  }  
+    
+};</code></font></pre></td>
+  </tr>
+</table>
+<h2><a name="Brand-C Support Code Enhancement">Brand-C Support Code Enhancement</a></h2>
+<p>Now consider the case where the marketing department comes back and says they
+need support for another type of Temperature Controller - Brand C. The
+developers assume that this should be a simple change as all they need to do is
+inherit from Temperature Controller base class and define the Get Temperature
+and Adjust Temperature methods.<p>On further inspection of the programming
+interface, the developers realize that Brand C is quite different from the other
+Temperature Controllers. It does not fit
+well into their scheme of things. Brand C is an automatic device where the
+reference temperature is programmed to the device and then on the device
+automatically maintains the temperature to the desired level.<p>It is clear that
+that Brand C will not fit into the base class. Thus developers decide to change
+the base class by making Get/Set Reference Temperature methods virtual (not pure
+virtual). They figure this way all the other temperature sensors would work with
+existing base class implementation. The Brand C would override the Get/Set
+Reference Temperature methods. These methods would directly operate upon the
+device.<p>Another change needed
+would be to override Adjust Temperature method with a blank implementation. As
+this method has no role to play in Brand C (Brand C is automatic so it performs
+temperature adjustments on its own.).
+    <p>The final code is shown below:<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Temperature
+      Controller</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class <b>TemperatureController</b>
+{
+   // The chamber needs to be maintained at the reference temperature
+   int m_referenceTemperature;
+public:
+
+   // Get and Set methods for Reference Temperature have been
+   // made virtual to accomodate Brand C       
+   virtual int GetReferenceTemperature() const
+   {
+      return m_referenceTemperature;
+   }
+   
+   virtual void SetReferenceTemperature(int referenceTemperature)
+   {
+       m_referenceTemperature = referenceTemperature;
+   }
+   
+   <b>virtual int GetTemperature() const = 0;</b>
+
+  <b> virtual void AdjustTemperature(int temperature) = 0;</b>
+    
+};
+
+class <b>Brand_C_TemperatureController</b>
+{
+public:
+   
+<b>   // Get/Set Reference Temperatures now read and write the device directly
+   int GetReferenceTemperature() const
+   {
+      return (io_read(REFERENCE_REGISTER);
+   }
+   
+   void SetReferenceTemperature(int referenceTemperature)
+   {
+       io_write(REFERENCE_REGISTER, referenceTemperature);
+   }
+</b>   
+   <b>int GetTemperature() const</b>
+   {
+      return (io_read(TEMP_MONITORING_REGISTER));
+   }
+
+<b>   void AdjustTemperature(int temperature);
+   {
+     // Adjust temperature has no role in brand C, as temperature
+     // control is automatic
+   }  </b>
+    
+};</code></font></pre></td>
+  </tr>
+</table>
+<h2><a name="Problems (Violates Liskov Substitution Principle)">Problems (Violates Liskov Substitution Principle)</a></h2>
+<p>The problems with the above design are:</p>
+<ul>
+  <li>It is a band-aid solution to the problem. A more natural solution would be
+    to define a base class for Automatic Temperature Sensors.</li>
+  <li>It violates the Liskov Substitution Principle. We can no longer substitute
+    one class from the class hierarchy with another.</li>
+</ul>
+<p>One can easily see the following violations of the Liskov Substitution 
+Principle. Consider the code below that is operating with a pointer to the 
+  Temperature Controller. The code first sets the reference temperature and then 
+intializes the controller. This code would work fine if pTempCtrl was pointing 
+to a Brand A or B temperature controller. The code breaks when the pointer is 
+Brand C. This happens because of the override of SetReferenceTemperature now 
+accesses the device using a io_write call. But the code actually calls 
+initialize only in the following statement. Thus all temperature controllers are 
+not perfectly substitutable. The SetReferenceTemperature method for Brand A and 
+B does not access the device. The same method for Brand C accesses the device.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><font color="#000080"><b>
+    SetReferenceTemperature violates Liskov Substitution Principle</b></font></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>
+. . .
+TemperatureController *pTempCtrl = GeNextTempController();
+pTempCtrl->SetReferenceTemperature(10);
+pTempCtrl->Initialize();
+
+. . .</code></font></pre></td>
+  </tr>
+</table>&nbsp;<p>Code calling Adjust Temperature may break too. If the original code was 
+being used to set the temperature to any thing other than the reference 
+temperature, it will not have the desired effect with Brand C. This method has 
+been overriden for Brand C to perform no action.</p>
+<p>If Liskov Substitution Principle is followed, code using a base class pointer 
+will never break after another class is added to the inheritance tree. </p>
+<table border="0" width="553" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="422" align="left" bgcolor="#E0E0E0">&nbsp;<font color="#000080"><b>Related
+      Links</b></font></td>
+  </tr>
+  <tr>
+    <td width="422" align="left" valign="top" bgcolor="#F0F0F0">
+    <ul>
+      <li><a href="object_design_tips.htm">Object Oriented Tips I</a></li>
+      <li><a href="object_design_tips_2.htm">Object Oriented Tips II</a></li>
+      <li><a href="open_closed_principle.htm">Open Closed Principle</a></li>
+    </ul>
+    </td>
+</table>
+<p>&nbsp;</p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table7" background="../../EventStudio/images/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bgcolor="#E0E0E0" bordercolor="#808080" align="left" width="1270" nowrap>
+			<font color="#000080" face="Arial" size="2"><b>&nbsp; </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b><font color="#666666">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-padding-alt: 0in 5.4pt 0in 5.4pt; margin-left: -3.85pt" width="100%">
+	<thead>
+		<tr>
+			<td width="100%" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in" background="../../EventStudio/images/hg.gif">
+			<small><font color="#666666">Copyright © 2000-2007 EventHelix.com 
+			Inc. All Rights Reserved.</font></small></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>

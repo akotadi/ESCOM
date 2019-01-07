@@ -1,0 +1,17 @@
+Cypress Package: palc22v10d-15pc  PinOut File: Buena.pin
+
+This file was created on 10/02/2017 at 11:16:57 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+e in <> Enabled Normal 1 <> [Auto] 
+d in <> Enabled Normal 2 <> [Auto] 
+c in <> Enabled Normal 3 <> [Auto] 
+b in <> Enabled Normal 4 <> [Auto] 
+a in <> Enabled Normal 5 <> [Auto] 
+cor out <> Enabled Normal 14 <> [Auto] 
+cnand out <> Enabled Normal 15 <> [Auto] 
+cxor out <> Enabled Normal 18 <> [Auto] 
+cxnor out <> Enabled Normal 19 <> [Auto] 
+cand out <> Enabled Normal 22 <> [Auto] 
+cnor out <> Enabled Normal 23 <> [Auto] 

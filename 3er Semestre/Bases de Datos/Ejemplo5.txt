@@ -1,0 +1,151 @@
+Generación de vistas: elemento virtual, no puedo hacer nada con ella, sólo muestra.
+
+1.- Cargar elektra.tt
+
+	create database elektra;
+	use elektra;
+	source ...
+
+2.- Creación de las siguientes vistas...
+
+	a) Nombre de la sucursal y el estado donde se ubica.
+
+		create view v1 as
+		Select nombre as SUCURSAL, estado as ESTADO
+		from tienda
+		order by 2;
+
+	b) Nombre del producto y su categoría.
+
+		create view v2 as
+		Select p.nombre as PRODUCTO, c.nombre as CATEGORIA
+		from producto p, subcategoria s, categoria c
+		where p.idsubcategoria=s.idsubcategoria
+		and s.idcategoria=c.idcategoria
+		order by 2, 1;
+
+	c) Nombre de la categoría y su subcategoría.
+
+		create view v3 as
+		Select  c.nombre as CATEGORIA, s.nombre as SUBCATEGORIA
+		from categoria c, subcategoria s
+		where c.idcategoria=s.idcategoria
+		order by 1, 2;
+
+	d) Nombre completo del cliente y la sucursal donde fue dado de alta.
+
+		create view v4 as
+		Select c.nombre as NOMBRE, c.apPaterno, c.apMaterno, t.nombre as SUCURSAL
+		from cliente c, pago p, tienda t
+		where c.idcliente=p.idcliente
+		and p.idtienda=t.idtienda
+		order by 4, 2;
+
+	e) Nombre del producto y su subcategoría.
+
+		create view v5 as
+		Select p.nombre as PRODUCTO, s.nombre as SUBCATEGORIA
+		from producto p, subcategoria s
+		where p.idsubcategoria=s.idsubcategoria
+		order by 2, 1;
+
+	f) Nombre del cliente y su monto de crédito.
+
+		create view v6 as
+		Select c.nombre as NOMBRE, c.appaterno, c.apmaterno, cr.monto as CREDITO
+		from cliente c, pago p, credito cr
+		where c.idcliente=p.idcliente
+		and p.idcredito=cr.idcredito
+		order by 2, 3;
+
+	g) Nombre del cliente y fechas de pago
+
+		create view v7 as
+		Select c.nombre as NOMBRE, c.appaterno, c.apmaterno, p.fechapago as FECHA
+		from cliente c, pago p
+		where c.idcliente=p.idcliente
+		order by 2, 3;
+
+	h) Nombre del producto y precio unitario.
+
+		create view v8 as
+		Select nombre as PRODUCTO, precioUnitario as PRECIO
+		from producto
+		order by 1;
+
+	i) Nombre del producto y su marca.
+
+		create view v9 as
+		Select nombre as PRODUCTO, marca as MARCA
+		from producto
+		order by 1;
+
+	j) Nombre del cliente, email y su género.
+
+		create view v10 as
+		Select nombre, appaterno, apmaterno, email, sexo
+		from cliente
+		order by 2, 3;
+
+	k) Nombre del cliente y su salario.
+
+		create view v11 as
+		Select nombre, appaterno, apmaterno, salario
+		from cliente
+		order by 2, 3;
+
+3.- Resolver las siguientes consultas empleando las vistas generadas anteriormente
+
+	a) Clientes existentes en las sucursales en el estado de Colima.
+
+		Select v4.*, v1.estado
+		from v4, v1
+		where v4.sucursal=v1.sucursal
+		and v1.estado like "Colima%"
+		order by v1.sucursal;
+
+	b) Sucursales donde hay mujeres.
+
+		Select v4.*, v10.sexo
+		from v10, v4
+		where v4.nombre=v10.nombre
+		and v4.appaterno=v10.appaterno
+		and v4.apmaterno=v10.apmaterno
+		and v10.sexo like "%F%"
+		order by v4.appaterno, v4.apmaterno;
+
+	c) Clientes que ganan entre $6,000 a $6,500, incluir sus sucursales.
+
+		Select v11.*, v4.sucursal
+		from v11, v4
+		where v11.nombre=v4.nombre
+		and v11.appaterno=v4.appaterno
+		and v11.apmaterno=v4.apmaterno
+		and v11.salario between "6000" and "6500"
+		order by v11.salario, v11.appaterno;
+
+	d) Productos pertenecientes a la categoría DEPORTE.
+
+		Select *
+		from v2
+		where categoria like "%deporte%"
+		order by producto;
+
+	e) Clientes que realizaron pagos el día 12 marzo 2010, incluir sucursal.
+
+		Select v7.*, v4.sucursal
+		from v7, v4
+		where v7.nombre=v4.nombre
+		and v7.appaterno=v4.appaterno
+		and v7.apmaterno=v4.apmaterno
+		and v7.fecha="2010-03-12"
+		order by v7.appaterno, v7.apmaterno;
+
+
+-----------------------------------------
+
+drop view __________; // nombre vista
+show tables; // nombre vista
+desc ________________; // metadato vista
+create view _____________ as sentencia SQL;
+Select * from _____________;

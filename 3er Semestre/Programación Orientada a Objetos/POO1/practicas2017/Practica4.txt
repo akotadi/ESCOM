@@ -1,0 +1,19 @@
+POO
+
+Practica 4 Hilos
+
+1.-Tamagochi (Java3D, carpeta estatiProgBarSinRed)
+Crear una interfaz grafica (usando Swing) con 3 etiquetas (hambre, sueño, aburrimiento), 3 barras de progreso y 3 botones (comer, dormir, jugar).
+Cada cierto tiempo debe ir llenando las 3 barras de progreso (usar un hilo).
+Si cualquiera de las tres barras de progreso se llena cambiar la textura (a la que corresponde a un tamagochi muerto) e imprimir un mensaje con el texto el tamagochi a muerto.
+Cada que se presiona uno de los botones diminuir la barra de progreso correspondiente.
+
+2.-Descenso del nivel de agua en un tanque ( carpeta valvula)
+El programa Simula.java de esta carpeta simula (usando un hilo) un tanque de agua, una valvula y una tuberia. Cuando la valvula esta abierta la tuberia se llena (el color de la tuberia es azul cuando esta llena). Lea el codigo en los archivos de la carpeta para determinar cual hay que modificar para que el nivel del tanque de agua vaya descendiendo cada cierto tiempo hasta quedar vacio. Ademas modifique el codigo para que una vez que se vacia el tanque de agua  tambien quede vacia la tuberia (el color de la tuberia es blanco cuando esta vacia).
+
+3.-Pegale al topo (continuacion)
+Si hizo el tablero de pegale al topo en una practica anterior agregue un hilo para sustituir el tablero actual por un tablero con una nueva distribucion aletoria de topos.
+
+4.-Marco Digital ( carpeta MarcoDigital)
+Si hizo el album de fotos digital en una practica anterior (no es indispensable que lo haya hecho en una practica previa) use un hilo para que el el album de fotos digital tenga un modo de diapositivas en dicho modo la imagen actual se sustituye por la siguiente (de forma circular) despues de cierto tiempo. Poner una ComboBox que permita elegir el lapso de tiempo entre imagenes.
+

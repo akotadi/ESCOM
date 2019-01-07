@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include "TADArbolBin.c"
+
+
+
+int main (void)
+{
+	char c[500];
+	printf("\nIntroduce el texto a codificar: ");
+	scanf("%s",&c);
+	printf("%s\n",c);
+	return 0;
+}

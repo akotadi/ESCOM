@@ -1,0 +1,94 @@
+
+
+INSERT INTO usuario (password, curp, tipo, email, nombre, apPaterno, apMaterno) VALUES("1234","EAMH950509MMCZPS45","A","edith23@hotmail.com","EDITH","MARTINEZ","HERNANDEZ"),
+("fotrn78","HEHH860513HMCZPS34","C","edmundo12@hotmail.com","EDMUNDO","HERNANDEZ","HERNANDEZ"),
+("ele98","HEGH910712MMCZPS32","C","ele34@hotmail.com","ELENA","GARCIA","HERNANDEZ"),
+("true67-","LOLF951124HGRTDF67","C","benito99@hotmail.com","BENITO","LOPEZ","FERNANDEZ"),
+("webls90","RURD850826MRFTDC78","C","belinda45@hotmail.com","BELINDA","RUIZ","DIAZ"),
+("12345","RARR910123HCFDRS45","E","bruno90@hotmail.com","BRUNO","RAMOS","ROMERO"),
+("rarnd89","RARB920725MFCDRT56","E","cecilia67@hotmail.com","CECILIA","RAMOS","BLANCO"),
+("ppry56","PEPP830813HMDCGV89","E","cesar19@hotmail.com","CESAR","PEREZ","PEREZ"),
+("rarc56","RARC920518HDFCRF89","E","felipe43@hotmail.com","FELIPE","RAMIREZ","CASTRO"),
+("cacn35","CACN880424HDRFCD75","E","pancho89@hotmail.com","FRANCISCO","CASTILLO","NUÑEZ"),
+("mabe12.","RURL900615MGFCDR47","E","mabel17@hotmail.com","MABEL","RUIZ","LOZANO");
+
+INSERT INTO estudiante (boleta, totalHora, idUsuario) VALUES("2014081397",0,6),
+("2018453265",10,7),
+("2015748394",0,8),
+("2012345678",12,9),
+("2013456756",29,10),
+("2018453423",3,11);
+
+INSERT INTO coordinador (tipo, idUsuario) VALUES("E",2),
+("E",3),
+("P",4),
+("P",5);
+
+INSERT INTO administrador (RFC, idUsuario) VALUES("RURL900615MG",1);
+
+insert into ejetematico values (1, 'Complementarias a la profesión - Trabajo de campo supervisado - Club de arte', 0.02);
+insert into ejetematico values (2, 'Énfasis a la profesión - Independientes - Simuladores', 0.05);
+insert into ejetematico values (3, 'Énfasis a la profesión - Independientes - Concursos', 0.05);
+insert into ejetematico values (4, 'Complementarias a la profesión - Docencia - Taller de algún área artística o cultural', 0.0625);
+insert into ejetematico values (5, 'Complementarias a la profesión - Trabajo de campo supervisado - Taller de una disciplina deportiva', 0.02);
+insert into ejetematico values (6, 'Inquietudes vocacionales propias - Independientes - Emprendedores', 0.05);
+
+INSERT INTO constancia (idConstancia, descripcion, cantidadHora, pathPDF, idEje) VALUES(1,"Taller Baile",3,"",4),
+(2,"Taller Pintura",5,"",4),
+(3,"Curso Italiano",8,"",6),
+(4,"Concurso Programacion",1,"",3),
+(5,"Concurso Sistemas Digitales",2,"",3),
+(6,"Club Baile",1,"",1),
+(7,"Club Canto",4,"",1);
+
+INSERT INTO citacotejo (idCitaCotejo, fecha, Estudiante_idUsuario, Administrador_idUsuario, idConstancia, idEje) VALUES(1,'2018-08-12',6,1,2,4),
+(2,'2018-08-12',8,1,7,1),
+(3,'2018-08-12',8,1,3,6);
+
+insert into club values (1, 'Escorum', 'Grupo de canto de la ESCOM', 'R', 1);
+insert into club values (2, 'Baile', 'Grupo de baile de la ESCOM', 'R', 1);
+insert into club values (3, 'Ajedrez', 'Grupo de practica de ajedrez de la ESCOM', 'R', 1);
+insert into club values (4, 'Club de videojuegos', 'Grupo de desarrollo de videojuegos de la ESCOM', 'R', 2);
+insert into club values (5, 'Club de matemáticas', 'Club de enseñanza y mejora de habilidades matemáticas de la ESCOM', 'R', 2);
+insert into club values (6, 'Club de algoritmia', 'Club de enseñanza y mejora de habilidades referentes a algoritmos de la ESCOM', 'R', 2);
+insert into club values (7, 'Teatro', 'Grupo de teatro de la ESCOM', 'R', 4);
+insert into club values (8, 'Danza contemporánea', 'Grupo de enseñanza de pasos de baile de danza contemporanea de la ESCOM', 'R', 4);
+insert into club values (9, 'Football', 'Club de football de la ESCOM', 'R', 5);
+insert into club values (10, 'Basket ball', 'Club de basketball de la ESCOM', 'R', 5);
+insert into club values (11, 'Karate Do', 'Grupo de karate de la ESCOM', 'R', 5);
+insert into club values (12, 'PoliEmprende', 'Grupo de incubación de empresas del IPN', 'R', 6);
+
+insert into registrado values (20, 1, 1);
+insert into registrado values (30, 2, 1);
+insert into registrado values (40, 4, 2);
+insert into registrado values (80, 6, 2);
+insert into registrado values (20, 8, 4);
+insert into registrado values (20, 9, 5);
+insert into registrado values (20, 7, 4);
+insert into registrado values (10, 11, 5);
+insert into registrado values (20, 12, 6);
+
+insert into candidato values (15, 3, 1);
+insert into candidato values (20, 5, 2);
+insert into candidato values (20, 10, 5);
+
+insert into noticia values (1, 'Bailando en la Biblioteca', 'Estudiantes de la #Escom sorprendieron a la #ComunidadPolitécnica al bailar en el vestíbulo de la Biblioteca Nacional para dar apertura a las celebraciones por el 20 aniversario del recinto.', 8, 4);
+insert into noticia values (2, 'Juego de Estrategia', 'Les pedimos su valiosa cooperación para probar un videojuego que se desarrolló como TT (”Selección de estrategias para la coordinación de unidades
+enemigas en un videojuego"), así como contestar una pequeña encuesta de satisfacción. Descarga el videojuego (windows) https://tinyurl.com/yapsrtft Encuesta https://tinyurl.com/yccjybsg', 4, 2);
+insert into noticia values (3, 'Día Microsoft', 'Te invitamos a participar en el "Día Microsoft" que se realizará el día 5 de junio de 2108 en las instalaciones de la ESFM. Regístrate enviando mensaje a esfmdiam@outlook.com con copia a uteycv.escom@gmail.com incluye nombre, boleta, taller de interés, semestre, carrera y escuela.', 6, 2);
+insert into noticia values (4, 'Verano de Entrenamiento en Programación', 'Esperamos su participación en nuestro tercer Verano de Entrenamiento en Programación Competitiva abierto a nivel medio y superior. Consulta la convocatoria en http://escom-ipn.hosting.acm.org/blog/3er-verano/', 6, 2);
+insert into noticia values (5, 'X Concurso Anual de Programación', 'La esperada convocatoria ha llegado. Participa este 8 de Junio en una competencia que retará tu talento con problemas inéditos. En esta edición aquellos competidores que no les sea posible trasladarse a nuestras instalaciones, podrán participar de forma virtual. No esperes más y regístrate para formar parte de este evento que reunirá a los grandes talentos mexicanos de la programación competitiva. Consulta las bases en http://escom-ipn.hosting.acm.org/', 6, 2);
+
+insert into evento values (1, 'X Concurso Anual de Programación', 'Décima edición anual del Concurso de Programación "Donald Knuth"más emblemático de la Escuela Superior de Cómputo del Instituto Politécnico Nacional.', '08-06-18', '08:30', 'Laboratorios de Programación - ESCOM', 6, 2);
+insert into evento values (2, 'Bailando en la Biblioteca', 'Actividad de baile organizada por el club de baile', '11-06-18', '15:30', 'Biblioteca Central Zacatenco - IPN', 8, 4);
+insert into evento values (3, 'Partido', 'Partido de footbal ESCOM vs UPIICSA', '15-06-18', '15:00', 'Campo de fútbol - ESCOM', 9, 5);
+
+insert into actividad values (1, 'Expo ESCOM', 'Feria de ciencias en su edición XXIII de la Expo-Escom.', '01-06-18', '08:00', 'ESCOM - IPN', 12, 6);
+insert into actividad values (2, 'Hansel y Greatel', 'Presentación de la obra de teatro Hansel y Greatel.', '04-06-18', '12:00', 'ESCOM - IPN', 7, 4);
+insert into actividad values (3, 'Presentación de actividades', 'El club se enorgullece en hacer una demostración de lo aprendido a lo largo del semestre.', '12-06-18', '10:00', 'ESCOM - IPN', 11, 5);
+
+insert into Estudiante_has_Actividad values (6, 1), (7, 1), (8, 2), (9, 3);
+
+insert into Coordinador_has_Club values (2, 1), (3, 2), (4, 3), (5, 4), (2, 5), (3, 6), (4, 7), (5, 8), (2, 9), (3, 10), (4, 11), (5, 12);
+
+insert into Registrado_has_Estudiante values (1, 1, 6, 10), (1, 1, 9, 10), (1, 1, 11, 10), (2, 1, 7, 10), (2, 1, 8, 10), (2, 1, 9, 10), (4, 2, 6, 10), (4, 2, 8, 10), (4, 2, 10, 10), (6, 2, 7, 10), (6, 2, 10, 10), (6, 2, 11, 10), (8, 4, 6, 10), (8, 4, 8, 10), (8, 4, 9, 10), (9, 5, 6, 10), (9, 5, 10, 10), (9, 5, 11, 10), (7, 4, 7, 10), (7, 4, 8, 10), (7, 4, 9, 10), (11, 5, 7, 10), (11, 5, 9, 10), (11, 5, 10, 10), (12, 6, 11, 10), (12, 6, 7, 10), (12, 6, 6, 10);

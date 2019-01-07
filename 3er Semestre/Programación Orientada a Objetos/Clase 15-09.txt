@@ -1,0 +1,41 @@
+Hilos
+
+	Cuerpo de un hilo
+		Es su núcleo: el contenido que está dentro dell método run()
+
+	Estado
+		Indica lo que el hilo está hacienod y lo que puede hacer
+
+	Prioridad
+		Los niveles de prioridad se asignan entre 1 y 10
+
+
+	Thread hilo;
+	String strig;
+	int count;
+	int sleepTime;
+
+public Printer(String s, int howMany, int sleep){
+	count = howMany;
+	String = s;
+	sleepTime = sleep;
+	hilo = new Thread(this);
+	hilo.start();
+}
+
+public void run(){
+	while(count --> 0){
+		System.out.println(string);
+		try{
+			Thread.sleep(sleepTime);
+		}
+		catch(Exception e){
+			return;
+		}
+	}
+}
+
+public Static void main(String s[]){
+	new Printer("Ping",5,300);
+	new Printer("Pong",5,300)
+}

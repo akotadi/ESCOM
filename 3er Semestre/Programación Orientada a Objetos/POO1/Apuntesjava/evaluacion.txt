@@ -1,0 +1,28 @@
+Evaluacion P.O.O.
+
+1er y 2o departamental
+50% examenes
+40% practicas
+10% tareas
+
+3er departamental
+30% examenes
+60% proyecto equipo (maximo 4 personas)
+10% tareas
+
+
+tareas y reportes de practicas (individuales para entregar impresos)
+Portada 
+  nombre
+  tema
+  numero
+  fecha
+  grupo
+  materia
+
+
+Bibliografia
+Pensando en Java
+Bruce Eckel
+Prentice Hall
+

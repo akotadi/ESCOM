@@ -1,0 +1,47 @@
+<head>
+<title>Boards Us</title>
+<script language="javascript" type="text/javascript">
+var request = null;
+function createRequest() {
+	try {
+		request = new XMLHttpRequest();
+	} catch (trymicrosoft) {
+	}
+}
+function getBoardsSold() {
+        var url="/servlet/Triangulo?renglones=9";
+	createRequest();  
+        request.open("GET", url, true);
+        request.onreadystatechange = updatePage;
+        request.send(null);
+
+}
+function updatePage() {
+var newTotal = request.responseText;
+if(request.readyState == 4 && request.status == 200) {
+	var body = document.getElementsByTagName('body');
+	// remove, if exists
+	if (document.getElementById('recipe')) {
+		body[0].removeChild(document.getElementById('recipe'));
+	}
+	var recipe = document.createElement('div');
+	recipe.id = 'recipe';
+	recipe.className = 'recipe';
+	recipe.innerHTML = request.responseText;
+	body[0].appendChild(recipe);
+}
+}
+</script>
+</head>
+<body>
+<h1>Prueba</h1>
+<div id="boards">
+<form method="GET" action="/servlets/servlet/Hello">
+<input type="button" value="Presiona"  onClick="javascript:getBoardsSold();">
+</form>
+</div>
+</body>
+
+
+
+

@@ -1,0 +1,87 @@
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#mouse-div {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background:red;
+}
+
+#intro {
+	background: url("../img/panorama.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+#intro .h6 {
+	font-weight: 300;
+	line-height: 1.7;
+}
+
+.hm-gradient .full-bg-img {
+	background: rgba(113, 28, 69, 0.7);
+	background: linear-gradient(45deg, rgba(138, 70, 103, 0.7), rgba(113, 28, 69, 0.7) 100%);
+	height: 100%;
+}
+
+.top-nav-collapse {
+	background-color: #711c45 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+	background: transparent !important;
+}
+
+@media (max-width: 768px) {
+	.navbar:not(.top-nav-collapse) {
+		background: #711c45 !important;
+	}
+}
+
+@media (max-width: 450px) {
+	.margins {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+}
+
+.wine-text,.hover-wine-text:hover{
+	color:#8a4667!important
+}
+
+.wine,.hover-wine:hover{
+	color:#fff!important;
+	background-color:#711c45!important
+}
+
+.active-wine-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #8a4667;
+    box-shadow: 0 1px 0 0 #8a4667;
+}
+.active-wine input[type=text] {
+    border-bottom: 1px solid #8a4667;
+    box-shadow: 0 1px 0 0 #8a4667;
+}
+
+.active-wine-textarea.md-form label.active {
+    color: #711c45;
+}
+.wine-textarea textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #711c45;
+    box-shadow: 0 1px 0 0 #711c45;
+}
+.wine-textarea.md-form .prefix.active {
+    color: #711c45;
+}
+
+#output{
+	width: 700px; 
+	height: 200px;
+}

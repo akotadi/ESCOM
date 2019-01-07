@@ -1,0 +1,27 @@
+\subsection{IU23 Pantalla de Control de Acceso}
+
+\subsubsection{Objetivo}
+	Controlar el acceso al sistema mediante una contraseña a fin de que cada usuario acceda solo a las operaciones permitidas para su perfil.
+
+\subsubsection{Diseño}
+	Esta pantalla aparece al iniciar el sistema. Para ingresar al mismo se debe escribir el Número de Boleta del estudiante y la contraseña de acceso. 
+
+\IUfig[.5]{gui/Login}{IU23}{Pantalla de Control de Acceso.}
+
+\subsubsection{Salidas}
+
+	Ninguna.
+
+\subsubsection{Entradas}
+Número de Boleta y Contraseña del Estudiante.
+
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Entrar}: Verifica que el Estudiante se encuentre registrado y la contraseña sea la correcta. Si la verificación es correcta, se muestra la \IUref{UI32}{Pantalla de Selección de Seminario}.
+	\item \IUbutton{Ayuda}: Muestra la ayuda de esta pantalla \IUref{UI50}{Pantalla de Ayuda}.
+\end{itemize}
+
+\subsubsection{Mensajes}
+	\begin{Citemize}
+		\item {\bf MSG5} Error al verificar los datos de acceso, vuelva a intentarlo.
+	\end{Citemize}

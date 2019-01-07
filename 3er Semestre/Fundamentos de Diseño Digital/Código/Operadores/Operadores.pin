@@ -1,0 +1,20 @@
+Cypress Package: palc22v10d-25pc  PinOut File: Operadores.pin
+
+This file was created on 10/09/2017 at 09:20:47 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+ams in <> Enabled Normal 1 <> [User] 
+bms in <> Enabled Normal 2 <> [User] 
+cinsc in <> Enabled Normal 3 <> [User] 
+amr in <> Enabled Normal 4 <> [User] 
+bmr in <> Enabled Normal 5 <> [User] 
+pirc in <> Enabled Normal 6 <> [User] 
+sms out <> Enabled Normal 14 <> [User] 
+cms out <> Enabled Normal 15 <> [User] 
+cosc out <> Enabled Normal 16 <> [User] 
+ssc out <> Enabled Normal 17 <> [User] 
+rmr out <> Enabled Normal 18 <> [User] 
+pmr out <> Enabled Normal 19 <> [User] 
+porc out <> Enabled Normal 20 <> [User] 
+rrc out <> Enabled Normal 21 <> [User] 

@@ -1,0 +1,185 @@
+1.- Cargar home.sql
+
+	create database home;
+	use home;
+	source ...
+
+2.- Resolver las siguientes consultas
+
+	a) Mostrar el nombre del asociado y la sucursal donde está asignado
+
+		// operación x reunión, usando relación que los une por medio del atributo de reunión	
+		Select a.nombre, h.nombre // alias
+		from asociado a, homedepot h  	
+		where a.homedepot_idHD=h.idhd // atributo de reunión
+		// condiciones de selección con and
+		order by 2,1; // ordena primero por nombre, luego por ciudad
+
+	b) Mostrar el nombre de los clubes existentes en el estado ... DF (CDMX)
+
+		Select nombre 
+		from homedepot
+		where estado="DF"
+		order by 1; // nombre
+
+		Select nombre 
+		from homedepot
+		where estado like "Nuev%" // comodín, no importa después del %, white card
+		order by 1; // nombre
+
+		Select nombre 
+		from homedepot
+		where estado like "Tamau%"
+		order by 1;
+
+	c) Mostrar el nombre del socio y la tarjeta asignada
+
+		Select s.nombre, t.nombre
+		from socio s, tarjeta t
+		where s.idsocio=t.socio_idsocio
+		order by 2,1;
+
+		Select s.nombre, t.nombre
+		from socio s, tarjeta t
+		where s.idsocio=t.socio_idsocio
+		and (s.nombre like "Calv%"
+		or s.nombre like "% Calv%") // usar or entre paréntesis para ahorrar trabajo al sistema
+		order by 2,1;
+
+	d) Mostrar el nombre de los departamentos de una sucursal ... Coacalco
+
+		// Consulta de más de dos relaciones, relaciones-1 = numero de selecciones
+		Select h.nombre, d.nombre
+		from homedepot h, depto d, hddepto x
+		where h.idhd=x.homedepot_idhd
+		and x.depto_iddepto=d.iddepto
+		and h.nombre like “Coacalco%"
+		order by 1;
+
+
+	e) Mostrar el crédito que tienen los socios que se apellidan como Garcia...
+
+		Select nombre, credito
+		from socio
+		where (nombre like "Garc%"
+		or nombre like "% Garc%")
+		order by 2;
+
+	f) Cuántos socios tienen la tarjeta DECORE
+
+		Select COUNT(*)
+		from socio s, tarjeta t
+		where s.idsocio=t.socio_idsocio
+		and t.nombre like "DECOR%";
+
+	g) Cómo se llaman los socios de la consulta anterior
+
+		Select s.nombre, t.nombre
+		from socio s, tarjeta t
+		where s.idsocio=t.socio_idsocio
+		and t.nombre like "DECOR%";		
+
+	h) Cuántos asociados tienen como apellido paterno Pérez
+
+		Select count(*)
+		from asociado 
+		where nombre like "Pere%"
+		order by nombre;
+
+	i) Cómo se llama los asociados de la consulta anterior
+
+		Select nombre
+		from asociado 
+		where nombre like "Pere%"
+		order by nombre;
+
+	j) Proyectar las sucursales donde están asignados los asociados
+
+		// proyeccion tiene dos caracteristicas importantes (ordena la salida / elimina los duplicados)
+		Select homedepot_idhd
+		from asociado;
+
+		//falta proyección
+
+		// 1a forma - lee todo, discrimina y ordena; son dos operaciones
+		Select DISTINCT homedepot_idhd
+		from asociado 
+		order by 1;
+
+		// 2a forma - accede directamente el index ¡¡más rápido!!
+		select homedepot_idhd 
+		from asociado 
+		group by homedepot_idhd;
+
+3.- Mostrar el nombre de las sucursales y sus asociados, de aquellas ubicadas en las siguientes cp 78045, 89360, 25279
+
+	Select h.nombre, a.nombre
+	from homedepot h, asociado a
+	where h.idhd=a.homedepot_idhd
+	and (h.direccion like "%78045%"
+	or h.direccion like "%89360%"
+	or h.direccion like "%25279%")
+	order by 1,2;
+
+4.- Como se llaman los asociados que tiene la sucursal Metepec
+
+	Select a.nombre
+	from asociado a, homedepot h 
+	where a.homedepot_idhd=h.idhd
+	and h.nombre like "Metep%"
+	order by 1;
+
+	Select a.nombre
+	from asociado a, homedepot h 
+	where a.homedepot_idhd=h.idhd
+	and h.nombre like "Tiju%"
+	order by 1;
+
+	Select a.nombre
+	from asociado a, homedepot h 
+	where a.homedepot_idhd=h.idhd
+	and h.nombre like "Tor%"
+	order by 1;
+
+5.- Qué teléfono tienen los socios que tienen la tarjeta Pagos fijos y mostrar la sucursal donde se encuentran dados de alta
+
+	// 4 relaciones, 3 atributos de reunión - a pesar de ser sólo dos campos
+	Select s.nombre, s.tel
+	from socio s, tarjeta t, hdsocio x, homedepot h // importa el orden, revisar
+	where s.idsocio=t.socio_idsocio // seguir camino en las relaciones, si no lo seguimos, se produce un producto cartesiano... no acaba
+	and s.idsocio=x.socio_idsocio
+	and x.homedepot_idhd=h.idhd
+	and t.nombre like "Pag% fij%"
+	order by 1;
+
+6.- Mostrar los departamentos que tiene la sucursal tijuana
+
+	Select h.nombre as "Tienda", d.nombre as "Departamento"
+	from homedepot h, depto d, hddepto x
+	where h.idhd=x.homedepot_idhd
+	and x.depto_iddepto=d.iddepto
+	and h.nombre like "Tiju%"
+	order by 2 desc;
+
+7.- Como se llaman las sucursales que tienen el depto de pisos
+
+	Select h.nombre as "Tienda", h.estado
+	from homedepot h, depto d, hddepto x
+	where h.idhd=x.homedepot_idhd
+	and x.depto_iddepto=d.iddepto
+	and d.nombre like "Pis%"
+	order by 1;
+
+	Select h.nombre as "Tienda", h.estado
+	from homedepot h, depto d, hddepto x
+	where h.idhd=x.homedepot_idhd
+	and x.depto_iddepto=d.iddepto
+	and d.nombre like "Tech%"
+	order by 1;
+
+		
+
+
+
+
+ctrl+c(\c) + delimiter ; // salir de la iteración en cadena

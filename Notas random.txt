@@ -1,0 +1,25 @@
+Principios subyacentes en el diseño de los lenguajes de progranación:
+
+	- Sintaxis
+	- Sistemas de tipos y semántica
+	- Gestión de memoria
+	- Manipulación de excepciones
+
+Paradigmas de aplicación
+
+	- Programación imperativa
+	- Programación orientada a objeto
+	- Programación funcional
+	- Programación lógica (declarativa)
+	- Programación guiada por eventos
+	- Programación concurrente
+
+Paradigmas de programación
+
+	- Computación científica
+	- Sistemas de gestión de información
+	- Inteligencia artificial
+	- Sistemas
+	- Centrada en la web
+
+Algoritmo de Booth

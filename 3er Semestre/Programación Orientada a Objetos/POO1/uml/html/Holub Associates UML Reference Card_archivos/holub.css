@@ -1,0 +1,109 @@
+body {
+	font: 10pt verdana, arial, helvetica, san-serif;
+	background: white;
+}
+
+.googleLinkPanel {
+	margin-left: .5in;
+	padding-left: .1in;
+	width: 600px;
+	border: 1px solid #cc0000;
+}
+
+
+/* Logo text in the page header, note that the background color is also
+ * used by the menus defined in menudata.js
+ */
+
+td.logo {
+	background: #cc0000;
+	font-weight: bold;
+	font-size: 20pt;
+	font-family: verdana, arial, helvetica, san-serif;
+	color: white;
+	text-align: center;
+	vertical-align: top;
+	top-margin: 0;
+}
+td.quotepane {
+	color:  #600000;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: verdana, arial, helvetica, san-serif;
+	background: #fff0c0;
+	border-left: white solid 1px;
+	border-right: white solid 1px;
+}
+td.menu		 { /*border: #600000 solid 1px;*/ }
+td.leftofmenu{ /*border: #cc0000 solid 1px;*/ } 
+td.undermenu { /*border: #cc0000 solid 1px;*/ } 
+
+/* quote-of-the-day styles */
+p.shortquote{ margin-bottom: 0; font-size: 10pt; margin-left: 0.25in; margin-right: 0.25in; }
+p.longquote { margin-bottom: 0; font-size: 8pt ; margin-left: 0.25in; margin-right: 0.25in; }
+p.quoteby 	{ margin-top:0; font-size: 6pt; text-align: right; margin-right: 0.25in; font-style: italic; }
+
+
+/* Styles used in the footer */
+
+table.footer { width=100% }
+td.copyright { text-align: right; font-size: 8pt; color: #990000 }
+
+td.footer{
+	font: 9pt verdana,arial,helvetica,san-serif;
+	text-align: center;
+	color: #990000;
+	border: 1px solid #990000;
+	padding: 2pt;
+}
+
+a.footer{
+	font: 9pt verdana,arial,helvetica,san-serif;
+	text-align: center;
+	color: #990000;
+	padding: 2pt
+}
+
+a.footer:link, a.footer:active, a.footer:visited{ color: #990000; text-decoration: none;}
+a.footer:hover { color: white;  background: #990000}
+
+a:active, a:visited	{color: #909090; font-weight: bold; text-decoration: underline}
+a:hover, a:link		{color: #990000; font-weight: bold; text-decoration: underline}
+
+/*---------------------------------
+ * Styles for the menu bar
+ */
+
+.lowText 	{ text-decoration: none; color: #000000; font: bold 11px verdana, arial, helvetica, san-serif }
+.highText 	{ text-decoration: none; color: #ffffff; font: bold 11px verdana, arial, helvetica, san-serif }
+.itemBorder,
+.itemBorderBlank { border: 1px solid #cc0000 }
+
+div.m{ text-indent: 4 }	/* menu line item, ignored by Navigator */
+
+/*----------------------------------
+ Most page content bracked by: */
+div.content	{ margin-left: 1in; margin-right: .1in; margin-top: .5in; margin-bottom: .5in }
+
+/* Code size is one point larger than normal text so that it doesn't look smaller */
+code { font-size: 11pt }
+
+h1 { text-indent: -0.5in; font: 16pt }
+h2 { text-indent: -0.5in; font: 14pt }
+h3 { text-indent: -0.5in; font: 12pt }
+h4 { text-indent: -0.5in; font: 10pt italic }
+
+/* Paragraphs in the same font style as header, but no leading space */
+
+p.h1 { text-indent: -0.5in; font: 16pt; padding-top: 0pt; margin-top: 0pt; }
+p.h2 { text-indent: -0.5in; font: 14pt; padding-top: 0pt; margin-top: 0pt; }
+p.h3 { text-indent: -0.5in; font: 12pt; padding-top: 0pt; margin-top: 0pt; }
+p.h4 { text-indent: -0.5in; font: 10pt; padding-top: 0pt; margin-top: 0pt; italic }
+
+p.spaced {letter-spacing: 8;}
+p.tight	 {margin-top: 3pt; margin-bottom:0pt}
+p.indent {margin-left: +.5in }
+
+img.header 		 {border: none; vertical-align: top}
+img.inlinebutton {border: none; vertical-align: top}
+img.down 		 {margin-top: 5;} /* submenu arrow */

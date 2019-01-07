@@ -1,0 +1,1328 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./MODELO%20DE%20COMPONENTES%20DE%20JAVA_archivos/filelist.xml">
+<link rel=Edit-Time-Data
+href="./MODELO%20DE%20COMPONENTES%20DE%20JAVA_archivos/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>MODELO DE COMPONENTES DE JAVA</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Roberto Tecla</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Roberto Tecla</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>138</o:TotalTime>
+  <o:LastPrinted>2001-11-21T06:40:00Z</o:LastPrinted>
+  <o:Created>2002-03-16T04:53:00Z</o:Created>
+  <o:LastSaved>2002-03-16T04:53:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>1507</o:Words>
+  <o:Characters>8592</o:Characters>
+  <o:Company>Cinvestav</o:Company>
+  <o:Lines>71</o:Lines>
+  <o:Paragraphs>17</o:Paragraphs>
+  <o:CharactersWithSpaces>10551</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	mso-bidi-font-weight:normal;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ES style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoTitle><span lang=EN-US>MODELO DE COMPONENTES DE JAVA</span></p>
+
+<h1><span lang=EN-US><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></h1>
+
+<h2 style='text-align:justify'><span lang=ES-MX>El modelo de componentes</span></h2>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los
+componentes son elementos autocontenidos que pueden ser controlados
+dinámicamente y ensamblados para formar aplicaciones. Los componentes deben
+interoperar de acuerdo a un conjunto de reglas. Deben comportarse de la forma
+esperada.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1 style='text-align:justify'><span lang=ES-MX style='mso-ansi-language:ES-MX'>JAVA
+BEANS<o:p></o:p></span></h1>
+
+<h2 style='text-align:justify'><span lang=ES-MX>Definición</span></h2>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Un Bean es un
+componente de software reutilizable que puede ser manipulado visualmente en una
+herramienta constructora.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2 style='text-align:justify'><span lang=ES-MX>Otra definición</span></h2>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los JavaBeans
+son el modelo de componentes de Java.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>El modelo de componentes de
+Java permite a los usuarios construir aplicaciones reuniendo componentes
+visualmente o mediante programación. El soporte a la programación visual es muy
+importante para el modelo de componentes; esto es lo que hace el desarrollo de
+software basado en componentes verdaderamente poderoso.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2 style='text-align:justify'><span lang=ES-MX>Descubrimiento y registro</span></h2>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Descubrimiento
+de clase y interfaz es el mecanismo usado para localizar un componente en
+tiempo de ejecución y para determinar las interfaces que soporta de modo que
+esas interfaces puedan ser usadas por otros.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>Manejo y lanzamiento de eventos<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Un evento es
+algo de importancia que pasa en un momento especifico. Los componentes enviaran
+notificaciones a otros objetos cuando tenga lugar un evento en el cual esos
+objetos hayan expresado interés (es decir se hayan registrado como
+listeners(escuchas)).</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>Persistencia<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Ya se vio anteriormente que la
+persistencia conserva el estado de un objeto en el tiempo y el espacio.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Generalmente
+todos los componentes tienen estado. Dicho estado puede ser almacenado en disco
+y recuperado de disco. Los componentes deben ser capaces de participar en el
+mecanismo de persistencia de su contenedor de forma tal que todos los
+componentes en la aplicación puedan proveer persistencia en una manera
+uniforme.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>Soporte para la programación visual<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los
+componentes son representados en cajas de herramientas. El usuario puede elegir
+un componente de la caja de herramientas y colocarlo en un contenedor,
+eligiendo su tamaño y posición. Las propiedades del componente pueden ser
+editadas para crear el comportamiento deseado. Esto se logra a través de un
+conjunto de interfaces provistas por el ambiente del componente que permiten a
+los componentes publicar o exponer sus propiedades.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>La arquitectura JavaBeans<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>Otra definición<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>JavaBeans es
+una arquitectura para usar y construir componentes en Java.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los Beans no
+necesariamente tienen una representación visual en tiempo de ejecución. Pero
+deben permitir que los valores de las propiedades sean cambiados a través de
+algún tipo de interfaz visual, y sus métodos y eventos deben ser expuestos para
+que la herramienta de desarrollo pueda escribir código capaz de manipular el
+componente cuando se ejecuta la aplicación.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><i style='mso-bidi-font-style:
+normal'><span lang=ES-MX>Ejemplo de un Bean muy simple<o:p></o:p></span></i></p>
+
+<p class=MsoBodyText style='text-align:justify'><i style='mso-bidi-font-style:
+normal'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></i></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'>public class MiBean implements java.io.Serializable<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'><span style='mso-tab-count:1'>                </span>protected
+int elValor;<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'><span style='mso-tab-count:1'>                </span><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'><span style='mso-tab-count:1'>                </span>public
+MiBean(){}<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'><span style='mso-tab-count:1'>                </span>public
+void setMiValor(int nuevoValor){ elValor=nuevoValor; }<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'><span style='mso-tab-count:1'>                </span>public
+int getMiValor(){ return elValor; }<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Este es un
+Bean real llamado MiBean que tiene estado (la variable elValor) que será automáticamente
+almacenada y recuperada por el mecanismo de persistencia de los JavaBeans (para
+esto MiBean declara que implementa java.io.Serializable), y tiene una propiedad
+llamada MiValor que es utilizable por los ambientes de programación visual.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>Arquitectura de los Beans<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los Beans se
+dividen en tres partes: propiedades, métodos y eventos.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><!--[if gte vml 1]><v:rect
+ id="_x0000_s1029" style='position:absolute;left:0;text-align:left;
+ margin-left:116.55pt;margin-top:9.85pt;width:259.2pt;height:122.4pt;z-index:1;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f"/><v:shapetype id="_x0000_t202" coordsize="21600,21600"
+ o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:138.15pt;margin-top:24.7pt;width:86.4pt;
+ height:28.8pt;z-index:2;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Propiedades<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1027" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:138.15pt;margin-top:54.4pt;width:86.4pt;
+ height:28.8pt;z-index:3;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Métodos<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1028" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:138.15pt;margin-top:84.1pt;width:86.4pt;
+ height:28.8pt;z-index:4;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Eventos<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1030" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:238.95pt;margin-top:24.7pt;width:50.4pt;
+ height:28.8pt;z-index:5;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
+    10.0pt;mso-ansi-language:EN-US'>etiqueta<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
+    10.0pt;mso-ansi-language:EN-US'>color<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1031" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:238.95pt;margin-top:54.4pt;width:108pt;
+ height:28.8pt;z-index:6;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
+    10.0pt;mso-ansi-language:EN-US'>setLabel(String l);<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:
+    10.0pt;mso-ansi-language:EN-US'>fireEvent(EventObject e);</span><span
+    lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1032" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:238.95pt;margin-top:84.1pt;width:108pt;
+ height:28.8pt;z-index:7;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>addEventListener<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>removeEventListener<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=155 height=13></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=347 height=164
+  src="./MODELO%20DE%20COMPONENTES%20DE%20JAVA_archivos/image001.gif" v:shapes="_x0000_s1029 _x0000_s1026 _x0000_s1027 _x0000_s1028 _x0000_s1030 _x0000_s1031 _x0000_s1032"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>Propiedades, Métodos y Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Las <b
+style='mso-bidi-font-weight:normal'>propiedades </b>son atributos de un Bean
+que son referenciados por nombre. Esas propiedades son usualmente leídas y
+escritas llamando métodos en el Bean creados específicamente para ese
+propósito. Un programador puede obtener o establecer el valor de una propiedad
+a través de llamadas a métodos, mientras que un desarrollador de aplicaciones
+que use una herramienta de desarrollo visual manipulara el valor de la
+propiedad usando un editor visual de propiedades.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los <b
+style='mso-bidi-font-weight:normal'>métodos</b> de un Bean son los métodos Java
+expuestos por la clase que implementa el Bean. Aquellos métodos representan la
+interfaz usada para acceder y manipular el componente.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los <b
+style='mso-bidi-font-weight:normal'>eventos</b> son el mecanismo usado por un
+componente para enviar notificaciones a otro. Siempre que un evento ocurre, el
+componente interesado será notificado mediante la invocación de uno de sus
+métodos.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><i style='mso-bidi-font-style:
+normal'><span lang=ES-MX>Ejemplo de un Bean que tiene: Propiedades, Métodos y
+Eventos<o:p></o:p></span></i></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>package tlight;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.awt.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.awt.event.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.awt.image.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.beans.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>//Un Bean simple
+que representa un componente de luz de trafico<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class
+TrafficLight extends Canvas implements Runnable {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>private ActionListener l = null;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>private Thread me = null;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>private String defaultLight =
+&quot;ROJO&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>private String currLight = defaultLight;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>private boolean debug = false;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//Establecer el tamaño del despliegue del
+Bean<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public TrafficLight () {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>setSize (100, 200);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>// Encender/Apagar la depuración <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void setDebugging (boolean state) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>debug = state;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public boolean getDebugging () {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>return debug;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>// Methods for get/set of the default light
+state<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public synchronized String
+getDefaultLightState () {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>return defaultLight;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void setDefaultLightState (String
+state) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>defaultLight = state;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>currLight = state;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>repaint();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>// Desplegar el estado actual de la luz de
+trafico<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void paint (Graphics g) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>// Poner un borde negro alrededor de este<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.setColor (Color.black);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.drawRect (1, 1, 98, 198);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Pintar el contorno de la luz trafico<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.setColor (Color.white);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.fillRect (2, 2, 96, 196);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Pintar el contorno de las luces<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.setColor (Color.black);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.drawOval (30, 30, 40, 40);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.drawOval (30, 80, 40, 40);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>g.drawOval (30, 130, 40, 40);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Depurar<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (debug) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">       </span>System.out.println <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>(&quot;El estado actual de la luz
+es: &quot; + currLight);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Cual luz esta encendida?<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (currLight.equals(&quot;ROJO&quot;)) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>g.setColor (Color.red);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>g.fillOval (30, 30, 40, 40);<span
+style="mso-spacerun: yes">      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>} else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>if
+(currLight.equals(&quot;AMARILLO&quot;)) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>g.setColor (Color.yellow);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span><span style="mso-spacerun:
+yes">  </span>g.fillOval (30, 80, 40, 40);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>} else<span style="mso-spacerun: yes">  
+</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>if
+(currLight.equals(&quot;VERDE&quot;)) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>g.setColor (Color.green);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>g.fillOval (30, 130, 40, 40);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//Enviar un mensaje a la luz para empezar un
+ciclo<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void start (ActionEvent x) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Depurar<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (debug) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println (&quot;Obtuve un
+evento start!&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>startCycle ();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//Empezar un ciclo de luz<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>private synchronized void startCycle () {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//No molestarse a menos que no haya un
+ciclo ejecutándose ya<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (me == null) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>me = new Thread (this);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>me.start ();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//El método run<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void run () {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Depurar<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (debug) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println (&quot;Ciclo
+empezado&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>while (me != null) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style="mso-spacerun:
+yes">   </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>me.sleep (3000);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">       </span>} catch (InterruptedException e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>//Obtener el estado actual de la luz<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>if (currLight.equals (&quot;ROJO&quot;))
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>// Cycle to green<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>currLight = &quot;VERDE&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>fireAction(currLight);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style="mso-spacerun: yes">   </span>}
+else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>if
+(currLight.equals(&quot;VERDE&quot;)) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>// Ciclo a través de amarillo a rojo<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>currLight = &quot;AMARILLO&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>} else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>//De otro modo, estamos en AMARILLO,
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>//Así ciclo a ROJO<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>currLight = &quot;ROJO&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>fireAction(currLight);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>repaint ();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>//Romper el ciclo cuando el estado por
+default sea alcanzado<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>if (currLight == defaultLight) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>me = null;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//Obtener un evento que indica un cambio de
+luz<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//de otra luz<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//En which caso, actuaremos como esclavo<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void lightChange (ActionEvent x) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Verificar el estado de este evento<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>String command = x.getActionCommand();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>// Debug<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (debug) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println (&quot;Recibí un
+evento de luz de trafico: &quot; <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>+ defaultLight + &quot; command: ir a
+&quot; + command);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Si la otra luz cambio a rojo, entonces
+verificar nuestro default<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (command.equals (&quot;ROJO&quot;)) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>if (currLight.equals
+(&quot;VERDE&quot;)) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>//Bien, no hacer nada<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>} else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>// Cycle<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>currLight = &quot;VERDE&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>repaint ();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>} else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>if (command.equals (&quot;VERDE&quot;))
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>if (currLight.equals
+(&quot;ROJO&quot;)) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>// Bien, no hacer nada <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>} else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span><span style="mso-spacerun:
+yes">  </span>//Ciclo<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>currLight = &quot;AMARILLO&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>repaint ();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>Thread.sleep (3000);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>} catch (InterruptedException e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>currLight = &quot;ROJO&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">          </span>repaint ();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//El metodo fireAction envía un evento al<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//TrafficLight esclavo para decirle estamos
+cambiando de<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//estado<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void fireAction (String s) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Depurar<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (debug) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println (&quot;Generando un
+evento action&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (l != null) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>ActionEvent actionEvt = new
+ActionEvent(this, 0, s);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>l.actionPerformed(actionEvt);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//Registrarnos nosotros mismos como la
+fuente de un evento<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>//Solo use Action por ahora...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void addActionListener
+(ActionListener l)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>throws
+java.util.TooManyListenersException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Depurar<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (debug) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println (&quot;Registrando a
+un escucha&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>//Hay ya un escucha de eventos?<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>if (this.l != null) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>throw new
+java.util.TooManyListenersException ();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>this.l = l;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public void removeActionListener
+(ActionListener l) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>l = null;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX>Introspección<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Introspección
+es el proceso de exponer las propiedades, los métodos y eventos que soporta un
+componente JavaBean. Este proceso es usado en tiempo de ejecución, así como por
+una herramienta de desarrollo visual en tiempo de diseño. El comportamiento por
+default de este proceso permite la introspección automática de cualquier Bean.
+Un mecanismo de reflexión de bajo nivel es usado para analizar la clase de un
+Bean para determinar sus métodos. Después aplica algunos patrones de diseño
+simples para determinar las propiedades y eventos que son soportados. Para
+sacar partido de la reflexión, solo se necesita seguir un estilo de
+codificación que concuerde con el patrón de diseño.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>También se
+puede elegir implementar una clase BeanInfo la cual provee información
+descriptiva acerca de su Bean asociado explícitamente. </span></p>
+
+<p class=MsoBodyText style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

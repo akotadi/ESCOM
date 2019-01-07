@@ -1,0 +1,89 @@
+1. Elegir enrutador 2811
+2. Configurar direcciones de red
+3. PCa Switch en el primer Fast Ethernet, (circulo naranja y verde, después cambia a verde)
+4. Switch a Router (no se prenden los foquitos).
+5. Para configurar es más facil para la computadora
+	tenemos 120.13/16, le damos la más baja a la computadora
+	y al enrutador la más alta.
+	Vamos a desktop/IP Address
+6. En opciones preferencias, que siempre muestre las etiquetas.
+	(Port Labels Always shown)
+7. Para el router:
+	COMANDOS
+	?
+	ena (cambia modo privilegiado y se cambia a #)
+	?
+	conf t
+	// Configuración IP
+	int fa0/0 // Debe cambiar el router XD
+	ip address 120.13.255.254 255.255.0.0
+	no shutdown 
+8. CONFIGURAR TARJETA DE RED
+	Me salgo del modo de configuración interfaz
+	exit
+	int se0/2/0
+	ip add
+	ip address 20.255.255.254 255.0.0.0
+	exit
+	interface Serial0/2/0
+	cloc
+	clock ra
+	clock rate 4000000
+	no sh
+	no shutdown
+	// Para guardar cambios
+	CONTROL Z
+9. CONFIGURAR EL OTRO ROUTER
+	ena
+	host (...)
+	conf t
+	hostname R1
+	int se0/2/0
+	ip add
+	ip address 20.255.255.253 255.0.0.0
+	no shutdown
+	CONTROL Z
+	----
+	siguiente configuración
+	conf t
+	int fa0/0 
+	ip address 30.255.255.254 255.0.0.0
+	no shutdown
+
+	CONTROL Z
+
+	wre
+
+|10. CONFIGURAR COMPUTADORA
+	ip address 30.0.0.1
+	255.0.0.0
+	30.255.255.254
+11. hacer un ping
+	Command Prompt
+	ping 120.13.255.254
+12. En el router 1
+	ena
+	sh ip route
+	// Muestra lo que ya pusimos
+	le configuramos enrutamiento estatico
+	conf t
+	// Le estoy diciendo como llegar a la red 30 y su mascara
+	debe llegar a traves de su vecino 20 XD
+	ip route 30.0.0.0 255.0.0.0 20.255.255.253
+	CONTROL Z
+	wr
+	sh ip route
+
+13. En el otro router
+	ena
+	ip route
+	conf t
+	ip route 120.13.0.0 255.255.0.0 se0/2/0
+	CONTROL Z
+	wr
+	sh ip route
+
+
+
+PRÁCTICA 6
+Configurar el protocolo RIP en la última topología de red vista en clase.

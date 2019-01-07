@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <body>
+          <h1>Automata Finito Deterministico</h1>
+            <button onclick = "AFD()">Empezar</button>
+              <p>Presiona el boton "Empezar" para iniciar el programa.<br><br>
+                Escribe los simbolos del alfabeto y el numero de estados.<br><br>
+                El programa asume el estado cero como inicial.</p>
+                <script>
+                {
+                    function AFD()
+                    {
+                      // Recepcion de datos elementales para el automata
+                        var dato = prompt("Escribe los simbolos del alfabeto separados por una coma");
+                        var sigma = dato.split(",");
+                        alert("Indicaste "+sigma.length+" simbolos");
+
+                        dato = prompt("Escribe el numero de estados:");
+                        var n = parseInt(dato);
+
+
+                        dato = prompt("Escribe los estados finales separados por una coma:");
+                        var edosfinales = dato.split(",");
+                        alert("Indicaste "+edosfinales.length+" estados finales");
+                        var finales = new Array(edosfinales.length);
+
+
+                        for( var i=0 ; i < edosfinales.length ; i++)
+                        {
+                          finales[i] = parseInt(edosfinales[i]);
+                        }
+                        // Se inicializa la matriz de transiciones con -1 (ESTADO ERRONEO)
+
+                        var delta = new Array(n);// El numero de estados n son los renglones
+                        for( var edo = 0; edo<n ; edo++)
+                        {
+                          delta[edo] = new Array(sigma.length).fill(-1);
+                        }
+
+                        // Se leen las transiciones y se actualizan los estados
+
+                        for( var i = 0;i<n;i++)
+                        {
+                          for(var j = 0;j<sigma.length;j++)
+                          {
+                            var dato = prompt("Si el automata esta en el estado "+i+" y llega el simbolo "+sigma[j]+" pasa al estado:");
+                            delta[i][j] = parseInt(dato);
+                          }
+                        }
+                        // Se lee la cadena
+                        var terminar = false;
+                        while(terminar==false)
+                        {
+                          var cadena = prompt("Escribe la cadena a reconocer (FIN para terminar el programa)");
+                          if ((cadena.localeCompare("FIN"))==0)
+                            {
+                              terminar = true;
+                              continue;
+                            }
+
+
+                        //Se define el estado inicial (por defecto es 0)
+
+                        var estado = 0;
+                        var posicion = 0; // posicion de la cadena
+                        var sigue = true;
+                        // Ejecucion del automata
+                        while(sigue)
+                        {
+                          // Si la cadena llega a su final y hay un estado final, entonces la cadena es valida
+                          if(posicion==cadena.length)
+                          {
+                            // En este momento(ya no hay mas simbolos) la cadena tiene que haber llegado a un estado final para que sea valida
+                            var encontrado = false // suponemos que no va a ser asi;
+                            for( var ef = 0;(ef<finales.length)&&(encontrado==false);ef++)//
+                            {
+                              if(estado == finales[ef]);
+                                encontrado=true;
+                            }
+                            if(encontrado)
+                            {
+                              alert("La cadena "+cadena+" si se reconoce");
+                            }
+                            else
+                            {
+                              alert("No fue posible reconocer la cadena: "+cadena);
+                            }
+                          }
+                          //Se busca el simbolo de la cadena en el alfabeto
+                          var simbolo = cadena.charAt(posicion); // charAt
+                          var indice = -1; // Volvemos a suponer que no esta
+                          for(var iSigma =0; (iSigma<sigma.length) && (indice == -1) ; iSigma++)
+                          {
+                               if(sigma[iSigma].length==1)
+                               {
+                                    if(sigma[iSigma].charAt(0)==simbolo)
+                                    {
+                                         indice=iSigma;
+                                         continue;
+                                    }
+                                }
+                                else
+                                {
+
+                                   if(((sigma[iSigma].charAt(0)) <= simbolo) && ((sigma[iSigma].charAt(3)) >= simbolo))
+                                     {
+                                         indice = iSigma;
+                                         continue;
+                                     }
+                                }
+                          }
+
+
+                          if (indice == -1)
+                          {
+                            alert("El simbolo "+simbolo+" es desconocido");
+                            sigue=false;
+                            continue;
+                          }
+                          var nuevoestado = delta[estado][indice];
+                          if(nuevoestado == -1)
+                          {
+                            alert("No tengo transicion con el simbolo "+simbolo);
+                            sigue=false;
+                            continue;
+                          }
+                          estado = nuevoestado;
+                          posicion=posicion+1;
+                       }
+
+                    }
+               }
+            }
+          </script>
+      </body>
+    </html>

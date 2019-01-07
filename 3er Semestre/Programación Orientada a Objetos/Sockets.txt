@@ -1,0 +1,163 @@
+Sockets Clientes
+
+Socket es un método que ofrece un servicio
+
+Se usan de la siguiente forma 
+	1.- El nuevo socket es creado usando un constructor socket().
+	2.- El socket intenta conectarse a un host remoto.
+	3.- Una vez que la conexión es establecida los hosts local y remoto obtienen flujos de E/S para el 
+	socket y usan esos flujos para enviarse datos uno a otro. Esta conexión es full-duplex. Lo que significan 
+	los datos depende del protocolo.
+	4.- Cuando la transmisión de datos está completa, uno o ambos cierra la conexión.
+
+Un protocolo de comunicaciones es un conjunto de reglas que utilizan dos partes para poder comunicarse
+
+Puertos < 1024 son reservados, el 13 está reservado para el date time
+
+Modelo cliente - servidor
+	El cliente envía una petición, el servidor lo procesa por medio de su protocolo y puede o no responder
+
+-------------------------------------
+
+import java.net.*; // incluye la clase socket
+import java.io.*; // incluye los DataInputStream
+
+public class DayTimeClient{
+	public static void main(String s[]){
+		Socket sock; // Los sockets son objetos en java
+		String hostname="localhost"; // IP en lugar de localhost en caso de otra máquina
+		DataInputStream timeStream;}
+		try{ // métodos que puedan lanzar excepciones
+			sock = new Socket(hostname,13); // dirección del servidor y el puerto
+			timeStream = new DataInputStream(sock.getInputStream());
+			Strin time = timeStream.readLine();
+			System.out.println("Son las "+ time);
+		}
+		catch(UnknownHostException e){ ... }
+		catch(IOException e){ ... }
+	}
+	// main
+}
+
+--------------------------------------
+
+Sockets para servidores
+
+Su ciclo básico de vida es
+	1.- Un ServerSocket nuevo es creado en un puerto particular usando el constructor ServerSocket()
+	2.- El ServerSocket() escucha los intentos de conexión entrantes con ese puerto usando su método accept().
+	Accept() se bloquea hasta que un cliente intenta realizar una conexión, en dicho punto accept() regresa un
+	socket que conecta el cliente al servidor.
+	3.- Dependiendo del tipo de servidor el método getInputStream() o el método getOutputStream() del socket será llamado.
+	Para obtener flujos de E/S que comunican con el cliente.
+	4.- El servidor y cliente interactuan de acuerdo a un protocolo establecido hasta que es tiempo de cerrar la conexión.
+	5.- El servidor, el cliente o ambos, cierran la conexión.
+	6.- El servidor regresa al paso 2 y espera la siguiente conexión.
+
+---------------------------------------
+
+import java.net.*;
+import java.io.*;
+import java.util.Date;
+
+public class DayTimeServer{
+	public static void main(String s[]){
+		ServerSocket serv;
+		Socket conex;
+		PrintStream p;
+		try{
+			serv = new ServerSocket(13); // queda ligado a un puerto
+			try{ // llamadas a métodos que pueden lanzar excepciones
+				while(true){ // ciclo infinito porque un servidor debe funcionar todo el tiempo en condiciones ideales
+					conex = serv.accept();
+					p = new PrintStream(conex.getOutputStream());
+					p.println(new Date()); // crea una fecha con los datos actuales del servidor, se envia y cierra la conexión
+					conex.close(); // se cierra el socket servidor
+				}
+			}
+			catch(IOException e){ // Excepción que se crea cuando se intentan conectar dos servers en el mismo puerto
+				serv.close();
+				System.out.println(e);
+			}
+		} // try
+		catch(IOException e){ ... }
+	}
+}
+
+---------------------------------------------
+
+UNIX 
+	- Proceso (Programa en ejecución)
+	- Archivos (Servencia de bytes) - flujo
+
+Sockets UNIX BDS (Bertley (?))
+	Sockets
+		- Cliente
+		- Servidor
+
+--------------------------------------------------------
+
+import java.io.*; // flujos
+import java.net.*; // sockets
+import java.util.*; // ArrayList
+
+public class VerySimpleChatServer{ // clase entrada ya que contiene a una función completa
+	ArrayList<ObjectOutputStream> clientObject OutputStream; // arraylist es un contenedor, parametrizamos los flujos de salida para objetos
+	public class ClientHandler implements Runnable{ // clase anidada ya que se encuentra dentro de otra. Runnable es una interfaz, por tanto debemos implementar sus métodos
+		ObjectInputStream reader; // lo que se mueve entre máquinas son objetos
+		Socket sock;
+		public ClientHandler(Socket client){
+			try{
+				sock=client;
+				reader = new ObjectInputStream(sock.getInputStream()); // InputStream recibe bytes
+			}
+			catch(Exception ex){ ... }
+		}
+
+		public void run(){ // cuerpo del hilo
+		 Object obj;
+		 try{
+		 	while(true){
+		 		obj=(object)reader.readObject();
+		 		tellEveryone(obj);
+		 	}
+		 }
+		 catch(Exception ex){ ... }
+		}
+	}
+
+	public static void main(String s[]){
+		new VerySimpleChatServer().go();
+	}
+
+	public void go(){
+		clientObjectOutputStreams = new ArrayList<ObjectOutputStream>();
+		try{
+			ServerSocket serv = new ServerSocket(5000);
+			while(true){
+				Socket client = serv.accept();
+				ObjectOutputStream writer = new ObjectOutputStream(client.getOutputStream());
+				clientObjectOutputStreams.add(writer);
+				Thread t = new Thread(new ClientHandler(client));
+				t.start();
+			}
+		}
+		catch(Exception ex){ ... }
+	}
+
+	public void telEveryone(Object obj){
+		Iterator it = clientObjectOutputStreams.iterator();
+		while(it.hasNext()){
+			try{
+				ObjectOutputStream writer = (ObjectOutputStream)it.next();
+				writer.writeObject(obj);
+				writer.flush();
+			}
+			catch(Exception ex){ ... }
+		}
+	}
+}
+
+--------------------------------------------------------------
+
+En caso de varios clientes, se puede guardar su respectiva ip, o bien el socket, o bien el flujo de datos

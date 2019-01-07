@@ -1,0 +1,122 @@
+% Paquete requerimientos.sty
+\usepackage{longtable}
+\usepackage[pdftex,bookmarks,colorlinks]{hyperref}
+\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{multirow}
+
+\definecolor{tblProbColor}{rgb}{1.0, 0.4, 0.4}
+\definecolor{tblReqColor}{rgb}{0.2, 0.2, 0.7}
+\definecolor{userColor}{rgb}{0.2, 0.7, 0.2}
+
+\definecolor{refColor}{rgb}{0.1, 0.3, 0.7}
+
+\hypersetup{linkcolor=refColor}
+
+
+
+% Docuemtnación de problemas
+% Usar:
+% \begin{problemas}[color]{prefijo}
+%
+%
+% \end{problemas}
+\newenvironment{problemas}[1][tblProbColor]
+{%
+	\arrayrulecolor{#1}%
+	%\begin{table}[h]%
+	%\caption{Especificación de problemas}%
+	\par\begin{longtable}{| p{.05\textwidth} | p{.2\textwidth} | p{.6\textwidth} | p{.05\textwidth} |}%
+		\arrayrulecolor{white}%
+		\rowcolor{#1}%
+		\problema{\color{white}\bf Id}{\color{white}\bf Nombre}{\color{white}\bf Descripción}{\color{white}\bf Pri.}\endhead%
+		\arrayrulecolor{#1}%
+}{%
+	\end{longtable} %
+	%\end{table}%
+	\arrayrulecolor{black} %
+}
+
+% Definir un problema (se usa con el environment problemas
+% Usar: \problema{id}{Nombre}{Descripción}{Prioridad}
+%
+% Ejemplo: MB - Muy Baja, B - Baja, M - Media, A - Alta, MA - Muy Alta.
+%
+% \problema{1}{Error Humano}{La captura en hojas de Excel provoca que errores de dedo afecten los resultados.}{M}
+%\hypertarget{#1}{
+\newcommand{\problema}[4]{ {#1} & {#2} & {#3} & {#4} \\ \hline}
+
+
+\newcommand{\mensaje}[3]{ {#1} & {#2} & {#3} \\ \hline}
+
+\newenvironment{mensajes}[1][tblProbColor]
+{%
+	\arrayrulecolor{#1}%
+	%\begin{table}[h]%
+	%\caption{Especificación de problemas}%
+	\par\begin{longtable}{| p{.2\textwidth} | p{.2\textwidth} | p{.6\textwidth} |}%
+		\arrayrulecolor{white}%
+		\rowcolor{#1}%
+		\mensaje{\color{white}\bf Id}{\color{white}\bf Nombre}{\color{white}\bf Descripción}\endhead%
+		\arrayrulecolor{#1}%
+}{%
+	\end{longtable} %
+	%\end{table}%
+	\arrayrulecolor{black} %
+}
+
+
+\newcommand{\FRitem}[4]{\par{#1} & {#2} & {#3} \\ \hline}%& {#4} \\ \hline}
+
+\newenvironment{requerimientos}[1][tblReqColor]
+{%
+	\arrayrulecolor{#1}%
+	\par\begin{longtable}{| p{.05\textwidth} | p{.2\textwidth} | p{.67\textwidth} |}% p{.05\textwidth} |}% p{.03\textwidth} |}
+		\arrayrulecolor{#1}%
+		\hline%
+		\rowcolor{#1}%
+		\multicolumn{3}{|c|}{\bf\color{#1}Requerimientos funcionales}\\%
+		\arrayrulecolor{white}%
+		\rowcolor{#1}%
+		\FRitem{\color{white}\bf Id}{\color{white}\bf Nombre}{\color{white}\bf Descripción}{\color{white}\bf Prob.}\endhead%
+		\arrayrulecolor{#1}%
+}{%
+	\end{longtable} %
+	\arrayrulecolor{black} %
+}
+%\newcommand{\NFRitem}[5]{\multirow{2}{*}{#1} & \multirow{2}{*}{#2} & {#3} & \multirow{2}{*}{#5} \\* & & {#4} & \\ \hline}
+
+\newcommand{\NFRitem}[5]{\multirow{2}{*}{#1} & \multirow{2}{*}{#2} & {$\mathfrak{N}$}-{#3}  \\* & & {$\mathfrak{E}$}-{#4} \\ \hline}
+
+\newenvironment{NFRequieriments}[1][tblReqColor]
+{%
+	\arrayrulecolor{#1}%
+	\par\begin{longtable}{| p{.08\textwidth} | p{.17\textwidth} | p{.67\textwidth} |}% p{.06\textwidth} | }
+		\arrayrulecolor{#1}%
+		\hline%
+		\rowcolor{#1}%
+		\multicolumn{3}{|c|}{\bf\color{#1}Requerimientos No funcionales}\\%
+		\arrayrulecolor{white}%
+		\rowcolor{#1}%
+		\FRitem{\color{white}\bf Id}{\color{white}\bf Atributo}{\color{white}\bf Necesidad/Estrategia}{\color{white}\bf Prob.}\endhead%
+		\arrayrulecolor{#1}%
+}{%
+	\end{longtable} %
+	\arrayrulecolor{black} %
+}
+
+% \begin{Usuario}[icono]{Nombre}
+% 	\Uitem[Descripción:]
+%	\Uitem[Funciones:]
+% 	\Uitem[:]
+% \end{Usuario}
+
+\newcommand{\Uitem}[1][]{\item[#1]}
+
+\newenvironment{Usuario}[2][usr]
+{%
+	\noindent{\color{userColor}\rule{\textwidth}{.5mm}}\\\noindent\includegraphics{images/#1} {\bf #2}%
+	\begin{description}%\item[\includegraphics{images/#1}] {\bf #2}%
+}{%
+	\end{description}%
+}

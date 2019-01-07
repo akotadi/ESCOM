@@ -1,0 +1,1457 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<!--&LANGUAGE "english" -->
+<!--&MODIFIED "$Date: 2007/08/10 09:18:44$" -->
+
+
+	<title>Holub Associates UML Reference Card</title>
+	<meta name="description" content="UML (Unified Modeling Language) Reference Card">
+
+	 <meta name="keywords" content="oo-design, software design, object, object oriented, software, object-oriented, object-oriented design, oo, instruction, java , holub, allen holub, goodies, UML, java, UML reference, unified modeling language, UML reference">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="shortcut icon" href="http://www.holub.com/favicon.ico" type="image/x-icon"> 
+<link rel="icon" href="http://www.holub.com/favicon.ico" type="image/x-icon"> 
+<link rel="stylesheet" type="text/css" href="Holub%20Associates%20UML%20Reference%20Card_archivos/holub.css">
+
+<script language="JavaScript1.2" src="Holub%20Associates%20UML%20Reference%20Card_archivos/menu.js"></script>
+<script language="JavaScript1.2" src="Holub%20Associates%20UML%20Reference%20Card_archivos/menudata.js"></script></head><body><div id="pMenu_root_Div" style="position: absolute; visibility: visible; left: 151px; top: 105px; width: 533px; height: 19px; z-index: 1000;"><div id="pMenu_root_1" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 0px; width: 63px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: default;" onmouseover="pMenu.over('root',1)" onmouseout="pMenu.out('root',1)" onclick="pMenu.click('root',1)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 63px; height: 17px;"><div class="m"> Services 	  </div></div></div><div id="pMenu_root_2" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 63px; top: 0px; width: 87px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: default;" onmouseover="pMenu.over('root',2)" onmouseout="pMenu.out('root',2)" onclick="pMenu.click('root',2)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 87px; height: 17px;"><div class="m"> Publications </div></div></div><div id="pMenu_root_3" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 150px; top: 0px; width: 61px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: default;" onmouseover="pMenu.over('root',3)" onmouseout="pMenu.out('root',3)" onclick="pMenu.click('root',3)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 61px; height: 17px;"><div class="m"> Goodies	  </div></div></div><div id="pMenu_root_4" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 211px; top: 0px; width: 79px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: default;" onmouseover="pMenu.over('root',4)" onmouseout="pMenu.out('root',4)" onclick="pMenu.click('root',4)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 79px; height: 17px;"><div class="m"> Newsletter	  </div></div></div><div id="pMenu_root_5" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 290px; top: 0px; width: 87px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: default;" onmouseover="pMenu.over('root',5)" onmouseout="pMenu.out('root',5)" onclick="pMenu.click('root',5)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 87px; height: 17px;"><div class="m"> Company 	  </div></div></div><div id="pMenu_root_6" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 377px; top: 0px; width: 54px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('root',6)" onmouseout="pMenu.out('root',6)" onclick="pMenu.click('root',6)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 54px; height: 17px;"><div class="m"> <em>Contact</em>  </div></div></div><div id="pMenu_root_7" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 431px; top: 0px; width: 50px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('root',7)" onmouseout="pMenu.out('root',7)" onclick="pMenu.click('root',7)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 50px; height: 17px;"><div class="m"> <em>Search</em>   </div></div></div><div id="pMenu_root_8" style="background: rgb(204, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 481px; top: 0px; width: 50px; height: 17px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('root',8)" onmouseout="pMenu.out('root',8)" onclick="pMenu.click('root',8)"><div class="highText" style="position: absolute; left: 0px; top: 0px; width: 50px; height: 17px;"><div class="m"> <em>Home</em>	   </div></div></div></div><div id="pMenu_mServices_Div" style="position: absolute; visibility: hidden; left: 0px; top: 0px; width: 326px; height: 112px; z-index: 1000;"><div id="pMenu_mServices_1" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 0px; width: 318px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mServices',1)" onmouseout="pMenu.out('mServices',1)" onclick="pMenu.click('mServices',1)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 312px; height: 14px;">Training (OO Design, Agile Process, Java, C++)</div></div><div id="pMenu_mServices_2" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 21px; width: 318px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mServices',2)" onmouseout="pMenu.out('mServices',2)" onclick="pMenu.click('mServices',2)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 312px; height: 14px;">Design Review</div></div><div id="pMenu_mServices_3" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 42px; width: 318px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mServices',3)" onmouseout="pMenu.out('mServices',3)" onclick="pMenu.click('mServices',3)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 312px; height: 14px;">Mentoring</div></div><div id="pMenu_mServices_4" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 63px; width: 318px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mServices',4)" onmouseout="pMenu.out('mServices',4)" onclick="pMenu.click('mServices',4)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 312px; height: 14px;">Hiring</div></div><div id="pMenu_mServices_5" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 84px; width: 318px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mServices',5)" onmouseout="pMenu.out('mServices',5)" onclick="pMenu.click('mServices',5)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 312px; height: 14px;">Expert Witness &amp; Due-Diligence</div></div><div style="background: rgb(51, 51, 51) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 6px; top: 6px; width: 316px; height: 102px; z-index: 2; opacity: 0.4;"></div><div style="background: rgb(102, 102, 102) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 4px; top: 4px; width: 320px; height: 106px; z-index: 1; opacity: 0.4;"></div></div><div id="pMenu_mPublications_Div" style="position: absolute; visibility: hidden; left: 0px; top: 0px; width: 216px; height: 112px; z-index: 1000;"><div id="pMenu_mPublications_1" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 0px; width: 208px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mPublications',1)" onmouseout="pMenu.out('mPublications',1)" onclick="pMenu.click('mPublications',1)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 202px; height: 14px;">Holub on Patterns</div></div><div id="pMenu_mPublications_2" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 21px; width: 208px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mPublications',2)" onmouseout="pMenu.out('mPublications',2)" onclick="pMenu.click('mPublications',2)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 202px; height: 14px;">Published Articles</div></div><div id="pMenu_mPublications_3" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 42px; width: 208px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mPublications',3)" onmouseout="pMenu.out('mPublications',3)" onclick="pMenu.click('mPublications',3)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 202px; height: 14px;">Other Works by Allen Holub</div></div><div id="pMenu_mPublications_4" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 63px; width: 208px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mPublications',4)" onmouseout="pMenu.out('mPublications',4)" onclick="pMenu.click('mPublications',4)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 202px; height: 14px;">Course Notes &amp; Other Slides</div></div><div id="pMenu_mPublications_5" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 84px; width: 208px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mPublications',5)" onmouseout="pMenu.out('mPublications',5)" onclick="pMenu.click('mPublications',5)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 202px; height: 14px;">Newsletter Archive</div></div><div style="background: rgb(51, 51, 51) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 6px; top: 6px; width: 206px; height: 102px; z-index: 2; opacity: 0.4;"></div><div style="background: rgb(102, 102, 102) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 4px; top: 4px; width: 210px; height: 106px; z-index: 1; opacity: 0.4;"></div></div><div id="pMenu_mGoodies_Div" style="position: absolute; visibility: hidden; left: 0px; top: 0px; width: 181px; height: 280px; z-index: 1000;"><div id="pMenu_mGoodies_1" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 0px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',1)" onmouseout="pMenu.out('mGoodies',1)" onclick="pMenu.click('mGoodies',1)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">Software</div></div><div id="pMenu_mGoodies_2" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 21px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',2)" onmouseout="pMenu.out('mGoodies',2)" onclick="pMenu.click('mGoodies',2)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;Holub on Patterns</div></div><div id="pMenu_mGoodies_3" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 42px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',3)" onmouseout="pMenu.out('mGoodies',3)" onclick="pMenu.click('mGoodies',3)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embedded SQL</div></div><div id="pMenu_mGoodies_4" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 63px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',4)" onmouseout="pMenu.out('mGoodies',4)" onclick="pMenu.click('mGoodies',4)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Game of Life</div></div><div id="pMenu_mGoodies_5" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 84px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',5)" onmouseout="pMenu.out('mGoodies',5)" onclick="pMenu.click('mGoodies',5)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;Compiler Design in C</div></div><div id="pMenu_mGoodies_6" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 105px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',6)" onmouseout="pMenu.out('mGoodies',6)" onclick="pMenu.click('mGoodies',6)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;Taming Java Threads</div></div><div id="pMenu_mGoodies_7" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 126px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',7)" onmouseout="pMenu.out('mGoodies',7)" onclick="pMenu.click('mGoodies',7)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;Articles</div></div><div id="pMenu_mGoodies_8" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 147px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',8)" onmouseout="pMenu.out('mGoodies',8)" onclick="pMenu.click('mGoodies',8)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">Goodies</div></div><div id="pMenu_mGoodies_9" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 168px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',9)" onmouseout="pMenu.out('mGoodies',9)" onclick="pMenu.click('mGoodies',9)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;UML Quick Reference</div></div><div id="pMenu_mGoodies_10" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 189px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',10)" onmouseout="pMenu.out('mGoodies',10)" onclick="pMenu.click('mGoodies',10)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;An OO Reading List</div></div><div id="pMenu_mGoodies_11" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 210px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',11)" onmouseout="pMenu.out('mGoodies',11)" onclick="pMenu.click('mGoodies',11)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;Other OO-Design/UML</div></div><div id="pMenu_mGoodies_12" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 231px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',12)" onmouseout="pMenu.out('mGoodies',12)" onclick="pMenu.click('mGoodies',12)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;Java</div></div><div id="pMenu_mGoodies_13" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 252px; width: 173px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mGoodies',13)" onmouseout="pMenu.out('mGoodies',13)" onclick="pMenu.click('mGoodies',13)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 167px; height: 14px;">&nbsp;&nbsp;&nbsp;Miscellaneous</div></div><div style="background: rgb(51, 51, 51) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 6px; top: 6px; width: 171px; height: 270px; z-index: 2; opacity: 0.4;"></div><div style="background: rgb(102, 102, 102) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 4px; top: 4px; width: 175px; height: 274px; z-index: 1; opacity: 0.4;"></div></div><div id="pMenu_mCompany_Div" style="position: absolute; visibility: hidden; left: 0px; top: 0px; width: 136px; height: 133px; z-index: 1000;"><div id="pMenu_mCompany_1" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 0px; width: 128px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mCompany',1)" onmouseout="pMenu.out('mCompany',1)" onclick="pMenu.click('mCompany',1)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 122px; height: 14px;">Contact Us</div></div><div id="pMenu_mCompany_2" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 21px; width: 128px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mCompany',2)" onmouseout="pMenu.out('mCompany',2)" onclick="pMenu.click('mCompany',2)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 122px; height: 14px;">Testimonials</div></div><div id="pMenu_mCompany_3" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 42px; width: 128px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mCompany',3)" onmouseout="pMenu.out('mCompany',3)" onclick="pMenu.click('mCompany',3)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 122px; height: 14px;">Past Clients</div></div><div id="pMenu_mCompany_4" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 63px; width: 128px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mCompany',4)" onmouseout="pMenu.out('mCompany',4)" onclick="pMenu.click('mCompany',4)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 122px; height: 14px;">About Allen Holub</div></div><div id="pMenu_mCompany_5" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 84px; width: 128px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mCompany',5)" onmouseout="pMenu.out('mCompany',5)" onclick="pMenu.click('mCompany',5)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 122px; height: 14px;">Allen's Schedule</div></div><div id="pMenu_mCompany_6" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 105px; width: 128px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mCompany',6)" onmouseout="pMenu.out('mCompany',6)" onclick="pMenu.click('mCompany',6)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 122px; height: 14px;">Privacy Policy</div></div><div style="background: rgb(51, 51, 51) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 6px; top: 6px; width: 126px; height: 123px; z-index: 2; opacity: 0.4;"></div><div style="background: rgb(102, 102, 102) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 4px; top: 4px; width: 130px; height: 127px; z-index: 1; opacity: 0.4;"></div></div><div id="pMenu_mNewsletter_Div" style="position: absolute; visibility: hidden; left: 362px; top: 127px; width: 126px; height: 70px; z-index: 991; clip: rect(0px, 126px, 0px, 0px);"><div id="pMenu_mNewsletter_1" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 0px; width: 118px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mNewsletter',1)" onmouseout="pMenu.out('mNewsletter',1)" onclick="pMenu.click('mNewsletter',1)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 112px; height: 14px;">Subscribe</div></div><div id="pMenu_mNewsletter_2" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 21px; width: 118px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mNewsletter',2)" onmouseout="pMenu.out('mNewsletter',2)" onclick="pMenu.click('mNewsletter',2)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 112px; height: 14px;">Archive</div></div><div id="pMenu_mNewsletter_3" class="itemBorder" style="background: rgb(255, 204, 102) none repeat scroll 0% 0%; position: absolute; left: 0px; top: 42px; width: 118px; height: 20px; z-index: 1000; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onmouseover="pMenu.over('mNewsletter',3)" onmouseout="pMenu.out('mNewsletter',3)" onclick="pMenu.click('mNewsletter',3)"><div class="lowText" style="position: absolute; left: 3px; top: 3px; width: 112px; height: 14px;">Subscribers Only</div></div><div style="background: rgb(51, 51, 51) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 6px; top: 6px; width: 116px; height: 60px; z-index: 2; opacity: 0.4;"></div><div style="background: rgb(102, 102, 102) none repeat scroll 0% 0%; position: absolute; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; left: 4px; top: 4px; width: 120px; height: 64px; z-index: 1; opacity: 0.4;"></div></div>
+
+
+
+	<script language="JavaScript1.2">
+		var home ="/goodies/uml/index.html";
+		var cur  = document.URL;
+		cur  = cur.toLowerCase();
+		cur  = cur.replace(/\\/g, "/");
+		cur  = cur.replace(/\/\/\//,"//"); // for netscape file:///
+//		if( home != cur )
+//		{	window.location = home;
+//		}
+	</script>
+	<style>
+	<!--
+	td.sym { vertical-align: top }
+	td.desc{ vertical-align: top; font-size: 10pt }
+	td.code{ vertical-align: top; font-size: 9pt; font-family: sans-serif; font-weight: bold; 
+			 padding-right:1em;
+		   }
+	-->
+	</style>
+
+	<!-- Site design and construction by Allen Holub -->
+<!-- Copyright (c) 2007, Allen I. Holub. All rights reserved. -->
+
+<a name="top">
+</a><table cellpadding="0" cellspacing="0" width="675">
+<tbody><tr>
+	<td class="logo"><a href="http://www.holub.com/">
+		<img class="header" src="Holub%20Associates%20UML%20Reference%20Card_archivos/logo.gif">
+		</a></td>
+	<td class="quotepane" width="100%">
+		<script language="JavaScript" src="Holub%20Associates%20UML%20Reference%20Card_archivos/qotd.js"></script><p class="shortquote">"For every complex problem, there is a simple answer, and it's wrong"</p><p class="quoteby"> -H.L. Mencken</p>
+	</td>
+</tr>
+<tr>
+	<td class="leftofmenu"><a href="http://www.holub.com/">
+		<img class="header" src="Holub%20Associates%20UML%20Reference%20Card_archivos/menubar.gif" width="100%" height="18"></a></td>
+	<td class="undermenu" width="100%">
+		<img class="header" src="Holub%20Associates%20UML%20Reference%20Card_archivos/menubar.gif" width="100%" height="18"></td>
+</tr>
+</tbody></table>
+<!-- CASCADING POPUP MENUS v5.1 by Angus Turnbull, http://www.twinhelix.com -->
+<div class="content">
+
+
+<h1>Allen Holub's UML Quick Reference</h1>
+Version 2.1.2 (2007/08/10)<br>
+<b><a href="http://www.holub.com/goodies/uml/"> http://www.holub.com/goodies/uml/
+</a></b>
+<table border="0" cellpadding="4" cellspacing="0">
+	<tbody><tr>
+		<td>
+© 2007, Allen I. Holub (). All rights reserved.
+<p>
+You may link to this page, but please do not "mirror" it (make a local copy).
+I revise this reference periodically, and local copies will become obsolete.
+This document may be reproduced and distributed freely,
+provided that the entire document is distributed without modification
+(including the copyright notice, my url, and this paragraph).
+</p><p>
+This reference covers the notation described in the OMG
+<em>UML version 2.0 Superstructure</em> document found at
+<a href="http://www.omg.org/cgi-bin/doc?ptc/2003-08-02">
+http://www.omg.org/cgi-bin/doc?ptc/2003-08-02</a>
+
+You can also find other UML information on the OMG UML site:
+<a href="http://www.uml.org/">http://www.uml.org</a>.
+
+</p><p>
+Finally, bear in mind that UML is just a notation that's used in the
+context of a good OO-Design process. 
+There's not much benefit in using UML unless you're actually doing OO, and
+many people who think they are, aren't. Find an OO-Design reading list
+at <a href="http://www.holub.com/goodies/books.html">http://www.holub.com/goodies/books.html</a>.
+		</p></td>
+		<td>
+<script type="text/javascript"><!--
+google_ad_client = "pub-0896781264577325";
+google_ad_width = 250;
+google_ad_height = 250;
+google_ad_format = "250x250_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "CC0000";
+google_color_bg = "FFFFFF";
+google_color_link = "CC0000";
+google_color_text = "000000";
+google_color_url = "990000";
+google_ui_features = "rc:0";
+//-->
+</script>
+<script type="text/javascript" src="Holub%20Associates%20UML%20Reference%20Card_archivos/show_ads.js">
+</script><script src="Holub%20Associates%20UML%20Reference%20Card_archivos/test_domain.js"></script><script>window.google_render_ad();</script><iframe name="google_ads_frame" src="Holub%20Associates%20UML%20Reference%20Card_archivos/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="250" frameborder="0" height="250"></iframe>
+
+<table cellpadding="1" cellspacing="1" width="250">
+	<tbody><tr>
+		<td style="border: thin solid rgb(204, 0, 0); padding-top: 6pt; padding-bottom: 6pt;">
+<a href="http://www.holub.com/training/index.html">
+<span style="color: rgb(204, 0, 0); font-family: helvetica,san-serif; font-style: normal; font-variant: normal; font-size: 9pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; font-weight: bold; padding-top: 6pt;">UML Training by Allen Holub</span>
+</a>
+<br>
+<span style="font-family: helvetica,san-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 8pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">The best in-house Object-Oriented-Design and Java training available.</span>
+<br>
+<span style="font-family: helvetica,san-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">
+	<a href="">www.holub.com</a>
+</span>
+<br>
+		</td>
+	</tr>
+</tbody></table>
+
+
+		</td>
+	</tr>
+</tbody></table>
+
+</div> <!-- matches open tag in header -->
+
+<p>
+</p><div class="googleLinkPanel">
+<p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-0896781264577325";
+google_ad_width = 468;
+google_ad_height = 15;
+google_ad_format = "468x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "CC0000";
+google_color_bg = "FFFFFF";
+google_color_link = "CC0000";
+google_color_text = "000000";
+google_color_url = "990000";
+//-->
+</script>
+<script type="text/javascript" src="Holub%20Associates%20UML%20Reference%20Card_archivos/show_ads.js">
+</script><script>window.google_render_ad();</script><iframe name="google_ads_frame" src="Holub%20Associates%20UML%20Reference%20Card_archivos/ads_002.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="468" frameborder="0" height="15"></iframe>
+
+<a href="http://www.holub.com/training/index.html" style="color: rgb(204, 0, 0); font-family: arial,helvetica,san-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 8.5pt; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; vertical-align: 30%;">
+	Training by Allen Holub
+</a>
+
+</p></div>
+
+
+<blockquote style="margin-left: 0.5in;">
+<h1>Miscellany</h1>
+</blockquote>
+
+<table border="1" cellpadding="4" cellspacing="0">
+<tbody><tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/comment.gif">
+	</td>		
+	<td class="desc">
+		<b>Comments</b>.
+		Any kind of information that isn't easily
+		representable in UML, including comments, implementation-level code,
+		etc. Also used for a long constraint.
+		This symbol is used in all of the UML diagrams.
+	</td>
+</tr>
+</tbody></table>
+
+
+<blockquote style="margin-left: 0.5in;">
+	<h1>Organizational Diagrams</h1>
+</blockquote>
+
+<table border="1" cellpadding="4" cellspacing="0">
+<tbody><tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/package.gif">
+	</td>		
+	<td class="desc">
+		<b>Packages</b>
+		<ul>
+		<li>Group together functionally-similar classes.
+		</li><li>Same as C++ <b>namespace</b>.
+		</li><li> <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_hollow.gif"> identifies derivation.
+		Classes/interfaces in "base" package are extended/implemented
+		in "derived" package, etc.
+		Derived classes need not be in the same package as base class, however.
+		</li><li><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_solid.gif"> represents a dependency,
+		typically stereotyped («import», «access»,
+		etc.).
+		</li><li>Package name is part of the class name.
+			(e.g. given the class <i>fred</i> in the <i>flintstone</i> package,
+			 the <b>fully-qualified class name</b> is <i>flintstone.fred</i>).
+		</li><li>Generally needed when entire static-model won't fit on one sheet.
+			</li><li>Packages can nest.
+			Outermost packages called <b>domains</b> if they contain
+			only subpackages (no classes).
+			(The <em>tools</em> package at left is an outer package;
+			<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/package_002.gif" align="right">
+			the <em>com.holub</em> package is a domain.)
+			Nested packages can also be shown using a tree
+			structure and static-model nested-class symbol (shown at right).
+		</li></ul>
+	</td>
+</tr>
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/subsystem.gif">
+	</td>		
+	<td class="desc">
+		<b>Subsystems.</b>
+		A subsystem is is a cooperating system of <em>runtime objects</em>
+		that form a cohesive group.
+		(Packages are made up of classes, not objects.)
+		Subsystems presents a standard set of
+		interfaces to the outside world, and all access to the objects
+		that comprise the subsystem should be through these interfaces.
+		<p>
+		Packages are
+		compile-time things, subsystems are run-time things.
+		Don't confuse them &#8212; the similar notation is unfortunate.
+		The classes that comprise the subsystem are often
+		contained in a single package, but need not be.
+		(The classes that define objects in the
+		JDBC subsystem are defined in the <em>java.sql</em> package. I've
+		shown relationship at left, but that's not standard UML.)
+		Subsystems are identified as such by a
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/subsystem_symbol.gif" align="top">
+		symbol, which can be placed in the tab or body of the
+		box.
+		</p><p>
+		The diagram at left shows both the standard and
+		ball-and-socket-style interface notations. UML also lets you put into the box a 
+		static-model diagram showing the classes that comprise the
+		subsystem. I've found that level of detail to be unnecessary
+		in practice, so have not shown it.
+	</p></td>
+</tr>
+</tbody></table>
+
+<blockquote style="margin-left: 0.5in;">
+	<h1>Use-Case Diagram</h1>
+</blockquote>
+
+<table border="1" cellpadding="4" cellspacing="0">
+<tbody><tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/use_case.gif">
+	</td>
+	<td class="desc">
+	Specifies participants in a use case and the relationships between use cases.
+	<ul>
+		<li>The stick-figure represents a role taken on by some actor
+		(sometimes called simply "actor," but it's really a role).
+		</li>
+		<li>A line connects the actor/role to the use case in which it participates.
+			You may use cardinality. (A Salesperson places many orders.)
+			</li><li>An is-specialization-of/generalizes relationship between actor/roles
+			(denoted by <nobr><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_hollow.gif">)</nobr>
+			indicates additional responsibilities.
+			(A <em>Supervisor</em> has all the responsibilities of a <em>Salesperson</em>,
+			but can also establish credit. A <em>Supervisor</em> can create an account,
+			for example.)
+		</li><li>Dotted lines denote use-case dependencies. Common dependencies are:
+
+		<table>
+			<tbody><tr><td class="code"> «equivalent»
+				</td>
+				<td>
+				Equivalent use cases have identical activities and identical flow, but
+				end users think of them as different. ("Deposit" and "Withdrawal"
+				might have identical activities, though the objects involved
+				might be different.)
+				</td>
+			</tr>
+
+			<tr><td class="code"> «extends»
+				</td>
+				<td>
+				When <em>extension</em> extends <em>base</em>, all the activities
+				of the <em>base</em> use case are also performed in the <em>extension</em> use case,
+				but the <em>extension</em> use case adds additional activities to
+				&#8212;or slightly modifies existing activities of&#8212;the <em>base</em> use case.
+				(To place a recurring order, you must
+				perform all the activities of placing an order plus set up the
+				recurrence.) 
+
+				<p style="margin-top: 6pt;">
+				If a set of activities occur in several use cases, it's reasonable to "normalize"
+				these common activities out into a <em>base</em> use case,
+				and then extend it as necessary.
+			
+				</p><p style="margin-top: 6pt;">
+				<em>Holub Extension:</em> This relationship is really a form of derivation, so I use
+				the derivation arrow <nobr>(<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_hollow.gif">)</nobr> instead of
+				a dashed line. As in a class diagram, the arrow points from the <em>extension</em>
+				to the <em>base</em> use case.
+				</p></td>
+			</tr>
+
+			<tr><td class="code"> «includes»
+				</td>
+				<td>
+					A subcase. If <em>case</em> includes <em>subcase</em>, then the activities of 
+					<em>subcase</em> are performed one or more
+					times in the course of performing <em>case</em>.
+					(An "Authenticate" subcase may be included
+					in several larger use cases, for example.)
+					The subcase is usually represented in the using use case as
+					a single box marked with the subcase name and the stereotype <b>«use case»</b>.
+				</td>
+			</tr>
+
+			<tr><td class="code"> 
+					«requires»<br>
+					«follows»
+
+				</td>
+				<td>
+					If <em>follower</em> requires <em>leader</em>, then <em>leader</em> must
+					be completed before you can execute the <em>follower</em> use case.
+					(You must create an account before you can place an order.)
+				</td>
+			</tr>
+
+			<tr><td class="code"> «resembles»
+				</td>
+				<td>
+				Two use cases are very similar, but do have different activities.
+				</td>
+			</tr>
+		</tbody></table>
+	</li></ul>
+	Actors/roles are mostly uninteresting to programmers. The dependencies are
+	valuable in determining which use case to implement first. (I often implement
+	the use cases that have the most incoming arrows first, since other use cases
+	depend on them.)
+	</td>
+</tr>
+
+</tbody></table>
+
+<blockquote style="margin-left: 0.5in;">
+<h1>Activity and State Diagrams</h1>
+</blockquote>
+<p>
+State diagrams share many notational elements with activity diagrams. The
+main difference is that state diagrams "decorate" the transitions
+(directed lines between states) to indicate
+the method call or condition that caused the transition.
+</p><p>
+
+</p><table border="1" cellpadding="4" cellspacing="0">
+<tbody><tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/activity_start_stop.gif">
+	</td>
+	<td class="desc"> <b>Starting and Stopping.</b>
+		The solid circle indicates the beginning of the sequence of activities.
+		<p>
+		The circle with an X represents an end of a "flow" but not the end of the entire use case.
+		In other words, some subtask completes, but the entire use case is not yet complete.
+		</p><p>
+		The "target" indicates that the entire use case is complete.
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/activity_sub.gif">
+	</td>
+	<td class="desc"><b>Subcase (Sub-Activity).</b>
+		The "rake" symbol indicates that the "activity" is complex
+		enough to merit its own activity diagram. In use-case
+		analysis, this is a "subcase"---a stand-alone activity
+		that occurs in more than one use case but is not large enough
+		to be a use case in its own right.
+	</td>
+</tr>
+
+<tr><td class="sym"><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/activity_synchronization.gif"></td>
+	<td class="desc">
+	<b>Synchronization (Fork/Join).</b>
+	Used either when several activities can go on in parallel or when
+	the order in which a set of activities execute is immaterial.
+	The heavy bar at the top is a <em>fork</em>. After the fork,
+	all activities can (but are not required to) go on in parallel.
+	Progress cannot continue
+	past the bar on the bottom (the <em>join</em>)
+	until all the activities that
+	feed into the join complete.
+	<p>
+	You can label the join with a constraint (e.g. <b>{joinspec= (A and B) or C}</b>)
+	to specify the condition that allows progress to continue. If there's no
+	constraint, AND is assumed.
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/activity_guard.gif">
+	</td>
+	<td class="desc"><b>Guards (tests).</b>
+	This path is used only if the text in the brackets is true.
+	</td>
+</tr>
+
+<tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/activity_decision.gif">
+	</td>
+	<td class="desc"><b>Decision (Branch/Merge).</b>
+	A decision activity, the guard labels the decision that was made.
+	The diamond with outgoing arrows (the <em>branch</em>) 
+	specifies an OR operation, with a condition imposed by the guard. 
+	The diamond with incoming arrows (a <em>merge</em>)
+	simply provides an end to the OR operation.
+	A merge can occur without an associated branch if the
+	diagram has multiple start states.
+	</td>
+</tr>
+
+<tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/signals.gif">
+	</td>
+	<td class="desc"><b>Signals (Events).</b>
+		<p>
+		<b>Generating signals:</b> sent to outside process (<em>Request Payment</em> at left).<br>
+		<b>Accepting signals:</b> received from outside process (<em>Payment Received</em> at left).<br>
+		<b>Timer signals:</b> received when time elapses or a set time arrives (<em>30 days...</em> at left).<br>
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/exception.gif">
+	</td>
+	<td class="desc"><b>Exceptions.</b>
+		Extraordinary errors that you typically don't
+		detect with explicit tests are indicated with a "lightning bolt."
+	</td>
+</tr>
+
+
+<tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/data.gif">
+	</td>
+	<td class="desc"><b>Object Flow.</b>
+		Identifies objects that are created by activities (box with outgoing arrow) or used by
+		activities (box with incoming arrow).
+		<p>
+		In the example at left, The <em>invoice</em> object is created during the receive-invoice
+		activity and used by the process-invoice activity.
+		The <em>check</em> object is created in the cut-check activity and is used by the
+		send-payment activity. In this second case, you can also put boxes at both ends of the line.
+		</p><p>
+		You can indicate exactly how the object is used with a constraint. 
+		(e.g. <b>{create}</b>, <b>{store}</b>, etc.)
+	</p></td>
+</tr>
+
+
+<tr><td class="sym">
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/activity_swim_lane.gif">
+	</td>
+	<td class="desc"><b>Swim Lanes.</b>
+	Activities are arranged into vertical or horizontal zones delimited with
+	lines. Each zone represents a broad area of
+	responsibility, typically implemented by a set of
+	classes or objects. For example, the swim lane labeled
+	<em>accounting</em> could represent objects of several classes
+	(Bookkeeper, Clerk, MailRoom, Accountant) working
+	in concert to perform the single "cut paycheck" activity.
+	<p>
+	UML 2.x (bottom diagram at left) uses solid rather than dashed lines, and
+	permits both horizontal and vertical (or both) delimitation.
+	The upper left quadrant in the diagram at left represents
+	accounting activities that happen in Paris.
+	</p></td>
+</tr>
+</tbody></table>
+
+<blockquote style="margin-left: 0.5in;">
+<h2>Example Activity Diagram</h2>
+</blockquote>
+
+<table border="1" cellpadding="4" cellspacing="0" width="100%"><tbody><tr><td>
+<center><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/activity.gif"></center>
+</td></tr></tbody></table>
+
+<blockquote style="margin-left: 0.5in;">
+	<h1>Static-Model (Class) Diagram</h1>
+</blockquote>
+
+<table border="1" cellpadding="4" cellspacing="0">
+<tbody><tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/design_pattern.gif">
+	</td>		
+	<td class="desc">
+		<b>Design Pattern (Collaboration)</b>
+		<ul>
+		<li>The dashed circle is UML, ver. 1.5.
+			The grey box is Erich Gamma's notation, as
+			presented in John Vlissides' book <i>Pattern Hatching</i>
+			(Reading: Addison Wesley, 1998).
+			Use one <em>or</em> the other.
+		</li><li>A single class can have different roles
+			with respect to several patterns. In the bottom example, the
+			class serves as both the "Concrete Observer" in the "Observer"
+			pattern and also the "Real Subject" in the "Proxy" pattern.
+			The UML notation can identify all participating classes
+			if they happen to be in physical proximity.
+		</li></ul>
+	</td>
+</tr>
+
+<tr>
+	<td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/classbox.gif">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/classbox_named.gif">
+	</td>
+
+	<td class="desc">
+	<b>Classes</b>. Standard representation contains three <i>compartments</i>:
+	<ol>
+	<li>The <i>name compartment</i> (required) contains the class name and other
+		documentation-related information: E.g.:
+<blockquote>
+<pre><b><u>Some_class</u></b> «abstract»
+
+{ author:      George Jetson
+  modified:    10/6/2999
+  checked_out: y
+}
+</pre>
+</blockquote>
+	<ul>
+	<li>Guillemets identify <b><i>stereotypes</i></b>. E.g.:
+		<b>«utility»</b>,
+		<b>«abstract»</b>
+		<b>«interface»</b>.
+	</li><li> Can use a graphic instead of word.(<b>«interface»</b> often represented as small circle)
+	</li><li> Access privileges (see below) can precede name
+	</li><li> Use italics for abstract-class and interface names.
+	</li></ul>
+
+	</li><li>The <i>attributes compartment</i> (optional):
+		<ul>
+		<li><i>During Analysis</i>: identify the attributes (i.e. defining
+			characteristics) of the object.
+		
+		</li><li><i>During Design</i>: identify a relationship to a stock class:
+			<br>
+			This:<br>
+			<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/attribute0.gif" style="padding-left: 0.25in;"><br>
+			is a more compact (and less informative) version of this:<br>
+			<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/attribute1.gif" style="padding-left: 0.25in;">
+		<br>Everything except constant values must be private. Always. Period.
+		</li></ul>
+		
+	</li><li>The <i>operations compartment</i> (optional) contains method definitions:
+<pre style="margin-left: 2em; margin-top: 6pt; margin-bottom: 6pt;">message_name(arguments): return_type
+</pre>
+		Resist the temptation to use implementation-language syntax.
+		<p>
+		Visibility (<b>access privileges</b>) indicated as follows:<sup><font size="-1">1</font></sup>
+		<br>
+		</p><hr>
+		<table style="padding-left: 0.1in;" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td> <b>+</b>					</td><td>&nbsp;public									</td></tr>
+			<tr><td> <b>#</b>					</td><td>&nbsp;protected								</td></tr>
+			<tr><td valign="top">~				</td><td>&nbsp;package<sup><font size="-1">2</font></sup>	</td></tr>
+			<tr><td> <b>&#8211;</b>				</td><td>&nbsp;private								 	</td></tr>
+			<tr><td valign="top"><b>--</b>		</td><td>&nbsp;implementation visibility (inaccessible to other
+												objects)<sup><font size="-1">2</font></sup>    			</td></tr>
+			<tr><td valign="top"><b>(+)</b>		</td><td>&nbsp;forced public. Override of an interface method that
+												should be treated as private, even
+												if it's declared public.<sup><font size="-1">2</font></sup></td></tr>
+		</tbody></table>
+		<hr>
+		UML 2.0 permits C++-style grouping:
+		<pre style="margin-top: 3pt; margin-bottom: 0pt;">   public
+      a(): int
+      b(): void
+   private
+      c(): void
+        </pre>
+
+		<p>
+		Properties (new in UML 2.0.):
+		</p><table border="1" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td valign="top"><b>/</b></td>
+				<td>Derived attribute. Synthesized at runtime. Combine with access.
+					(e.g. <b><nobr>-height</nobr>, <nobr>-width</nobr>, <nobr>/+area</nobr></b>)
+				</td>
+			</tr>
+			<tr>
+				<td valign="top"><b>{<i>property</i>}</b></td>
+				<td>
+					Standard properties are:
+					<i>{readOnly}</i>,
+					<i>{union}</i>,
+					<nobr><i>{subsets</i> property-name<i>}</i>,</nobr>
+					<nobr><i>{redefines</i> property-name<i>}</i>,</nobr>
+					<i>{ordered}</i>,
+					<i>{bag}</i>,
+					<i>{seq}</i> (or <i>{sequence}</i>),
+					<i>{composite}</i>.
+				</td>
+			</tr>
+			<tr><td colspan="2">example: &nbsp;&nbsp;<b>/+area: integer {readOnly}</b></td></tr>
+		</tbody></table>
+		<p>
+		<b><code><em>abstract</em></code></b> operations indicated by <i>italics</i> (or <u>underline</u>).
+	</p></li></ol>
+
+	If attributes and operations are both omitted
+	(yielding a box with a class name in it),
+	a more-complete definition is assumed to be on another sheet.
+	<p>
+	Introduce nonstandard compartments simply by naming them,
+	as is shown in the bottom example at left.
+
+	</p><p>
+	<sup><font size="-1">1</font></sup><font size="-1"><i>
+	Java, unfortunately,
+	defaults to "package" access when no modifier is present.
+	UML does not support the notion of a default access.
+	UML has no notion of "implementation visibility"
+	(accessible only within an object &#8212;
+	other objects of the same class cannot access it).
+	</i></font>
+	</p><p>
+	<sup><font size="-1">2</font></sup><i>
+		These are Allen Holub's personal extensions.
+		The ~ was incorporated into the UML standard with version 1.5. The other's are not standard UML.
+	</i>
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/association.gif">
+	</td>
+	<td class="desc">
+	<b>Associations</b> (relationships between classes).
+	<ul>
+	<li>Associated classes are connected by lines.
+	</li><li>The <b>relationship</b> is identified, if necessary, with a
+		&lt; or &gt; to indicate direction (or use solid arrowheads).
+	</li><li>The role that a class plays in the relationship is identified
+		on that class's side of the line.
+	</li><li>Stereotypes (like <b>«friend»</b>) are appropriate.
+	</li><li>Unidirectional message flow can be indicated by an arrow
+		(but is implicit in situations where there is only one
+		role):
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/navigation.gif">
+	</li><li>Cardinality:
+		<blockquote>
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr><td>1		</td><td>&nbsp;&nbsp;(usually omitted if 1:1)</td></tr>
+			<tr><td>n		</td><td>&nbsp;&nbsp;(unknown at compile time, but bound)</td></tr>
+			<tr><td>0..1
+			</td><td>&nbsp;&nbsp;(1..2&nbsp;&nbsp;&nbsp;1..n)</td></tr>
+			<tr><td>1..*	</td><td>&nbsp;&nbsp;(1 or more)</td></tr>
+			<tr><td>*		</td><td>&nbsp;&nbsp;(0 or more)</td></tr>
+			</tbody></table>
+		</blockquote>
+	</li></ul>
+	Example:<br><br>
+<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/companyemployee.gif">
+<pre>class Company
+{ private Person[] employee=new Person[n];
+  public void give_me_a_raise(
+                          Person employee)
+  { /*...*/
+  }
+  public void hire_me( Person prospect )
+  { /*...*/
+  }
+}
+
+class Person
+{   private String  name;
+    private Company employer;
+    private Person  boss;
+    private Vector  flunkies=new Vector();
+    public  void    you_re_fired(){...}
+}
+</pre>
+	<font size="-1">
+		(A Java <code>Vector</code> is a variable-length array.
+		In this case it will hold <code>Person</code> objects.)
+	</font>
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/extends.gif">
+	</td>		
+	<td class="desc">
+	<b>Implementation Inheritance (Generalize/Specialize)</b>
+	<p>
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_hollow.gif"> identifies derivation
+	The derived class <em>is</em> the base class, but with additional (or modified) properties.
+	Derived (sub) class is a specialization of (extends) the base (super) class.
+	Variations include:
+	</p><table border="1" cellpadding="6" cellspacing="0">
+		<tbody><tr><td><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/mi0.gif"></td>
+			<td><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/mi1.gif"></td>
+		</tr>
+		<tr><td><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/mi2.gif"></td>
+			<td><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/mi3.gif"></td>
+		</tr>
+	</tbody></table>
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/interface1.gif"><br>
+
+		<br> <br> <br> <br> <br>
+
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/interface.gif"><br>
+	</td>		
+	<td class="desc">
+	<b>Interface Inheritance (Specifies/Refines).</b>
+	<p>
+	A contract that specifies a set of methods that must be
+	implemented by the derived class.
+	In C++, an <i>interface</i> is a class containing
+	nothing but pure virtual methods. Java supports them directly.
+	(c.f.. "abstract class," which can contain method and field
+	definitions in addition to the abstract declarations.)
+	</p><p>
+	Interfaces contain no attributes, so the "attributes" compartment is always empty.
+	</p><p>
+	The "inheritance" relationship line is dashed if the base class is an interface.
+	</p><p>
+	The "ball and socket" notation at left is new in UML 2.0.
+	Classes that consume (require) an interface display a "socket" labeled
+	with the interface name (<em>A</em> at left).
+	Classes that provide (implement) an interface display a "ball" labeled
+	with the interface name (<em>B</em> at left).
+	Combining the two is a compact way to say that the Consumer talks
+	to the provider via the named interface.
+	</p><p>
+	<em>My UML extension:
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/interface_by_hand.gif" align="right">
+			Rounded corners identify interfaces.
+			Since rounded corners are often
+			difficult to draw by hand, I sometimes use the version at right
+			for hand-drawn diagrams.
+	</em>
+	</p><p>
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/UML_interface.gif" align="right">
+	Strict UML uses the <b>«interface»</b> stereotype in the
+	name compartment of a standard class box. A small circle in
+	a corner of the compartment can also indicate an interface.
+	</p><p>
+	If the full interface specification is in some other diagram,
+	I use the "ball"
+	notation or <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/interface3.gif" align="absmiddle">.
+	</p><p>
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/interface2.gif" align="right">
+	Microsoft-style "pin" notation (at right) is obsolete as of UML 2.0.
+	Don't use it.
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/nested.gif">
+	</td>		
+	<td class="desc">
+		<b>Nesting, Inner Class.</b>.
+		Identifies nesting (containment) relationships in all diagrams.
+		In a class diagram:
+		an "inner" class whose definition is nested
+		within the another class definition.
+		Typically puts the inner class in the name space of the outer class.
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/dependency.gif">
+	</td>		
+	<td class="desc">
+		<b>Dependency</b>. <em>User</em> uses <em> Resource</em>,
+		but <em> Resource</em>
+		is not a member of (field in) the <em> User</em> class.
+		If <em> Resource</em> is modified,
+			some method of <em> User</em> might need to be modified.
+		<em> Resource</em> is typically a local variable or argument
+		of some method in <em> User</em>. The line is typically stereotyped
+		(e.g. «creates»  «modifies»)
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/aggregation.gif">
+	</td>		
+	<td class="desc">
+		<b>Aggregation</b> (comprises) relationship
+		relationship.<a href="#composition" style="text-decoration: none; vertical-align: super; font-size: 8pt;">1</a>
+		Destroying the "whole" does not destroy the parts.
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/composition.gif">
+	</td>		
+	<td class="desc">
+		<b>Composition</b> (has)
+		relationship.<a href="#composition" style="text-decoration: none; vertical-align: super; font-size: 8pt;">1</a>
+		The parts are destroyed along with the "whole."
+		Doesn't really exist in Java. In C++:
+<pre>class Container
+{
+    Item item1;   // both of these are
+    Item *item2;  // "composition"
+public:
+    Container() { item2 = new Item; }
+    ~Container(){ delete item2;     }
+}
+</pre>
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/navigability.gif">
+	</td>		
+	<td class="desc">
+		<b>Navigability</b> Messages flow in direction of arrow (only).
+		An unmarked line is "unspecified" navigability.
+		An X indicates non-navigable
+		(Uml 2.0).
+		<p>
+		Typically, if a role is specified, then navigability in the
+		direction of that role is implicit.
+		If an object doesn't
+		have a role in some relationship, then there's no way to
+		send messages to it, so non-navigability is implicit.
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/ordered.gif">
+	</td>		
+	<td class="desc">
+		<b>Constraint</b>
+		A constrained relationship
+		requires some rule to be applied.
+		(e.g. <i>{ordered}</i>)
+
+		Often combined with aggregation, composition, etc.
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/or.gif">
+		<br>
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/subset.gif">
+		<br>
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arbitrary_constraint.gif">
+	</td>		
+	<td class="desc">
+		<b>Complex Constraint</b><br>
+		<b>Comments</b>
+		<ul>
+		<li>In the case of the <b>or</b>, only one of the indicated relationships
+			will exist at any given moment (a C++ <code>union</code>).
+		</li><li><b>Subset</b> does the obvious.
+		</li><li>In official UML, put arbitrary constraints that affect
+			more than one relationship in a "<b>comment</b>" box, as shown.
+			I usually leave out the box.
+
+	</li></ul></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/qualified.gif">
+	</td>		
+	<td class="desc">
+	<b>Qualified Association</b> (hash-table, associative array, "dictionary").
+Use an external (or "foreign") key to identify an object that does not
+contain that key. Eg.: A bank uses a Customer to identify an Account becuase
+accounts do not contain customers. (An account is identified by an
+account number, not a customer.)
+<pre>class User
+{ // A Hashtable is an associative array,
+  // indexed by some key and containing
+  // some value; in this case, contains
+  // Item objects, indexed by UID.
+
+  private Hashtable bag = new HashTable();
+
+  private void add(UID key, Item value)
+  {   bag.put( key, value );
+  }
+}
+</pre>
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/association_class.gif">
+	</td>		
+	<td class="desc">
+		<b>Association Class</b>
+		<ul>
+		<li>Use when a class is required to define a relationship.
+		</li><li>If this class appears only as an association class
+		(an class-to-class association like the one between Person and Ticket doesn't exist),
+		objects of the association class must be passed as arguments to every message.
+		</li></ul>
+	</td>
+</tr>
+
+</tbody></table>
+
+<blockquote style="margin-left: 0.5in;">
+<h2>Example Class Diagram</h2>
+</blockquote>
+<table border="1" cellpadding="4" cellspacing="0" width="100%"><tbody><tr><td>
+<center><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/class_example.gif"></center>
+</td></tr></tbody></table>
+
+<blockquote style="margin-left: 0.5in;">
+	<h1>Dynamic-Model Diagrams</h1>
+
+	Dynamic model diagrams show how runtime objects act out a use case by
+	sending messages to each other.
+	<p>
+	There are two sorts of dynamic-model diagrams:
+	Sequence Diagrams and Collaboration Diagrams.
+	The two forms present identical information in different way.
+	Which one you use is largely a matter of taste.
+
+	</p><h2>Sequence Diagram</h2>
+</blockquote>
+
+<table border="1" cellpadding="4" cellspacing="0">
+<tbody><tr><td class="sym">
+		    <b>Without Activations:</b>
+		<br><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence.gif">
+		<hr align="center" size="1" width="75%">
+		<b>With Activations:</b>
+		<br><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_004.gif">
+	</td>		
+	<td class="desc">
+	<b>Objects and Messages</b>
+	<ul>
+	<li>Vertical lines represent <b>objects</b>, not classes.
+		<ul>
+		<li>May optionally add a ":class" to the box if it makes the
+			diagram more readable.
+		</li></ul>
+	</li><li><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_solid.gif"> represents synchronous message.
+		(message handler doesn't return until done).
+	</li><li><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/msg_return.gif"> represents return.
+		Label arrow with the name [and optional :type]
+		of the returned <u>object</u>.
+		(Example at left translates to: <code>returned_obj=receiver.message2();</code>)
+		</li><li>Sending object's class must have:
+			<ol>
+			<li>A association of some sort with receiving-object's class.
+			</li><li>The receiver-side class's "role" must be the same
+				as the name of the receiving object.
+			</li></ol>
+	</li><li>Activiations are optional, but much easier to read.
+		Compare:<br>
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_002.gif" align="middle">
+		to
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_007.gif" align="middle">
+		<p>
+		Return implied by bottom of box when activations present.
+		A <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/msg_return.gif"> is unnecessary
+		on methods that don't return values.
+		Explicit returns, when shown, are unambiguous because they
+		emit from the activation for the message that returns the
+		value.
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/msg_delayed.gif" align="right">
+	</p></li><li>Messages that take a long time to arrive (when sent over
+	a network for example) can be drawn with a diagonal line, as
+	is shown at right.
+	</li><li> When activations are missing,
+		return arrows are essential for disambiguating control flow.
+	<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_003.gif" align="right">
+		In above diagram,
+		it's unclear whether <code>message2</code> 
+		or <code>message4</code>
+		returns <code>returned_obj</code> when unlabeled returns are omitted.
+	</li><li>When drawing by hand, I use a solid line and put the activation
+		boxes at the side of the line, as is shown at right.
+	</li></ul>
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_010.gif">
+	</td>
+	<td class="desc">
+	<b>Data "Tadpoles"</b>
+	<p>Data "tadpoles" are often more readable than return arrows or message
+		arguments. At left, the <code>entryClerk</code> object sends the <code>shippingDock</code> an
+		object called <code>order</code>. The <code>shippingDock</code> returns the <code>shippingReceipt</code>
+		object.
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/new_object.gif">
+	</td>
+	<td class="desc">
+	<b>Object Creation</b>
+		<ul>
+		<li>Name box appears at point of creation.
+		</li><li>«creates» form for automatic creation. In C++:
+			An object (not a reference to one)
+			is declared as a field in a class.
+			The closest Java equivalent is an object created
+			by instance-variable initialization:
+<pre>class X
+{ private Cls o = new Cls();
+  //...
+}
+</pre>
+		</li><li>If message shown instead of «creates», then the
+			message handler creates the object.
+			Think of <code>new Fred()</code> 
+			as <code>Fred.new()</code>.
+			Method does not have to be <code>new()</code>.
+		</li></ul>
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_006.gif">
+	</td>
+	<td class="desc">
+	<b>Conditions, Branches, Loops, Grouping</b>
+	<ol>
+	<li value="1"><code>message1()</code> is sent only if the condition specified in the
+		<em>guard</em> (in brackets) is true.</li>
+	<li value="2"> A branch. Sender sends either <code>message2()</code> or <code>message3()</code>. Guards
+		should be exclusive. I use «else» instead of a guard when appropriate.</li>
+	<li value="3"> Iteration. Sender sends <code>message4()</code> as long as the condition is true.</li>
+	<li value="4"> "For each." If the receiver is a collection of objects (indicated by the cardinality
+		of the associated role in the static model), send the message to all of them.</li>
+	<li value="5"> UML 2.0 <b>Interaction Frame</b>. As shown, condition specifies a loop. Can also use:
+		<table cellpadding="0" cellspacing="0">
+		<tbody><tr><td valign="top" width="60"><code>loop</code></td>	<td valign="top">&nbsp;A loop, executes multiple times</td></tr>
+		<tr><td valign="top" width="60"><code>opt</code></td>	<td valign="top">&nbsp;Optional. An "if" statement.</td></tr>
+		<tr><td valign="top" width="60"><code>region</code></td><td valign="top">&nbsp;A named region.</td></tr>
+		<tr><td valign="top" width="60"><code>ref</code></td><td valign="top">&nbsp;A reference to a named region
+														(elsewhere in diagram or on another diagram):<br>
+														<br><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_009.gif"><br></td></tr>
+		</tbody></table>
+	</li><li value="6">As shown, an if/else structure. Can use:
+		<table cellpadding="0" cellspacing="0">
+		<tbody><tr><td valign="top" width="60"><code>alt</code></td>	<td valign="top">&nbsp;Execute one of the alternatives, controlled by guards</td></tr>
+		<tr><td valign="top" width="60"><code>par</code></td>	<td valign="top">&nbsp;Execute regions in parallel</td></tr>
+		</tbody></table>
+	</li></ol>
+	<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;Interaction frames can nest: <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_005.gif" align="top">
+		
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_008.gif">
+	</td>
+	<td class="desc">
+	<b>Alternative (Nonstandard) Branch/Loop Notation</b>
+	Use "pseudo-activations" and guards to indicate control flow.
+	<p>
+	Diagonal line indicates an "alternative" flow.
+	</p></td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/loop.gif">
+	</td>
+	<td class="desc">
+	<b>Loops, Alternative</b> <i>(My own extension to UML.)</i>
+		<ul>
+		<li>Don't think loops, think what the loop is accomplishing.
+		</li><li>Typically, you need to send some set of messages to every
+			element in some collection. Do this with <b>every</b>.
+		</li><li>You can get more elaborate: "every receiver where <code>x&lt;y</code>".
+		</li><li>The diagram at left comes from this model:
+		<img style="margin-top: 6pt; margin-bottom: 6pt;" src="Holub%20Associates%20UML%20Reference%20Card_archivos/loop_static.gif"><br>
+			and maps to the following code:
+<pre style="margin-left: 2em; margin-top: 6pt; margin-bottom: 6pt;">class sender_class
+{   receiver_class receiver[n];
+    public do_it()
+    {  for( int i = 0; i &lt; n; ++i )
+          receiver[i].message();
+    }
+}
+</pre>
+		</li></ul>
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_012.gif">
+	</td>
+	<td class="desc">
+		<b>Active Objects</b><br><br>
+	<em>Active objects</em>
+	process messages on one or more
+	auxiliary background threads.
+	They are are indicated by a heavyweight outline.
+	The messages sent to an active object are typically
+	<em>asynchronous</em>: they initiate some activity but
+	don't wait around for the activity to complete.
+
+	<ul style="margin-bottom: 6pt; margin-top: 6pt;">
+		<li>The &#8220;stick&#8221;
+			arrowhead means <em>asynchronous</em> message &#8212;
+			the call returns before message is fully processed. A return value
+			from an asynchronous message can indicate that work started, but
+			can't indicate any sort of completion status.
+		</li><li>The box on the lifeline
+			means <em>activated</em> &#8212; some activity
+			is being performed by the object, perhaps on a background thread.
+		</li><li>A separate lifeline
+			[shown at left when the <code>work()</code> message
+			activates the <code>processor</code> object]
+			implies a separate thread for processing
+			the message.
+		</li><li>The large X indicates that an object deletes itself
+			when done handling message. An external kill is represented as:
+			<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/external_kill.gif" align="center">
+	</li></ul>
+	At left, the <code>process(x)</code> message activates <code>processor</code>.
+	The <code>process(x)</code> message is asynchronous,
+	so the requesting method returns immediately and the
+	<code>processor</code> object does the work in the background.
+	While <code>process(x)</code> is being handled, the <code>sender</code>
+	object sends a <code>do(x)</code> message, which brings
+	an anonymous <code>Worker</code> object into existence.
+	(The <code>do()</code> method is a <code>static</code>
+	method of the <code>Worker</code> class that creates an anonymous
+	object to handle the request.)
+	This anonymous object does some work, sending a synchronous
+	<code>work()</code> message to the
+	<code>processor</code> object.
+	Since the <code>work()</code> handler is synchronous,
+	it doesn't return until the work is complete. The
+	anonymous worker waits for <code>work()</code>
+	to return, then deletes itself (killing any associated threads).
+	The <code>processor</code> object continues to exist, waiting for
+	something else to do.
+	</td>
+</tr>
+
+<tr><td class="sym">
+		<img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_011.gif">
+	</td>
+	<td class="desc">
+	<b>Callbacks, Recursion</b>
+		<p>At left, the sender sends an asynchronous message to the
+		active-object <code>receiver</code>
+		for background processing, passing it the object
+		to notify when the operation is complete (in this case, itself). The
+		<code>receiver</code> calls it's own <nobr><wbr><code>msg(...)</code></nobr> method to
+		process the request, and that method issues the
+		<code>callback()</code> call when it's done.
+		Note that:
+		</p><ul style="margin-top: 6pt;">
+		<li>The <code>callback()</code> message is running on the
+		<code>receiver</code> object's message-processing thread.
+		</li><li>The <code>callback()</code> method is,
+		however, a member of the <code>sender</code> object's class,
+		so has access to all the fields of the <code>sender</code> object.
+		</li><li>Since the original thread (from which the original
+		<code>request()</code> was issued) is also running,
+		you must synchronize access to all fields shared by both
+		<code>callback()</code> and other methods of the <code>sender</code>
+		object.
+		</li></ul>
+	</td>
+</tr>
+</tbody></table>
+
+<p><b>Message Arrowheads</b>
+</p><p>
+</p><table border="1" cellspacing="0">
+<tbody><tr>
+	<td class="desc"> <b>Symbol</b> 			</td>
+	<td class="desc"> <b>Message<br>Type</b> </td>
+	<td class="desc"> <b>Description</b>		</td>
+</tr>
+<tr>
+	<td class="desc"> <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_stick.gif"> </td>
+	<td class="desc"> Asynchronous	</td>
+	<td class="desc"> The handler returns immediately, but the actual work is done
+		in the background. The sender can move on to other tasks while processing goes on.</td>
+</tr>
+<tr>
+	<td class="desc"> <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/arrow_solid.gif">  </td>
+	<td class="desc"> Synchronous </td>
+	<td class="desc"> The sender waits until the handler completes (blocks). This
+		is a normal method call in a single-threaded application.</td>
+</tr>
+<tr>
+	<td class="desc"> <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/msg_asynch.gif"> </td>
+	<td class="desc"> Asynchronous </td>
+	<td class="desc"> Obsolete (UML version 1.3 or earlier.)
+</td></tr>
+<tr>
+	<td class="desc"> <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/msg_balking.gif"></td>
+	<td class="desc"> Balking </td>
+	<td class="desc"> The receiving object can refuse to accept the message
+		request. This could happen if an "active" object's message queue fills,
+		for example. Not part of "core" UML.</td>
+</tr>
+<tr>
+	<td class="desc"> <img src="Holub%20Associates%20UML%20Reference%20Card_archivos/msg_timeout.gif"></td>
+	<td class="desc"> Timeout </td>
+	<td class="desc"> The message handler typically blocks, but will return after
+		a predetermined amount of time, even if the work of the handler is not
+		complete. Not part of "core" UML.</td>
+</tr>
+</tbody></table>
+<br>
+
+<blockquote style="margin-left: 0.5in;">
+<h2>Example Sequence Diagram</h2>
+</blockquote>
+<table border="1" cellpadding="4" cellspacing="0" width="100%"><tbody><tr><td>
+<center><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/sequence_example.gif"></center>
+</td></tr></tbody></table>
+
+<blockquote style="margin-left: 0.5in;">
+<h2>Collaboration Diagram</h2>
+</blockquote>
+
+<table border="1" cellpadding="4" cellspacing="0" width="100%">
+<tbody><tr><td class="sym">
+	<center><img src="Holub%20Associates%20UML%20Reference%20Card_archivos/collaboration_example.gif"></center>
+    </td>
+
+	<td class="sym">
+Collaboration Diagrams are an alternative presentation of a sequence diagram.
+They tend to be more compact, but harder to read, than the equivalent
+sequence diagrams.
+The example at left is identical in meaning to the Sequence-Diagram
+example at the end of the previous section.
+(It represents the same objects and message flow.)
+<p>
+The boxes are objects.
+Lines connecting two boxes indicates that the objects collaborate with (send messages to) one another.
+Use a multiplicity indicator in the box (such as <b>*</b>) to indicate that all elements of an aggregation
+receive a message.
+</p><p>
+The object name typically goes inside the box,
+but can go outside the box when different collaborators refer to it by different names. E.g.:
+the <code>JComponent</code> at the lower right of the diagram is referenced
+by <code>Element</code> objects through a field called <code>proxy</code>
+it's referenced from <code>thing[i]</code> via a field named <code>attribute_ui</code>.
+</p><p>
+Use the following qualifiers on names:
+</p><table style="margin-left: 1em;">
+<tbody><tr><td class="code"><nobr>«parameter» <em>name</em></nobr></td><td>Method parameter.</td></tr>
+<tr><td class="code"><nobr>«local»     <em>name</em></nobr></td><td>Local variable.</td></tr>
+<tr><td class="code"><nobr><em>name</em> {new}      			</nobr></td><td>Object created during execution</td></tr>
+<tr><td class="code"><nobr><em>name</em> {destroyed}			</nobr></td><td>Object destroyed during execution</td></tr>
+<tr><td class="code"><nobr><em>name</em> {transient}			</nobr></td><td>Object created during execution, used, then destroyed</td></tr>
+</tbody></table>
+<p>
+Usually, the instance name (or reference through which the instance is accessed) is the same as the role the instance
+plays in the collaboration.
+When the name and role aren't identical, use <b>instance/role:Class</b>. E.g.:
+given <code>tutor/teacher:Person</code> and <code>lecturer/teacher:Person</code>,
+an object of class <em>Person</em>,
+used in the role of <em>teacher</em>,
+is called <code>tutor</code> in some portion of the code and
+<code>lecturer</code> elsewhere in the code.
+</p><p>
+Messages that flow from one object to another are drawn
+next to the line, with an arrow indicating direction.
+Arrowhead types have the same meaning as in sequence diagrams.
+The message sequence is shown via a numbering scheme.
+Message 1 is sent first.
+Messages 1.1, 1.2, etc., are sent by whatever method handles message 1.
+Messages 1.1.1, 1.1.2, etc., are set by the method that handles message 1.1,
+and so forth.
+Message sequence in the current example is:
+</p><blockquote>
+	1.<br>
+	1.1<br>
+	1.1.1<br>
+	1.1.2<br>
+	1.1.2.1<br>
+	1.1.2.2<br>
+	1.1.3<br>
+	2.<br>
+	2.1<br>
+	2.2<br>
+	2.2.1<br>
+	2.2.2<br>
+	3.<br>
+</blockquote>
+<p>
+Guards are specified using the "Object Constraint Language," a pseudo-code
+that's part of the
+<a href="http://www.uml.org/">UML specification</a>.
+Syntactically, it's more like Pascal and Ada than Java and C++,
+but it's readable enough. (The operators that will trip you up are 
+assignment [<code>:=</code>]
+equality [<code>=</code>]
+and not-equals [<code>&lt;&gt;</code>]).
+As in a sequence diagram, an asterisk indicates iteration.
+
+</p></td>
+</tr>
+</tbody></table>
+<br>
+<br>
+
+<blockquote style="margin-left: 0.5in;">
+<h2>Nomeclature</h2>
+	There are three broad categories of diagrams.
+	<dl>
+	<dt>Structure Diagrams</dt>
+		<dd>include class diagrams, deployment diagrams, etc.</dd>
+	<dt>Behavior Diagrams</dt>
+		<dd>include activity, use-case, and state diagrams.</dd>
+	<dt>Interaction Diagrams (are a subclass of Behavior Diagrams)</dt>
+		<dd>include Sequence and Collaboration diagrams.</dd>
+	</dl>
+	Collaboration diagrams are called "Communication Diagrams" in UML 2.
+
+<h2>What's Missing</h2>
+A few parts of UML aren't shown here. (Some of these are useful, I just haven't
+gotten around to adding them yet.)
+<ul>
+<li><b>State-Diagram Symbols.</b>
+	There are a few symbols used in state diagrams that aren't shown
+	in the earlier Activity/State-Diagram section.
+</li><li><b>Deployment diagrams.</b>
+	Show how large modules in the system hook up. Useful primarily
+	for marketing presentations, executive summaries, and
+	pointy-haired bosses.
+</li><li><b>Paramaterized Classes.</b> C++ templates/Java generics.
+</li><li><b>N-ary Associations.</b> are better done with classes. Don't use them.
+</li><li><b>Component Diagrams.</b> The only difference between a component and a
+	subsystem is size. Component diagrams are almost identical to subsystem
+	diagrams.
+</li><li><b>Activity Realization Diagram.</b> is an activity diagram
+redrawn to look more like a collaboration-diagram.
+</li></ul>
+
+Refer to the
+<a href="http://www.omg.org/cgi-bin/doc?ptc/2004-01-11">UML Superstructure</a>
+document for more details.
+
+
+<h2>Footnotes</h2>
+
+<a name="composition">(1)</a> <span style="font-size: 12pt; font-weight: bold;">Composition vs. Aggregation:</span>
+<p>
+Neither "aggregation" nor "composition" really have direct analogs in
+many languages (Java, for example).
+</p><p>
+An "aggregate" represents a whole that comprises various parts;
+so, a Committee is an aggregate of its Members. A
+Meeting is an aggregate of an Agenda, a Room, and the Attendees. At
+implementation time, this relationship is not containment. (A meeting
+does not contain a room.)
+Similaraly, the parts of the aggregate might be doing other things
+elsewhere in the program, so they might be refereced by several
+objects. In other words,
+There's no implementation-level difference between aggregation
+and a simple "uses" relationship (an "association" line with no
+diamonds on it at all). In both cases an object has references to other
+objects. Though there's no implementation difference, it's definitely
+worth capturing the relationship in the UML, both because it helps
+you understand the domain model better, and because there are subtle
+implementation issues. I might allow tighter coupling relationships in
+an aggregation than I would with a simple "uses," for example.
+
+</p><p>Composition involves even tighter coupling than aggregation,
+and definitely involves containment. The basic
+requirement is that, if a class of objects (call it a "container")
+is composed of other objects (call them the "elements"), then the elements
+will come into existence and also be destroyed as a side effect of
+creating or destroying the container. It would be rare for a element
+not to be declared as <code>private</code>. An example might be an
+Customer's name and address. A Customer without a name or address is a
+worthless thing. By the same token, when the Customer is destroyed,
+there's no point in keeping the name and address around. (Compare this
+situation with aggregation, where destroying the Committee should not
+cause the members to be destroyed---they may be members of other
+Committees).
+
+</p><p>In terms of implementation, the elements in a composition relationship
+are typically created by the constructor or
+an initializer in a field declaration,
+but Java doesn't have a destructor, so there's no way to
+guarantee that the elements are destroyed along with the container.
+In C++, the element would be an object (not a reference or pointer) that's
+declared as a field in another object, so creation and destruction of
+the element would be automatic. Java has no such mechanism. It's
+nonetheless important to specify a containment relationship in the
+UML, because this relationship tells the implementation/testing
+folks that your intent is for the element to become garbage collectable
+(i.e. there should be no references to it) when the container is
+destroyed.
+</p></blockquote>
+
+	<div> <!-- matches close tag in footer -->
+	</div>
+<table class="footer" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+	<td class="footer">
+			<a class="footer" href="http://www.holub.com/">Allen I. Holub &amp; Associates</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;Berkeley, California 
+			&nbsp;&nbsp;&nbsp;&nbsp;510.528.3620 
+			&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer" href="http://www.holub.com/company/contact.html"><img style="border-style: none; vertical-align: top;" src="Holub%20Associates%20UML%20Reference%20Card_archivos/contact.gif" onmouseover="src='/images/contact.rollover.gif';" onmouseout="src='/images/contact.gif';"></a>
+	</td>
+</tr>
+<tr>
+	<td class="copyright">©2007 Allen I. Holub (<a class="footer" href="http://www.holub.com/">www.holub.com</a>). All Rights Reserved. ¤
+	</td>
+</tr>
+</tbody></table>
+<!-- Google Analytics -->
+<script src="Holub%20Associates%20UML%20Reference%20Card_archivos/urchin.js" type="text/javascript"> </script>
+<script type="text/javascript">
+	_uacct = "UA-2406460-1";
+	urchinTracker();
+</script>
+
+</body></html>

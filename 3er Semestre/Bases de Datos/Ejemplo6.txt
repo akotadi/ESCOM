@@ -1,0 +1,169 @@
+1.- Cargar script tt.sql
+
+	create database tt1;
+	use tt1;
+	source ...
+
+2.- Creación de las siguientes vistas...
+
+	a) Nombre del tt y su número de aquellos tts donde ha sido sinodal fabiola ocampo.
+
+		create view v1 as
+		Select t.*
+		from tt t, sinodalia s, profesor p
+		where t.nott=s.nott
+		and (s.s1=p.idprof or s.s2=p.idprof or s.s3=p.idprof)
+		and p.nombre like "Fabiola%"
+		and p.apPaterno like "Ocampo%"
+		order by t.titulo, t.nott;
+
+	b) Mostrar las calificaciones de los tts remediales.
+
+		create view v2 as
+		Select califRevisor, califSinodales, nott
+		from presentacion
+		where tipo like "TT R%"
+		order by nott;
+	
+	c) Mostrar la fecha de presentación y el tipo de tt que han sido dirigidos por el profesor Arturo Garfias.
+
+		create view v3 as
+		Select x.nott, x.fecha, x.tipo
+		from presentacion x, tt t, dirige d, profesor p
+		where x.nott=t.nott
+		and t.nott=d.nott
+		and d.idProf=p.idProf
+		and p.nombre like "Flavi%"
+		and p.apPaterno like "S_nch%"
+		order by 1;
+	
+	d) Mostrar el nombre de los profesores que han hecho un doctorado.
+
+		create view v4 as 
+		Select p.nombre, p.apPaterno, p.apMaterno
+		from profesor p, gradoProf gp, gradoEstudios ge
+		where p.idProf=gp.idProf
+		and gp.idGrado=ge.idGrado
+		and ge.descripcion like "doctor%"
+		order by 2,3;
+	
+	e) Mostrar los tts que se han presentado en el año 2007.
+
+		create view v5 as
+		Select t.*, p.fecha
+		from tt t, presentacion p
+		where t.nott=p.nott
+		and fecha between "2007-01-01" and "2007-12-31"
+		order by nott;
+	
+	f) Mostrar el nombre de los tts que ha sido sinodal la profesora Martha Rosa Cordero.
+
+		create view v6 as
+		Select t.*
+		from tt t, sinodalia s, profesor p
+		where t.nott=s.nott
+		and (s.s1=p.idprof or s.s2=p.idprof or s.s3=p.idprof)
+		and p.nombre like "Martha%"
+		and p.apPaterno like "Cordero%"
+		order by t.titulo, t.nott;
+	
+	g) Cuántos tts se presentaron en el año 2008.
+
+		create view v7 as
+		Select count(*)
+		from presentacion
+		where fecha between "2008-01-01" and "2008-12-31";
+	
+	h) Mostrar el dictamen de los tts que han sido revisados por la profesora Idalia Maldonado
+
+		create view v8 as
+		Select x.nott, x.dictamen
+		from presentacion x, tt t, sinodalia s, profesor p
+		where x.nott=t.nott
+		and t.nott=s.nott
+		and s.revisor=p.idprof
+		and p.nombre like "Idalia%"
+		and p.appaterno like "Maldona%"
+		order by 2,1;
+	
+	i) Mostrar el dictamen de los tts que han sido revisados por el profesor Ulises Vélez
+
+		create view v9 as
+		Select x.nott, x.dictamen
+		from presentacion x, tt t, sinodalia s, profesor p
+		where x.nott=t.nott
+		and t.nott=s.nott
+		and s.revisor=p.idprof
+		and p.nombre like "Ulise%"
+		and p.appaterno like "V_le%"
+		order by 1,2;
+
+3.- Primera función (procedure)
+
+	a) Conocer el número de registros donde su profe de bd ha dirigido tts.
+
+	b) Conocer el nott y la fecha de presentación de la consulta anterior
+
+	delimiter &
+	create procedure p1()
+	begin
+		Select count(*) 
+		from dirige d, profesor p
+		where d.idProf=p.idProf
+		and p.nombre like "Euler%"
+		and p.appaterno like "Hern%";
+
+		Select x.nott, x.fecha 
+		from presentacion x, tt t, dirige d, profesor p
+		where x.nott=t.nott
+		and t.nott=d.nott
+		and d.idProf=p.idProf
+		and p.nombre like "Euler%"
+		and p.appaterno like "Hern%"
+		order by 1, 2;
+	end &
+
+4.- Segunda función (procedure)
+
+	a) Los tts que tienen en su título el nombre de redes de computadoras
+
+	b) Conocer el nombre de sus directores de la consulta anterior
+
+	delimiter &
+	create procedure p2()
+	begin
+		Select *
+		from tt
+		where titulo like "%redes de computadoras%"
+		order by titulo, nott;
+
+		Select t.*, p.nombre, p.apPaterno, p.apMaterno
+		from tt t, dirige d, profesor p
+		where t.nott=d.nott
+		and d.idprof=p.idprof
+		and t.titulo like "%redes de computadoras%"
+		order by p.appaterno, p.apmaterno;
+	end &
+	
+---------------------------------------------
+
+drop view __________; // nombre vista
+show tables; // nombre vista
+desc ________________; // metadato vista
+create view _____________ as sentencia SQL;
+Select * from _____________;
+
+---------------------------------------------
+
+delimiter () // () es el símbolo a usar
+create procedure ______________ ()
+begin
+	sentencia sql1;
+	...
+	sentencia sqln;
+end () // () es el símbolo a usar
+delimiter ; // espacio importante
+
+drop procedure _____________;
+show procedure status;
+call _______________;

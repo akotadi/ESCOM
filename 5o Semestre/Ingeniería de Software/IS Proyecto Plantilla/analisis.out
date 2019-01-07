@@ -1,0 +1,45 @@
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Prop\363sito}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Alcance}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Definiciones, acr\363nimos y abreviaturas}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Referencias}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Contenido y organizaci\363n}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{An\341lisis del problema}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Contexto del sistema}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Procesos actuales}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Participantes}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{Procesos}{section.2.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Problemas identificados}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.3.1}{Problema general}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.2}{Descomposici\363n del problema}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.3}{An\341lisis de causas}{section.2.3}% 15
+\BOOKMARK [1][-]{section.2.4}{Propuesta de soluci\363n}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.4.1}{Alternativas de soluci\363n}{section.2.4}% 17
+\BOOKMARK [0][-]{chapter.3}{Propuesta de soluci\363n}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Objetivos}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.1.1}{Objetivo general}{section.3.1}% 20
+\BOOKMARK [2][-]{subsection.3.1.2}{Objetivos espec\355ficos}{section.3.1}% 21
+\BOOKMARK [1][-]{section.3.2}{Modelo de despliegue}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.2.1}{Requerimientos no funcionales}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.2}{Modelo de despliegue del sistema}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.3}{Especificaci\363n de Plataforma}{section.3.2}% 25
+\BOOKMARK [0][-]{chapter.4}{Modelo de Negocios}{}% 26
+\BOOKMARK [1][-]{section.4.1}{Glosario de t\351rminos}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.2}{Proceso ajustado}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.3}{Procesos actuales}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{Participantes}{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.2}{Proceso A}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.3}{Proceso B}{section.4.3}% 32
+\BOOKMARK [1][-]{section.4.4}{Modelo de entidades del negocio}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.5}{Descripci\363n de atributos}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.5.1}{Atributos de ``Alumno''}{section.4.5}% 35
+\BOOKMARK [1][-]{section.4.6}{Reglas de Negocio}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Modelo del despliegue del sistema}{}% 37
+\BOOKMARK [0][-]{chapter.6}{Modelo de comportamiento}{}% 38
+\BOOKMARK [1][-]{section.6.1}{CU17 Inscribir a Seminario}{chapter.6}% 39
+\BOOKMARK [2][-]{subsection.6.1.1}{Descripci\363n completa}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.2}{Atributos importantes}{section.6.1}% 41
+\BOOKMARK [2][-]{subsection.6.1.3}{Trayectorias del Caso de Uso}{section.6.1}% 42
+\BOOKMARK [0][-]{chapter.7}{Modelo de la Interacci\363n}{}% 43
+\BOOKMARK [1][-]{section.7.1}{Modelo de navegaci\363n}{chapter.7}% 44
+\BOOKMARK [2][-]{subsection.7.1.1}{IU23 Pantalla de Control de Acceso}{section.7.1}% 45

@@ -1,0 +1,20 @@
+/*
+ * Pieza.java
+ *
+ * Created on 21 de febrero de 2004, 12:20
+ */
+
+package objetos3D;
+
+/**
+ *
+ * @author  Administrador
+ * @version 
+ */
+public class Pieza {
+
+    /** Creates new Pieza */
+    public Pieza() {
+    }
+
+}

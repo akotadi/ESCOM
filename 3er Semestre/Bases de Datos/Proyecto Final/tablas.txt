@@ -1,0 +1,223 @@
+create table Empleado(
+	CURP varchar(20) not null primary key,
+	nombre varchar(20),
+	apPaterno varchar(20),
+	apMaterno varchar(20),
+	calle varchar(45),
+	colonia varchar(20),
+	cp int,
+	estado varchar(20),
+	fechaContratacion DATE,
+	turno varchar(5),
+	sueldo double,
+	tipo varchar(3)
+);
+
+------------------
+
+create table emailEmpleado(
+	email varchar(45) not null,
+	Empleado_CURP varchar(20) not null,
+	primary key(email, Empleado_CURP),
+	foreign key(Empleado_CURP) references Empleado(CURP) on delete cascade on update cascade
+);
+
+------------------
+
+create table telefonoEmpleado(
+	telefono int not null,
+	Empleado_CURP varchar(20) not null,
+	primary key(telefono, Empleado_CURP),
+	foreign key(Empleado_CURP) references Empleado(CURP) on delete cascade on update cascade
+);
+
+------------------
+
+create table Gerente(
+	Empleado_CURP varchar(20) not null primary key,
+	fechaAsignacion DATE,
+	foreign key(Empleado_CURP) references Empleado(CURP) on delete cascade on update cascade
+);
+
+------------------
+
+create table Mostrador(
+	Empleado_CURP varchar(20) not null primary key,
+	montoCorte double,
+	noLocalAsignado int,
+	nombreLocal varchar(45),
+	foreign key(Empleado_CURP) references Empleado(CURP) on delete cascade on update cascade
+);
+
+------------------
+
+//,
+	//foreign key(noLocalAsignado) references Local(numero) on delete cascade on update cascade,
+	//foreign key(nombreLocal) references Local(nombre) on delete cascade on update cascade
+
+create table Local(
+	numero int not null,
+	nombre varchar(30) not null,
+	giroLocal varchar(10),
+	gerente_CURP varchar(20),
+	primary key(numero, nombre),
+	foreign key(gerente_CURP) references Gerente(Empleado_CURP) on delete cascade on update cascade
+);
+
+------------------
+
+create table Refrigerador(
+	Local_numero int not null,
+	Local_nombre varchar(30) not null,
+	modelo varchar(45),
+	compañia varchar(45),
+	fechaLlegada DATE,
+	primary key(Local_numero, Local_nombre),
+	foreign key(Local_numero, Local_nombre) references Local(numero, nombre) on delete cascade on update cascade
+);
+
+------------------
+
+create table Bascula(
+	Local_numero int not null,
+	Local_nombre varchar(30) not null,
+	modelo varchar(45),
+	fechaLlegada DATE,
+	primary key(Local_numero, Local_nombre),
+	foreign key(Local_numero, Local_nombre) references Local(numero, nombre) on delete cascade on update cascade
+);
+
+------------------	 
+
+create table Proveedor(
+	RFC varchar(20) not null primary key,
+	nombre varchar(20),
+	apPaterno varchar(20),
+	apMaterno varchar(20),
+	compañia varchar(20),
+	email varchar(45),
+	calle varchar(45),
+	colonia varchar(20),
+	cp int,
+	estado varchar(20)
+);
+
+------------------
+
+create table telefonoProveedor(
+	telefono int not null,
+	Proveedor_RFC varchar(20) not null,
+	primary key(telefono, Proveedor_RFC)
+);
+
+------------------
+
+create table Producto(
+	idProducto int not null primary key,
+	nombre varchar(20),
+	marca varchar(15),
+	tipoVenta varchar(3),
+	precio double,
+	limiteMin int,
+	limiteMax int,
+	tamañoCantidad double,
+	tamañoUnidad varchar(5),
+	codigoQR varchar(30),
+	descuento int
+);
+
+------------------
+
+create table Merma(
+	Producto_idProducto int not null primary key,
+	cantidad int,
+	proveedor varchar(20),
+	foreign key(Producto_idProducto) references Producto(idProducto) on delete cascade on update cascade
+);
+
+------------------
+
+create table Cliente(
+	idCliente int not null primary key,
+	nombre varchar(20),
+	apPaterno varchar(20),
+	apMaterno varchar(20),
+	telefono int,
+	email varchar(45),
+	calle varchar(45),
+	colonia varchar(20),
+	cp int,
+	estado varchar(20),
+	creditoMaximo double,
+	creditoActual double,
+	descuento double
+);
+
+------------------
+
+create table PP(
+	Proveedor_RFC varchar(20) not null,
+	Producto_codigo double not null,
+	precio double,
+	primary key(Proveedor_RFC, Producto_codigo),
+	foreign key(Proveedor_RFC) references Proveedor(RFC) on delete cascade on update cascade,
+	foreign key(Producto_codigo) references Producto(codigo) on delete cascade on update cascade
+);
+
+
+
+------------------
+
+create table LP(
+	Producto_idProducto int not null,
+	Local_numero int not null,
+	Local_nombre varchar(30) not null,
+	existencia int,
+	primary key(Producto_idProducto, Local_numero, Local_nombre),
+	foreign key(Producto_idProducto) references Producto(codigo) on delete cascade on update cascade,
+	foreign key(Local_numero, Local_nombre) references Local(numero, nombre) on delete cascade on update cascade
+);
+
+------------------
+
+create table Pedido(
+	idPedido int not null primary key,
+	montoTotal double,
+	noProductos int,
+	fechaRealizacion DATE,
+	fechaEntrega DATE,
+	cantidadProducto int,
+	Proveedor_RFC varchar(20) character set latin1,
+	Gerente_CURP varchar(20) character set latin1,
+	Producto_codigo double,
+	foreign key(Proveedor_RFC) references Proveedor(RFC) on delete cascade on update cascade,
+	foreign key(Gerente_CURP) references Gerente(Empleado_CURP) on delete cascade on update cascade,
+	foreign key(Producto_codigo) references Producto(codigo) on delete cascade on update cascade
+);
+
+create table PromocionPedido(
+	promocion varchar(45) not null,
+	Pedido_idPedido int not null,
+	primary key(promocion,Pedido_idPedido),
+	foreign key(Pedido_idPedido) references Pedido(idPedido) on delete cascade on update cascade
+);
+
+create table Venta(
+	idVenta int not null primary key auto_increment,
+	montoTotal double,
+	noProductos int,
+	fechaVenta DATE,
+	cantidadProducto int,
+	promocion int,
+	Mostrador_CURP varchar(20),
+	Cliente_idCliente int,
+	Producto_codigo double,
+	descuento double,
+	foreign key(Cliente_idCliente) references Cliente(idCliente) on delete cascade on update cascade,
+	foreign key(Producto_codigo) references Producto(codigo) on delete cascade on update cascade
+);
+
+
+	alter table venta add foreign key(Mostrador_CURP) references Mostrador(Empleado_CURP) on delete cascade on update cascade;
+	foreign key(Cliente_idCliente) references Cliente(idCliente) on delete cascade on update cascade;
+	foreign key(Producto_codigo) references Producto(codigo) on delete cascade on update cascade;

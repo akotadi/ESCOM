@@ -1,0 +1,77 @@
+sudo systemctl stop postgresql.service
+sudo systemctl start postgresql.service
+sudo systemctl enable postgresql.service
+sudo systemctl status postgresql.service
+
+/etc/init.d/postgresql stop
+sudo apt-get --purge remove postgresql\*
+sudo rm -r /etc/postgresql/
+sudo rm -r /etc/postgresql-common/
+sudo rm -r /var/lib/postgresql/
+sudo userdel -r postgres
+sudo groupdel postgres
+sudo apt-get remove --auto-remove pgadmin4
+sudo apt-get update
+sudo apt-get install postgresql postgresql-11
+sudo apt-get install pgadmin4
+psql --version
+sudo adduser postgres
+sudo passwd postgres
+sudo -i -u postgres
+psql
+ALTER USER postgres PASSWORD 'root';
+\q
+createdb apms
+psql apms
+
+cd ~
+nano .bashrc
+PATH="/home/akotadi/ProgramFiles/apache-maven-3.6.0/bin:$PATH"
+mvn -version
+mvn spring-boot:run
+
+heroku pg:psql postgresql-corrugated-70150 --app apmsrest
+
+ctrl+alt+r (Requester)
+ctrl+alt+y (Terminal)
+
+git clone https://github.com/SoftwareEngineerESCOM/APMS-Server
+
+
+
+
+get('localhost:8080/syntheticProgram/syntheticProgramsByLearningUnitId/25')
+
+
+
+
+Jefe de Innovación Educativa
+	Registro PE
+	Correcciones
+
+Estado entidades
+	Aprobado
+	No aprobado
+
+Número de revisión
+	Número consecutivo
+
+Estados plan de estudio
+	Creación
+	Rediseño
+	Aprobado
+	Vigente
+	En liquidación
+	Liquidado
+
+
+documento técnico
+procesos
+usuario
+código
+aplicativo
+
+
+
+Cambiar direccionamiento
+Revisar con diccionario de datos

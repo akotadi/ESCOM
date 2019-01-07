@@ -1,0 +1,106 @@
+Conjunto<Estado> Cerradura(Conjunto<Estado> A){
+	Conjunto<Estado> R;
+	R.clear();
+	for each e in A{
+		R.Union(Cerradura(e));
+	}
+	return R;
+}
+
+Conjunto<Estado> Mover(Estado e, char s){
+	Conjunto<Estado> R;
+	R.clear();
+	for each t in e.Transiciones{
+		if(t.simbolo == s){
+			R.Add(t.Estado);
+		}
+	}
+	return R;
+}
+
+Conjunto<Estado> Mover(Conjunto<Estado> E, char s){
+	Conjunto<Estado> R;
+	R.clear();
+	for each e in E{
+		R.Union(Mover(e,s));
+	}
+	return R;
+}
+
+Conjunto<Estado> JA(Estado e, char s){
+	return Cerradura(Mover(e,s));
+}
+
+AFN CrearAFNBasico(char s){
+	AFN f = new AFN();
+	Estado e1, e2;
+	Transicion t;
+	e1 = new Estado();
+	e2 = new Estado();
+	t = new Transicion(s, e2);
+	e1.Transiciones.Add(t);
+	e2.EdoAccept = true;
+	f.EdoIni = e1;
+	f.Alfabeto.Add(s);
+	f.EdosAccept.Add(e2);
+	return f;
+}
+
+
+AFN Unir(AFN f2){
+	Estado e1, e2;
+	e1 = new Estado();
+	e2 = new Estado();
+	e2.EdoAccept = true;
+	e1.Transitions.Add(new Transition(epsilon, this.EdoIni));
+	e1.Transitions.Add(new Transition(epsilon, f2.EdoIni));
+	for each e in this.EdosAccept{
+		e.Transitions.Add(new Transition(epsilon, e2));
+		e.EdoAccept = false;
+	}
+	for each e in f2.EdosAccept{
+		e.Transitions.Add(new Transition(epsilon, e2));
+		e.EdoAccept = false;
+	}
+	this.EdosAccept.Clear();
+	f2 = NULL;
+	this.EdoIni = e1;
+	this.EdosAccept.Add(e2);
+	this.Alphabet = this.Alphabet.Merge(f2.Alphabet);
+	return this;
+}
+
+AFN Concatenacion(AFN f2){
+	for each t in f2.EdoIni.Transitions{
+		for each e in this.EdosAccept{
+			e.Transitions.Add(t);
+		}
+		e.EdoAccept = false;
+	}
+	this.EdosAccept.Clear();
+	this.EdosAccept.Merge(f2.EdosAccept);
+	for each e in f2.EdosAccept{
+		this.edosAccept.Add(e);
+	}
+	this.Alphabet.Merge(f2.Alphabet);
+	f2 = NULL;
+	return this;
+}
+
+AFN CerraduraKleene(){
+	Estados e1, e2;
+	e1 = new Estado();
+	e2 = new Estado();
+	e2.EdoAccept = true;
+	e1.Transitions.Add(new Transition(epsilon, this.EdoIni));
+	e1.Transitions.Add(new Transition(epsilon, e2));
+	for each e in this.EdosAccept{
+		e.EdoAccept = false;
+		e.Transitions.Add(new Transition(epsilon, this.EdoIni));
+		e.Transitions.Add(new Transition(epsilon, e2));
+	}
+	this.EdoIni = e1;
+	this.EdosAccept.Clear();
+	this.EdosAccept.Add(e2);
+	return this;
+}

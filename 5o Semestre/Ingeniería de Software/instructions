@@ -1,0 +1,31 @@
+/etc/init.d/postgresql stop
+
+sudo apt-get --purge remove postgresql\*
+sudo rm -r /etc/postgresql/
+sudo rm -r /etc/postgresql-common/
+sudo rm -r /var/lib/postgresql/
+sudo userdel -r postgres
+sudo groupdel postgres
+sudo apt-get remove --auto-remove pgadmin4
+
+sudo apt-get update
+sudo apt-get install postgresql postgresql-11
+sudo apt-get install pgadmin4
+
+psql --version
+
+sudo adduser postgres
+sudo passwd postgres
+sudo -i -u postgres
+psql
+ALTER USER postgres PASSWORD 'root';
+\q
+createdb apms
+psql apms
+sudo systemctl stop postgresql.service
+
+heroku labs:enable log-runtime-metrics --app apmsrest
+
+heroku logs --tail --app apmsrest
+
+/usr/lib/postgresql/11/bin/pg_ctl -D /var/lib/postgresql/11/main -l logfile start

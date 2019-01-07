@@ -1,0 +1,80 @@
+create table Usuario(
+CURP varchar(15) not null primary key,
+nombre varchar(45),
+apPaterno varchar(45),
+direccion varchar(45)
+);
+
+create table Servicio(
+idServicio int not null primary key,
+descripcion varchar(45),
+costo double,
+TipoServicio varchar(45)
+)
+
+create table ServicioTiendaTelmex(
+idServicio int not null,
+idTiendaTelmex int not null,
+CURP varchar(15) not null,
+primary key(idServicio,idTiendaTelmex,CURP),
+fechaContratacion DATE,
+foreign key(idServicio) references Servicio(idServicio) on delete cascade on update cascade,
+foreign key(idTiendaTelmex) references Empleado(idTiendaTelmex) on delete cascade on update cascade,
+foreign key(CURP) references Usuario(CURP) on delete cascade on update cascade
+);
+
+create table TiendaTelmex(
+idTiendaTelmex int not null primary key,
+calle varchar(45),
+cp int,
+colonia varchar(45),
+ciudad varchar(45),
+horario varchar(45)
+);
+
+create table Empleado(
+RFC int not null primary key,
+nombre varchar(45),
+apPaterno varchar(45),
+apMaterno varchar(45),
+fechaIngreso DATE,
+salario double,
+idTiendaTelmex int,
+foreign key(idTiendaTelmex) references TiendaTelmex(idTiendaTelmex) on delete cascade on update cascade
+);
+
+alter table Empleado rename as Asociado;
+
+alter table Usuario modify direccion varchar(350);
+
+create table Presentacion(
+idPresentacion int not null primary key,
+descripcion varchar(45)
+);
+
+alter table Asociado add column Empleado idPresentacion int;
+
+alter table Asociado add foreign key(idPresentacion) references Asociado(idPresentacion) on delete cascade on update cascade;
+
+
+alter table Usuario add tel int;
+alter table Asociado add tel int;
+
+create table email(
+RFC int not null,
+email varchar(45) not null,
+primary key(RFC,email)
+);
+
+alter table asociado add foreign key(RFC) references email(RFC) on update cascade on delete cascade;
+
+
+create table tratamiento(
+idTratamiento int not null primary key,
+descripcion varchar(400)
+);
+
+alter table tratamiento add column curp varchar(15);
+
+alter table tratamiento add foreign key(curp) references paciente(curp) on delete cascade on update cascade;
+

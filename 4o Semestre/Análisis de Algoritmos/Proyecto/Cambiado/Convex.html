@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Convex ESCOM</title>
+</head>
+
+<body>
+<div id="body">
+    <h2>ConvexHull EquipoArbol</h2>
+    <div id="grid">
+      	<div id="leftPanel">
+      		<h2>Monotone chain</h2>
+      		<p>
+        		Monotone chain fue publicado en 1979 por A. M. Andrew, el cual es un algoritmo voraz
+        		que se encarga de encontrar el minimmo conjunto convexo que contenga
+        		un conjunto dado de puntos. Este problema es fundamental de la geometria computacional.
+      		</p>
+      		<h2>Sus aplicaciones abarcan:</h2>
+      		<ul>
+        		<li>Geometria</li>
+        		<li>Graficos de computadora</li>
+        		<li>Planeo de rutas para robots</li>
+      		</ul>
+    	</div>
+    	<div id="canvas"></div>
+    	<div id="rightPanel">
+      		<p>
+        		<h2>Puntos del ConvexHull</h2>
+       			<ul id="PointsInCH">
+        		</ul>
+      		</p>
+    	</div>
+    </div>
+    <div id="botones">
+        <button id="runbtn" type="button">Iniciar</button>
+        <button id="randombtn" type="button">Aleatorio</button>
+        <button id="clearbtn" type="button">Reiniciar</button>
+    </div>
+    <div class="clase1">
+    	<h3>Algoritmo</h3>
+      		<pre>
+Ordene los puntos de P por la coordenada x (en caso de un empate, ordene por coordenada y).
+
+Inicialice U y L como listas vacías.
+Las listas contendrán los vértices de los cascos superior e inferior.
+
+para i = 1, 2, ..., n:
+	mientras que L contiene al menos dos puntos y la secuencia de los dos últimos puntos
+	de L y el punto P [i] no hace un giro en sentido antihorario:
+    	eliminar el último punto de L
+    añadir P [i] a L
+
+para i = n, n - 1, ..., 1:
+	mientras que U contiene al menos dos puntos y la secuencia de los dos últimos puntos
+    de U y el punto P [i] no hace un giro en sentido antihorario:
+    	eliminar el último punto de U
+    añadir P [i] a U
+
+Elimine el último punto de cada lista (es el mismo que el primer punto de la otra lista).
+Concatenar L y U para obtener el casco convexo de P.
+Los puntos en el resultado se enumerarán en el sentido contrario a las agujas del reloj.
+      		</pre>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>

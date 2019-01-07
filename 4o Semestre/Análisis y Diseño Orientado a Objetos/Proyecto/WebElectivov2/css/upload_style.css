@@ -1,0 +1,35 @@
+body
+{
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+ background-color:#fff;
+}
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:995px;
+}
+#drop-area
+{
+ margin-top:20px;
+ margin-left:220px;
+ width:550px;
+ height:200px;
+ background-color:white;
+ border:3px dashed grey;
+}
+.drop-text
+{
+ margin-top:70px;
+ color:grey;
+ font-size:25px;
+ font-weight:bold;
+}
+#drop-area img
+{
+ max-width:200px;
+}

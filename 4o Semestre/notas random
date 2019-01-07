@@ -1,0 +1,17 @@
+random_shuffle
+treap
+
+enum
+
+wchar
+
+Evaluation: none
+Family: Spartan6
+Device: XC6SLX16
+Package: CSG324
+Speed: -2
+Simulator: ISim
+Preferred Language: VHDL
+
+New source
+VHDL module

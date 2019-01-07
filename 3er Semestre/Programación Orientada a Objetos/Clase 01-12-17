@@ -1,0 +1,26 @@
+Patrón de diseño Singlenton
+
+	- Constructor privado
+	- Var clase
+	- Método getter público
+
+Aseguro que una clase sólo tenga una instancia y provee un punto de acceso global a ella.
+
+
+
+
+new MyObject()
+
+public class MyClass{
+	
+}
+
+public class MyClass{
+	private MyClass(){ }
+	MyClass uniqueInstance;
+	public MyClass getUniqueInstance(){
+		if(uniqueInstance == null)
+			uniqueInstance = new MyClass();
+		return uniqueInstance;
+	}
+}

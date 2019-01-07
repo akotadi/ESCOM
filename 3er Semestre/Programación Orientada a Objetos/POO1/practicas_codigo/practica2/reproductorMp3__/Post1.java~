@@ -1,0 +1,120 @@
+import java.io.File;
+import javazoom.jlgui.basicplayer.BasicPlayer;
+import javazoom.jlgui.basicplayer.BasicPlayerException;
+//javac -cp .:JID3.jar:jl-1.0.1.jar:basicplayer3.0.jar Post1.java
+//java -cp .:JID3.jar:jl-1.0.1.jar:basicplayer3.0.jar Post1
+public class Post1 {
+public Boolean reproduciendo, pausado;
+        
+/*
+        public void accion(int n){
+		String dir = System.getProperty("user.dir");
+		if (n == 2){
+			Image temp = (new ImageIcon(dir+"/Images/play.png")).getImage();
+			System.out.println("Entro a algo");
+			if (reproduciendo){
+				try {
+					aTunesPlayer.Pausa();
+					reproduciendo = false;
+					pausado = true;
+					temp = (new ImageIcon(dir+"/Images/play.png")).getImage();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}
+			else{  
+				System.out.println("Entro un poco mas");
+				if (pausado){
+					try{
+						aTunesPlayer.Continuar();
+						reproduciendo = true;
+						temp = (new ImageIcon(dir+"/Images/pause.png")).getImage();
+						pausado =false;
+						System.out.println("Entro c");
+					}catch(Exception xd){
+						xd.printStackTrace();
+					}
+				}
+				else{
+					System.out.println("Entro donde quiero");
+					try{
+						//setDir();
+                                                int fila=table.getSelectedRow();
+                String s=(String)((DefaultTableModel) table.getModel()).getValueAt(fila, 1);
+						
+                                                String songPath =new String();              
+			                	songPath = urls.get(fila);
+System.out.println("row= "+fila+" cell= "+s+"url= "+songPath); 
+                try {
+			aTunesPlayer.AbrirFichero(songPath);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+						aTunesPlayer.Play();
+						reproduciendo = true;
+						System.out.println("play");
+						temp = (new ImageIcon(dir+"/Images/pause.png")).getImage();
+					}catch(Exception xd){
+						System.out.println("Error "+xd);
+						xd.printStackTrace();
+					}
+				}
+			}
+			temp = temp.getScaledInstance(31, 31,  java.awt.Image.SCALE_SMOOTH);
+			//bPlay.setIcon(new ImageIcon(temp));
+		}
+		if (n == 3){
+			try {
+				System.out.println("stop");
+				aTunesPlayer.Stop();
+				reproduciendo=false;  
+                		pausado=false;  
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
+		if (n == 5){
+			volu=70+(volu+2)%30;
+                        System.out.println("volumen = "+volu);
+			setVolume(volu);
+		}
+}*/
+
+
+
+
+public static void main(String[] args) {
+Reproductor aTunesPlayer;
+aTunesPlayer=new Reproductor();
+try{						                                						                                            
+                String songPath =new String("feel.mp3");              
+                try {
+			aTunesPlayer.AbrirFichero(songPath);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		aTunesPlayer.Play();
+		//reproduciendo = true;
+		System.out.println("main play");
+		
+}catch(Exception xd){
+		System.out.println("Error "+xd);
+		xd.printStackTrace();
+}
+Frame f=new Frame("Reproduce");
+f.setVisible(true);
+}
+}
+
+
+/*
+    public static void main(String[] args) {
+        try {
+            BasicPlayer player= new BasicPlayer(); // Llamo la clase de la libreria Basic Player, que reproduce
+            player.open(new File("feel.mp3"));// Dentro las "" va la                     ruta de tu archivo mp3.
+            player.play();// Llama al método Reproducir también existen los métodos  stop,resume.           
+        } catch (BasicPlayerException ex) {
+            System.out.print("-------Error-----"+ex.getMessage());
+        }// Fin try
+    }// Fin Main
+}*/

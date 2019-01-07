@@ -1,0 +1,636 @@
+
+<html>
+
+<head>
+<title>Embedded Object Oriented Design Tips II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Object Oriented Design Tips for development of Realtime and Embedded systems">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="keywords" content="OO Design, Object, Object Oriented, OOPS">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<style>
+a            { text-decoration: none }
+</style>
+<!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/eventhelix/even1000.css"><meta name="Microsoft Theme" content="eventhelix 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body topmargin="0" marginheight="0" leftmargin="0" marginwidth="0"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table1" background="../../EventStudio/image1/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bordercolor="#808080" width="1141">
+			<a title="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design" href="../../">
+			<img border="0" src="../../EventStudio/_borders/event_helix.jpg" width="242" height="92" alt="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design"></a>
+			<a name="top"></a></td>
+			<td bordercolor="#808080" width="238" nowrap>
+			<div align="center">
+				<table border="0" cellspacing="1" width="74%" id="table4" background="../../EventStudio/image1/w2gh.gif" align="left" height="36">
+					<tr>
+						<td width="20" style="text-align: center">
+						<a title="EventStudio 2.5: System Engineering CASE Tool" href="../../EventStudio">
+						<img border="0" src="../../EventStudio/eventstudio_icon.gif" width="32" height="32" alt="EventStudio 2.5: Sequence diagram based modeling"></a></td>
+						<td style="text-align: left" valign="top">
+						<span style="color: navy; font-weight: 700">
+						<font size="2">
+						<a title="Generate Sequence Diagrams, Message Sequence Charts and Collaboration Diagrams" href="../../EventStudio">
+						<font color="#000080">EventStudio 4.0</font></a></font></span><br>
+						<a title="System Architecture and System Engineering CASE Tool" href="../../EventStudio">
+						<font size="1" color="#707070">Sequence diagram based 
+						system design and modeling</font></a></td>
+					</tr>
+				</table>
+			</div>
+			<p>&nbsp;</td>
+		</tr>
+		<tr>
+			<td bgcolor="#E0E0E0" bordercolor="#808080" align="left" colspan="2" width="1270" valign="top" nowrap>
+			<font color="#000080" size="2" face="Arial">&nbsp;<b> </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b>
+			<font color="#666666" face="Arial" size="2">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<h1><font size="2">
+<a href="../../default.htm" style="text-decoration: none">Home</a> &gt; 
+<a href="../../RealtimeMantra">Real-time Mantra</a> &gt;<a href="../Object_Oriented"> Object Oriented Design</a><font color="#000000"> 
+&gt; Object Oriented Design Tips II<br>
+</font>
+</font>Object Oriented Design Tips II</h1>
+<p>We have already covered object oriented design tips in a previous article.
+Here we will look at more tips that will help you improve your object oriented
+design skills:</p>
+<ol>
+  <li><a href="#Class with just get-set methods points to missed delegation">Class with just get-set methods points to missed delegation</a></li>
+  <li><a href="#Replace array of structures with array of objects">Replace an array of structures with
+    an array of objects</a></li>
+  <li><a href="#Delegate work to helper class">Delegate work to helper class</a></li>
+  <li><a href="#Multi-dimensional arrays point to incomplete class identification">Multi-dimensional arrays point to incomplete class identification</a></li>
+  <li><a href="#Multiple nested loops point to incomplete delegation">Multiple nested loops point to incomplete delegation</a></li>
+  <li><a href="#Classes with very large numbers of methods points to incomplete class identification">Class with very large numbers of methods points to incomplete class
+    identification</a></li>
+  <li><a href="#Don't go overboard with inheritance">Don't go overboard with inheritance</a></li>
+  <li><a href="#Use composition to the fullest">Prefer delegation to inheritance</a>&nbsp;</li>
+  <li><a href="#Don't scatter the abstraction">Don't scatter the abstraction</a></li>
+  <li><a href="#Use objects, not tasks to split work amongst team members">Consider
+    group of objects to split work amongst team members</a></li>
+  <li><a href="#Use nested classes for lightweight helper classes">Use nested classes for lightweight helper classes</a></li>
+  <li><a href="#Use templates to improve type safety and performance">Use templates to improve type safety and performance</a></li>
+  <li><a href="#Divide your code into framework and application parts">Divide your code into framework and application parts</a></li>
+</ol>
+<h3><a name="Class with just get-set methods points to missed delegation">Class with just get-set methods points to missed delegation</a></h3>
+<p>Many times while developing classes you might find that a particular class
+you have developed has just get and set based methods. There are no methods to
+perform any operations on the object. In many cases, this points to
+inadequate delegation of work by the caller. Examine the caller of the get-set methods. Look
+for operations that could be delegated to the class with just get-set
+methods.</p>
+<p>The example below shows a DSP class that has get and set methods. The Message
+Handler class was doing most of the processing.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Overworked
+      Message Handler class and a simple Get-Set DSP class</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class DSP
+{
+public:
+   Queue *GetWriteBufferQueue();
+   Queue *GetReadBufferQueue();
+
+   void SetStatusRegister(int mask);
+   void SetCongestionLevel();
+   
+   void SetWriteBufferQueue(Buffer *pQueue);
+   void SetReadBufferQueue(Buffer *pQueue);   
+};   
+
+Status MessageHandler::SendMessage(Buffer *pBuffer)
+{
+    int dspId = pBuffer-&gt;GetDSP();
+    
+    DSP* pDSP = m_dsp[dspId];
+    
+    Queue *pQueue = pDSP-&gt;GetWriteBufferQueue();
+    
+    int status = pQueue-&gt;Add(pBuffer);    
+    
+    pDSP-&gt;SetStatusRegister(WRITTEN_MESSAGE);
+    
+    if (pQueue-&gt;GetLength() &gt; CONGESTION_THRESHOLD)
+    {
+       pDSP-&gt;SetCongestionLevel();
+    }
+    
+    return status;
+}</code></font></pre></td>
+  </tr>
+</table>
+<p> The above classes have been transformed to assign most of the DSP queue
+management to the DSP class itself. This has simplified the design of the
+Message Handler class. The interfaces of the DSP class have also been
+simplified. </p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Here
+      the DSP class does most of the work</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class DSP
+{
+public:
+    void WriteBuffer(Buffer *pBuf);
+    Buffer *ReadBuffer();   
+};   
+
+Status MessageHandler::SendMessage(Buffer *)
+{
+    int dspId = pBuffer-&gt;GetDSP();
+    
+    pDSP = m_dsp[dspId];
+    
+    int status = pDSP-&gt;WriteBuffer();
+    
+    return status;
+}
+
+Status DSP::WriteBuffer(Buffer *)
+{    
+    int status = m_pQueue-&gt;Add(pBuffer);    
+    
+    IOWrite(WRITTEN_MESSAGE);
+    
+    if (m_pQueue-&gt;GetLength() &gt; CONGESTION_THRESHOLD)
+    {
+       m_bCongestionFlag = true;
+    }
+    
+    return status;
+}
+</code></font></pre></td>
+  </tr>
+</table>
+<h3><a name="Replace array of structures with array of objects">Replace an array of structures with
+an array of objects</a></h3>
+<p>Whenever you end up with an array of structures in your class, consider if
+you should convert the array of structure into an array of objects. Initially the
+structure array might be simple with only one or two fields. As coding progresses,
+more and more fields are added to the structure. At that time it might be too
+late to treat the structure as a class.&nbsp;</p>
+<h3><a name="Delegate work to helper class">Delegate work to helper class</a></h3>
+<p>If you find that one of the classes in your design has too many methods and
+the code size for the class is much greater than your average class, consider
+inventing helper classes to handle some of the functionality of this class. This
+will simplify the design of the huge class, making it more maintainable. More
+importantly, you might be able to split the work amongst different developers.</p>
+<p>Consider the following class:</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Monolithic
+      Digital
+      Trunk Class</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class DigitTrunk
+{
+    Status m_status;
+    Timeslot m_timeslot[MAX_TIMESLOT_PER_TRUNK];
+
+    
+    int m_signalingTimeslot;
+    int m_signalingStatus;
+    . . .
+    
+    int m_errorThreshold;
+    int m_localErrorRate;
+    int m_remoteErrorRate;
+    . . .
+public:
+
+    . . .
+    void HandleSignalingRequest();
+    void SendSignalingIndication();
+    . . .
+    
+    void HandleRemoteError();
+    void HandleLocalError();    
+    . . .
+};    </code></font></pre></td>
+  </tr>
+</table>
+<p>The above class can be made more maintainable by adding private helper classes
+SignalingHandler and ErrorHandler.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Digital
+      Trunk Class With Helper Classes</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class DigitTrunk
+{
+    Status m_status;
+    Timeslot m_timeslot[MAX_TIMESLOTS_PER_TRUNK];
+
+    class SignalingHandler
+    {
+    
+       int m_signalingTimeslot;
+       int m_signalingStatus;
+       . . .
+     public:
+       void HandleSignalingRequest();
+       void SendSignalingIndication();
+    };
+    
+    class ErrorHandler
+    {
+       int m_errorThreshold;
+       int m_localErrorRate;
+       int m_remoteErrorRate;
+       . . .       
+    public:
+       void HandleRemoteError();
+       void HandleLocalError();
+    };
+    
+   // Helper classes
+   SignalingHandler m_signalingHandler;
+   ErrorHandler m_errorHandler;
+    
+public:
+
+    . . .
+    void HandleSignalingRequest()
+    { m_sigalingHandler.HandleSignalingRequest(); }
+    
+    void SendSignalingIndication()
+    { m_signalingHandler.SendSignalingIndication(); }
+    
+    . . .
+    
+    void HandleRemoteError()
+    { m_errorHandler.HandleRemoteError(); }
+    
+    void HandleLocalError()
+    { m_errorHandler.HandleLocalError(); }
+    
+    . . .
+};    </code></font></pre></td>
+  </tr>
+</table>
+<h3><a name="Multi-dimensional arrays point to incomplete class identification">Multi-dimensional arrays point to incomplete class identification</a></h3>
+<p>If your design contains multi-dimensional arrays, this might point to missed
+class identification. The following example should clarify this:</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Two
+      dimensional DSP array declaration</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>. . .
+  // Each Signal Processor Card contains 32 DSPs. 
+  // This is represented by a two dimensional
+  // array of DSP objects. The first dimension 
+  // is the Signal Processor Card Id and the second
+  // dimension is the DSP id on the card
+  
+  DSP m_dsp[MAX_SIGNAL_PROCESSOR_CARDS][MAX_DSPS_PER_CARD];
+  </code></font></pre></td>
+  </tr>
+</table>
+<p>The above two dimensional array points to missed identification of
+SignalProcessingCard class. This has been fixed in the following code
+fragment:&nbsp;</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">SignalProcessingCard
+      class eliminates two dimensional array</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>   . . .
+   // The two dimensional array is replaced. We identify 
+   // SignalProcesingCard as an object. This
+   // object contains 32 DSPs
+    
+   class SignalProcessingCard
+   {
+      DSP m_dsp[MAX_DSPS_PER_CARD];
+    public:
+      . . .
+   };
+    
+   // Array of signal processing card objects, indexed by signal processing card id  
+   SignalProcessingCard m_signalProcessingCard[MAX_SIGNAL_PROCESSOR_CARDS];
+   . . .
+  </code></font></pre></td>
+  </tr>
+</table>
+<h3><a name="Multiple nested loops point to incomplete delegation">Multiple nested loops point to incomplete delegation</a></h3>
+<p>Many times, nested loops point to incomplete delegation. May be the inner
+nesting of the loop should have been delegated to a lower level object. Consider
+the above example of SignalProcessingCard and DSP.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Initializing
+      all DSPs (Nested Loops)</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>   . . .
+   for (card=0; card &lt; MAX_SIGNAL_PROCESSING_CARDS; card++)
+   {
+      for (dsp=0; dsp &lt; MAX_DSPS_PER_CARD; dsp++)
+      {
+         m_signalProcessingCard[card].GetDSP(dsp)-&gt;Initialize();
+      }
+   }  </code></font></pre></td>
+  </tr>
+</table>
+<p>The inner loop in the above code should be replaced with a Initialize method
+at SignalProcessingCard. Code operating on SignalProcesingCard initialization
+should not worry about DSP level initialization. This should be delegated to the
+Initialize method of the SignalProcessingCard.&nbsp;</p>
+<table border="0" width="601" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="599" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Initializing
+      all DSPs delegated to SignalProcessingCard class (no nested loop)</font></b></td>
+  </tr>
+  <tr>
+    <td width="599" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>   . . .
+   for (card=0; card &lt; MAX_SIGNAL_PROCESSING_CARDS; card++)
+   {
+      m_signalProcessingCard[card].Initialize();
+   }
+   
+void SignalProcessingCard::Initialize()
+{
+   for (dsp=0; dsp &lt; MAX_DSPS_PER_CARD; dsp++)
+   {
+      m_dsp[dsp].Initialize();
+   }
+}</code></font></pre></td>
+  </tr>
+</table>
+<h3><a name="Classes with very large numbers of methods points to incomplete class identification">Class with very large numbers of methods points to incomplete class
+    identification</a></h3>
+<p>A class with very large number of methods typically means that fine grain
+object identification has been missed. At this stage, have a hard look at your
+design to identify more classes.</p>
+<h3><a name="Don't go overboard with inheritance">Don't go overboard with inheritance</a></h3>
+<p>This is a very common mistake made by designers new to object oriented
+design. Inheritance is such a wonderful concept that its easy to go overboard
+and try to apply it every where. This problem can be avoided by using the litmus
+test:</p>
+<p><i>X should inherit from Y only if you can say that X is a Y. By this rule
+its easy to see that Circle should inherit from Shape as we can make the
+statement &quot;Circle is a Shape&quot;.</i></p>
+<p>Inheritance is the most tightly coupled of all the relationships. Every
+inheritance relationship causes the derived class to strongly depend upon the
+base class. That dependency is hard to manage.</p>
+<p>Also note that the biggest benefit of object oriented design are obtained
+from composition and not inheritance. In our earlier example, programmers can develop
+SignalProcessingCard and DSP objects as if there was only one instance of the
+object. The multiplicity is achieved by just declaring an array of the objects.</p>
+<h3><a name="Use composition to the fullest">Prefer delegation to inheritance</a></h3>
+<p>Many times, relationships are better modeled as delegation than
+inheritance. When in doubt, always consider delegation as an alternative.
+Sometimes commonality in classes that do not meet the &quot;is a&quot; rule is
+better implemented by using a common helper class which implements the common
+functionality. This class can then be included as a member in both the classes.</p>
+<p>Consider two classes <font color="#000080">TerminalAllocator</font> and <font color="#000080">DSPAllocator</font>
+which use similar resource allocation algorithms. The two classes have
+completely different type of interfaces. You might be tempted to model this as
+both the classes inheriting from a common Allocator class which implements the
+common parts of the allocation algorithm. In many cases, it might be better to
+model TerminalAllocator and DSPAllocator as standalone classes with a helper
+class Allocator included as a member.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Modeled
+      as Inheritiance</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class TerminalAllocator : public Allocator
+{
+   . . .
+};      
+
+class DSPAllocator : public Allocator
+{
+   . . .
+};  </code></font></pre></td>
+  </tr>
+</table><p>&nbsp;</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Modeled
+      as Delegation</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class TerminalAllocator
+{
+<b>   Allocator m_allocator;</b>
+   . . .
+};      
+
+class DSPAllocator
+{
+<b>   Allocator m_allocator;</b>
+   . . .
+};  </code></font></pre></td>
+  </tr>
+</table>
+<h3><a name="Don't scatter the abstraction">Don't scatter the abstraction</a></h3>
+<p>This is a common mistake when multiple developers are working on a project.
+Each developer implements his or her part by designing objects that they need,
+without considering if other developers have similar objects. This scatters the
+abstraction of an object into several different objects which implement pieces
+of the whole objects functionality. In our example, this would mean that the
+design contains several objects that represent the <font color="#000080"> SignalProcessingCard</font> and
+<font color="#000080"> DSP</font>
+objects in different portions of the code. Each developer implement parts of the
+<font color="#000080">SignalProcessingCard</font> and <font color="#000080">DSP</font>
+functionality that is needed in their domain. This results in scattering the
+functionality of an object over several incomplete objects.</p>
+<p>Needless to say, such code would be
+difficult to understand and hard to maintain.</p>
+<h3><a name="Use objects, not tasks to split work amongst team members">Consider
+group of objects to split work amongst team members</a></h3>
+<p>Embedded software developers often split work amongst team members by
+dividing the functionality into several tasks. With object oriented design, work
+can be divided in a much more fine grain way by assigning a group of classes to a
+developer.&nbsp; In many cases you can implement all the functionality in a
+single task, thus greatly reducing the effort in designing intra-processor
+communication.</p>
+<h3><a name="Use nested classes for lightweight helper classes">Use nested classes for lightweight helper classes</a></h3>
+<p>Many times you will encounter a situation where a small class might be useful
+in capturing some of functionality of a large class. Often developers avoid
+adding such classes as they would result in a new set of header and source
+files. This brings its associated changes like makefile updates, checking in
+new elements. Another problem with the this approach is that you end up with
+simply too many classes. There is no way to isolate the important classes from
+the simple helper classes.</p>
+<p>The solution to this problem is to use small nested classes that are declared
+within the parent class. With this approach, the nested class does not appear
+amongst the top level classes in your design. This greatly simplifies the total
+number of high level classes you have to deal with. (If you are using a tool
+like Microsoft Visual Studio, the nested classes would appear as tree nodes
+inside the parent class. Thus adding a new class does not increase the number of
+classes visible in the outermost nodes of the tree).</p>
+<p>Nested classes can be made even more lightweight by letting developers write the code for the nested classes in the parent class source files. This
+lightweight mechanism would improve the readability of complex classes. The
+developers can now model the complex class as a set of lightweight helper
+classes.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">DigitalTrunk.h
+      : Nested class declaration</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class DigitalTrunk
+{
+private:
+      // Timeslot allocator is a private class used by DigitalTrunk. The full
+      // name for the class is DigitalTrunk::TimeslotAllocator.
+<b>   class TimeslotAllocator
+</b>
+      {
+      public:
+         int Allocate();
+         void Free(int timeslot);   
+      }
+      
+      // Timeslots in transmit and receive direction can be allocated
+      // independently
+      TimeslotAllocator m_transmitAllocator;
+      TimeslotAllocator m_receiveAllocator;
+      
+public:
+   . . .
+};      </code></font></pre></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">DigitalTrunk.cpp
+      : Nested class methods</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>// Nested classes methods are also contained
+// in the the parent class's CPP file
+    
+int DigitalTrunk::TimeslotAllocator::Allocate()
+{
+
+}      
+void DigitalTrunk::TimeslotAllocator::Free()
+{
+
+}      </code></font></pre></td>
+  </tr>
+</table>
+<h3><a name="Use templates to improve type safety and performance">Use templates to improve type safety and performance</a></h3>
+<p>Do not restrict yourself to using templates as defined in STL. Templates can
+be used to provide type safe and efficient code in the following cases:</p>
+<ul>
+  <li>Classes have common functionality but differ in the size of data
+    structures. Such classes can be modeled in base template class that takes
+    the data structure sizes as template parameters.</li>
+  <li>Preprocessor macros are type independent but type unsafe. C++ inline
+    functions are type safe but type dependent. Template functions can be used
+    to replace macros as well as regular inline functions. Template functions
+    are both type safe and type independent.</li>
+  <li>Pointer and reference based classes where the functionality is the same in
+    classes but the type to operate on is different. In most such cases
+    declaring template base class with a generic type would solve this problem
+    in an elegant fashion.&nbsp;</li>
+</ul>
+<h3><a name="Divide your code into framework and application parts">Divide your code into framework and application parts</a></h3>
+<p>When developing a new application consider dividing the total application into
+core application code and framework code. The core application code performs
+operations that are very specific to the application at hand. All the other code
+that is needed to support the core application should be modeled as an
+application framework. This has several benefits:</p>
+<ul>
+  <li>The application framework developed here might get reused in developing
+    similar applications. The application framework can be reused much more
+    readily than the core application.</li>
+  <li>Lower layers of the application framework might be reused in applications
+    that are quite different from the original core application.</li>
+  <li>The core application can to be ported to a different platform by just
+    changing the application framework.</li>
+  <li>Often developing the core application and framework requires different
+    skills. This application- framework can simplify staffing the
+    project.&nbsp;&nbsp;</li>
+</ul>
+<p>Here are a few examples of possible frameworks:</p>
+<ul>
+  <li>Tracing framework</li>
+  <li>Memory management framework</li>
+  <li>Message management framework</li>
+  <li>Call processing framework</li>
+  <li>Operator interface management framework</li>
+  <li>Fault handling framework</li>
+</ul>
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table7" background="../../EventStudio/images/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bgcolor="#E0E0E0" bordercolor="#808080" align="left" width="1270" nowrap>
+			<font color="#000080" face="Arial" size="2"><b>&nbsp; </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b><font color="#666666">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-padding-alt: 0in 5.4pt 0in 5.4pt; margin-left: -3.85pt" width="100%">
+	<thead>
+		<tr>
+			<td width="100%" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in" background="../../EventStudio/images/hg.gif">
+			<small><font color="#666666">Copyright © 2000-2007 EventHelix.com 
+			Inc. All Rights Reserved.</font></small></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>

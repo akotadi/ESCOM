@@ -1,0 +1,9 @@
+
+
+CREATE TABLE  PerroImg (
+         nombre VARCHAR(100),
+         raza VARCHAR(100),
+	 edad VARCHAR(3),
+         genero VARCHAR(10),
+         imagen blob
+);

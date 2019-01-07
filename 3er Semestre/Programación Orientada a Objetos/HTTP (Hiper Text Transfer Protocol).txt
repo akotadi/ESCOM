@@ -1,0 +1,114 @@
+HTTP (Hiper Text Transfer Protocol)
+
+// Es pequeño, por lo tanto es stateless (sin estado), esto significa
+
+1. Realizar la conexión
+	El cliente se conecta al servidor en el puerto 80
+
+2. Hacer la petición
+	El cliente envía un mensaje al servidor, solicitando una página en el url especificado.
+
+	MétodoHTTP -> URL Relativo -> Versión HTTP // URL es la dirección del objeto que vive en internet
+	donde MétodoHTTP puede ser GET, post o HEAD
+
+	opc. a la línea de método, una petición del cliente puede incluir otra información. Finalmente 
+	una línea en blanco termina la petición.
+
+3. La respuesta
+	Empieza con un código de respuesta.
+		"http\1.0 200 OK\r\n"
+		"http\1.0 403 forbidden\r\n"
+		"http\1.0 404 Not found\r\n"
+		"http\1.0 500 Internal Server Error\r\n"
+
+	El código de respuesta va seguido por información de cabecera MIME, luego una línea en blanco
+		// MIME = Extensiones multipropósito del correo electrónico
+	y luego el documento solicitado o un mensaje de error.
+
+4. Cerrando la conexión
+	Ya sea el cliente, el servidor o ambos cierran la conexión.
+
+----------------------------------------------
+
+Petición
+
+	Encabezado de petición
+		GET /index.hmtl HTTP/1.0
+		Accept: text/plain // tipo MIME, dividido en tipo/subtipo
+		Accept: text/html
+		User-Agent: Lynx/2.4www/2.1.4 // quién es el navegador
+		[CRLF] // retorno de carro y line fit - nueva línea
+
+Respuesta
+
+	Encabezado de respuesta
+		HTTP/1.0 200 OK // código de respuesta
+		Server: NCSA/1.4.2 // servidor
+		Mime-version:1.0
+		Content-type: text/html // envió de MIME
+		Content-lenght: 107 // longitud de cuánto va a enviar
+		[CRLF] // línea en blanco // Encabezado
+
+
+		<html><head><title> // <> conocido como etiquetas
+		A sample HTML file
+		</title></head>
+		<body>
+		The rest of document goes her
+		</body>
+		<html>
+
+-------------------------------------------------
+
+CGI (Common Gateway Interface)
+
+	<Form method = GET action = "/cgi-bin/register.pl">
+	<PRE>
+		Nombre: <input name="username" type="text" size=40>
+		e-mail: <input name="email" type="text" size=40>
+	</PRE>
+	<input type="submit" value="Envia">
+	</Form>
+
+		-----------------------------------------
+		|			---------------				|
+		|	Nombre: | Donald Trump|				|
+		|			---------------				|
+		|										|
+		|		   -------------------------	|
+		|	email: | Donald@whitehouse.gov |	|
+		|		   -------------------------	|
+		|										|
+		|				---------				|
+		|				| Envía |				|
+		|				---------				|
+		|										|
+		-----------------------------------------
+
+Cadena de consulta
+
+	Son parejas de nombre-valor separadas por "&" y donde el nombre se separa del valor mediante "="
+	
+	username=Donald+Trump&email=Donald%40whitehouse%2egov
+
+	Hay 2 formas de enviar una cadena de consulta al servidor: GEST y POST. Con GET
+	el navegador agrega la cadena de consutla al url y lo envía al servidor. Si usa
+	POST envía la cadena de consutla en un flujo de salida.
+
+	GET /cgi-bin/register?username=Donald+Trump&email=Donald%40whitehouse%2egov
+
+	Con POST el navegador envia los encabezados usuales y los termina acon una línea 
+	en blanco y entonces envía la cadena de consulta. La cadena se le pasa al programa
+
+
+CGI en la entrada estándar
+	
+	POST /cgi-bin/register.pe HTTP/1.0
+	Content-type:application/x-www-form-urlencaded
+	Content-length:65
+	[CR LF]
+	username=Donald+Trump&email=Donald%40%whitehouse%2egov
+
+----------------------------------------------------------
+
+SERVLETS

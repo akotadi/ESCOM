@@ -1,0 +1,10 @@
+n = 8
+datos[N] = {6200, 4555, 829, 566, 1830, 2650, 7790, 1210};
+
+acumula = 0;
+for( n= 0; n != N; n++){
+	acumula += datos[n];
+}
+promedio = acumula / N;
+
+512 Hz

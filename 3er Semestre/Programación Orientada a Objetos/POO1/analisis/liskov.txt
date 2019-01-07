@@ -1,0 +1,20 @@
+Liskov substitution principle
+From Wikipedia, the free encyclopedia
+Jump to: navigation, search
+In object-oriented programming, the Liskov substitution principle is a particular definition of subtype that was introduced by Barbara Liskov and Jeannette Wing in a 1993 paper entitled Family Values: A Behavioral Notion of Subtyping [1]. (It is not the only definition; see data type.)
+
+The principle was formulated succinctly [2] as follows:
+
+Let q(x) be a property provable about objects x of type T. Then q(y) should be true for objects y of type S where S is a subtype of T. 
+Thus, Liskov and Wing's notion of "subtype" is based on the notion of substitutability; that is, if S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program (e.g., correctness).
+
+
+[edit] Design by contract
+The Liskov substitution principle is closely related to the design by contract methodology, leading to some restrictions on how contracts can interact with inheritance:
+
+Preconditions cannot be strengthened in a subclass. This means that you cannot have a subclass that has stronger preconditions than its superclass. 
+Postconditions cannot be weakened in a subclass. This means that you cannot have a subclass that has weaker postconditions than its superclass. 
+In addition, the principle implies that no new exceptions should be thrown by methods of the subclass, except where those exceptions are themselves subtypes of exceptions thrown by the methods of the superclass. See covariance and contravariance.
+
+A function using a class hierarchy violating the principle uses a reference to a base class, yet must have knowledge of the subclasses. Such a function violates the open/closed principle because it must be modified whenever a new derivative of the base class is created.
+

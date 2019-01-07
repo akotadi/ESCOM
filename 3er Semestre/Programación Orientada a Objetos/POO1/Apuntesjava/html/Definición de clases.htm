@@ -1,0 +1,1993 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Definición%20de%20clases_archivos/filelist.xml">
+<link rel=Edit-Time-Data href="./Definición%20de%20clases_archivos/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Definición de clases </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Roberto Tecla</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Roberto Tecla</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>197</o:TotalTime>
+  <o:LastPrinted>2002-01-30T21:01:00Z</o:LastPrinted>
+  <o:Created>2002-03-16T04:41:00Z</o:Created>
+  <o:LastSaved>2002-03-16T04:41:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>1567</o:Words>
+  <o:Characters>8937</o:Characters>
+  <o:Company>Cinvestav</o:Company>
+  <o:Lines>74</o:Lines>
+  <o:Paragraphs>17</o:Paragraphs>
+  <o:CharactersWithSpaces>10975</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:16792199 0 0 0 65791 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:ES-MX;}
+h2
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+h3
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:stroke endarrow="block"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ES style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h1><span lang=ES-MX>Definición de clases </span></h1>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Para definir una clase se usa la palabra reservada class y
+el nombre de la misma <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class NombreClase<span style="mso-spacerun: yes">  </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Si dicha clase es una subclase de otra, se usa extends para
+indicar la superclase <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class NombreClase extends NombreSuperclase {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Si dicha clase implementa una interfaz se usa implements
+para referirse a la interfaz<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class NombreClase implements Interfaz {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Una clase puede implementar varias interfaces <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class NombreClase implements Interfaz1, Interfaz2, Interfaz3,
+..., InterfazN {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Una clase puede ser subclase de otra y además implementar
+interfaces<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class NombreClase extends NombreSuperclase implements
+Interfaz1, Interfaz2, Interfaz3, ..., InterfazN {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Variables locales</span></h2>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Son aquellas que se declaran dentro de la definición de un
+método <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">         </span>TipoX
+métodoA ( listaParámetrosFormales ){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">            </span>TipoY y;
+// variable local<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:2'>                        </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Variables de instancia </span></h2>
+
+<p class=MsoBodyText><span lang=ES-MX>Las variables de instancia se declaran
+dentro de la definición de la clase pero fuera de cualquier método.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class X {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>Tipo a;
+//variable de instancia<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>} <o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Variables de clase</span></h2>
+
+<p class=MsoBodyText><span lang=ES-MX>Las variables de clase son globales para
+todas sus instancias de clase.<span style="mso-spacerun: yes">  </span>Se
+declaran poniendo la palabra reservada static antes del tipo de la variable que
+se va a declarar.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class X {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>static Tipo
+b; //variable de clase<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>} <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=ES-MX>Ejemplo de definición de una clase </span></h3>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>import java.awt.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Punto {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>int x=0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>int y=0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>public Punto (
+) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>x=5;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>y=5;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public Punto (int x, inty ) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>this. x=x;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>this.
+y=y;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>int obtenX {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">      </span><span style='mso-tab-count:2'>                  </span>return
+x;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>int obtenY ( ) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">      </span><span style='mso-tab-count:2'>                  </span>return
+y;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void ponX (int x) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">        </span><span style='mso-tab-count:2'>                </span>this.x=x;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void ponY(int y ) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">       </span><span style='mso-tab-count:1'>     </span><span
+style="mso-spacerun: yes"> </span><span style='mso-tab-count:1'>           </span></span><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>this.y=y;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public void mueve (int dx, int dy ){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">            </span><span style='mso-tab-count:1'>            </span>x=x+dx;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">             </span><span style='mso-tab-count:1'>           </span></span><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>y=y+dy:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public void dibuja (Graphics g ){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">       </span><span style='mso-tab-count:2'>                 </span></span><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>g.drawLine
+(x, y, x, y );<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>import Punto;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>import java.applet.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>import java.awt.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>public class DibujaPunto extends
+Applet {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Punto p1,p2;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">      </span><span
+style='mso-tab-count:1'>      </span></span><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US'>public
+void init ( ) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">      </span><span style='mso-tab-count:2'>                  </span>p1 =
+new Punto ( );<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">      </span><span style='mso-tab-count:2'>                  </span>p2 =
+new Punto (10,10);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">      </span><span style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">      </span><span style='mso-tab-count:1'>      </span>public void paint
+(Graphics g){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>p1.
+dibuja (g);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>p2.
+dibuja (g);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">   </span><span
+style='mso-tab-count:1'>         </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Esqueleto de un applet simple</span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>import java.applet.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>import java.awt.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>public class MiApplet extends
+Applet{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public void init ( ) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">                    </span>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">        </span><span
+style='mso-tab-count:1'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">         </span><span
+style='mso-tab-count:1'>   </span></span><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US'>public
+void paint (Graphics g) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">                     </span></span><span lang=ES-MX style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman"'>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">         </span><span
+style='mso-tab-count:1'>   </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Esqueleto de una aplicación </span></h2>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class ClaseX {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>tipoA<span
+style="mso-spacerun: yes">  </span>a;// variable de instancia <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>static<span
+style="mso-spacerun: yes">  </span>tipoB<span style="mso-spacerun: yes">  
+</span>b;// variable de clase<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>tipo1 métodoM
+(listaDeParámetrosFormales){ // método de instancia<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>tipoC<span
+style="mso-spacerun: yes">  </span>c; // variable local<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">  </span><span
+style='mso-tab-count:2'>                      </span>…<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>static tipo2
+métodoN (listaDeParámetrosFormales){ // método de clase<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>tipoD<span
+style="mso-spacerun: yes">  </span>d; // variable local<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">   </span><span
+style='mso-tab-count:2'>                     </span></span><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>…<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public static void main (String args[ ]){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>tipo1
+t1; // variable local<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>tipo2
+t2; // variable local<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ClaseX<span
+style="mso-spacerun: yes">   </span>unObjetoDeClaseX= new ClaseX();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>t1
+=unObjetoDeclaseX.métodoM (listaDeParámetrosReales);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>t2
+=ClaseX.métodoN (listaDeParámetrosReales);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Superposición de métodos </span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes"> </span>class<span style="mso-spacerun: yes">   </span>ClaseImprime<span
+style="mso-spacerun: yes">  </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>int x=0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>int y=1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void imprime () {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>System.out.println
+(“x es “+x);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>System.out.println
+(“y es “+y);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">   </span><span
+style='mso-tab-count:1'>         </span></span><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class SubclaseImprime extends
+ClaseImprime{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>int z=3;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public static void main (String args[] ){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>SubclaseImprime
+obj=new SubclaseImprime ();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>obj.imprime();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">     </span><span
+style='mso-tab-count:1'>       </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>x es 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>y es 1<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class SubclaseImprime2 extends ClaseImprime {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>int z=3;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public imprime (){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>System.out.println
+(“x es “ + x );<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>System.out.println
+(“y es “ + y );<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>System.out.println
+(“z es “ + z ):<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">    </span><span
+style='mso-tab-count:1'>        </span></span><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public static void main (String args[] ){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>SubclaseImprime2
+obj=new SubclaseImprime2 ();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>obj.imprime
+();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">     </span><span
+style='mso-tab-count:1'>       </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>x es 0 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>y es 1<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>z es 3<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>// de la clase ClaseImprime <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>void imprime (){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>System.out.println(“x
+es “ + x);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>System.out.println(“y
+es “ + y);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>// de la clase SubclaseImprime2<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>void imprime (){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>super.imprime ();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>S</span><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>ystem.out.println(“z es “ + z);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>x es 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>y es 1<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>z es 3<o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Como llamar a otro constructor </span></h2>
+
+<p class=MsoBodyText><span lang=ES-MX>Un constructor puede tener el mismo
+comportamiento que otro constructor y un poco más.<span style="mso-spacerun:
+yes">  </span>Si se quiere llamar a un constructor definido en la clase actual
+se usa lo siguiente:</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>this (arg1, arg2, arg3, …)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Como llamar a un constructor en la superclase.<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Para llamar a un método ordinario en una
+superclase, utilice super.nombreMetodo (argumentos).<span style="mso-spacerun:
+yes">  </span>Para llamar el constructor de la superclase se usa lo siguiente:</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>super ( arg1, arg2,….)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Clases abstractas<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Una clase abstracta no puede crear
+instancias directas.<span style="mso-spacerun: yes">  </span>En java una clase
+abstracta es aquella que contiene al menos un método abstracto. Los métodos
+abstractos no necesitan implementación; se requiere que las subclases no
+abstractas los implementen.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>public abstract class MiClaseAbstracta
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>int unaVariable;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>public abstract int
+unaSubclaseNoAbstractaDebeImplementarme();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public void hazAlgo(){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">        </span><span style='mso-tab-count:2'>                </span></span><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">    </span><span
+style='mso-tab-count:1'>        </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>public class UnaSubclaseConcreta extends MiClaseAbstracta {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>public
+abstract int unaSubclaseNoAbstractaDebeImplementarme (){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>// debemos
+implementar este método <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">    </span><span
+style='mso-tab-count:2'>                    </span>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">   </span><span
+style='mso-tab-count:1'>         </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Interfaces en java <o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Una definición de intefaz es: una
+interfaz es una declaración de un conjunto de métodos.<span
+style="mso-spacerun: yes">  </span>Esta no lleva información sobre
+implementación, así una interfaz no puede ser implementada directamente.<span
+style="mso-spacerun: yes">  </span>Una clase puede implementar múltiples
+interfaces.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>public interface una una interfaz{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public static final int laRespuesta=42;//ok<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public abstract int laVidaEnElUniverso();//ok<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>long<span style="mso-spacerun: yes">  </span>contadorDelBingBang=0; //ok<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>long edadDelUniverso();//ok<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>protected int unaConstante;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>private int
+obtenUnEntero();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<h3><span lang=ES-MX>Ejemplo de definición y uso de una intefaz</span></h3>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>inteface Imprimible {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void imprime();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Lunes implements Imprimible{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void imprime(){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>System.out.println(“Lunes”);<br>
+}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Martes implements Imprimible{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void imprime(){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>System.out.println(“Martes”);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Miercoles implements
+Imprimible{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void imprime(){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>System.out.println(“Miercoles”);<br>
+}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Jueves implements Imprimible{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void imprime(){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>System.out.println(“Jueves”);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">           </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Viernes implements Imprimible{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void imprime(){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=EN-US style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US'>System.out.println(“Viernes”);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">           </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Notación UML para interfaces<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">            </span></span><span
+lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>Nombre Interfaz<o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t202"
+ coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t202" style='position:absolute;
+ margin-left:18pt;margin-top:39.05pt;width:108pt;height:36pt;z-index:1'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>Clase</span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>Implementadora</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:oval id="_x0000_s1033" style='position:absolute;margin-left:63pt;
+ margin-top:3.65pt;width:18pt;height:18pt;z-index:8'/><v:line id="_x0000_s1034"
+ style='position:absolute;z-index:9' from="1in,21.35pt" to="1in,39.35pt"/><v:shape
+ id="_x0000_s1027" type="#_x0000_t202" style='position:absolute;margin-left:189pt;
+ margin-top:32.35pt;width:99pt;height:45pt;z-index:2'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>Clase</span></p>
+    <p class=MsoNormal><span lang=ES-MX>Implementadora</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1028" type="#_x0000_t202" style='position:absolute;
+ margin-left:351pt;margin-top:32.35pt;width:90pt;height:45pt;z-index:3'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>&lt;&lt;interfaz&gt;&gt;</span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>Tipo</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1036" style='position:absolute;z-index:10'
+ from="4in,50.05pt" to="351pt,50.05pt">
+ <v:stroke dashstyle="longDash" endarrow="block"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=24 height=5></td>
+  <td width=147></td>
+  <td width=81></td>
+  <td width=339></td>
+ </tr>
+ <tr>
+  <td height=38></td>
+  <td rowspan=2 align=left valign=top><img width=147 height=98
+  src="./Definición%20de%20clases_archivos/image001.gif" v:shapes="_x0000_s1026 _x0000_s1033 _x0000_s1034"></td>
+ </tr>
+ <tr>
+  <td height=60></td>
+  <td></td>
+  <td rowspan=2 align=left valign=top><img width=339 height=63
+  src="./Definición%20de%20clases_archivos/image002.gif" v:shapes="_x0000_s1027 _x0000_s1028 _x0000_s1036"></td>
+ </tr>
+ <tr>
+  <td height=3></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></h3>
+
+<h3><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></h3>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<h3><span lang=ES-MX>Ejemplos</span></h3>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:oval id="_x0000_s1038" style='position:absolute;
+ margin-left:54pt;margin-top:12.55pt;width:18pt;height:18pt;z-index:12'/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:11;margin-left:72px;
+margin-top:17px;width:25px;height:25px'><img width=25 height=25
+src="./Definición%20de%20clases_archivos/image003.gif" v:shapes="_x0000_s1038"></span><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1031" type="#_x0000_t202" style='position:absolute;margin-left:351pt;
+ margin-top:10.25pt;width:90pt;height:35.4pt;z-index:6'/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:8;margin-left:468px;
+margin-top:14px;width:123px;height:50px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=123 height=50 align=left valign=top bgcolor=white style='border:
+  .75pt solid black;vertical-align:top;background:white'><![endif]><![if !mso]><span
+  style='position:absolute;z-index:6'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1031" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>&lt;&lt;interfaz&gt;&gt;</span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>Imprimible</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">           
+</span>Imprimible<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1030" type="#_x0000_t202"
+ style='position:absolute;margin-left:207pt;margin-top:2.95pt;width:63pt;
+ height:27pt;z-index:5'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>Lunes</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1032" type="#_x0000_t202" style='position:absolute;
+ margin-left:351pt;margin-top:18.35pt;width:90pt;height:36pt;z-index:7'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=ES-MX>Imprime():void</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1037" style='position:absolute;z-index:11'
+ from="270pt,11.95pt" to="351pt,11.95pt">
+ <v:stroke dashstyle="longDash" endarrow="block"/>
+</v:line><v:shape id="_x0000_s1029" type="#_x0000_t202" style='position:absolute;
+ margin-left:36pt;margin-top:18.35pt;width:63pt;height:27pt;z-index:4'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX>Lunes</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1039" style='position:absolute;z-index:13'
+ from="63pt,2.95pt" to="63pt,20.95pt"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=48 height=3></td>
+  <td width=87></td>
+  <td width=141></td>
+  <td width=315></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+  <td rowspan=2 align=left valign=top><img width=87 height=60
+  src="./Definición%20de%20clases_archivos/image004.gif" v:shapes="_x0000_s1029 _x0000_s1039"></td>
+ </tr>
+ <tr>
+  <td height=59></td>
+  <td></td>
+  <td rowspan=2 align=left valign=top><img width=315 height=71
+  src="./Definición%20de%20clases_archivos/image005.gif" v:shapes="_x0000_s1030 _x0000_s1032 _x0000_s1037"></td>
+ </tr>
+ <tr>
+  <td height=12></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><i><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></i></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><i><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Interfaces de elementos soportados por la clase
+java.awt.Component <o:p></o:p></span></i></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>public interface MouseListener
+extends EventListener {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public abstract void mouseClicked(MouseEvent e);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public abstract void mouseEntered(MouseEvent e);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public abstract void mouseExited(MouseEvent e);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public abstract void mousePressed(MouseEvent e);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>public abstract void mouseReleased(MouseEvent e);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>public interface ActionListener
+extends java.util.EventListener<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>void actionPerformed (ActionEvent e);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>si un objeto quiere recibir
+notificaciones de eventos del ratón debe de llamar el siguiente método</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>public void
+addMouseListener(MouseListener listener);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Si un objeto quiere recibir
+notificaciones de eventos acción se debe registrar llamando el siguiente método</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>public void
+addActionListener(ActionListener listener);<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Paquetes<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Los paquetes
+son la manera de Java para diseñar y organizar a gran escala. Además de las
+clases que nos permiten agrupar los campos y métodos, Java tiene una
+construcción llamada paquete que permite agrupar clases relacionadas. Clases
+seleccionadas de este paquete pueden ser usadas por otras clases que no estén
+en el paquete mediante el uso del comando import. Suponga que<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>quisiéramos
+crear un paquete de clases geométricas<span style="mso-spacerun: yes"> 
+</span>relacionadas que llamaremos el paquete forma. Podemos hacerlo usando un
+archivo por clase y poniendo una declaración package forma<span
+style="mso-spacerun: yes">  </span>al principio de cada archivo.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//Forma.java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>package forma;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class Forma {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>--------------------------------------- <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//Punto.java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>package forma;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class Punto extends Forma {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">          </span>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>---------------------------------------<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//Línea.java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>package forma;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class Linea extends Forma {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">          </span>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>---------------------------------------<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>//Triangulo.java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>package forma;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Triangulo extends Forma{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">         </span></span><span lang=ES-MX style='font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>---------------------------------------<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//Rectángulo.java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>package forma;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>class rectángulo extends Forma {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">          </span>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>---------------------------------------<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//Circulo.java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>package forma;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Circulo extends Forma{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">         </span></span><span lang=ES-MX style='font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>---------------------------------------<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//Elipse.java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>package forma;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'>class Elipse extends Forma{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">         </span></span><span lang=ES-MX style='font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>---------------------------------------<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//Dibuja. Java<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>//importamos el paquete forma para usarlo<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>import forma.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>...<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Excepciones<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Una forma de manejar los errores en los
+lenguajes como C era regresar un valor para decirle al llamador de la función
+que un error ocurrió. Así siempre que una función tenia la posibilidad de
+regresar<span style="mso-spacerun: yes">  </span>un código de error, tenia que
+checarse y una acción apropiada tenia que ser tomada, como en la siguiente
+pieza de código:</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>if(!escribirArchivo (algo)){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">   </span>/*error*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>if(!escribirArchivo (algoMas)){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">   </span>/*error*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Las excepciones proveen una forma limpia
+para que un método aborte lo que sea que este haciendo y señale al llamador del
+método que algo salió mal. En contraste con las formas de manejo de error que
+devuelven códigos de error, el llamador puede ignorar la excepción que fue
+lanzada y dejar que el error se propague hacia arriba en la pila de llamadas
+hasta que alguno de los métodos maneje la excepción. Suponga que existe un<span
+style="mso-spacerun: yes">  </span>método llamado escribe algo que usa retorno
+de códigos de error.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>void escribeAlgo (String algo, String algoMás) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>if(!
+escribirArchivo(algo)){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">    </span><span
+style='mso-tab-count:2'>                    </span></span><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>/*error*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   
+</span><span style='mso-tab-count:2'>                    </span>return;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>if(!escribirArchivo(algoMás)){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes"> </span><span
+style='mso-tab-count:2'>                       </span>/*error*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">  </span><span
+style='mso-tab-count:2'>                      </span>return;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Si se escribe dicho<span
+style="mso-spacerun: yes">  </span>método usando excepciones y suponiendo que
+escribeArchivo lanzara una excepción.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes"> </span>void
+escribeAlgo(String algo, String algoMás){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes"> </span><span
+style='mso-tab-count:1'>           </span>try{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">     </span><span
+style='mso-tab-count:2'>                   </span>escribirArchivo(algo);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">     </span><span
+style='mso-tab-count:2'>                   </span>escribirArchivo(algomás);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}catch
+(excepción e ){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">   </span><span
+style='mso-tab-count:2'>                     </span></span><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>e. printStackTrace();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>return;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:1'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Las instrucciones dentro del bloque try
+se escriben como si no ocurrieran excepciones. Si una excepción<span
+style="mso-spacerun: yes">  </span>ocurre en cualquier parte del bloque try,
+las instrucciones del bloque catch se ejecutan.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Para lanzar una excepción, se usa el
+operador throw en Java. El argumento para este operador es una instancia de
+una<span style="mso-spacerun: yes">  </span>subclase de la clase Exception.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>void escribirArchivo (String algo){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=EN-US
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US'>if (archivoNoExiste){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    
+</span><span style='mso-tab-count:2'>                   </span>throw new
+FileNotFoundException();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-ansi-language:EN-US'><span style="mso-spacerun:
+yes">      </span><span style='mso-tab-count:1'>      </span></span><span
+lang=ES-MX style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}
+else{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">      </span><span
+style='mso-tab-count:2'>                  </span>/* escribir algo al archivo */<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>La instrucción throw aborta el método y
+lanza la excepción a lo largo de la pila de llamadas. Si hay una instrucción
+catch en el llamador que concuerde con la clase de la<span style="mso-spacerun:
+yes">  </span>excepción o una de sus clases ancestros, entonces la excepción se
+detiene ahí y la instrucción catch manejara el problema. Sin embargo si el
+llamador no tiene una instrucción catch, la excepción continua viajando a lo
+largo de la pila hasta que encuentra una instrucción catch. El programa aborta
+si no hay ninguna instrucción catch.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">     </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1040" type="#_x0000_t202"
+ style='position:absolute;margin-left:135pt;margin-top:6.65pt;width:108pt;
+ height:27pt;z-index:14'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX
+    style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>escribirArchivo</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1041" type="#_x0000_t202" style='position:absolute;
+ margin-left:135pt;margin-top:33.05pt;width:108pt;height:27pt;z-index:15'>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX
+    style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>escribeAlgo</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:oval id="_x0000_s1045" style='position:absolute;margin-left:270pt;
+ margin-top:10.85pt;width:18pt;height:18pt;z-index:19'/><v:line id="_x0000_s1048"
+ style='position:absolute;z-index:21' from="279pt,28.25pt" to="279pt,73.25pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:shape id="_x0000_s1049" type="#_x0000_t202" style='position:absolute;
+ margin-left:306pt;margin-top:1.85pt;width:63pt;height:18pt;z-index:22'
+ stroked="f"/><v:line id="_x0000_s1043" style='position:absolute;flip:y;
+ z-index:18' from="108pt,1.85pt" to="108pt,91.85pt">
+ <v:stroke endarrow="block"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=138 height=1></td>
+  <td width=14></td>
+  <td width=28></td>
+  <td width=147></td>
+  <td width=33></td>
+  <td width=25></td>
+  <td width=23></td>
+  <td width=86></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+  <td rowspan=7 align=left valign=top><img width=14 height=123
+  src="./Definición%20de%20clases_archivos/image006.gif" v:shapes="_x0000_s1043"></td>
+ </tr>
+ <tr>
+  <td height=7></td>
+  <td colspan=5></td>
+  <td rowspan=3 width=86 height=26 align=left valign=top bgcolor=white
+  style='vertical-align:top;background:white'><![endif]><![if !mso]><span
+  style='position:absolute;z-index:22'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1049" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:
+    12.0pt'>excepción<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+ <tr>
+  <td height=5></td>
+  <td></td>
+  <td rowspan=3 align=left valign=top><img width=147 height=74
+  src="./Definición%20de%20clases_archivos/image007.gif" v:shapes="_x0000_s1040 _x0000_s1041"></td>
+ </tr>
+ <tr>
+  <td height=14></td>
+  <td></td>
+  <td></td>
+  <td rowspan=3 align=left valign=top><img width=25 height=86
+  src="./Definición%20de%20clases_archivos/image008.gif" v:shapes="_x0000_s1045 _x0000_s1048"></td>
+ </tr>
+ <tr>
+  <td height=55></td>
+ </tr>
+ <tr>
+  <td height=17></td>
+ </tr>
+ <tr>
+  <td height=24></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1044" type="#_x0000_t202"
+ style='position:absolute;margin-left:54pt;margin-top:.65pt;width:54pt;
+ height:36pt;z-index:17' stroked="f"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:16;margin-left:72px;
+margin-top:1px;width:74px;height:50px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=74 height=50 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:17'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1044" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:
+    12.0pt'>pila de<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:
+    12.0pt'>llamadas</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1050" type="#_x0000_t202"
+ style='position:absolute;margin-left:306pt;margin-top:.65pt;width:1in;
+ height:36pt;z-index:23' stroked="f"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:22;margin-left:408px;
+margin-top:1px;width:98px;height:50px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=98 height=50 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:23'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1050" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:
+    12.0pt'>manejador de<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:
+    12.0pt'>excepciones <o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1042" type="#_x0000_t202"
+ style='position:absolute;margin-left:135pt;margin-top:.65pt;width:108pt;
+ height:27pt;z-index:16'/><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+position:absolute;z-index:15;margin-left:180px;margin-top:1px;width:147px;
+height:39px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=147 height=39 align=left valign=top bgcolor=white style='border:
+  .75pt solid black;vertical-align:top;background:white'><![endif]><![if !mso]><span
+  style='position:absolute;z-index:16'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1042" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX
+    style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>escribeTodo</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:line id="_x0000_s1047" style='position:absolute;
+ z-index:20' from="243pt,4.85pt" to="279pt,4.85pt"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=323 height=5></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=51 height=3
+  src="./Definición%20de%20clases_archivos/image009.gif" v:shapes="_x0000_s1047"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style="mso-spacerun: yes">                            
+</span>Lo que pasa cuando se lanza una excepción.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

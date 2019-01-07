@@ -1,0 +1,156 @@
+#VRML V2.0 utf8
+#-------------------------Define Raton--------------------------------------#
+DEF cuerpo Transform{
+#-------------------------Cuerpo
+	scale 1 1 1.2
+	children[
+		Shape{
+		appearance Appearance{
+			material DEF mat Material{diffuseColor .85 .85 .85 }}
+		geometry Sphere {radius  0.6}}
+
+
+#-------------------------Pata
+DEF PDI Transform{ 
+	scale  1.3 .45 2.2
+	translation 0.15 -0.55 0.40
+	rotation 2 0 4 3	
+	children [
+		DEF Pata Group{
+		  children[
+		    Shape{
+		       appearance Appearance{
+        			material Material{diffuseColor .85 .85 .85 }}
+	       	       geometry Sphere{radius 0.2}}
+		 ]  
+	} 
+	]
+} 
+DEF PDD Transform { scale  1.3 .45 2.2 translation 0.15 -0.55 -0.40 rotation -2 0 4 3 children USE Pata}
+
+
+#-------------------------Ojo
+DEF Ojo Transform{ 
+	translation .48 0.21 0.08 
+	children [
+		DEF Ojo Group{
+		  children[
+		    Shape{
+		       appearance Appearance{
+        			material Material{diffuseColor 0.1 0.1 0.1}}
+	       	       geometry Sphere{radius 0.07}}
+		 ]  
+	} 
+	]
+} 
+DEF PDD Transform { translation .48 0.21 -0.08 children USE Ojo}
+
+
+#-------------------------Oreja
+DEF PDI Transform{ 
+	scale 1 0.05 1
+	translation 0.15 0.52 -0.40 
+	rotation 0 0 -1 -5	
+	children [
+		DEF Oreja Group{
+		  children[
+		    Shape{
+		       appearance Appearance{
+        			material Material{diffuseColor .85 .85 .85}}
+	       	       geometry Sphere{radius 0.35}}
+		 ]  
+	} 
+	]
+} 
+DEF PDD Transform { scale  1 0.05 1 translation 0.15 0.52 0.40 rotation 0 0 -1 -5 children USE Oreja}
+
+
+#-------------------------Oido
+DEF PDI Transform{ 
+	scale 0.35 0.05 0.35
+	translation 0.16 0.52 -.40 
+	rotation 0 0 -1 -5	
+	children [
+	    	DEF Oido Group{
+		  children[
+		    Shape{
+		       appearance Appearance{
+        			material Material{diffuseColor 1 0.5 0.7}}
+	       	       geometry Sphere{radius 0.35}}
+		 ]  
+	} 
+	]
+} 
+DEF PDD Transform { scale 0.35 0.05 0.35 translation 0.16 0.52 0.40 rotation 0 0 -1 -5 children USE Oido}
+
+
+#-------------------------Huella 
+DEF PDI Transform{ 
+	scale  1.5 .45 2.2
+	translation 0.25 -0.62 0.46
+	rotation 2 0 4 3	
+	children [
+		DEF Huella Group{
+		  children[
+		    Shape{
+		       appearance Appearance{
+        			material Material{diffuseColor 1 0.5 .7 }}
+	       	       geometry Sphere{radius 0.07}}
+		 ]  
+	} 
+	]
+} 
+DEF PDD Transform { scale  1.5 .45 2.2 translation 0.25 -0.62 -0.46 rotation -2 0 4 3 children USE Huella}
+
+
+
+#-------------------------Bigote
+DEF PDI Transform{ 
+	translation 0.48 0.2 0.4
+	rotation 1 0 0 1
+	children [
+		DEF Bigote Group{
+		  children[
+		    Shape{
+		       appearance Appearance{
+        			material Material{diffuseColor 0.1 0.1 0.1 }}
+	       	       geometry Cylinder{height 0.2 radius 0.01}}
+		 ]  
+	} 
+	]
+} 
+DEF PDD Transform {translation 0.48 0 0.4 rotation -1 0 0 1 children USE Bigote}
+DEF PDD Transform {translation 0.48 0.2 -0.4 rotation -1 0 0 1 children USE Bigote}
+DEF PDD Transform {translation 0.48 0 -0.4 rotation 1 0 0 1 children USE Bigote}
+
+
+#-------------------------Cola
+DEF PDI Transform{ 
+	scale 1.5 0.09 0.06
+	translation -0.5 -0.45 0
+	children [
+		DEF Cola Group{
+		  children[
+		    Shape{
+		       appearance Appearance{
+        			material Material{diffuseColor 0.1 0.1 0.1 }}
+	       	       geometry Sphere{radius 0.2}}
+		 ]  
+	} 
+	]
+} 
+DEF PDD Transform {scale 0.5 0.05 0.05 translation -1.04 -0.38 -.147 children USE Cola}
+DEF PDD Transform {scale 0.6 0.05 0.06 translation -0.87 -0.415 -0.074 rotation -1 -1 -1 1 children USE Cola}
+
+	]  #Cuerpo
+}
+
+
+
+
+
+
+
+
+
+

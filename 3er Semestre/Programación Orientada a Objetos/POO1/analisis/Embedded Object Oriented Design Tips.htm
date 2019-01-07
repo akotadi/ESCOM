@@ -1,0 +1,357 @@
+
+<html>
+
+<head>
+<title>Embedded Object Oriented Design Tips</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Here is an assortment of tips to keep in mind when using object oriented design in embedded systems">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="keywords" content="Object Oriented Design, OOPS, OO, Embedded Object">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<style>
+a            { text-decoration: none }
+</style>
+<!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/eventhelix/even1000.css"><meta name="Microsoft Theme" content="eventhelix 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body topmargin="0" marginheight="0" leftmargin="0" marginwidth="0"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table1" background="../../EventStudio/image1/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bordercolor="#808080" width="1141">
+			<a title="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design" href="../../">
+			<img border="0" src="../../EventStudio/_borders/event_helix.jpg" width="242" height="92" alt="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design"></a>
+			<a name="top"></a></td>
+			<td bordercolor="#808080" width="238" nowrap>
+			<div align="center">
+				<table border="0" cellspacing="1" width="74%" id="table4" background="../../EventStudio/image1/w2gh.gif" align="left" height="36">
+					<tr>
+						<td width="20" style="text-align: center">
+						<a title="EventStudio 2.5: System Engineering CASE Tool" href="../../EventStudio">
+						<img border="0" src="../../EventStudio/eventstudio_icon.gif" width="32" height="32" alt="EventStudio 2.5: Sequence diagram based modeling"></a></td>
+						<td style="text-align: left" valign="top">
+						<span style="color: navy; font-weight: 700">
+						<font size="2">
+						<a title="Generate Sequence Diagrams, Message Sequence Charts and Collaboration Diagrams" href="../../EventStudio">
+						<font color="#000080">EventStudio 4.0</font></a></font></span><br>
+						<a title="System Architecture and System Engineering CASE Tool" href="../../EventStudio">
+						<font size="1" color="#707070">Sequence diagram based 
+						system design and modeling</font></a></td>
+					</tr>
+				</table>
+			</div>
+			<p>&nbsp;</td>
+		</tr>
+		<tr>
+			<td bgcolor="#E0E0E0" bordercolor="#808080" align="left" colspan="2" width="1270" valign="top" nowrap>
+			<font color="#000080" size="2" face="Arial">&nbsp;<b> </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b>
+			<font color="#666666" face="Arial" size="2">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<h1><font size="2">
+<a href="../../default.htm" style="text-decoration: none">Home</a> &gt; 
+<a href="../../RealtimeMantra">Real-time Mantra</a> &gt;<a href="../Object_Oriented"> Object Oriented Design</a><font color="#000000"> 
+&gt; Object Oriented Design Tips I<br>
+</font>
+</font>Object Oriented Design Tips</h1>
+<p>Here is an assortment of tips to keep in mind when using object oriented
+design in embedded systems:</p>
+<ol>
+  <li><a href="#Stay close to real world">Stay close to problem domain</a></li>
+  <li><a href="#Object discovery vs. object invention">Object discovery vs. object invention</a></li>
+  <li><a href="#Pick nouns as classes">Pick nouns or noun phrases as classes</a></li>
+  <li><a href="#Method names should contain verbs">Method names should contain a verb</a></li>
+  <li><a href="#Prefix adjectives when naming inheriting classes">Prefix
+    adjectives when naming inheriting classes</a></li>
+  <li><a href="#Do not add suffixes to class names">Do not add suffixes to class
+    names</a></li>
+  <li><a href="#Avoid one-to-one mapping from structured design">Avoid one-to-one mapping from structured design</a></li>
+  <li><a href="#Replace multiple get-set methods with operations">Replace multiple get-set methods with operations</a></li>
+  <li><a href="#Model classes that handle messages as state machines">Model classes that
+    handle messages as state machines</a></li>
+  <li><a href="#Use const whenever possible">Use const whenever possible</a></li>
+  <li><a href="#Restrict header file level dependency">Restrict header file level dependency</a></li>
+  <li><a href="#Don't reinvent the wheel; use STL">Don't reinvent the wheel; use STL</a></li>
+</ol>
+<h3><a name="Stay close to real world">Stay close to problem domain</a></h3>
+<p>Design is a process of modeling the problem domain into programming constructs.
+Object oriented design simplifies the design process by maintaining a one-to-one
+mapping between problem domain objects and software objects. To succeed in object
+oriented design, keep your design as close as possible to problem domain objects.
+The interactions between your objects should mirror interactions between
+corresponding problem domain objects.</p>
+<p>Problem domain objects is basically an object that can be found in the
+problem itself. For example, when developing a text editor real-world objects
+would be, Paragraph, Sentence, Word, ScrollBar, TextSelection etc. While
+developing a call processing module, the objects might be Call, Ringer,
+ToneDetector, Subscriber etc.&nbsp;</p>
+<h3><a name="Object discovery vs. object invention">Object discovery vs. object
+invention</a></h3>
+<p>The first step in object oriented analysis is to discover the objects that can be
+directly identified from the problem itself. In many cases objects can be
+identified&nbsp;
+from the requirements. Objects discovered from the problem
+statement are extremely important. These objects will be the core objects in the
+design.</p>
+<p>The next stage in object design is to &quot;invent&quot; objects. These
+objects are needed to &quot;glue&quot; together objects that have been
+identified during object discovery. Invented objects generally do not correspond
+to anything tangible in the problem domain. They are inventions of programmers to simplify
+design.</p>
+<p>Consider the following statement from the requirements:</p>
+<p><font color="#000080"><i>The <b>circuit controller</b> shall support <b>digital
+and analog </b><b>circuits</b>. The circuit controller shall contain 32 <b>DSPs</b>.
+When the circuit controller receives a request to setup a circuit, it shall
+allocate a DSP to the circuit.</i></font></p>
+<p>We discover the following objects from the requirement:</p>
+<ul>
+  <li><font color="#000080">CircuitController</font></li>
+  <li><font color="#000080">DigitalCircuit</font></li>
+  <li><font color="#000080">AnalogCircuit</font></li>
+  <li><font color="#000080">DSP</font></li>
+</ul>
+<p>We invent the following objects based on our knowledge of the <a href="../ManagerDesignPattern.htm">manager
+design pattern</a>:</p>
+<ul>
+  <li><font color="#000080">DSPManager</font>: Manages the 32 DSPs on the
+    circuit controller</li>
+  <li><font color="#000080">CircuitManager</font>: Manages the digital and
+    analog circuits</li>
+</ul>
+<p>We invent a <font color="#000080">Circuit</font> base class for <font color="#000080">DigitalCircuit</font>
+and <font color="#000080">AnalogCircuit</font> by filtering properties that are
+common to <font color="#000080">DigitalCircuit</font> and <font color="#000080">AnalogCircuit</font>
+objects.</p>
+<p>The relationship between the classes also follows from the requirement. <font color="#000080">CircuitController</font>
+class contains <font color="#000080">DSPManager</font> and <font color="#000080">CircuitManager</font>
+classes. The <font color="#000080">CircuitManager</font> contains an array of <font color="#000080">Circuit</font>
+class pointers. The <font color="#000080">DSPManager</font> contains an array of
+<font color="#000080">DSP</font> objects.</p>
+<h3><a name="Pick nouns as classes">Pick nouns or noun phrases as classes</a></h3>
+<p>Identifying objects is easy, they should always be nouns. As we have seen in
+the Circuit Controller example, we picked up nouns from the requirements as
+classes in our design. Even when you invent classes, keep in mind that they
+should be nouns. Abstract concepts don't qualify as object names.&nbsp;</p>
+<p>Naming the objects is extremely important in object oriented design. Chances
+are that if you name your object correctly, the designers and maintainers will
+assign it functionality that fits its name. Also note that, if you have trouble
+naming an object, you probably have the wrong object. At this point go back and
+look at the problem again and see if you can pick an alternative object.</p>
+<h3><a name="Method names should contain verbs">Method names should contain
+verbs</a></h3>
+<p>In any language, actions performed by nouns are specified using verbs. Why
+should object oriented programming be any different? Thus make sure all the
+operation methods should contain verbs.</p>
+<p>Thus the <font color="#000080">Circuit</font> class we discussed earlier
+would have methods like:</p>
+<ul>
+  <li>Activate</li>
+  <li>Deactivate</li>
+  <li>Block</li>
+  <li>Unblock</li>
+  <li>ChangeStatus</li>
+</ul>
+<p>Notice that the methods do not include Circuit in the name (ActivateCircuit,
+BlockCircuit etc.) as being methods of Circuit its clear that they refer to
+operations on <font color="#000080">Circuit</font>.</p>
+<h3><a name="Prefix adjectives when naming inheriting classes">Prefix adjectives
+when naming inheriting classes</a></h3>
+<p>This one is fairly obvious. When a class inherits from a base class, the name
+for the new class can be determined just by prefixing it with the appropriate
+adjective. For example, classes inheriting from <font color="#000080">Circuit</font>
+are called <font color="#000080">AnalogCircuit</font> and <font color="#000080">DigitalCircuit</font>.
+Following this convention leads to class names that convey information about the
+classes inheritance.&nbsp;</p>
+<h3><a name="Do not add suffixes to class names">Do not add suffixes to class
+names</a></h3>
+<p>Do not add suffixes like Descriptor, ControlBlock, Agent to the class names. For
+example,&nbsp; <font color="#000080">DigitalCircuit</font> should not be
+called DigitalCircuitDescriptor or DigitalCircuitControlBlock. Such names are
+longer and do not convey the exact role of the class.</p>
+<h3><a name="Avoid one-to-one mapping from structured design">Avoid one-to-one
+mapping from structured design</a></h3>
+<p>Many developers moving from structured design just continue with structured
+design in C++. The classes developed correspond more to similar structured
+constructs they have used in the past. Similarity between C and C++ confuses
+developers. Make no mistake, object oriented programming is a completely
+different technique. The emphasis here is to keep the design process simple by
+minimizing the difference between the problem domain and software domain.</p>
+<h3><a name="Replace multiple get-set methods with operations">Replace multiple
+get-set methods with operations</a></h3>
+<p>Developers complain that after moving to object oriented programming, they
+spend considerable time writing mindless get and set methods. Here is a simple
+tip on reducing the get and set methods. Consider the code below:</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Circuit
+      Status (Multiple Get-Set)</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>void CircuitManager::GetStatus(const CircuitStatusMsg *pMsg) const
+{
+   for (int i= 0; i &lt; MAX_CIRCUITS; i++)
+   {
+      pMsg-&gt;circuitInfo[i].circuitId = m_pCircuit[i]-&gt;GetId();
+      pMsg-&gt;circuitInfo[i].circuitType = m_pCircuit[i]-&gt;GetType();
+      pMsg-&gt;circuitInfo[i].circuitStatus = m_pCircuit[i]-&gt;GetStatus();
+      pMsg-&gt;circuitInfo[i].circuitCallId = m_pCircuit[i]-&gt;GetCallId();
+      pMsg-&gt;circuitInfo[i].circuitState = m_pCircuit[i]-&gt;GetState();      
+   }  
+}</code></font></pre></td>
+  </tr>
+</table>
+<p>The above code can be replaced by moving the field filling in the message to
+the <font color="#000080">Circuit</font> class. This way you do not need to
+define a large number of get operations. Also, any changes in the CircuitInfo
+field would result only in changes to the <font color="#000080">Circuit</font>
+class. <font color="#000080">CircuitManager</font> would be transparent as it
+does not look into CircuitInfo.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Circuit
+      Status (Single Operation)</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>void CircuitManager::GetStatus(const CircuitStatusMsg *pMsg) const
+{
+   for (int i= 0; i &lt; MAX_CIRCUITS; i++)
+   {
+      m_pCircuit[i]-&gt;UpdateStatus(pMsg-&gt;circuitInfo[i]);    
+   }  
+}
+
+void Circuit::UpdateStatus(CircuitInfo &amp;circuitInfo) const
+{
+    circuitInfo.circuitId = m_id;
+    circuitInfo.circuitType = m_type;
+    circuitInfo.circuitStatus = m_status;
+    circuitInfo.circuitCallId = m_callId;
+    circuitInfo.circuitState = m_state;
+}</code></font></pre></td>
+  </tr>
+</table>
+<h3><a name="Model classes that handle messages as state machines">Model classes
+that handle messages as state machines</a></h3>
+<p>Whenever you encounter a class that has to perform some level of message
+handling, its always better to model it as a state machine. We have discussed
+this in the article on <a href="../HierarchicalStateMachine.htm">hierarchical
+state machines</a>.</p>
+<h3><a name="Use const whenever possible">Use const whenever possible</a></h3>
+<p>C++ provides powerful support for const methods and fields. const should be
+used in the following cases:</p>
+<ul>
+  <li>Methods that do not change the value of any variable in the class should
+    be declared const methods.</li>
+  <li>If a function is supposed to just read information from a class, pass a
+    const pointer or reference to this function. The called function would be
+    restricted to calling const methods and using the classes fields only on the
+    right side of an expression.</li>
+</ul>
+<p>Proper and consistent use of const will help you catch several bugs at
+compile time. So start using const from day one of your project.&nbsp; If const
+is not used extensively from the beginning of a project, it will be close to
+impossible to add it later.</p>
+<h3><a name="Restrict header file level dependency">Restrict header file level
+dependency</a></h3>
+<p>Complex software requires a careful header file
+management even when programming in C. When developers move to C++, header file
+management becomes even more complex and time consuming. Reduce header file
+dependency by effective use of forward declarations in header files. Sometimes
+to reduce header file dependency you might have to change member variables from
+values to pointers. This might also warrant&nbsp; changing inline functions to
+out-of-line functions. Every time you use a #include make sure that you have an
+extremely good reason to do so.</p>
+<p>For details
+refer to the <a href="../HeaderFileIncludePatterns.htm">header file include
+patterns</a> article.</p>
+<h3><a name="Don't reinvent the wheel; use STL">Don't reinvent the wheel; use
+STL</a></h3>
+<p>The C++ standard template library is extremely powerful. It can save
+countless hours of coding and testing of complex containers and queues. Details
+can be found in the <a href="../Patterns/stl_design_patterns.htm">STL design
+patterns</a>&nbsp; and <a href="../Patterns/stl_design_patterns_2.htm">STL design
+patterns II</a> articles.&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0" width="553" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="422" align="left" bgcolor="#E0E0E0">&nbsp;<font color="#000080"><b>Related
+      Links</b></font></td>
+  </tr>
+  <tr>
+    <td width="422" align="left" valign="top" bgcolor="#F0F0F0">
+      <ul>
+        <li> <a href="../HierarchicalStateMachine.htm">Hierarchical State Machines</a></li>
+        <li><a href="../HeaderFileIncludePatterns.htm">Header File Include
+          Patterns</a></li>
+        <li><a href="../Patterns/stl_design_patterns.htm">STL Design Patterns</a></li>
+        <li><a href="../Patterns/stl_design_patterns_2.htm">STL Design Patterns II</a> </li>
+        <li><a href="object_design_tips_2.htm">Object Oriented Tips II</a></li>
+      </ul>
+    </td>
+</table>
+<p>&nbsp;</p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table7" background="../../EventStudio/images/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bgcolor="#E0E0E0" bordercolor="#808080" align="left" width="1270" nowrap>
+			<font color="#000080" face="Arial" size="2"><b>&nbsp; </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b><font color="#666666">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-padding-alt: 0in 5.4pt 0in 5.4pt; margin-left: -3.85pt" width="100%">
+	<thead>
+		<tr>
+			<td width="100%" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in" background="../../EventStudio/images/hg.gif">
+			<small><font color="#666666">Copyright © 2000-2007 EventHelix.com 
+			Inc. All Rights Reserved.</font></small></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>

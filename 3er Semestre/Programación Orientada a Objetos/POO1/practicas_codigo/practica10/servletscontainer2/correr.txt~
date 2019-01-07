@@ -1,0 +1,15 @@
+
+poner los archivos en la carpeta servletsconta2
+
+En caso de ser necesario compilar servidor con
+javac -cp .:servlet-api.jar:commons-logging.jar *.java
+
+Ejecutar servidor con
+java -cp .:servlet-api.jar:commons-logging.jar jhttp
+
+Compilar servlets con
+javac -cp .:servlet-api.jar  NombreServlet.java
+
+Ejecutar servlets con
+http://localhost:8080/servlet/JDBCServlet
+http://localhost:8080/servlet/Triangulo?renglones=9

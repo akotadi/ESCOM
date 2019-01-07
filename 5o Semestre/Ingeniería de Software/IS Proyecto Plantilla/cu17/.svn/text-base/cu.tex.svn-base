@@ -1,0 +1,199 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+	\begin{UseCase}{CU1}{Administrar Planta de Selección}{
+		Administra un catálogo en el que se puede realizar Altas, Bajas y Cambios de las Plantas de Selección a cargo de la SOS.
+	}
+		\UCitem{Versión}{0.1}
+		\UCitem{Actor(es)}{SOS}
+		\UCitem{Propósito}{Mantener actualizada la información de las  Plantas de Selección.}
+		\UCitem{Resumen}{
+		Se muestran las plantas de selección registradas con la posibilidad de agregar, modificar y eliminar una Planta de Selección.}
+		\UCitem{Entradas}{Ninguna.}
+		\UCitem{Salidas}{Despliegue de las Plantas de Selección registradas.}
+		\UCitem{Precondiciones}{Ninguna.}
+		\UCitem{Postcondiciones}{Ninguna.}
+		\UCitem{Autor}{Donato David Morales Bautista.}
+		\UCitem{Referencias}{RF1.2}
+		\UCitem{Tipo}{Primario.}
+		\UCitem{Módulo}{Obras.}
+
+	\end{UseCase}
+
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Oprime el comando \IUbutton{Administrar Plantas de Selección} del menú \IUref{IUMenuSOS}{Menú SOS}.
+		\UCpaso Busca las Plantas de Selección Registradas.\label{Buscar_PlantasdeSeleccion}
+		\UCpaso Muestra la página \IUref{IUAdmPS}{Administrar Plantas de Selección}. donde se despliegan los Datos de las Plantas de Selección registradas y las opciones para Agregar\IUref{IUAdmPS}{Administrar Planta de Selección}, Modificar\IUref{IUModPS}{Modificar Planta de Selección} o Eliminar\IUref{IUEliPS}{Eliminar Planta de Selección} una planta de selección.\label{PECU1}
+	\end{UCtrayectoria}
+		
+	\subsection{Puntos de Extensión}
+	\UCEPdef{Agregar Planta de Selección}
+	{El actor decide registrar una nueva Planta de Selección}
+	{\ref{PECU1}} 
+	{\UCref{CU1.1}}
+	\UCEPdef{Modificar Planta de Selección}
+	{El actor selecciona una Planta de Selección para modificarla}
+	{\ref{PECU1}} 
+	{\UCref{CU1.2}}
+	\UCEPdef{Eliminar Planta de Selección}
+	{El actor selecciona una Planta de Selección para eliminarla}
+	{\ref{PECU1}} 
+	{\UCref{CU1.3}}
+
+%--------- Agregar Plantas de Selección
+	\begin{UseCase}{CU1.1}{Agregar Planta de Selección}{
+			El usuario registra una nueva Planta de Selección con sus datos respectivos.
+		}
+			\UCitem{Versión}{0.1}
+			\UCitem{Actor(es)}{SOS}
+			\UCitem{Propósito}{Agregar una Planta de Selección.}
+			\UCitem{Resumen}{Se agrega una nueva Planta de Selección registrando sus datos correspondientes.}
+			\UCitem{Entradas}{Datos de la Planta de Selección(Área \ref{Datos_Planta_Seleccion} del Diccionario de Datos).
+			}
+			\UCitem{Salidas}{Mensaje de confirmación que la Planta se registró satisfactoriamente.}
+			\UCitem{Precondiciones}{Ninguna.}
+			\UCitem{Postcondiciones}{Planta de Selección registrada.}
+			\UCitem{Autor}{Donato David Morales Bautista.}
+			\UCitem{Referencias}{RF1.2}
+			\UCitem{Tipo}{Secundario. Viene del caso de uso \UCref{CU1}}
+			\UCitem{Módulo}{Obras.}
+		\end{UseCase}
+
+	\begin{UCtrayectoria}{Principal}
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{Nueva Planta de Selección} en la página \IUref{IUAdmPS}{Administrar Planta de Selección}.
+			\UCpaso Muestra el formulario \IUref{IUAgrPS}{Agregar Planta de Selección}.\Trayref{A}
+			\UCpaso [\UCactor] Ingresa los Datos de la Planta de Selección.\label{ValidacionDatos_Agregar}
+			\UCpaso [\UCactor] Oprime el botón \IUbutton{Aceptar}.
+			\UCpaso Revisa los datos de acuerdo al diccionario de datos (Área \ref{Datos_Planta_Seleccion} del Diccionario de Datos).\Trayref{B}
+			\UCpaso Verifica que se cumpla la regla de negocio \BRref{1}. \Trayref{C} %%REFERENCIA REGLA. \
+			\UCpaso Registra la Planta de Selección.
+			\UCpaso Muestra un mensaje que indique que la planta se ha agregado.
+			\UCpaso [\UCactor] Oprime el botón \IUbutton{Aceptar}.
+			\UCpaso Continua en el paso \ref{Buscar_PlantasdeSeleccion} del \UCref{CU1}.
+		\end{UCtrayectoria}
+
+		\begin{UCtrayectoriaA}{A}{Cancelar operación}{El usuario abandona el Use Case}
+			\UCpaso[\UCactor] Decide ya no agregar una nueva Planta de Selección.
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{Cancelar}.
+			\UCpaso Continua en el paso \ref{PECU1} del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+		
+		\begin{UCtrayectoriaA}{B}{Datos de Planta de Selección Incorrectos}{Los Datos de la Planta de Selección no cumplen con lo especificado en el diccionario de datos.
+		}
+			\UCpaso Muestra un mensaje que indica que los datos no son validos.
+			\UCpaso Continúa en el paso \ref{ValidacionDatos_Agregar}
+		\end{UCtrayectoriaA}
+
+		\begin{UCtrayectoriaA}{C}{Planta de Selección Registrada}{ La Planta de Selección que se desea agregar ya se encuentra registrada.
+		}
+			\UCpaso Muestra un mensaje que indica que ya existe un planta con esos datos.
+			\UCpaso Continúa en el paso \ref{ValidacionDatos_Agregar}
+		\end{UCtrayectoriaA}
+%--------- Modificar Planta de Selección
+	\begin{UseCase}{CU1.2}{Modificar Planta de Selección}{
+			El usuario modifica los Datos de una Planta de Selección registrada.
+		}
+			\UCitem{Versión}{0.1}
+			\UCitem{Actor(es)}{SOS}
+			\UCitem{Propósito}{Modificar una Planta de Selección.}
+			\UCitem{Resumen}{El sistema despliega los Datos de las Plantas de Selección registradas y permite seleccionar una Planta de Selección para modificar sus datos, almacenando lo cambios.}%Resumen modificado de acuerdo a las recomendaciones de la revisión del 02/08/10 MODIFICADO POR: OMAR
+			\UCitem{Entradas}{
+				Datos de la Planta de Selección(Área \ref{Datos_Planta_Seleccion} del Diccionario de Datos).
+			}
+			\UCitem{Salidas}{Mensaje de confirmación que los Datos de la Planta se actualizaron satisfactoriamente.}
+			\UCitem{Precondiciones}{Que exista al menos una Planta de Selección registrada.}
+			\UCitem{Postcondiciones}{
+			  \begin{enumerate}
+			  \item Los Datos de la Planta de Selección requerida se actualizan.
+			  \item La Planta de Selección requerida se activa y podrá ser utilizada para realizar transferencias.
+			  \item La Planta de Selección requerida se desactiva y ya no podrá ser utilizada para realizar transferencias.
+			  \item Todos los reportes que se generen a partir de la modificación del nombre de una Planta de Selección aparecerán con este nuevo nombre.
+			  \end{enumerate}
+			}
+			\UCitem{Autor}{Donato David Morales Bautista.}
+			\UCitem{Referencias}{RF1.2}
+			\UCitem{Tipo}{Secundario. Viene del caso de uso \UCref{CU1}}
+			\UCitem{Módulo}{Obras.}
+		\end{UseCase}
+
+	\begin{UCtrayectoria}{Principal}
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{Modificar Planta de Selección} en la página \IUref{IUAdmPS}{Administrar Planta de Selección}.
+			\UCpaso Muestra el formulario \IUref{IUModPS}{Modificar Planta de Selección}.\Trayref{A}
+                        \UCpaso [\UCactor] Ingresa los Datos de la Planta de Selección.\label{ValidacionDatos_Modificar}
+			\UCpaso [\UCactor] Oprime el botón \IUbutton{Aceptar}.
+			\UCpaso Revisa los datos de acuerdo al diccionario de datos. (Área \ref{Datos_Planta_Seleccion} del Diccionario de Datos).\Trayref{B}
+			\UCpaso Actualiza los datos de la Planta de Selección.
+			\UCpaso Muestra un mensaje de Confirmación de Modificación de Planta.
+			\UCpaso [\UCactor] Oprime el botón \IUbutton{Aceptar}.\Trayref{C}
+			\UCpaso Continua en el paso \ref{Buscar_PlantasdeSeleccion} del \UCref{CU1}.
+		\end{UCtrayectoria}
+
+		\begin{UCtrayectoriaA}{A}{Cancelar operación}{El usuario abandona el Use Case}
+			\UCpaso[\UCactor] Decide ya no modificar los Datos de la Planta de Selección.
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{Cancelar}.
+			\UCpaso Continúa en el paso \ref{PECU1} del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+		
+		 \begin{UCtrayectoriaA}{B}{Datos de Planta de Selección Incorrectos}{Los Datos de la Planta de Selección no cumplen con lo especificado en el diccionario de datos.
+		}
+			\UCpaso Muestra un mensaje que indica que los datos no son válidos.
+			\UCpaso Continúa en el paso \ref{ValidacionDatos_Modificar}
+		\end{UCtrayectoriaA}
+
+		\begin{UCtrayectoriaA}{C}{Plantas de Selección Cerradas}{Todos las Plantas de Selección se han cerrado
+		}
+			\UCpaso Continúa en el paso \ref{PECU1}
+		\end{UCtrayectoriaA}
+
+		%se borro la trayectoria C
+%--------- CU Eliminar Planta de Selección
+	\begin{UseCase}{CU1.3}{CU Eliminar Planta de Selección}{
+			El usuario elimina una Planta de Selección registrada.
+		}
+			\UCitem{Versión}{0.1}
+			\UCitem{Actor(es)}{SOS}
+			\UCitem{Propósito}{Eliminar una Planta de Selección.}
+			\UCitem{Resumen}{El sistema despliega los Datos de las Plantas de Selección registradas y permite seleccionar una Planta de Selección para eliminarla.}
+			\UCitem{Entradas}{Planta de Selección requerida.}
+			\UCitem{Salidas}{
+				Mensaje de confirmación que la Planta se ha borrado satisfactoriamente.
+			}
+			\UCitem{Precondiciones}{Que exista al menos una Planta de Selección registrada.}
+			\UCitem{Postcondiciones}{La Planta de Selección se elimina.}
+			\UCitem{Autor}{Donato David Morales Bautista.}
+			\UCitem{Referencias}{RF1.2}
+			\UCitem{Tipo}{Secundario. Viene del caso de uso \UCref{CU1}}
+			\UCitem{Módulo}{Obras.}
+		\end{UseCase}
+
+	\begin{UCtrayectoria}{Principal}
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{Eliminar Planta de Selección} en la página \IUref{IUAdmPS}{Administrar Planta de Selección}.
+                        \UCpaso Verifica que se cumpla la regla de negocio \BRref{2}. \Trayref{B} %%REFERENCIA REGLA. \
+			\UCpaso Muestra el mensaje \IUref{IUEliPS}{Eliminar Planta de Selección}.
+			\UCpaso [\UCactor] Oprime el botón \IUbutton{Aceptar}.\Trayref{A}
+			\UCpaso La Planta de Selección Requerida se elimina.
+			\UCpaso Continua en el paso \ref{Buscar_PlantasdeSeleccion} del \UCref{CU1}.
+		\end{UCtrayectoria}
+
+		\begin{UCtrayectoriaA}{A}{Cancelar operación}{El usuario abandona el Use Case}
+			\UCpaso[\UCactor] Decide ya no eliminar la Planta de Selección.
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{No}.
+			\UCpaso Continúa en el paso \ref{PECU1} del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+		
+		\begin{UCtrayectoriaA}{B}{Datos Asociados}{ La Planta de Selección que se desea eliminar tiene datos que están asociados a ella.
+		}
+			\UCpaso Muestra un mensaje que indica que le planta tiene datos asociados.
+			\UCpaso Continúa en el paso \ref{PECU1} del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

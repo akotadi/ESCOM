@@ -1,0 +1,3 @@
+padding: 0 0 0 80px // top - right - bottom - left
+padding: 0 0 80px // top - vertical sides - bottom ... Mirror
+padding: 0 80px // horizontal sides - vertical sides ... Mirror

@@ -1,0 +1,131 @@
+mysql -u root -p -enter-
+
+1. Crear una bd
+
+create data base ejemplo1;
+
+use ejemplo1;
+
+2. construir relaciones propietarias
+
+create table tt(
+nott int not null primary key,
+titulo varchar (80)
+);
+
+create table depto(
+idDepto int not null primary key,
+nombre varchar(50)
+);
+
+create table presentacion(
+idPresentacion int not null primary key,
+fecha date,
+califSeguimiento int,
+califSinodales int,
+tipo varchar(8)
+);
+
+-------------------------
+
+create table profesor(
+idprof int not null primary key,
+nombre varchar(10),
+ap varchar(10),
+am varchar(10),
+academia varchar(20),
+salario double,
+idDepto int,
+foreign key(idDepto) references 
+depto(idDepto) on delete cascade on update cascade
+);
+
+// eliminar libremente // modificar libremente
+
+--------------------------
+
+create table dirige(
+nott int not null,
+idProf int not null,
+primary key(nott, idProf),
+foreign key(nott) references tt(nott) on delete cascade on update cascade,
+foreign key(idProf) references Profesor(idProf) on delete cascade on update cascade
+);
+
+---------------
+
+3. Renombrar la relación profesor
+
+alter table profesor RENAME AS catedratico;
+
+-----------------
+
+4. Agregar un campo en la relación presentación (dictamen)
+
+alter table presentacion ADD COLUMN dictamen varchar(10);
+
+---------------
+
+5. Renombrar el campo nombre en depto y llamarle depto
+
+alter table depto CHANGE COLUMN nombre depto varchar(50);
+
+---------------------
+
+6. agregar el tel del catedratico
+
+alter table catedratico ADD COLUMN tel int;
+
+----------------
+
+7. Cambiar el tipo de dato de int a varchar de tel de catedratico
+
+alter table catedratico MODIFY COLUMN tel varchar(15);
+
+-------------------
+
+8. Agregar FK
+
+alter table presentacion ADD COLUMN nott int; // agregar columna para poder agregar la llave foránea
+alter table presentacion ADD foreign key(nott) references tt(nott) on delete cascade on update cascade
+
+-----------------------
+
+9. Cambiar la definición de la PK en presentacion
+
+	a) Eliminar la PK
+
+	alter table presentacion DROP PRIMARY KEY;
+
+	b) Agregar nuevamente la PK pero ahora considerando la restricción de que sea compuesto
+
+	alter table presentacion ADD primary key(idPresentacion,fecha);
+
+-----------------------
+
+10. Cómo crear un respaldo
+
+En windows:
+	cmd...path... myql... bin... // cd copiar la dirección completa
+En Ubuntu:
+	mysqldump -u root -p ejemplo1>... // dónde va a estar con ruta
+
+
+
+
+
+
+show tables;
+
+desc/describe ___; // muestra la tabla especificada
+
+show create table ___; // mostrará las relaciones específicas
+
+drop database; // desechar y volver a construir
+
+select database; // muestra el nombre de la base de datos
+
+Editor de texto vi
+Libro c++ 11
+bin tutor
+complemento a 2

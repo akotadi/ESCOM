@@ -1,0 +1,15 @@
+ENTITY variables IS
+    PORT (
+	a : in std_logic  ; 
+	b : in std_logic  ; 
+	c : in std_logic  ; 
+	d : in std_logic  ; 
+	c0 : inout std_logic  ; 
+	c1 : inout std_logic  ; 
+	a1 : inout std_logic  ; 
+	c2 : inout std_logic  ; 
+	b1 : inout std_logic  ; 
+	c11 : inout std_logic  ; 
+	d1 : inout std_logic 
+    ) ;
+END variables ;

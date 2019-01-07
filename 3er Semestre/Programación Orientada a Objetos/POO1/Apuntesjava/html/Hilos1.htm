@@ -1,0 +1,1700 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Hilos1_archivos/filelist.xml">
+<link rel=Edit-Time-Data href="./Hilos1_archivos/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Hilos (procesos ligeros)</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Roberto Tecla</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Roberto Tecla</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:LastPrinted>2001-10-24T21:10:00Z</o:LastPrinted>
+  <o:Created>2002-03-16T04:46:00Z</o:Created>
+  <o:LastSaved>2002-03-16T04:46:00Z</o:LastSaved>
+  <o:Pages>7</o:Pages>
+  <o:Words>1102</o:Words>
+  <o:Characters>6284</o:Characters>
+  <o:Company>Casa</o:Company>
+  <o:Lines>52</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>7717</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:ES-MX;
+	font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ES style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=ES-MX
+style='font-size:14.0pt;mso-bidi-font-size:10.0pt'>Hilos (procesos ligeros)<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Dentro de un
+programa, un hilo es un flujo de control. Los hilos múltiples y los procesos
+múltiples son diferentes. La diferencia clave es que los hilos múltiples en un
+programa comparten el mismo estado y se ejecutan en el mismo espacio de
+direcciones.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>El
+cuerpo de un hilo<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>El cuerpo de
+un hilo es su núcleo: el contenido que está dentro del método run(). Esta
+sección de código define la acción de un hilo.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>Ciclo
+de vida de los hilos<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Todos los
+hilos, después de su creación y antes de proceder a su eliminación, pasarán por
+uno de estos cuatro estados: recién creados, ejecutable, bloqueado o eliminado.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><!--[if gte vml 1]><v:shapetype id="_x0000_t202"
+ coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1049" type="#_x0000_t202" style='position:absolute;
+ margin-left:274.95pt;margin-top:96.35pt;width:93.6pt;height:64.8pt;z-index:1'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>resume()<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>notify()<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>caducidad de<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>tiempo de espera<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>fin de E/S<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:oval id="_x0000_s1026" style='position:absolute;margin-left:1.35pt;
+ margin-top:64.85pt;width:115.2pt;height:36pt;z-index:2' o:allowincell="f"/><v:oval
+ id="_x0000_s1027" style='position:absolute;margin-left:181.35pt;margin-top:64.85pt;
+ width:100.8pt;height:36pt;z-index:3' o:allowincell="f"/><v:oval id="_x0000_s1028"
+ style='position:absolute;margin-left:361.35pt;margin-top:64.85pt;width:93.6pt;
+ height:36pt;z-index:4' o:allowincell="f"/><v:oval id="_x0000_s1029" style='position:absolute;
+ margin-left:188.55pt;margin-top:213.85pt;width:93.6pt;height:36pt;z-index:5'
+ o:allowincell="f"/><v:shape id="_x0000_s1030" type="#_x0000_t202" style='position:absolute;
+ margin-left:195.75pt;margin-top:72.5pt;width:79.2pt;height:21.6pt;z-index:6'
+ o:allowincell="f" filled="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Ejecutable<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1031" style='position:absolute;z-index:7' from="116.55pt,79.7pt"
+ to="181.35pt,79.7pt" o:allowincell="f">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1032" style='position:absolute;z-index:8' from="274.95pt,72.5pt"
+ to="368.55pt,72.5pt" o:allowincell="f">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1033" style='position:absolute;flip:x;z-index:9'
+ from="274.95pt,94.55pt" to="368.55pt,94.55pt" o:allowincell="f">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1034" style='position:absolute;z-index:10' from="231.75pt,102.2pt"
+ to="231.75pt,210.2pt" o:allowincell="f">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1035" style='position:absolute;z-index:11' from="51.75pt,102.2pt"
+ to="188.55pt,224.6pt" o:allowincell="f">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1036" style='position:absolute;flip:x;z-index:12'
+ from="274.95pt,102.2pt" to="404.55pt,217.4pt" o:allowincell="f">
+ <v:stroke endarrow="block"/>
+</v:line><v:shape id="_x0000_s1037" type="#_x0000_t202" style='position:absolute;
+ margin-left:202.95pt;margin-top:221.05pt;width:64.8pt;height:21.6pt;z-index:13'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Eliminado<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1038" type="#_x0000_t202" style='position:absolute;
+ margin-left:22.95pt;margin-top:72.5pt;width:79.2pt;height:21.6pt;z-index:14'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Recien
+    creado<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1039" type="#_x0000_t202" style='position:absolute;
+ margin-left:375.75pt;margin-top:72.5pt;width:1in;height:21.6pt;z-index:15'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Bloqueado<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1040" type="#_x0000_t202" style='position:absolute;
+ margin-left:123.9pt;margin-top:57.65pt;width:43.2pt;height:21.6pt;z-index:16'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>start()<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1042" type="#_x0000_t202" style='position:absolute;
+ margin-left:102.15pt;margin-top:126.1pt;width:43.2pt;height:21.6pt;z-index:17'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>stop()<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1043" type="#_x0000_t202" style='position:absolute;
+ margin-left:174.15pt;margin-top:102.2pt;width:43.2pt;height:21.6pt;z-index:18'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>stop()<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1044" type="#_x0000_t202" style='position:absolute;
+ margin-left:397.35pt;margin-top:111.2pt;width:43.2pt;height:21.6pt;z-index:19'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>stop()<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1045" type="#_x0000_t202" style='position:absolute;
+ margin-left:37.35pt;margin-top:153.95pt;width:64.8pt;height:21.6pt;z-index:20'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>fin de run()<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1046" type="#_x0000_t202" style='position:absolute;
+ margin-left:390.15pt;margin-top:133.75pt;width:64.8pt;height:21.6pt;z-index:21'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>fin de run()<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1047" type="#_x0000_t202" style='position:absolute;
+ margin-left:166.95pt;margin-top:124.25pt;width:64.8pt;height:21.6pt;z-index:22'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>fin de run()<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1048" type="#_x0000_t202" style='position:absolute;
+ margin-left:282.15pt;margin-top:7.25pt;width:1in;height:57.6pt;z-index:23'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>suspend()<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>wait()<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>sleep()<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>bloqueo E/S<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=2 height=10></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=607 height=324 src="./Hilos1_archivos/image001.gif" v:shapes="_x0000_s1049 _x0000_s1026 _x0000_s1027 _x0000_s1028 _x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033 _x0000_s1034 _x0000_s1035 _x0000_s1036 _x0000_s1037 _x0000_s1038 _x0000_s1039 _x0000_s1040 _x0000_s1042 _x0000_s1043 _x0000_s1044 _x0000_s1045 _x0000_s1046 _x0000_s1047 _x0000_s1048"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=ES-MX>Ciclo
+de vida de un hilo</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Ejemplo de un programa multihilo</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>public class Printer implements Runnable
+{</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>Thread
+printerThread;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>String
+string;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>int
+count;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>int
+sleepTime;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:35.4pt'><span lang=ES-MX>public
+Printer(String s, int howMany, int sleep){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>count=howMany;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>string=s;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>sleepTime=sleep;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>printerThread=new
+Thread(this);</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>printerThread.start();</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>public
+void run(){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>while(count--
+&gt;0){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:3'>                                   </span>System.out.println(string);</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:3'>                                   </span>try{</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:4'>                                               </span>Thread.sleep(sleepTime);</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:3'>                                   </span>}
+catch (Exception e) {</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:4'>                                               </span>return;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:3'>                                   </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>public
+static void main(String args[]){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>new
+Printer(“Ping”, 5, 300);</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>new
+Printer(“Pong”, 5, 500);</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><!--[if gte vml 1]><v:shape id="_x0000_s1050" type="#_x0000_t202"
+ style='position:absolute;margin-left:181.35pt;margin-top:24.45pt;width:57.6pt;
+ height:21.6pt;z-index:24' o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Printer<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1051" style='position:absolute;z-index:25'
+ from="238.95pt,32.1pt" to="303.75pt,32.1pt" o:allowincell="f"/><v:oval id="_x0000_s1052"
+ style='position:absolute;margin-left:303.75pt;margin-top:24.45pt;width:14.4pt;
+ height:14.4pt;z-index:26' o:allowincell="f"/><v:shape id="_x0000_s1053"
+ type="#_x0000_t202" style='position:absolute;margin-left:282.15pt;
+ margin-top:2.4pt;width:64.8pt;height:21.6pt;z-index:27' o:allowincell="f"
+ stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Runnable<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=242 height=3></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=223 height=61 src="./Hilos1_archivos/image002.gif" v:shapes="_x0000_s1050 _x0000_s1051 _x0000_s1052 _x0000_s1053"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<h1><span lang=ES-MX>Notación UML para el código Ejemplo</span></h1>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>El programa puede producir la siguiente salida<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Ping<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Pong<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Ping<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Pong<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Ping<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Ping<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Pong<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Ping<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Pong<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Pong<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>La interface run se encuentra en el paquete java.lang y se define
+básicamente como:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><span style='mso-tab-count:1'>            </span>package java.lang;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><span style='mso-tab-count:1'>            </span>public interface
+Runnable {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><span style='mso-tab-count:2'>                        </span>void
+run();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><span style='mso-tab-count:1'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Monitores</span></h2>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Los monitores
+son un esquema de sincronización que usa java para sincronizar el acceso a
+datos compartidos. </span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Cada objeto
+tiene un objeto llamado monitor asociado con el. Este monitor actúa como un portero
+para el objeto y solo permitirá un método sincronizado a la vez. Cuando el
+método sincronizado finaliza, el monitor se desbloquea, dándole a otro método
+sincronizado la oportunidad de empezar a ejecutarse.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Dado que el
+orden en que se ejecutan los hilos no es predecible, si se permite que varios
+hilos modifiquen los datos simultáneamente, los datos podrían quedar en un
+estado inconsistente. Por ejemplo suponga que un objeto tiene dos campos que
+necesitan mantenerse consistentes: uno es un arreglo de números y el otro es
+una cuenta de cuantos números hay en el arreglo.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Un programa que puede resultar en datos
+inconsistentes</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>class NumberArray {</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>int
+count;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>int
+number[]=new numbers[20];</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>void
+addNumber(int n){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>numbers[count]=n;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>count++;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>void
+print(){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>for(int
+i=0; i &lt; count; i++){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:3'>                                   </span>System.out.println(numbers[i]);</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Suponga que
+dos hilos ejecutaran el metodo addNumber. Y la siguiente secuencia que puede
+conducir a un estado inconsistente:</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Hilo1 : numbers[count]=12;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Hilo2:<span style="mso-spacerun: yes"> 
+</span>numbers[count]=13;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Hilo1:<span style="mso-spacerun: yes"> 
+</span>count++;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Hilo2:<span style="mso-spacerun: yes"> 
+</span>count++;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Un programa con datos consistentes usando
+métodos sincronizados</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>class NumberArray {</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>int
+count;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>int
+number[]=new numbers[20];</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span></span></p>
+
+<p class=MsoBodyText style='text-indent:35.4pt'><span lang=ES-MX>synchronized
+void addNumber(int n){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>numbers[count]=n;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>count++;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>synchronized
+void print(){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>for(int
+i=0; i &lt; count; i++){</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:3'>                                   </span>System.out.println(numbers[i]);</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:2'>                        </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>}</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>Relación
+productor/consumidor con <span style='layout-grid-mode:line'>sincronización de
+hilos<o:p></o:p></span></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='layout-grid-mode:line'>Un hilo ejecutándose en un método synchronized
+podría determinar que no puede continuar, así que el hilo invoca wait
+voluntariamente. Esto hace que el hilo deje de competir por el procesador y por
+el objeto monitor. Ahora, el hilo esperara en una cola mientras otros hilos
+tratan de entrar en el objeto. Cuando un hilo que está ejecutando un método
+synchronized termina el objeto puede notificar (con notify) a un hilo en espera
+que vuelva a estar listo para que pueda intentar obtener otra vez el candado
+del objeto monitor y ejecutarse. El notify actúa como una señal para el hilo en
+espera, indicándole que la condición que estaba esperando ya se satisfizo, y
+que es aceptable que vuelva a entrar en el monitor. Si un hilo invoca
+notifyAll, todos los hilos que estaban esperando el objeto se hacen elegibles
+para volver a entrar en el monitor (es decir, todos pasan al estado listo).</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>//
+SharedCell.java<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>// Muestra
+multiples hilos modificando un objeto compartido.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>// Usa
+sincronización para asegurar que ambos hilos<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>// accedan
+a la celda compartida correctamente.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>public
+class SharedCell {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public static void main( String args[] )<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>HoldInteger h = new HoldInteger();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>ProduceInteger p = new ProduceInteger( h
+);<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>ConsumeInteger c = new ConsumeInteger( h
+);<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>p.start();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>c.start();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>class
+ProduceInteger extends Thread {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>private HoldInteger pHold;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public ProduceInteger( HoldInteger h )<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>pHold = h;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public void run()<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>for ( int count = 0; count &lt; 10;
+count++ ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>// sleep for a random interval<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>try {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>Thread.sleep( (int) ( Math.random()
+* 3000 ) );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>catch( InterruptedException e ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>System.err.println( e.toString()
+);<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>pHold.setSharedInt( count );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>System.out.println( &quot;Producer
+set sharedInt to &quot; +<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">                           </span><span
+style="mso-spacerun: yes">  </span>count );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>pHold.setMoreData( false );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>class
+ConsumeInteger extends Thread {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>private HoldInteger cHold;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public ConsumeInteger( HoldInteger h )<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>cHold = h;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public void run()<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>int val;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>while ( cHold.hasMoreData() ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>// sleep for a random interval<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>try {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>Thread.sleep( (int) (
+Math.random() * 3000 ) );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>catch( InterruptedException e ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>System.err.println( e.toString()
+);<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style="mso-spacerun:
+yes">      </span>val = cHold.getSharedInt();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>System.out.println( &quot;Consumer
+retrieved &quot; + val );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>} <o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>class
+HoldInteger {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>private int sharedInt = -1;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>private boolean moreData = true;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>private boolean writeable = true;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public synchronized void setSharedInt( int
+val )<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>while ( !writeable ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>try {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>wait();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>catch ( InterruptedException e ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>System.err.println(
+&quot;Exception: &quot; + e.toString() );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>sharedInt = val;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>writeable = false;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>notify();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public synchronized int getSharedInt()<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>while ( writeable ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>try {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>wait();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>catch ( InterruptedException e ) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span>System.err.println( &quot;Exception:
+&quot; + e.toString() );<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>writeable = true;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>notify();<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>return sharedInt;<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public void setMoreData( boolean b ) {
+moreData = b; }<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>public boolean hasMoreData() { return
+moreData; }<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Programación en RED</span></h2>
+
+<h3 style='text-align:justify'><span lang=ES-MX>La información se mueve entre
+dos maquinas en forma de paquetes. Donde un paquete contiene como mínimo los
+tres componentes siguientes: dirección de origen, dirección de destino y datos.</span></h3>
+
+<p class=MsoNormal><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1054" type="#_x0000_t202"
+ style='position:absolute;margin-left:116.55pt;margin-top:2.35pt;width:43.2pt;
+ height:28.8pt;z-index:28' o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Origen<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1055" type="#_x0000_t202" style='position:absolute;
+ margin-left:159.75pt;margin-top:2.35pt;width:50.4pt;height:28.8pt;z-index:29'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Destino<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1056" type="#_x0000_t202" style='position:absolute;
+ margin-left:210.15pt;margin-top:2.35pt;width:50.4pt;height:28.8pt;z-index:30'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Datos<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=155 height=3></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=195 height=42 src="./Hilos1_archivos/image003.gif" v:shapes="_x0000_s1054 _x0000_s1055 _x0000_s1056"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Uno de
+protocolos mas usados en internet es el TCP/IP (Transmision Control
+Protocol/Internet Protocol).</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><span style='mso-tab-count:1'>            </span></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1057" type="#_x0000_t202"
+ style='position:absolute;margin-left:116.55pt;margin-top:4.95pt;width:129.6pt;
+ height:19.8pt;z-index:31' o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Niveles de internet<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1058" type="#_x0000_t202" style='position:absolute;
+ margin-left:246.15pt;margin-top:4.95pt;width:86.4pt;height:19.8pt;z-index:32'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Niveles OSI<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1059" type="#_x0000_t202" style='position:absolute;
+ margin-left:116.55pt;margin-top:25.2pt;width:64.8pt;height:21.6pt;z-index:33'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>TCP<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1060" type="#_x0000_t202" style='position:absolute;
+ margin-left:181.35pt;margin-top:25.2pt;width:64.8pt;height:21.6pt;z-index:34'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>UDP<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1061" type="#_x0000_t202" style='position:absolute;
+ margin-left:246.15pt;margin-top:25.2pt;width:86.4pt;height:21.6pt;z-index:35'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Transporte<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1062" type="#_x0000_t202" style='position:absolute;
+ margin-left:116.55pt;margin-top:47.7pt;width:129.6pt;height:21.6pt;z-index:36'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>IP<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1063" type="#_x0000_t202" style='position:absolute;
+ margin-left:246.15pt;margin-top:47.7pt;width:86.4pt;height:21.6pt;z-index:37'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Red<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=155 height=7></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=291 height=88 src="./Hilos1_archivos/image004.gif" v:shapes="_x0000_s1057 _x0000_s1058 _x0000_s1059 _x0000_s1060 _x0000_s1061 _x0000_s1062 _x0000_s1063"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Arquitectura de TCP/IP y
+relación con los niveles OSI.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Las
+direcciones del protocolo IP son de la forma n1.n2.n3.n4 (donde cada ni es un
+valor de 0 a 225).</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>Modelo
+Cliente-Servidor<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><span lang=ES-MX>El modelo cliente-servidor es el modelo
+estándar de ejecución de aplicaciones en una red.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>Servidor<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Un servidor es
+un proceso que se está ejecutando en un nodo de la red y que gestiona el acceso
+a un determinado recurso.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>Cliente<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Un cliente es
+un proceso que se ejecuta en el mismo nodo o en un nodo diferente y que realiza
+peticiones de servicio al servidor. Las peticiones están originadas por la
+necesidad de acceder al recurso que gestiona el servidor.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1064" type="#_x0000_t202"
+ style='position:absolute;margin-left:30.15pt;margin-top:96.65pt;width:108pt;
+ height:28.8pt;z-index:38' o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Maquina Cliente<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1065" type="#_x0000_t202" style='position:absolute;
+ margin-left:325.35pt;margin-top:96.65pt;width:100.8pt;height:28.8pt;z-index:39'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Maquina Servidor<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1066" type="#_x0000_t202" style='position:absolute;
+ margin-left:138.15pt;margin-top:103.85pt;width:36pt;height:21.6pt;z-index:40'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>NIC<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1067" type="#_x0000_t202" style='position:absolute;
+ margin-left:289.35pt;margin-top:103.85pt;width:36pt;height:21.6pt;z-index:41'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>NIC<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1068" style='position:absolute;z-index:42'
+ from="174.15pt,118.25pt" to="289.35pt,118.25pt" o:allowincell="f"/><v:rect
+ id="_x0000_s1069" style='position:absolute;margin-left:346.95pt;margin-top:53.45pt;
+ width:64.8pt;height:36pt;z-index:43' o:allowincell="f"/><v:rect id="_x0000_s1072"
+ style='position:absolute;margin-left:354.15pt;margin-top:60.65pt;width:50.4pt;
+ height:21.6pt;z-index:46' o:allowincell="f"/><v:shape id="_x0000_s1076"
+ type="#_x0000_t202" style='position:absolute;margin-left:1.35pt;margin-top:2.6pt;
+ width:57.6pt;height:36pt;z-index:50' o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Clientes comunes<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1078" type="#_x0000_t202" style='position:absolute;
+ margin-left:58.95pt;margin-top:2.6pt;width:100.8pt;height:43.2pt;z-index:52'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>internet puerto=80<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>telnet<span style="mso-spacerun: yes">   
+    </span>puerto=23<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>ftp<span style="mso-spacerun: yes">        
+    </span>puerto=21<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1077" type="#_x0000_t202" style='position:absolute;
+ margin-left:267.6pt;margin-top:9.8pt;width:86.4pt;height:36pt;z-index:51'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Servidores<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>correspondientes<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1079" type="#_x0000_t202" style='position:absolute;
+ margin-left:346.95pt;margin-top:2.6pt;width:50.4pt;height:43.2pt;z-index:53'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Httpd<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Telnetd<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>ftpd<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1073" type="#_x0000_t202" style='position:absolute;
+ margin-left:30.15pt;margin-top:132.65pt;width:108pt;height:21.6pt;z-index:47'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Dir. IP a1.a2.a3.a4<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1074" type="#_x0000_t202" style='position:absolute;
+ margin-left:318.15pt;margin-top:132.65pt;width:108pt;height:21.6pt;z-index:48'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Dir. IP b1.b2.b3.b4<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1075" type="#_x0000_t202" style='position:absolute;
+ margin-left:58.95pt;margin-top:154.25pt;width:352.8pt;height:21.6pt;z-index:49'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Modelo cliente-servidor en internet<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:rect id="_x0000_s1070" style='position:absolute;margin-left:51.75pt;
+ margin-top:53.45pt;width:64.8pt;height:36pt;z-index:44' o:allowincell="f"/><v:rect
+ id="_x0000_s1071" style='position:absolute;margin-left:58.95pt;margin-top:60.65pt;
+ width:50.4pt;height:21.6pt;z-index:45' o:allowincell="f"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=2 height=3></td>
+  <td width=38></td>
+  <td width=29></td>
+  <td width=87></td>
+  <td width=59></td>
+  <td width=142></td>
+  <td width=106></td>
+  <td width=69></td>
+  <td width=18></td>
+  <td width=20></td>
+  <td width=1></td>
+ </tr>
+ <tr>
+  <td height=60></td>
+  <td colspan=4 align=left valign=top><img width=213 height=60
+  src="./Hilos1_archivos/image005.gif" v:shapes="_x0000_s1076 _x0000_s1078"></td>
+  <td></td>
+  <td colspan=2 align=left valign=top><img width=175 height=60
+  src="./Hilos1_archivos/image006.gif" v:shapes="_x0000_s1077 _x0000_s1079"></td>
+ </tr>
+ <tr>
+  <td height=8></td>
+ </tr>
+ <tr>
+  <td height=49></td>
+  <td colspan=2></td>
+  <td align=left valign=top><img width=87 height=49
+  src="./Hilos1_archivos/image007.gif" v:shapes="_x0000_s1070 _x0000_s1071"></td>
+  <td colspan=3></td>
+  <td colspan=2 align=left valign=top><img width=87 height=49
+  src="./Hilos1_archivos/image008.gif" v:shapes="_x0000_s1069 _x0000_s1072"></td>
+ </tr>
+ <tr>
+  <td height=9></td>
+ </tr>
+ <tr>
+  <td height=41></td>
+  <td></td>
+  <td colspan=9 align=left valign=top><img width=531 height=41
+  src="./Hilos1_archivos/image009.gif" v:shapes="_x0000_s1064 _x0000_s1065 _x0000_s1066 _x0000_s1067 _x0000_s1068"></td>
+ </tr>
+ <tr>
+  <td height=7></td>
+ </tr>
+ <tr>
+  <td height=59></td>
+  <td></td>
+  <td colspan=8 align=left valign=top><img width=530 height=59
+  src="./Hilos1_archivos/image010.gif" v:shapes="_x0000_s1073 _x0000_s1074 _x0000_s1075"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

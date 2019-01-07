@@ -1,0 +1,18 @@
+import com.sun.j3d.utils.geometry.*;
+import com.sun.j3d.utils.image.TextureLoader;
+import com.sun.j3d.utils.universe.*;
+import javax.media.j3d.*;
+import javax.vecmath.*;
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.event.*;
+import javax.swing.*;
+import java.util.*;
+
+public class NuevoPlaneta{
+
+	public NuevoPlaneta()
+	{
+		
+	}
+}

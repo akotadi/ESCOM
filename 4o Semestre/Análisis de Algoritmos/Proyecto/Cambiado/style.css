@@ -1,0 +1,45 @@
+body{
+  background-color: #20a9af;
+  }
+  #body {
+    }
+    h2{
+    	text-align: center;
+    }
+    #leftPanel{
+      width: 30%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px;
+      margin-left: 0px;
+    }
+    p{
+      text-align: justify;
+    }
+
+    #canvas {
+        height: 400px;
+        display: inline-block;  
+        width: 500px;
+        padding: 10px;
+        padding-bottom: 5px;
+        cursor: crosshair;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #rightPanel{
+      background-color: #20a9af;
+      max-width: 30%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px;
+    }
+
+    #body button {
+        font-size: 1.2em;
+        width: 120px;
+    }
+    #botones{
+    	text-align: center;
+    }

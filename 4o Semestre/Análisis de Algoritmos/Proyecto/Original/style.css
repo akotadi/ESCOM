@@ -1,0 +1,24 @@
+#ch-body {
+        margin: 0;
+        padding: 0px 0px 20px 0px;
+        text-align: center;
+    }
+
+    #ch-body h2 {
+        font-weight: 400;
+        height: 5%;
+    }
+
+    #ch-body #canvas {
+        height: 480px;
+        margin: 0 auto;
+        text-align: left;
+        width: 640px;
+        padding-bottom: 10px;
+        cursor: crosshair;
+    }
+
+    #ch-body button {
+        font-size: 1.2em;
+        width: 120px;
+    }

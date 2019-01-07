@@ -1,0 +1,440 @@
+#VRML V2.0 utf8
+
+Transform {
+	translation	2 0 0
+  scale 1.3 1.3 1.3
+#  rotation 5 1 0 .54
+  children [
+#    NavigationInfo { headlight FALSE } # We'll add our own light
+
+    DirectionalLight {        # First child
+        direction -1 0 -1      # Light illuminating the scene
+    }
+	 
+
+
+	 Transform {               # Rueda-eje1
+#      scale 1.7 1 1
+      translation 0 3 -3
+#      rotation 0 0 1 1.57
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+    
+
+
+	Transform {               # Rueda-eje1-transversal
+#      scale 1.7 1 1
+      translation 0 3 -3
+      rotation 0 0 1 1.57
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+	Transform {               # Rueda-eje1-45grad
+#      scale 1.7 1 1
+      translation 0 3 -3
+      rotation 0 0 1 0.78
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+
+	Transform {               # Rueda-eje1-(-45grad)
+#      scale 1.7 1 1
+      translation 0 3 -3
+      rotation 0 0 1 -0.78
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+
+	Transform {				 #rueda union1
+		translation	 -2.52 4.05 -3
+		rotation 0 0 1 -0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union2
+		translation	 2.52 4.05 -3
+		rotation 0 0 1 0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union3
+		translation	 -2.52 2 -3
+		rotation 0 0 1 0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union4
+		translation	 2.52 2 -3
+		rotation 0 0 1 -0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union5
+		translation	 -1.10 0.45 -3
+		rotation 0 0 1 4.27
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union6
+		translation	 1.10 0.45 -3
+		rotation 0 0 1 2.00
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union7
+		translation	 1.10 5.58 -3
+		rotation 0 0 1 4.27
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union8
+		translation	 -1.10 5.58 -3
+		rotation 0 0 1 2.00
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+#--------------------------------------------------------------------------        
+#RUEDA 2
+	 Transform {               # Rueda-eje1
+#      scale 1.7 1 1
+      translation 0 3 -0
+#      rotation 0 0 1 1.57
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+
+    Transform {               # Rueda-eje1
+#      scale 1.7 1 1
+      translation 0 3 0
+      rotation 0 0 1 1.57
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+         appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+
+	Transform {               # Rueda-eje1-transversal
+#      scale 1.7 1 1
+      translation 0 3 0
+      rotation 0 0 1 1.57
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+	Transform {               # Rueda-eje1-45grad
+#      scale 1.7 1 1
+      translation 0 3 0
+      rotation 0 0 1 0.78
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+
+	Transform {               # Rueda-eje1-(-45grad)
+#      scale 1.7 1 1
+      translation 0 3 0
+      rotation 0 0 1 -0.78
+      children [
+        Shape {
+          geometry Cylinder { radius 0.1 height 6 bottom TRUE side TRUE top TRUE }
+          appearance Appearance {
+            material Material { diffuseColor 1 .6 .6 }   #gris
+         }
+        }
+      ]
+    }
+
+	Transform {				 #rueda union1
+		translation	 -2.52 4.05 0
+		rotation 0 0 1 -0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union2
+		translation	 2.52 4.05 0
+		rotation 0 0 1 0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union3
+		translation	 -2.52 2 0
+		rotation 0 0 1 0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union4
+		translation	 2.52 2 0
+		rotation 0 0 1 -0.39
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union5
+		translation	 -1.10 0.45 0
+		rotation 0 0 1 4.27
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union6
+		translation	 1.10 0.45 0
+		rotation 0 0 1 2.00
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union7
+		translation	 1.10 5.58 0
+		rotation 0 0 1 4.27
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union8
+		translation	 -1.10 5.58 0
+		rotation 0 0 1 2.00
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 2.3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+#--------------------------------------------------------------------------------------------------
+	#UNIONES DE RUEDA A RUEDA
+
+
+	Transform {				 #rueda union1
+		translation	 -2.52 4.05 -1.5
+		rotation 1 0 0 1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union2
+		translation	 2.52 4.05 -1.5
+		rotation 1 0 0 1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union3
+		translation	 -2.52 2 -1.5
+		rotation 1 0 0  1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union4
+		translation	 2.52 2 -1.5
+		rotation 1 0 0 1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union5
+		translation	 -1.10 0.45 -1.5
+		rotation 1 0 0 1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union6
+		translation	 1.10 0.45 -1.5
+		rotation 1 0 0 1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union7
+		translation	 1.10 5.58 -1.5
+		rotation 1 0 0 1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	Transform {				 #rueda union8
+		translation	 -1.10 5.58 -1.5
+		rotation 1 0 0 1.57
+		children [
+			Shape{
+				geometry Cylinder{radius 0.1 height 3 bottom TRUE side TRUE top TRUE }
+				appearance Appearance {
+					material Material{diffuseColor 1 .6 .6}
+				}
+			}
+		]
+	}
+	
+  ] # end of children for world
+  #--------------------------------------------------------------------------        
+ 	
+}

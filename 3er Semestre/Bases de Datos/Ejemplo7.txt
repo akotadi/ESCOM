@@ -1,0 +1,132 @@
+Cargar script home.sql
+
+1. Darnos de alta a un home determinado.... (3 tuplas)
+
+	INSERT INTO asociado (idAsociado, homedepot_idhd, nombre) VALUES 
+	("a1000",(select idhd from homedepot where nombre like "%Tecnol_gic%"),"PEREZ PEREZ PANCHITO"),
+	("a1001",(select idhd from homedepot where nombre like "%Tlatilco%"), "LOPEZ LOPEZ LORENA"),
+	("a1002",(select idhd from homedepot where nombre like "%Interlomas%"),"JIMENEZ JIMENEZ JUANITO");
+
+	// No va el paréntesis después del into cuando voy a agregar todos los campos
+
+	select * from asociado where idAsociado in("a1000","a1001","a1002");
+
+2.- Reasignar a homedepot Morelia, los asociados que tienen como apellido paterno "García"
+	
+	select a.nombre, a.homedepot_idhd, h.nombre
+	from asociado a, homedepot h
+	where a.homedepot_idhd=h.idhd
+	and a.nombre like "Garcia%";
+
+	UPDATE asociado SET homedepot_idhd=(select idhd from homedepot where nombre like "%Morelia%") where nombre like "Garcia%";
+
+	select a.nombre, a.homedepot_idhd, h.nombre
+	from asociado a, homedepot h
+	where a.homedepot_idhd=h.idhd
+	and a.nombre like "Gonza%";
+
+	update asociado set homedepot_idhd=(select idhd from homedepot where nombre like "Interloma%") where nombre like "Gonza%";
+
+3.- Actualizar el registro del departamento de pinturas...
+
+	update depto set nombre = "Pinturas y mas cositas" where iddepto="D008";
+
+4.- Cambiar la dirección de los socios que tienen un credito entre 6500 a 8000, ponerle direccion desconocida
+
+	update socio set direccion="DIRECCION DESCONOCIDA" where credito between 6500 and 8000;
+
+	select nombre, direccion, credito from socio where credito between 6500 and 8000 order by credito;
+
+5.- Eliminar a los socios que tienen la tarjeta que se llama decore
+
+	delete from tarjeta where nombre="decore";
+
+6.- Quienes son los socios que tienen la tarjeta credito
+
+	select s.idsocio, s.nombre, t.nombre as tarjeta
+	from socio s, tarjeta t
+	where t.socio_idsocio=s.idsocio
+	and t.nombre like "Cr_dit%"
+
+	union
+
+	select s.idsocio, s.nombre, t.nombre as tarjeta
+	from socio s, tarjeta t
+	where t.socio_idsocio=s.idsocio
+	and t.nombre like "Pagos%"
+	order by nombre;
+
+	select s.idsocio, s.nombre, t.nombre as tarjeta
+	from socio s, tarjeta t
+	where t.socio_idsocio=s.idsocio
+	and t.nombre in("Pagos Fijos","Credito");
+
+	select s.idsocio, s.nombre, t.nombre as tarjeta
+	from socio s, tarjeta t
+	where t.socio_idsocio=s.idsocio
+	and (t.nombre <>"Pagos Fijos" or t.nombre<>"Credito");
+
+	select *
+	from socio
+	where idsocio not in(select s.idsocio
+	from socio s, tarjeta t
+	where t.socio_idsocio=s.idsocio
+	and (t.nombre <>"Pagos Fijos" or t.nombre<>"Credito"))
+	group by idsocio;
+
+7.- Trabajar con transacciones
+
+	l(x)
+
+	e(x)
+
+	begin;
+ 
+ 	INSERT INTO asociado (idAsociado, homedepot_idhd, nombre) VALUES 
+	("a1004",(select idhd from homedepot where nombre like "%Tecnol_gic%"),"HERNANDEZ EULER");
+
+	Select * from asociado where idasociado in("a1004");
+
+	rollback;
+
+	.-.-.-.-.-..-.-.-..-.-..-..-.-.---.-.-.-.-.-.-.-.-..--.--.
+
+	begin;
+
+	INSERT INTO asociado (idAsociado, homedepot_idhd, nombre) VALUES 
+	("a1004",(select idhd from homedepot where nombre like "%Tecnol_gic%"),"HERNANDEZ EULER");
+
+	Select * from asociado where idasociado in("a1004");
+
+	// Cerrar la terminal = Fallo del sistema
+
+	Select * from asociado where idasociado in("a1004"); // no está el registro
+
+	-.-.-.--.-..-.-.--.-..-.-.-.-.-.-.-.--.-.-.-.
+
+	begin;
+
+	INSERT INTO asociado (idAsociado, homedepot_idhd, nombre) VALUES 
+	("a1004",(select idhd from homedepot where nombre like "%Tecnol_gic%"),"HERNANDEZ EULER");
+
+	Select * from asociado where idasociado in("a1004");
+
+	commit;
+
+	// Fallo de sistema
+
+	.-.-.-..-.-..-.--...-..-.-.---.-.-.-.-.-.-.-.
+
+	begin;
+
+	INSERT INTO asociado (idAsociado, homedepot_idhd, nombre) VALUES 
+	("a1005",(select idhd from homedepot where nombre like "%Tecnol_gic%"),"NICOLAR ABI (La chida)");
+
+	Select * from asociado where idasociado in("a1005");
+
+	commit;
+
+
+---------------------------
+
+show databases;

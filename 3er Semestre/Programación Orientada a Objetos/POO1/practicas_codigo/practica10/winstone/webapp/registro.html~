@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<header>
+		<h1>Registro</h1>
+	</header>
+	<nav></nav>
+	<section>
+<h2>Formulario de registro</h2>
+<form action="/servlets/servlet/registro" method="get" name="formulario_registro_usuario">
+Nombre <input type="text" name="Nombre_nuevo_usuario"><br><br>
+Apellidos <input type="text" name="Apellidos_nuevo_usuario"><br><br>
+Nombre de usuario <input type="text" name="nick"><br><br>
+Correo electronico <input type="text" name="e-mail"><br><br>
+Contraseña <input type="password" name="Contraseña"><br><br>
+<input type="submit" name="Enviar_registro" value="Enviar">
+</form>
+</section>
+<footer>
+		<h3>ESCOM 2014</h3>
+	</footer>
+</body>
+</html>

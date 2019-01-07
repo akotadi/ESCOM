@@ -1,0 +1,105 @@
+1.- Crear BD
+(EN UBUNTU: mysql -u root -p)
+CREATE DATABASE ejemplo1;
+USE ejemplo1;
+------------------------------------------------------------------------
+Modelo de Datos (Relacional) -> Esquema BD
+ 
+Ejem.
+
+Alumno (noBoleta(PK), nombre,ap,am,idPlantel(FK),...) } Atributos-> # -> Grado
+201111 P P P 01 
+201112 K L 1 02 -> Tupla 
+201113 E U H 01
+         |
+         Cardinalidad
+------------------------------------------------------------------------
+2.- Crear tablas o realciones (Primero propietarias)
+CREATE TABLE tt(
+nott int not null primary key,
+titulo varchar(80)
+);
+CREATE TABLE depto(
+idDepto int not null primary key,
+nombre varchar(50)
+); 
+CREATE TABLE presentacion(
+idPresentacion int not null primary key,
+fecha date,
+califSeguimiento int,
+califSinodales int,
+tipo varchar(8)
+);
+
+***** Por si nos equivocamos en un tabla utilizamos: DROP DATABASE ;***
+DESC tt;
+DESC depto;
+DESC presentacion;
+
+CREATE TABLE profesor(
+idprof int not null primary key,
+nombre varchar(10),
+ap varchar(10),
+am varchar(10),
+academia varchar(20),
+salario double,
+idDepto int,
+FOREIGN KEY(idDepto) REFERENCES depto(idDepto) ON DELETE CASCADE ON UPDATE CASCADE
+);
+** Si aparece MUL en la llave foranea se dice que de hizo bien la vinculacion.
+DESC profesor;
+SHOW CREATE TABLE profesor;
+**ENGINE debe tener InnoDB para que se respete la relacion.
+------------------------------------------------------------------------
+CREATE TABLE dirige(
+nott int not null,
+idprof int not null,
+PRIMARY KEY(nott, idprof),
+FOREIGN KEY(nott) REFERENCES tt(nott) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(idprof) REFERENCES profesor(idprof) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+**Con esto creamos llaves primarias compuestas, sabiendo que son llaves foraneas.
+------------------------------------------------------------------------
+3.- Renombrar relacion profesor
+
+ALTER TABLE profesor RENAME AS catedratico;
+
+4.- Agregar campo en la relacion presentacion...dictamen
+
+ALTER TABLE presentacion ADD COLUMN dictamen varchar(10);
+
+5.- Renombrar campo nombre en depto y llamarle depto
+
+ALTER TABLE depto CHANGE COLUMN nombre depto varchar(50);
+
+6.- Agregar telefono del catedratico....
+
+ALTER TABLE catedratico ADD COLUMN tel int;
+
+7.- Cambiar tipo de dato int a varchar
+ 
+ALTER TABLE catedratico MODIFY COLUMN tel varchar(15);
+
+REALIZAR REPORTE DE CADA INSTRUCCION SEGUN EL FORMATO DEL PROFESOR
+
+8.- Agregar llave foranea FK
+
+ALTER TABLE presentacion ADD COLUMN nott int;
+ALTER TABLE presentacion ADD FOREIGN KEY(nott) REFERENCES tt(nott) ON DELETE CASCADE ON UPDATE CASCADE;
+
+9.- Cambiar definicion de la PK en presentacion
+
+a) ELiminar llave PK ("MUY IMPORTANTE")
+
+ALTER TABLE presentacion DROP PRIMARY KEY;
+
+b) Agregar nuevamente PK pero ahoran considerando la nueva restriccion que sea compuesto
+
+ALTER TABLE presentacion ADD PRIMARY KEY(idPresentacion,fecha); 
+
+10.- Como crear un respaldo
+
+CMD... path... mysql/.. bin 
+
+UBUNTU:mysqldump -u root -p ejemplo1>Bd1.sql

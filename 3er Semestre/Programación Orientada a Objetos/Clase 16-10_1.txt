@@ -1,0 +1,67 @@
+import javax.swing.*;
+import java.bet.*;
+import java.io.*;
+
+public class Red{
+	private socket cliente;
+	private ObjectInputStream oesNet;
+	private ObjectInputStream oosNet;
+	private LeeRed lr;
+	private int puerto = 5000;
+
+	public Red(LeeRed lr){
+		this.lr; // inicializa la variable de instancia lr
+		setUpNetworking();
+	}
+
+	public void setUpNetworking(){
+		int i=0;
+		String host = JOptionPane.showInputDialog("Escriba dir. IP","localHost");
+		while(i==0){
+			i=1; // la variable i es una bandera
+			try{
+				cliente = new Socket(host,puerto);
+			}
+			catch(IOException e){ 
+				i=0; 
+			}
+		}
+		try{
+			oisNet = getOISNet(cliente.getInputStream());
+			oosNet = new getOOSNet(cliente.getOutputStream());
+		}
+		catch(IOException e){ ... }
+		(new Thread(new IncomingReader(lr,oisNet))).start();
+	}
+
+	public void escribeRed(Object obj){
+		try{
+			oosNet.writeObject(obj);
+			oosNet.flush();
+		}
+		catch(IOException){ ... }
+	}
+	
+	ObjectOutputStream getOOSNet(OutputSteam os);
+	throws IOException{
+		return new ObjectOutputStream(os);
+	}
+	ObjectOutputStream getIOSNet(InputStream is);
+	throws IOException{
+		return new ObjectInputStream(is);
+	}
+}
+
+public interface LeeRed{
+	void leeRed(Object obj);
+}
+
+
+
+
+---------------------------
+
+Las variables usualmente tienen 3 papeles:
+	contadores
+	acumuladores
+	banderas

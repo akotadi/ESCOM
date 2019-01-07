@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solver</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/table.css" />
+</head>
+<body>
+	<div id="inicio">
+		<p>
+			Max o min: 
+			<select id="maxmin">
+				<option value="max">Maximizar</option>
+				<option value="min">Minimizar</option>
+			</select>
+			<br>
+			Numero de variables: 
+			<select id="numVariables" onclick="variables()">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+			<br>
+			Numero de restricciones: 
+			<select id="numRestricciones" onclick="variables()">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+			</select>
+			<br>
+			<button onclick="reset()">Reiniciar</button>
+		</p>
+	</div>
+
+	<!-- Las divisiones de "variables", "resultados" y "tabla"
+		seran creadas en el script
+	-->
+	<hr>
+	<div id="variables">
+		<h1>Variables</h1>
+	</div>
+	<hr>
+	<div id="resultados"></div>
+	<div id="res"></div>
+	<hr>
+	<div id="tabla">
+		<h1>Tablas</h1>
+	</div>
+
+	<script src="scripts/solver.js"></script>
+</body>
+</html>

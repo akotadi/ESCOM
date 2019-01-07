@@ -1,0 +1,18 @@
+<html lang="es">
+    <head>
+            <meta charset="UTF-8">
+            <link rel="shortcut icon" href="img/logo.png"/>
+            <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+            <link href="css/formstyles.css" rel="stylesheet" type="text/css"/>
+            <title>Subir Foto</title>
+    </head>
+    <body class='login'>
+            <div class='contform' style='margin-top:96px;'>
+                <form class='form' method='post' action='subeimg' enctype='multipart/form-data'>
+                    Foto
+                    <input type='file' name='imagen' id='file' value="" size="50" required/><br>
+                    <input type='submit' value='Enviar'/><br>
+                </form>
+            </div>
+    </body>
+</html>

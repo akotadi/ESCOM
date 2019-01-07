@@ -1,0 +1,47 @@
+import com.sun.j3d.utils.geometry.*;
+import com.sun.j3d.utils.image.TextureLoader;
+import com.sun.j3d.utils.universe.*;
+import java.awt.*;
+import javax.media.j3d.*;
+import javax.vecmath.*;
+import java.io.*;
+public class Esfera implements Movible {
+   Appearance app;
+   TextureLoader tex;
+   TransformGroup BobTG;
+   BranchGroup group;
+   static Sphere sphere;
+   Frame frame1;
+   public void giraTron(float angulo){}
+   public void giraHD(float angulo){}
+   public void giraHI(float angulo){}
+   public BranchGroup myBody() {
+     return group;
+   }
+   public Esfera(Frame frame) {
+      frame1=frame;
+      group = new BranchGroup();
+   int primflags = Primitive.GENERATE_NORMALS +
+   Primitive.GENERATE_TEXTURE_COORDS/*+Primitive.ENABLE_APPEARANCE_MODIFY*/ ; 
+
+    //ap.setTextureUnitState(textureUnitState);  
+   sphere = new Sphere(0.5f, primflags, app);
+   sphere.setCapability(Primitive.ENABLE_APPEARANCE_MODIFY); 
+   app = sphere.getAppearance();
+   app.setCapability(Appearance.ALLOW_TEXTURE_ATTRIBUTES_WRITE);
+    app.setCapability(Appearance.ALLOW_TEXTURE_WRITE);
+    app.setCapability(Appearance.ALLOW_MATERIAL_WRITE);
+    group.addChild(sphere);
+   }
+   public void changeTextureCab(Texture texture, String image) {
+        tex = new TextureLoader(image, "RGB",frame1);
+    	texture = tex.getTexture();
+	texture.setBoundaryModeS(Texture.CLAMP_TO_BOUNDARY);
+	texture.setBoundaryModeT(Texture.CLAMP_TO_BOUNDARY);
+	texture.setBoundaryColor(new Color4f(0.0f, 1.0f, 0.5f, 0f));
+	TextureAttributes texAttr = new TextureAttributes();
+	texAttr.setTextureMode(TextureAttributes.REPLACE);
+	app.setTextureAttributes(texAttr);
+	app.setTexture(texture);
+    }
+}

@@ -1,0 +1,8 @@
+Expresiones regulares:
+Es un patrón que representa al lenguaje que produce un AFD mediante los símbolos del 
+alfabeto y los operadores unión, concatenación y cerradura de Kleen; además dde parentesis 
+para agrupar expresiones regulares.
+
+Es una operación unaria que se aplica a un símbolo o una ER entre paréntesis, representando 
+las cadenas que se pueden formar con cualquier número de ocurrencias entre uno o infinito, 
+incluyendo la cadena vacía.

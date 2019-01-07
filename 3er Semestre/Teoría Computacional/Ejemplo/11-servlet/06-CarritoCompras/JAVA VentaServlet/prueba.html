@@ -1,0 +1,36 @@
+<html><head><title>Compra de Boletos</title></head><BODY bgcolor="#FFFFFF">
+<h3>SELECCIONE SU LINEA DE PREFERENCIA</h3>
+<FORM ACTION="http://localhost:8080/examples/servlet/Compra" METHOD=Post>
+<font face=Arial SIZE=4>Transportes de Baja California Sur A Nuevo León</font>
+<BR>
+<TABLE BORDER=1>
+<TR>
+   <TD><font face=Arial SIZE=2 COLOR=BLUE>CANTIDAD </font></TD>
+   <TD><font face=Arial SIZE=2 COLOR=BLUE>COMPRAR </font></TD>
+   <TD><font face=Arial SIZE=2 COLOR=BLUE>LINEA </font></TD>
+   <TD><font face=Arial SIZE=2 COLOR=GREEN>COSTO </font></TD>
+   <TD><font face=Arial SIZE=2 COLOR=BLUE>DISPONIBILIDAD </font></TD>
+   <TD><font face=Arial SIZE=2 COLOR=BLUE>TIPO </font></TD>
+</TR>
+<TR>
+   <TD> <INPUT TYPE=TEXT VALUE=1 NAME=ad1 SIZE=3 > </TD>
+   <TD> <CENTER> <INPUT TYPE=CHECKBOX NAME=ac1> </CENTER> </TD>
+   <TD> Azteca <INPUT TYPE=HIDDEN NAME=al1 VALUE=Azteca </TD>
+   <TD> $2,000.00</TD>
+   <TD> <CENTER>28</CENTER> </TD>
+   <TD> Avión </TD>
+</TR>
+<TR>
+   <TD> <INPUT TYPE=TEXT VALUE=1 NAME=cd1 SIZE=3 > </TD>
+   <TD> <CENTER> <INPUT TYPE=CHECKBOX NAME=cc1> </CENTER> </TD>
+   <TD> TuriStar </TD>
+   <TD> $200.00</TD>
+   <TD> <CENTER>30</CENTER> </TD>
+   <TD> Camión </TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT TYPE=Submit VALUE="Comprar">
+</FORM>
+</body>
+</html>

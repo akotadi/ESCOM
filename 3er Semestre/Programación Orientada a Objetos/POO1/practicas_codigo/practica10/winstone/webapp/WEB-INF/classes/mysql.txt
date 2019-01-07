@@ -1,0 +1,17 @@
+
+
+
+CREATE TABLE Perro (
+         nombre VARCHAR(100),
+         raza VARCHAR(100),
+	 edad VARCHAR(3),
+         genero VARCHAR(10)
+       );
+
+INSERT INTO Perro(nombre, raza, edad, genero) VALUES('Solovino', 'Criollo', '3', 'Macho');
+
+INSERT INTO Perro(nombre, raza, edad, genero) VALUES('Lassie', 'Collie', '4', 'Hembra');
+
+ LOAD DATA INFILE '/home/rtecla/perros.txt' INTO TABLE Perro;
+
+

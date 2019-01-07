@@ -1,0 +1,33 @@
+
+Practica 3
+Java3d
+
+1.-Sistema Solar
+
+
+Agregar 2 planetas
+
+Para cada "planeta"
+        -crear una apariencia
+        -cargar una textura a partir del archivo de una imagen
+        -poner la textura a la apariencia
+        -crear una esfera con el radio y la apariencia correspondiente al planeta
+	-rotar la esfera sobre su propio eje a la velocidad  correspondiente al planeta (duracion del dia) 
+	-alejar la esfera del sol (la posicion del sol es el origen)
+	-rotar la esfera alrededor del sol a la velocidad  correspondiente al planeta (duracion del anio) alrededor del sol
+	-agregarla al BranchGroup
+
+2.-Tio Vivo
+Para cada "silla" del Tio Vivo
+	-crear un cubo
+        -rotar  el cubo sobre su propio eje
+	-alejar el cubo del origen
+        -rotar  el cubo alrededor del origen
+
+3.-Carrusel
+Para cada "caballito" del Carrusel
+	crear un cubo
+        -trasladar el cubo sobre un eje vertical que pase por el centro del cubo
+	-alejar el cubo del origen
+	-rotar  el cubo alrededor del origen
+

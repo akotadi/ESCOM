@@ -1,0 +1,12 @@
+<HTML>
+<HEAD>
+<TITLE>Introductiones</TITLE>
+</HEAD>
+<BODY>
+<FORM METHOD=GET ACTION="/servlets/servlet/Triangulo">
+If you don't mind me asking, what es tu nombre?
+<INPUT TYPE=TEXT NAME="renglones"><P>
+<INPUT TYPE=SUBMIT>
+</FORM>
+</BODY>
+</HTML>

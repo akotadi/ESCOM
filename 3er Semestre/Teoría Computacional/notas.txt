@@ -1,0 +1,7 @@
+				for each renglon = 0...Q.length
+					for each columna = 0...sigma.length
+						dato = prompt("Dame el estado al que llega si estoy en " + renglon + " con el símbolo" + sigma[columna])
+						dato = prompt("(q" + renglon + "," + sigma[columna] + ", estado","");
+
+estado = 0;
+var delta = array();

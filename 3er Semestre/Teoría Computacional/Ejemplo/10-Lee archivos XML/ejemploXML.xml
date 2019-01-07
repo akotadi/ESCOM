@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+
+<structure>
+	<concept>
+		<term>Benito Juárez</term>
+		<word>Benito Juarez, el Benemerito de las Americas,Benito Pablo Juarez Garcia</word>
+		<relation>was born<id>oaxaca</id> </relation>
+	</concept>
+	<concept>
+		<term>Jorge Solorzano</term>
+		<word>amigo de Juarez, el doctor del CIC</word>
+	</concept>
+	<concept>
+		<term>Margarita Maza</term>
+		<word>esposa de Juárez, Margarita Maza</word>
+	</concept>
+</structure>
+

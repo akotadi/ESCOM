@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Compra de Boletos</title>
+  </head>
+  <body bgcolor="#FFFFFF">
+    <h3>SELECCIONE SU LINEA DE PREFERENCIA</h3>
+    <FORM ACTION="http://localhost:8080/examples/servlet/Compra" METHOD=POST>
+    	
+    <font face=Arial SIZE=4>Transportes de CAMPECHE a QUERETARO:</font>
+    <BR>
+    <BR>
+    <TABLE BORDER=1>
+       <TR>
+       	
+       	  <TD><font face=Arial SIZE=2 COLOR=BLUE>CANTIDAD </font></TD>
+       	  <TD><font face=Arial SIZE=2 COLOR=BLUE>COMPRAR </font></TD>
+       	  <TD><font face=Arial SIZE=2 COLOR=BLUE>LINEA </font></TD>
+       	  <TD><font face=Arial SIZE=2 COLOR=GREEN>COSTO </font></TD>
+       	  <TD><font face=Arial SIZE=2 COLOR=BLUE>DISPONIBILIDAD </font></TD>
+       	  <TD><font face=Arial SIZE=2 COLOR=BLUE>TIPO </font></TD>	
+       	
+       </TR>
+       
+       <TR>
+       	  <TD> <INPUT TYPE=TEXT VALUE=1 NAME=d1 SIZE=3 > </TD>
+       	  <TD> <CENTER> <INPUT TYPE=CHECKBOX NAME=r1> </CENTER> </TD>
+       	  <TD> MEXICANA </TD>
+       	  <TD> $2000.00 </TD>
+       	  <TD> <CENTER> 20 </CENTER> </TD>
+       	  <TD> Avión </TD>	
+       </TR>
+                 
+       <TR>
+       	  <TD> <INPUT TYPE=TEXT VALUE=1 NAME=d2 SIZE=3 > </TD>
+       	  <TD> <CENTER> <INPUT TYPE=CHECKBOX NAME=r2> </CENTER> </TD>
+       	  <TD> ADO </TD>
+       	  <TD> $340.00 </TD>
+       	  <TD> <CENTER> 15 </CENTER> </TD>
+       	  <TD> Camión </TD>	
+       </TR>              
+    </TABLE>
+    <BR>
+    <INPUT TYPE=Submit VALUE="Comprar">
+    </FORM>  	
+  </body>
+</html>

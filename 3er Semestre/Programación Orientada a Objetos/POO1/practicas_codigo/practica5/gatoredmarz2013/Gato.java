@@ -1,0 +1,61 @@
+import java.awt.event.*;
+import java.awt.*;
+import java.io.*;
+import java.net.*;
+public class Gato extends Frame implements Runnable, ActionListener {
+	Socket cliente;  
+	PrintWriter writer;
+        BufferedReader reader;
+  	Thread hilo;
+	Button botones[]=new Button[9];
+	String jugadores[]={"X", "0"};
+	int puerto=5000, turno=0, i=0;
+	public Gato(){
+                super("Tablero JGato");
+		setLayout(new GridLayout(3,3));
+		for(int i=0; i<9; i++){
+			add(botones[i]=new Button(""+i));
+			botones[i].addActionListener(this);
+		}
+   		while(i==0){
+    			i=1;
+    			System.out.println("Esperando al servidor . . .");
+    			try {
+				cliente=new Socket( "localhost", puerto);
+    			} catch ( IOException e) {
+            			System.out.println("E1"); i=0;
+   			}
+   		}
+   		System.out.println("Connectado al servidor.");
+   		try {    
+            		writer = new PrintWriter(cliente.getOutputStream());  
+			InputStreamReader isReader = new InputStreamReader
+                        (cliente.getInputStream());
+                        reader = new BufferedReader(isReader);
+   		} catch ( IOException e) { System.out.println("E2"); }
+                setSize(300, 300); setVisible(true);    
+   		hilo = new Thread(this); hilo.start ();
+	}
+	public void run(){
+		int j,k=0;
+   		for(;;){
+    			j=0;
+    			try {
+				k=Integer.parseInt(reader.readLine());
+    			} catch ( IOException e) { j=1; }
+    			if (j == 0) {
+				botones[k].setLabel(jugadores[turno]);
+				botones[k].setEnabled(false);
+				turno=1-turno;   
+			}
+		}
+	}
+	public void actionPerformed(ActionEvent e) {
+		Button btn=(Button)e.getSource();	
+		writer.println(btn.getLabel());
+                writer.flush();
+		btn.setLabel(jugadores[turno]);
+		btn.setEnabled(false); turno=1-turno;                    
+	}
+	public static void main(String s[]){ new Gato(); }
+}

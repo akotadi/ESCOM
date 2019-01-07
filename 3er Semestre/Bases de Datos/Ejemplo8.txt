@@ -1,0 +1,181 @@
+Cargar script sams
+
+	create database sams;
+	use sams;
+	source ...
+
+Trabajar con una operación de escritura y otra de lectura
+	
+	insert into gerente (idgerente, nombre) values (302, "HERNANDEZ CONTRERAS EULERCITO");
+
+	select * from gerente
+	where idgerente between 298 and 310;
+
+	Bloqueo de lectura:
+
+		t1.
+
+			lock tables gerente read;
+
+			l(gerente)
+			l(estado)
+			l(socio)
+			l(producto)
+
+		t2.
+
+			l(gerente)
+			l(estado)
+			l(socio)
+			l(producto)
+
+Trabajar sobre proveedor
+
+	insert into proveedor values (34, "Mi negocio chido!!!", "55-55-55-55-55");
+
+	Bloqueo de escritura:
+
+		t1.
+
+			lock tables gerente write;
+
+			e(proveedor)
+			l(proveedor)
+			l(estado)
+			l(gerente)
+
+		t2.
+
+			l(estado)
+			l(gerente)
+			l(proveedor) ... // stand by
+
+		t1. 
+
+			unlock tables;
+
+		t2.
+
+			... l(proveedor)
+
+
+		t1. 
+
+			bloquear lectura(gerente)
+			bloquear escritura(proveedor)
+				lock tables gerente read, proveedor write;
+
+			l(gerente)
+			l(proveedor)
+			l(estado)
+			l(socio)
+
+
+insert into proveedor values (35, "Proveedor de marihuana!!", "55-55-55-55-56");
+
+
+	t1.
+	bloquear escritura(proveedor)
+	bloquear lectura(socio)
+	lock tables proveedor write, socio read;
+	l(proveedor)
+	l(socio)
+
+	t2.
+	bloquear escritura(socio)
+	lock tables socio write;
+	e(socio)
+	l(socio)
+
+	t3.
+	bloquear lectura(proveedor)
+	lock tables proveedor read;
+	l(proveedor)
+
+	t1. 
+	bloquear escritura(socio)
+	lock tables socio write;
+
+
+
+------------------------------------
+
+	lock tables _________ [read/write];
+
+	unlock tables;
+
+
+
+--------------------------------------
+
+Crear los siguientes stored procedures...
+
+	1. Mostrar los gerentes existentes en las sucursales del Estado de México
+
+		delimiter $
+		create procedure sp1()
+		begin
+			select g.nombre as gerente, c.nombre as club
+			from gerente g, club c, estado e
+			where g.idclub = c.idclub
+			and c.idedo = e.idedo
+			and e.nombre like "%M_xico%"
+			order by 2, 1;
+		end $
+		delimiter ;
+
+	2. Los servicios que tiene el club Morelia
+
+		delimiter $
+		create procedure sp2()
+		begin
+			select s.nombre
+			from club c, servicioclub sc, servicio s
+			where c.idclub = sc.idclub
+			and sc.idservicio = s.idservicio
+			and c.nombre like "%Morel%"
+			order by 1;
+		end $
+		delimiter ;
+
+	3. Nombre de las sucursales en que están registrados los socios que se apellidan García
+
+		delimiter $
+		create procedure sp3()
+		begin
+			select c.nombre
+			from club c, socioclub sc, socio s
+			where c.idclub = sc.idclub
+			and sc.idsocio = s.idsocio
+			and s.nombre like "%Garc_a%"
+			order by 1;
+		end $
+		delimiter ;
+
+	4. Mostrar el nombre y precio unitario de los productos suministrados por Sabritas
+
+		delimiter $
+		create procedure sp4()
+		begin
+			select po.nombre, po.preciounitario
+			from proveedor p, producto po
+			where po.idproveedor = p.idproveedor
+			and p.nombre like "%Sabritas%"
+			order by 1, 2;
+		end $
+		delimiter ;
+
+	5. Mostrar el nombre del club y sus gerentes de aquellos clubes existentes en los siguientes cp (90610,64780,54080)
+
+		delimiter $
+		create procedure sp5()
+		begin
+			select c.nombre, g.nombre
+			from club c, gerente g
+			where c.idclub = g.idclub
+			and (c.direccion like "%90610%" 
+			or c.direccion like "%64780%" 
+			or c.direccion like "%54080%")
+			order by 1, 2;
+		end $
+		delimiter ;

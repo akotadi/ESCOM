@@ -1,0 +1,99 @@
+Procesos de Adquisición
+	1. Iniciación.
+	2. Solicitud de preparación de propuesta.
+	3. Elaboración y actualización del contrato.
+	4. Monitoreo del proveedor.
+	5. Aceptación y finalización.
+
+Proceso de Suministro
+	1. Iniciación.
+	2. Preparación de la respuesta.
+	3. Contrato.
+	4. Planificación.
+	5. Ejecución y control.
+	6. Revisión y evaluación.
+	7. Entrega y terminación.
+
+Proceso de Desarrollo
+	1. Implementación del proceso de análisis de requerimientos del sistema
+	2. Diseño del sistema
+ 	3. Análisis de requerimientos del sistema
+	4. Diseño de la arquitectura del software
+	5. Diseño detallado software
+	6. Codificación
+	7. Pruebas de software
+	8. Integracion del software
+	9. Pruebas de calificación del software
+
+Proceso de Operación
+
+Procesos de Mantenimiento
+	Este proceso se activa cuando un sistema se somete a modificaciones en el código y la documentación asociada debido a un error, una deficiencia, un problema, o la necesidad de una mejora o adaptación.
+	Este proceso consta de las siguientes actividades además de sus tarea específicas:
+	1. Imprementación del proceso de análisis de problemas y modificaciones.
+	2. Aplicación de las modificaciones.
+	3. Revisión de mantenimiento / aceptación.
+	4. La migración.
+	5. La baja del software.
+
+Procesos de Soporte
+
+
+
+SOPORTE
+	Buenas prácticas
+	Conjunto de instrumentos para medir lo que estoy haciendo
+	Manual de buenas prácticas
+
+
+ORGANIZACIONALES
+
+
+
+CALIDAD DEL SOFTWARE
+	Software: Conjunto de documentación, estructuras de datos y código.
+
+	Usabilidad
+	Fiabilidad
+	Funcionalidad
+	Eficiencia
+	Mantenibilidad
+	Portabilidad
+	Tolerancia a fallos
+	Completitud
+	Cpmprensible	
+
+
+OMG - BPMN 2.0
+
+
+
+Proceso para levantar requerimientos (técnicas como entrevista, encuesta, obervación)
+	Obtener proceso que se requiere automatizar
+		Áreas
+		Actores
+		(Reglas de Negocio a ser posible)
+	Con la plática, diagramar el proceso y recibir firma del cliente del mismo
+	Identificar lo que se va a automatizar
+	Maqueta del proceso y recibir firma del cliente
+Terminó el procedimiento de recolección
+
+IEC 12207
+
+
+
+Misión: Lo que haces.
+Visión: Cómo te ves.
+
+
+
+
+
+
+
+
+
+
+
+
+Evento es algo que detona el empezar a trabajar (iniciar proceso)

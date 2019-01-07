@@ -1,0 +1,171 @@
+create database e1;
+use e1;
+
+1.- Crear realciones propietarias
+
+create table empleado(
+idEmp int not null primary key,
+nombre varchar(10),
+direccion varchar(300),
+tel int,
+genero varchar(10)
+);
+
+create table cinemex(
+idCinemex int not null primary key,
+nombre varchar(30),
+dir varchar(300),
+tel int,
+email varchar(30)
+);
+
+create table ec(
+idEmp int not null,
+idCinemex int not null,
+primary key(idEmp,idCinemex),
+foreign key(idEmp) references empleado(idEmp) on delete cascade on update cascade,
+foreign key(idCinemex) references cinemex(idCinemex) on delete cascade on update cascade
+);
+
+---------------------------------
+
+2.- Agregar email y salario en empleado
+
+alter table empleado add column email varchar(60);
+
+alter table empleado add column salario double;
+
+-----------------------------
+
+3.- Crear relacion y asociar con cinemex
+
+gerente(idGerente, nombre, turno, salario, noCel)
+
+create table gerente(
+idGerente int not null primary key,
+nombre varchar(50),
+turno varchar(20),
+salario double,
+noCel int,
+idCinemex int, 
+foreign key(idCinemex) references Cinemex(idCinemex) on delete cascade on update cascade
+);
+
+------------------------------------
+
+4.- Cambiar tipo de dato en gerente, noCel a varchar
+
+alter table gerente modify column noCel varchar(15);
+
+--------------------------------------
+
+5.- Renombrar empleado por asociado
+
+alter table empleado rename as asociado;
+
+----------------------------------------
+
+6.- Aumentar de tamaño el campo direccion en asociado a 350
+
+alter table asociado modify column direccion varchar(350);
+
+-------------------------------------
+
+7.- Modificar la definicion de la llave primaria en cinemex, teniendo una nueva PK(idCinemex,nombre)
+
+alter table Cinemex drop primary key; // Arroja error si no eliminas relaciones primero
+
+	a) eliminar las FK de las relaciones ec y gerente
+
+		show create table ec;
+
+		alter table ec drop foreign key ec_ibfk_2; // eliminar asociacion con referencia de show create table
+
+		show create table gerente;
+
+		alter table gerente drop foreign key gerente_ibfk_1;
+
+	b) eliminar llave primaria de Cinemex
+
+		alter table Cinemex drop primary key;
+
+	c) agregar la nueva llave primaria compuesta por idCinemex y nombre
+
+		alter table Cinemex add primary key(idCinemex,nombre);
+
+	d) establecer las nuevas relaciones, creando primero los nuevos campos para las nuevas relaciones
+
+		alter table ec add column nombreCinemex varchar(30);
+
+		alter table ec add foreign key(idCinemex,nombreCinemex) references Cinemex(idCinemex,nombre) on delete cascade on update cascade;
+
+		alter table gerente add column nombreCinemex varchar(30);
+
+		alter table gerente add foreign key(idCinemex,nombreCinemex) references Cinemex(idCinemex,nombre) on delete cascade on update cascade;
+
+-----------------------------------
+
+8.- Crear la nueva relación y asociarla con cinemex
+
+cartelera(idCartelera, nombre, fechaInicio, fechaFin, clasificacion, idCinemex, nombreCinemex)
+
+create table cartelera(
+idCartelera int not null primary key,
+nombre varchar(60),
+fechaInicio date,
+fechaFin date,
+clasificacion varchar(5),
+idCinemex int,
+nombreCinemex varchar(30),
+foreign key(idCinemex,nombreCinemex) references Cinemex(idCinemex,nombre) on delete cascade on update cascade
+);
+
+-----------------------------------
+
+9.- Cargar el script sams.sql
+
+	a) Crear una bd
+
+		create database s1;
+
+	b) use
+
+		use s1;
+
+	c) source... 
+
+		source // arrastrar a la terminal (en ubuntu quitar comillas) para la ruta
+
+----------------------------------------
+
+10.- Consultas
+
+select * from club; // mostrar todo el contenido
+
+select idclub, nombre from club; // limitar a los nombres del club 
+
+select idclub, nombre from club order by 2; // ordenar alfabéticamente
+
+select idclub, nombre from club order by 2 DESC;
+
+select COUNT(*) from proveedor; // proveedores
+
+select COUNT(*) as proveedor from proveedor; // renombrar
+
+select COUNT(*) as "numero de proveedores" from proveedor; // renombrar mas de una palabra
+
+select nombre as socios from socio; // consultar nombre socios
+ 
+select nombre as socios from socio order by nombre;
+
+select nombre from servicio; // conocer los servicios 
+
+select nombre from servicio order by 1;
+
+select nombre, precioUnitario from producto
+where precioUnitario between 100 and 3000
+order by 2; // conocer nombre y precio unitario de los productos que valen entre 100 a 3000
+
+select * from gerente; // mostrar todo el contenido de los gerentes
+
+select * from gerente order by nombre; 

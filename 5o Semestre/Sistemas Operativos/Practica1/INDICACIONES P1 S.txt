@@ -1,0 +1,72 @@
+FORMATO DEL REPORTE DE PRÁCTICA
+
+TITULO
+COMPETENCIA(S)
+DESARROLLO
+	PUNTOS A OBSERVAR Y REPORTAR
+	CODIGOS FUENTE DE LOS PROGRAMAS DESARROLLADOS
+OBSERVACIONES       (PROBLEMAS COMO SE SOLUCIONARON, SI NO QUE SE INTENTO Y QUE SE CREE QUE ES)
+ANALISIS CRITICO           (OPINION)
+CONCLUSIONES
+
+NOTAS: TANTO LA PRACTICA COMO EL REPORTE PODRAN DESARROLLARSE EN
+EQUIPOS DE 3 O 4 PERSONAS.
+
+LA ENTREGA DEL REPORTE DEBERÁ REALIZARSE EN LA FECHA INDICADA
+EN EL FORMATO DE LA PRACTICA
+EL REPORTE SERA ENTREGADO EN FORMA IMPRESA
+
+-------------------------------------------------------------------------------------
+PRACTICA 1
+
+INTRODUCCION A LOS S.O. LINUX Y WINDOWS(1)
+
+REVISION DEL ENTORNO DE TRABAJO DE LINUX Y WINDOWS
+REVISION DE LA INTERFAZ DE COMANDOS DE WIN Y LINUX
+DESARROLLO DE APPS EN LENGUAJE C TANTO EN LINUX COMO EN WIN
+
+
+
+
+
+REPORTAR DISTRIBUCION** DENTRO DEL DESARROLLO +
+OTRAS DISTRIBUC EXISTENTES Y SUS DIFERENCIAS
+
+
+$MAN NOMB_COMAN
+
+
+*** PARTE 5 USAR ps CON Ps probar** linux comandos minusculas
+
+
+mencionar 5 opciones en punto 6
+
+a partir del pto 7 comienza en C
+$gcc nombre.c
+$./a.out
+
+ó
+
+$gcc nombre.c -o nuevonombre
+$./nuevonombre.out
+
+el "./" es para decirle que busque en los dir
+
+gcc compilador portable, soporta varios s.o.
+
+en linux no hay extensiones
+
+punto 8:
+
+solo un asterisco a la vez, no usar goto, esa es del s.o. win
+solo ocupar funciones de la biblioteca ansi c
+la idea es que funcionen en ambos s.o.
+pto 11 no usar converion a prefijo o postfijo se hace con pilas y arboles
+puede tener ([{
+sleep() es standard
+solo numeros enteros
+
+distros:
+https://es.wikipedia.org/wiki/Anexo:Distribuciones_Linux
+
+debian ubuntu linux mint fedora opensuse knoppix

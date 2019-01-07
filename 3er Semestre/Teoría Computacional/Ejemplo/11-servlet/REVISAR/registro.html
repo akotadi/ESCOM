@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>
+Alta de Persona
+</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+ <H2>Proporcione los datos de una persona:</H2>
+ <BR>
+   <FORM NAME="forma" ACTION="http://localhost:8080/servlets-examples/servlet/Registro" METHOD=POST>
+   <BR>
+      Código <INPUT NAME="OFICINA" VALUE="" TYPE="text" LENGTH=4 size=4>/
+             <INPUT NAME="NUMERO" VALUE="" TYPE="text" LENGTH=6 size=6>/
+             <INPUT NAME="YEAR" VALUE="2007" TYPE="text" LENGTH=4 size=4>	
+   <BR>
+   Nombre: <INPUT NAME="NOMBRE" VALUE="" TYPE="text">
+   <BR>
+   Dirección: <INPUT NAME="DIRECCION" VALUE="" TYPE="text" LENGTH="30">
+   <BR>
+   Telefono: <INPUT NAME="TELEFONO" VALUE="" TYPE="text">
+<br>
+
+Status:
+<SELECT NAME="STATUS" SIZE=1>
+  <OPTION>[seleccione uno]</OPTION>
+  <OPTION>Pendiente</OPTION>
+  <OPTION>Asignado</OPTION>
+  <OPTION>En Tramite</OPTION>
+  <OPTION>Terminado</OPTION>
+</SELECT>
+<BR><BR><INPUT NAME="botonAlta" VALUE="Registro" TYPE="submit">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <INPUT NAME="botonLimpia" VALUE="Limpia" TYPE="reset">
+ </FORM>
+</BODY>
+</HTML>

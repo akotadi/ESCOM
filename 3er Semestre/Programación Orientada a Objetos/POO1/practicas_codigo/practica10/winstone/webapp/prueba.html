@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Boards Us</title>
+<script language="javascript" type="text/javascript">
+var request = null;
+function createRequest() {
+	try {
+		request = new XMLHttpRequest();
+	} catch (trymicrosoft) {
+	}
+}
+function getBoardsSold() {
+        var url="enviaprog";
+	createRequest();  
+        request.open("GET", url, true);
+        request.onreadystatechange = updatePage;
+        request.send(null);
+
+}
+function updatePage() {
+var newTotal = request.responseText;
+if(request.readyState == 4 && request.status == 200) {
+	var body = document.getElementsByTagName('body');
+	// remove, if exists
+	if (document.getElementById('recipe')) {
+		body[0].removeChild(document.getElementById('recipe'));
+	}
+	var recipe = document.createElement('div');
+	recipe.id = 'recipe';
+	recipe.className = 'recipe';
+	recipe.innerHTML = 'recipe de Codigazo'//request.responseText;
+	body[0].appendChild(recipe);
+        if (document.getElementById('codigo')) {
+		body[0].removeChild(document.getElementById('codigo'));
+	}
+	var codigo = document.createElement('textarea');
+        codigo.style.width = 800;
+        codigo.style.height = 700;
+	codigo.id = 'codigo';
+	codigo.className = 'codigo';
+	codigo.innerHTML = request.responseText;
+	body[0].appendChild(codigo);
+}
+}
+</script>
+</head>
+<body>
+<h1>Prueba</h1>
+<div id="boards">
+<form method="GET" action="/servlets/servlet/Hello">
+<input type="button" value="Presiona"  onClick="javascript:getBoardsSold();">
+</form>
+</div>
+</body>
+</html>
+
+
+
+

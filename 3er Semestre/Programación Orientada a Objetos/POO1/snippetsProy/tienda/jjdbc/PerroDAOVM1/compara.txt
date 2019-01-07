@@ -1,0 +1,15 @@
+
+PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field.getName(), type);
+      Method method = propertyDescriptor.getReadMethod();
+      Object value = method.invoke(instance);
+
+PropertyDescriptor property = properties[i];
+            property.getName()
+	    Object o;
+	    try {
+	        Method getter = properties[i].getReadMethod();
+	        Object args[] = { };
+	        o = getter.invoke(target, args);
+	    } catch (Exception ex) {
+		o = null;
+	    }

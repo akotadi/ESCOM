@@ -1,0 +1,9 @@
+Práctica 5. Enrutamiento estático
+
+Dada la siguiente topología 
+
+
+
+ip route 30.0.0.0 (entrada en tabla, a donde quiero llegar) 255.0.0.0 20.255.255.253 (a través de quien)
+^z
+sh ip route

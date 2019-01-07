@@ -1,0 +1,30 @@
+Unidad Académica:
+	- Nombre
+	- Clave (¿hasta ~65 actualmente?)
+Academia:
+	- Nombre
+Recurso Humano:
+	- Cargo (¿Comisión de Programas Académicos del Consejo General Consultivo del IPN - Secretarío Técnico de la Comisión de Programas Académicos?)
+Programa Académico:
+	- Nombre
+	- Clave
+Unidad de Aprendizaje:
+	- Nombre
+	- Propósito
+	- Orientación Didáctica
+	- Evaluación y Acreditación
+	- Intención Educativa
+Perfil Docente:
+	- Conocimiento
+	- Experiencia Profesional
+	- Habilidad
+	- Actitud
+Unidad Temática:
+	- Nombre
+	- Unidad de Competencia
+	- Estrategias de Aprendizaje
+	- Nombres de Evaluación (Resumen, Organizadores gráficos, Reporte de Práctica, Evaluación escrita... ¿Hay un catálogo?, ¿son propuestos por profesores?)
+Práctica
+	- Nombre
+Temas
+	- Nombre

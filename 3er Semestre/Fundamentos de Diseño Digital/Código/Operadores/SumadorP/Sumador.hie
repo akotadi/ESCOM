@@ -1,0 +1,2 @@
+sumador.vhd #Entity suma 4
+sumador.vhd #Architecture behavioral suma 16

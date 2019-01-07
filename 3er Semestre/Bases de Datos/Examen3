@@ -1,0 +1,138 @@
+create view v1 as
+select p.nombre, p.edad, h.fechaingreso, c.tratamiento
+from paciente p, historial h, causahosp c
+where p.curp=h.curp
+and h.idcausahosp=c.idcausahosp;
+
+create view v2 as
+select p.nombre as paciente, m.nombre as medico, c.tratamiento
+from paciente p, historial h, causahosp c, medico m
+where p.curp=h.curp
+and h.idcausahosp=c.idcausahosp
+and h.cedula=m.cedula;
+
+create view v3 as
+select p.nombre, h.nocama, h.fechaalta, c.observaciones
+from paciente p, historial h, causahosp c
+where p.curp=h.curp
+and h.idcausahosp=c.idcausahosp;
+
+create view v4 as
+select p.nombre, p.edad
+from paciente p, historial h, medico m, especialidad e
+where p.curp=h.curp
+and h.cedula=m.cedula
+and m.idesp=e.idesp
+and e.descesp like "%Neurologo%";
+
+create view v5 as
+select p.curp, m.cedula, e.descesp
+from paciente p, historial h, medico m, especialidad e
+where p.curp=h.curp
+and h.cedula=m.cedula
+and m.idesp=e.idesp
+and h.fechaalta between "2005-01-01" and "2005-12-31";
+
+select p.curp, p.tel, h.idhistorial
+from paciente p, historial h
+where p.curp=h.curp
+and p.dir not like "%conocida%";
+
+select p.nombre, h.fechaingreso, p.dir
+from paciente p, historial h
+where p.curp=h.curp
+and (h.nocama=18
+or h.nocama=33
+or h.nocama=45)
+order by 1;
+
+select h.idhistorial, p.nombre, c.tratamiento
+from paciente p, historial h, causahosp c, medico m, especialidad e
+where p.curp=h.curp
+and h.idcausahosp=c.idcausahosp
+and h.cedula=m.cedula
+and m.idesp=e.idesp
+and e.descesp like "%radi%";
+
+select count(*)
+from paciente p, historial h, medico m
+where p.curp=h.curp
+and h.cedula=m.cedula
+and m.nombre like "%ana laura%";
+
+select p.nombre, p.edad, h.nocuarto
+from paciente p, historial h, medico m
+where p.curp=h.curp
+and h.cedula=m.cedula
+and m.nombre like "%ana laura%";
+
+select p.nombre as paciente, h.fechaingreso, h.fechaalta, m.nombre as medico
+from paciente p, historial h, causahosp c, medico m
+where p.curp=h.curp
+and h.cedula=m.cedula
+and h.idcausahosp=c.idcausahosp
+and c.tratamiento like "%pancreatitis%";
+
+select count(*)
+from paciente p, historial h
+where p.curp=h.curp
+and h.fechaalta between "2010-03-01" and "2010-03-31";
+
+select m.nombre, e.descesp
+from paciente p, historial h, medico m, especialidad e
+where p.curp=h.curp
+and h.cedula=m.cedula
+and m.idesp=e.idesp
+and h.fechaalta between "2010-03-01" and "2010-03-31";
+
+select count(*)
+from cuarto c, edocuarto e
+where c.idedocuarto=e.idedocuarto
+and e.edocuarto like "%Remodelac%";
+
+select c.tratamiento, p.nombre, m.cedula, m.nombre, h.nocuarto
+from paciente p, historial h, medico m, especialidad e, causahosp c
+where p.curp=h.curp
+and c.idcausahosp=h.idcausahosp
+and h.cedula=m.cedula
+and m.idesp=e.idesp
+and h.fechaalta between "2006-08-01" and "2006-08-31";
+
+
+
+create table hospital(
+idhospital int not null primary key,
+nombre varchar(45),
+direccion varchar(45)
+);
+
+create table mh(
+idhospital int not null,
+cedula int(10) not null,
+primary key(idhospital, cedula),
+foreign key(idhospital) references hospital(idhospital) on delete cascade on update cascade,
+foreign key(cedula) references medico(cedula) on delete cascade on update cascade
+);
+
+create table emailpaciente(
+curp varchar(15) not null,
+email varchar(45) not null,
+primary key(curp, email),
+foreign key(curp) references paciente(curp) on delete cascade on update cascade
+);
+
+alter table especialidad add column institucion varchar(45);
+
+show create table cuarto;
+alter table cuarto drop foreign key fk_cuarto_1;
+
+alter table medico CHANGE COLUMN nombre medico varchar(50);
+
+
+
+show create table hospital;
+
+alter table historial drop foreign key fk_historial_1;
+
+alter table 
+

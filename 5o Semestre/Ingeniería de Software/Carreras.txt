@@ -1,0 +1,1427 @@
+Actuación
+	Licenciatura
+Actuaría
+	Licenciatura
+	Post-Grado
+Administración
+	Diplomado
+	Bachillerato
+	Licenciatura
+	Maestría
+	Post-Grado
+Administración de Capital Humano
+	Diplomado
+	Bachillerato
+	Licenciatura
+	Maestría
+Administración de Empresas
+	Diplomado
+	Bachillerato
+	Licenciatura
+	Maestría
+Administración de Empresas de Hospitalidad
+	Licenciatura
+Administración de Empresas de Hospitalidad, Gastronómicas y Turísticas
+	Licenciatura
+Administración de Empresas Turísticas
+	Licenciatura
+Administración de Finanzas
+	Maestría
+Administración de Hospitales
+	Maestría
+Administración de Hospitales y Salud Pública
+	Maestría
+Administración de Instituciones Educativas
+	Maestría
+Administración de la Capacitación del Capital Humano
+	Maestría
+Administración de la Construcción
+	Maestría
+Administración de la Hospitalidad
+	Licenciatura
+Administración de la Tecnología Educativa
+	Maestría
+Administración de Negocios
+	Licenciatura
+	Maestría
+	Doctorado
+Administración de Negocios de Comunicación y Entretenimiento
+	Licenciatura
+Administración de Negocios en Calidad y Productividad
+	Maestría
+Administración de Negocios en Finanzas
+	Maestría
+Administración de Negocios en Mercadotecnia
+	Maestría
+Administración de Negocios en Recursos Humanos
+	Maestría
+Administración de Negocios Internacionales
+	Licenciatura
+Administración de Organizaciones
+	Doctorado
+Administración de Proyectos
+	Especialidad
+	Diplomado
+Administración de Recursos Humanos
+	Especialidad
+	Licenciatura
+	Maestría
+Administración de Recursos Telemáticos
+	Especialidad
+Administración de Restaurantes
+	Licenciatura
+Administración de Riesgos
+	Maestría
+Administración de Servicios de Tecnología de la Información
+	Maestría
+Administración de Sistemas de Productividad y Calidad
+	Maestría
+Administración del Vino
+	Maestría
+Administración Empresarial
+	Maestría
+Administración Estratégica
+	Diplomado
+Administración Financiera
+	Licenciatura
+Administración Global de Negocios
+	Maestría
+Administración Hotelera
+	Especialidad
+	Licenciatura
+Administración Hotelera y Turística
+	Licenciatura
+Administración Modalidad Mixta
+	Licenciatura
+Administración Municipal
+	Maestría
+Administración Pública
+	Licenciatura
+	Maestría
+	Doctorado
+Administración Pública y Gobierno
+	Licenciatura
+Administración Social de la Salud
+	Maestría
+Administración Turística
+	Licenciatura
+Administración y Dirección de Empresas
+	Maestría
+Administración y Estrategia de Negocios
+	Licenciatura
+Administración y Finanzas
+	Licenciatura
+Administración y Gestión de Organizaciones
+	Licenciatura
+Administración y Mercadotecnia
+	Licenciatura
+Agencia de Viajes
+	Licenciatura
+Agronomía
+	Ingeniería
+Alta Dirección
+	Licenciatura
+	Maestría
+Alta Dirección Corporativa
+	Maestría
+Alta Dirección de Empresas Turísticas
+	Diplomado
+Amparo
+	Maestría
+Análisis y Tecnología de Alimentos
+	Bachillerato
+Anestesiología
+	Especialidad
+Animación y Arte Digital
+	Licenciatura
+Animación y Efectos Visuales
+	Licenciatura
+Año Integral
+	Licenciatura
+Antropología Cultural
+	Especialidad
+Antropología Educativa
+	Especialidad
+Antropología Filosófica
+	Especialidad
+Antropología Religiosa
+	Especialidad
+Antropología Social
+	Maestría
+	Doctorado
+Arquitecto Constructor
+	Licenciatura
+Arquitectura
+	Licenciatura
+	Maestría
+	Post-Grado
+Arquitectura de Interiores
+	Licenciatura
+Arquitectura de Interiores y Ambientación
+	Licenciatura
+Arquitectura Religiosa Virreinal
+	Diplomado
+Arte
+	Maestría
+Arte Antiguo
+	Diplomado
+Arte del Siglo XX
+	Post-Grado
+Arte Moderno y Contemporáneo
+	Diplomado
+Artes Culinarias
+	Post-Grado
+Artes Plásticas
+	Licenciatura
+Atención a la Diversidad e Inclusión Escolar
+	Diplomado
+Autoconocimiento y Desarrollo Humano
+	Diplomado
+Biomédico
+	Ingeniería
+Biotecnología
+	Ingeniería
+	Maestría
+	Doctorado
+Calidad de la Atención Clínica
+	Especialidad
+Cardiología
+	Especialidad
+Cátedra de Cirugía
+	Post-Grado
+Ciencia de Datos
+	Maestría
+Ciencia y Tecnología Alimentaria
+	Especialidad
+Ciencias Administrativas
+	Doctorado
+Ciencias Aduanales y Comercio Exterior
+	Licenciatura
+Ciencias de Ingeniería
+	Doctorado
+Ciencias de la Administración
+	Doctorado
+Ciencias de la Computación
+	Maestría
+Ciencias de la Comunicación
+	Licenciatura
+Ciencias de la Comunicación y Periodismo
+	Licenciatura
+Ciencias de la Educación
+	Licenciatura
+	Maestría
+	Doctorado
+Ciencias de la Familia
+	Licenciatura
+	Maestría	
+Ciencias de la Familia para la Consultoría
+	Maestría
+Ciencias de la Informática
+	Licenciatura
+Ciencias de la Ingeniería
+	Maestría
+	Doctorado
+Ciencias del Deporte
+	Licenciatura
+Ciencias del Desarrollo Humano
+	Doctorado
+Ciencias en Computación
+	Maestría
+Ciencias en Ingeniería Química
+	Maestría
+Ciencias Financieras
+	Doctorado
+Ciencias Juridicas
+	Doctorado
+Ciencias Penales
+	Especialidad
+	Maestría
+Ciencias Penales y Criminalística
+	Maestría
+Ciencias Políticas
+	Licenciatura
+Ciencias Políticas y Administración Pública
+	Licenciatura
+Ciencias Sociales
+	Maestría
+	Doctorado
+Ciencias Sociales y Administrativas
+	Doctorado
+Ciencias Sociales y Políticas
+	Doctorado
+Ciencias Teológicas
+	Licenciatura
+Ciencias y Técnicas de la Comunicación
+	Licenciatura
+Ciencias y Técnicas de la Educación
+	Licenciatura
+Cine y Televisión
+	Licenciatura
+Cine y TV Digital
+	Licenciatura
+Cinematografía
+	Licenciatura
+Cirugía Bucal de Gabinete
+	Diplomado
+Cirugía General
+	Especialidad
+Cirujano Dentista
+	Licenciatura
+Clínica Psicoanalítica
+	Diplomado
+	Maestría
+	Post-Grado
+Coaching
+	Maestría
+Cognición y Lenguaje
+	Especialidad
+Comercio Exterior
+	Maestría
+Comercio Internacional
+	Diplomado
+	Licenciatura
+	Maestría
+Comercio Internacional y Aduanas
+	Licenciatura
+Comercio y Finanzas Internacionales
+	Licenciatura
+Comercio y Logística Internacionales
+	Licenciatura
+Comercio y Negocios Internacionales
+	Licenciatura
+Computación
+	Bachillerato
+	Ingeniería
+	Maestría
+Computación Administrativa
+	Ingeniería
+Computadoras en la Educación
+	Maestría
+Comunicación
+	Licenciatura
+	Ingeniería
+	Maestría
+	Doctorado
+	Post-Grado
+Comunicación Educativa
+	Maestría
+Comunicación Empresarial
+	Especialidad
+	Maestría
+Comunicación Estratégica para el mercado Global
+	Especialidad
+Comunicación Humana
+	Licenciatura
+Comunicación Organizacional
+	Licenciatura
+	Maestría
+Comunicación Periodística y sus Nuevas Tecnologías
+	Maestría
+Comunicación Visual
+	Licenciatura
+Comunicación y Coaching Familiar
+	Diplomado
+Comunicación y Medios Digitales
+	Licenciatura
+Comunicación y Multimedios
+	Licenciatura
+Comunicación y R.P
+	Licenciatura
+Construcción
+	Maestría
+Construcción de Carreteras
+	Maestría
+Construcción de Escuelas
+	Diplomado
+Construcción de Hospitales
+	Diplomado
+Construcción de Proyectos Hidráulicos
+	Diplomado
+Consultor de Negocios
+	Especialidad
+Consultor PYMES
+	Maestría
+Contabilidad
+	Bachillerato
+	Ingeniería
+Contabilidad con Especialidad en Impuestos
+	Maestría
+Contador Auditor Privado
+	Diplomado
+Contador Público
+	Licenciatura
+Contador Público con Énfasis en Contraloría Empresarial
+	Licenciatura
+Contaduría
+	Bachillerato
+	Licenciatura
+	Maestría
+Contaduría Pública
+	Licenciatura
+Contaduría Pública y Estrategia Financiera
+	Licenciatura
+Contaduría Pública y Finanzas
+	Licenciatura
+Contaduría y Finanzas
+	Licenciatura
+Contaduría y Gestión Empresarial
+	Licenciatura
+Contaduría y Gestión Financiera
+	Licenciatura
+Continuidad y Actualización
+	Licenciatura
+Counseling
+	Diplomado
+Creación de Estrategias Integrales 360
+	Diplomado
+Creación y Desarrollo de Empresas
+	Licenciatura
+Creatividad y Estrategias Publicitarias
+	Post-Grado
+Criminalísta
+	Licenciatura
+Criminalística y Criminología
+	Licenciatura
+Criminología
+	Maestría
+Cultura Prehispánica
+	Especialidad
+De la Estrategia Creativa a la Producción de un Comercial
+	Diplomado
+Deportiva
+	Licenciatura
+Derecho
+	Licenciatura
+	Maestría
+	Especialidad
+	Doctorado
+	Post-Grado
+Derecho Administrativo y Fiscal
+	Maestría
+Derecho Civil
+	Maestría
+	Post-Grado
+Derecho Comparado
+	Especialidad
+Derecho con acentuación en Economía
+	Licenciatura
+Derecho Constitucional y Amparo
+	Maestría
+Derecho Corporativo
+	Maestría
+Derecho Corporativo y Negocios Internacionales
+	Maestría
+Derecho de Amparo
+	Maestría
+Derecho Fiscal
+	Maestría
+	Especialidad
+Derecho General
+	Maestría
+Derecho Laboral
+	Maestría
+	Especialidad
+Derecho Mercantil
+	Especialidad
+	Post-Grado
+Derecho Penal
+	Maestría
+	Especialidad
+Derecho Penal con Énfasis en Juicios Adversariales
+	Maestría
+Derecho Procesal Administrativo
+	Especialidad
+Derecho Público
+	Post-Grado
+Derecho Tributario
+	Especialidad
+Derecho y Ciencia Política
+	Licenciatura
+Derecho y Ciencias Jurídicas
+	Doctorado
+Derecho y Finanzas
+	Licenciatura
+Derechos Humanos
+	Maestría
+Derechos Humanos y Garantías
+	Maestría
+Desafíos para la Mujer Actual
+	Diplomado
+Desarolladores Turísticos
+	Diplomado
+Desarrolladores de Vivienda
+	Diplomado
+Desarrollo de Negocios y Dirección de Empresas Turísticas
+	Maestría
+Desarrollo de Proyectos de Participación Público-Privadas
+	Diplomado
+Desarrollo de Software
+	Ingeniería
+Desarrollo de Soluciones.NET
+	Diplomado
+Desarrollo de Tecnologías de Información
+	Licenciatura
+	Ingeniería
+Desarrollo Empresarial
+	Licenciatura
+Desarrollo Humano
+	Maestría
+	Especialidad
+Desarrollo Organizacional
+	Especialidad
+Desarrollo Sustentable
+	Ingeniería
+Diplomado en Alta Dirección
+	Diplomado
+Diplomado en Aminación 3D
+	Diplomado
+Diplomado en Marketing Deportivo
+	Diplomado
+Diplomado en Marketing Digital
+	Diplomado
+Diplomado en Mercadotecnia Política
+	Diplomado
+Diplomado en Producción Audiovisual
+	Diplomado
+Diplomado en Publicidad y Medios
+	Diplomado
+Diplomado en Relaciones Públicas (semipresencial)
+	Diplomado
+Diplomado Insight del Consumidor
+	Diplomado
+Dirección de Arte para Cine y Televisión
+	Diplomado
+Dirección de Empresas
+	Maestría
+Dirección de Empresas de Entretenimiento
+	Licenciatura
+Dirección de Negocios del Entretenimiento
+	Licenciatura
+Dirección de Organizaciones
+	Doctorado
+Dirección de Restaurantes
+	Licenciatura
+Dirección en Responsabilidad Social y Desarrollo Sustentable
+	Licenciatura
+Dirección en Ventas
+	Licenciatura
+Dirección Financiera
+	Licenciatura
+Dirección Global de Negocios
+	Maestría
+Dirección Hotelera
+	Licenciatura
+Dirección Internacional
+	Maestría
+Dirección Internacional de Hoteles
+	Licenciatura
+Dirección y Administración de Empresas
+	Licenciatura
+Dirección y Administración de Instituciones de Salud
+	Licenciatura
+Dirección y Administración del Deporte
+	Licenciatura
+Disciplina Alexander
+	Diplomado
+Diseño
+	Licenciatura
+Diseño Arquitectónico
+	Bachillerato
+	Maestría
+	Especialidad
+Diseño Automotriz
+	Ingeniería
+Diseño de Animación
+	Licenciatura
+Diseño de Bolsas y Carteras
+	Diplomado
+Diseño de Indumentaria y Moda
+	Licenciatura
+Diseño de Interiores
+	Diplomado
+	Licenciatura
+	Maestría
+	Especialidad
+Diseño de Joyería
+	Diplomado
+Diseño de la Moda e Industria del Vestido
+	Licenciatura
+Diseño de la Moda e Industria del Vestido con Certificado NABA
+	Licenciatura
+Diseño de Moda y Textiles
+	Licenciatura
+Diseño de Modas
+	Licenciatura
+Diseño de Patrones Industriales
+	Bachillerato
+Diseño Digital
+	Maestría
+Diseño en Medios Digitales
+	Licenciatura
+Diseño Estratégico e Innovación
+	Maestría
+Diseño Gráfico
+	Bachillerato
+	Licenciatura
+Diseño Gráfico con Certificado NABA
+	Licenciatura
+Diseño Gráfico y Animación
+	Licenciatura
+Diseño Industrial
+	Licenciatura
+Diseño Industrial con Certificado NABA
+	Licenciatura
+Diseño Interactivo
+	Licenciatura
+Diseño Multimedia
+	Licenciatura
+Diseño Multimedia y Arte Digital
+	Licenciatura
+Diseño para la Comunicación en Medios Digitales
+	Licenciatura
+Diseño Publicitario
+	Licenciatura
+Diseño Textil
+	Licenciatura
+Diseño Textil y Moda
+	Licenciatura
+Diseño y Animación Digital
+	Post-Grado
+Diseño y Complementos (Bolsos) Moda
+	Diplomado
+Diseño y Comunicación Visual
+	Licenciatura
+Diseño y Creación de Calzado
+	Diplomado
+Docencia
+	Maestría
+Docencia Universitaria
+	Maestría
+Economía
+	Licenciatura
+	Maestría
+	Doctorado
+	Post-Grado
+Economía y Finanzas
+	Licenciatura
+Educación
+	Licenciatura
+	Maestría
+	Doctorado
+	Post-Grado
+Educación Basada en Competencias
+	Maestría
+Educación con Orientación en Dirección y Gestión de Instituciones Educativas
+	Maestría
+Educación con Orientación en Innovación y Tecnologías Educativas
+	Maestría
+Educación con Orientación en Tutoría
+	Maestría
+Educación en Competencias Educativas
+	Maestría
+Educación Familiar
+	Diplomado
+Educación Preescolar
+	Licenciatura
+Educación Primaria
+	Diplomado
+	Licenciatura
+Educación Secundaria
+	Licenciatura
+Educación Superior
+	Maestría
+Educación y Desarrollo
+	Licenciatura
+Educación y Desarrollo Humano
+	Maestría
+Ejecución de Obra Pública
+	Diplomado
+Ejecutiva en Administración
+	Licenciatura
+Emprendimiento Cultural y Social
+	Licenciatura
+Endodoncia
+	Licenciatura
+	Post-Grado
+Endoperio
+	Diplomado
+Enfermera Partera
+	Técnico
+Enfermería
+	Licenciatura
+Enfermería y Obstetricia
+	Licenciatura
+Enseñanza de la Lengua Inglesa
+	Licenciatura
+	Maestría
+Enseñanza del Idioma Inglés como Segunda Lengua
+	Especialidad
+Enseñanza del Inglés
+	Especialidad
+	Licenciatura
+	Maestría
+Enseñanza del Inglés Modalidad Mixta
+	Licenciatura
+Enseñanza Superior
+	Especialidad
+Envase y Embalaje
+	Especialidad
+Especialidad en impuestos
+	Post-Grado
+Especialidad Endodoncia
+	Especialidad
+Especialidad Odontología Pedíatrica
+	Especialidad
+Especialidad Ortodoncia
+	Especialidad
+Estética Dental
+	Diplomado
+Estomatología
+	Licenciatura
+	Post-Grado
+Estudios de Arte
+	Maestría
+Estudios de Diseño
+	Maestría
+Estudios Diplomáticos
+	Especialidad
+Estudios Humanísticos
+	Maestría
+	Doctorado
+Estudios Judaicos
+	Diplomado
+	Maestría
+Evaluación Neuropsicológica en el Adulto
+	Diplomado
+Evaluación Psicológica en la Clínica y la Escuela
+	Diplomado
+Excutive MBA
+	Maestría
+Familia: estructura, conflictos y terapia
+	Diplomado
+Fashion Design and Marketing
+	Licenciatura
+Filosofía
+	Licenciatura
+	Maestría
+	Doctorado
+Filosofía del Derecho
+	Doctorado
+Finanzas
+	Diplomado
+	Licenciatura
+	Maestría
+	Especialidad
+Finanzas Corporativas y Bancas
+	Licenciatura
+Finanzas Empresariales
+	Diplomado
+	Especialidad
+Finanzas en Alta Dirección
+	Especialidad
+Finanzas y Banca
+	Licenciatura
+Finanzas y Contaduría Pública
+	Licenciatura
+Fiscal
+	Especialidad
+	Maestría
+Físico Industrial
+	Ingeniería
+Fisioterapia
+	Licenciatura
+Fisioterapia Deportiva
+	Maestría
+Formación Integral
+	Licenciatura
+Fotografía Periodística
+	Diplomado
+Gastronomía
+	Diplomado
+	Licenciatura
+	Maestría
+Gastronomía y Administración Operativa
+	Licenciatura
+Gastronomía y Artes Culinarias
+	Licenciatura
+Gastronomía y Gestión Restaurantera
+	Licenciatura
+Geotecnia
+	Diplomado
+Gerencia de Proyectos
+	Diplomado
+	Maestría
+Geriatría
+	Especialidad
+Gerontología
+	Licenciatura
+Gestión Administrativa
+	Maestría
+Gestión de Comercio Electrónico
+	Maestría
+Gestión de la Innovación Tecnológica
+	Maestría
+Gestión de Negocios Gastronómicos
+	Maestría
+Gestión de Negocios Turísticos
+	Licenciatura
+Gestión de Tecnologías de la Información
+	Maestría
+Gestión Directiva en Salud
+	Maestría
+Gestión e Innovación Educativa
+	Maestría
+Gestión Turística
+	Licenciatura
+Gestión y Administración de Proyectos
+	Maestría
+Gestión y Finanzas Públicas
+	Maestría
+Ginecología y Obstetricia
+	Especialidad
+Gobierno y Política Pública
+	Maestría
+	Doctorado
+Grafología
+	Maestría
+Historia
+	Diplomado
+	Licenciatura
+	Maestría
+	Doctorado
+Historia de México
+	Maestría
+Historia del Arte
+	Licenciatura
+Historia y Arte
+	Licenciatura
+Humanidades
+	Maestría
+Humanismo y Cultura
+	Maestría
+Iconografía del Arte Virreinal Mexicano
+	Diplomado
+Idiomas
+	Diplomado
+	Licenciatura
+Impacto y Gestión Ambiental
+	Diplomado
+Implantología
+	Diplomado
+Impuestos
+	Diplomado
+	Especialidad
+	Maestría
+Industrial
+	Ingeniería
+	Licenciatura
+Industrias Alimentarias
+	Ingeniería
+Informática
+	Bachillerato
+	Licenciatura
+	Maestría
+	Especialidad
+Informática Administrativa
+	Bachillerato
+	Licenciatura
+	Especialidad
+Informática Forense
+	Diplomado
+Informática y Tecnologías de Información
+	Licenciatura
+Ingeniería Ambiental
+	Ingeniería
+	Licenciatura
+Ingeniería Biomédica
+	Ingeniería
+	Licenciatura
+Ingeniería Civil
+	Ingeniería
+	Licenciatura
+Ingeniería con Especialidad en Administración de la Construcción
+	Maestría
+Ingeniería de la Calidad
+	Maestría
+Ingeniería de Sistemas
+	Maestría
+Ingeniería de Software
+	Diplomado
+	Maestría
+	Doctorado
+Ingeniería del Mantenimiento de obra civil
+	Diplomado
+Ingeniería en Alimentos
+	Licenciatura
+Ingeniería en Dirección de Negocios
+	Licenciatura
+Ingeniería en Diseño y Animación Digital
+	Licenciatura
+Ingeniería en Energía y Desarrollo Sustentable
+	Ingeniería
+	Licenciatura
+Ingeniería en Mecatrónica
+	Ingeniería
+	Licenciatura
+Ingeniería en Negocios y Tecnologías de la Manufactura
+	Ingeniería
+	Licenciatura
+Ingeniería en Sistemas Computacionales
+	Ingeniería
+	Licenciatura
+Ingeniería en Sistemas Electrónicos
+	Ingeniería
+	Licenciatura
+Ingeniería en Tecnología Interactiva en Animación Digital
+	Ingeniería
+	Licenciatura
+Ingeniería en Tecnologías Computacionales
+	Ingeniería
+Ingeniería en Telecomunicaciones y Electrónica
+	Ingeniería
+	Licenciatura
+Ingeniería en Telemática y Sistemas de Seguridad
+	Licenciatura
+Ingeniería Física
+	Licenciatura
+Ingeniería Industrial
+	Ingeniería
+	Licenciatura
+Ingeniería Industrial y de Sistemas
+	Ingeniería
+	Licenciatura
+Ingeniería Mecánica Industrial
+	Ingeniería
+	Licenciatura
+Ingeniería Química de la Dirección
+	Licenciatura
+Ingeniería Telemática
+	Licenciatura
+Ingeniería y Administración de la Construcción
+	Maestría
+Ingeniero Constructor
+	Licenciatura
+Innovación Educativa
+	Maestría
+Innovación Industrial
+	Ingeniería
+Innovación y Desarrollo
+	Ingeniería
+Innovación y Dirección de Negocios
+	Licenciatura
+Inteligencia de Negocios
+	Diplomado
+Inteligencia Emocional y Desarrollo Integral
+	Diplomado
+Interinstitucional en Educación
+	Doctorado
+Internacional en Bienestar Social
+	Doctorado
+Internado Pregrado
+	Técnico
+Interpretación
+	Licenciatura
+Interpretación Judicial Constitucional
+	Maestría
+Intérprete Traductor
+	Bachillerato
+	Licenciatura
+Intervención Emocional en al Educación Especial
+	Maestría
+Investigación de Mercados para la Toma de Decisiones Empresariales
+	Diplomado
+Investigación Psicoanalítica
+	Doctorado
+Investigación Psicológica
+	Doctorado
+Investigación y Desarrollo de la Educación
+	Maestría
+Investigación y Psicoanálisis
+	Doctorado
+Juicio de Amparo
+	Diplomado
+Justicia Penal y Seguridad Pública
+	Maestría
+Legislación Aduanera
+	Diplomado
+Legislación Ambiental
+	Maestría
+Legislación Empresarial
+	Maestría
+Lenguas Extranjeras
+	Licenciatura
+Lenguas Modernas y Gestión Cultural
+	Licenciatura
+Letras Hispánicas
+	Licenciatura
+Letras Modernas
+	Maestría
+	Doctorado
+Literatura
+	Diplomado
+Literatura Latinoamericana
+	Licenciatura
+Locución y Conducción para Radio y Televisión
+	Diplomado
+Logística Internacional
+	Licenciatura
+Master of Business Administration
+	Post-Grado
+Matemáticas Aplicadas
+	Licenciatura
+MBA
+	Maestría
+Mecánica y Eléctrica
+	Licenciatura
+Mecánico Administrador
+	Ingeniería
+Mecánico Electricista
+	Ingeniería
+Mecatrónica
+	Licenciatura
+	Ingeniería
+Mecatrónica y Producción
+	Licenciatura
+Mediación Familiar
+	Diplomado
+Medicina
+	Licenciatura
+Medicina del Enfermo en Estado Crítico
+	Especialidad
+Medicina Interna
+	Especialidad
+Medicina Veterinaria y Zootecnia
+	Licenciatura
+Medico Cirujano
+	Licenciatura
+Médico Cirujano Odontólogo
+	Licenciatura
+Médico Homeópata Cirujano y Partero
+	Licenciatura
+Mercadotecnia
+	Diplomado
+	Licenciatura
+	Maestría
+	Post-Grado
+Mercadotecnia Deportiva Internacional
+	Licenciatura
+Mercadotecnia Estratégica
+	Diplomado
+	Maestría
+Mercadotecnia Estratégica e Innovación
+	Licenciatura
+Mercadotecnia Internacional
+	Licenciatura
+Mercadotecnia y Comunicación
+	Licenciatura
+Mercadotecnia y Publicidad
+	Licenciatura
+Moda
+	Licenciatura
+Modelos de Información para la Construcción BIM
+	Diplomado
+Modelos Gerenciales
+	Especialidad
+Museografía
+	Especialidad
+Museología
+	Post-Grado
+Música
+	Licenciatura
+Música Contemporánea
+	Licenciatura
+Nanotecnología y Ciencias Químicas
+	Ingeniería
+Negocio de Banquetes
+	Diplomado
+Negocios
+	Ingeniería
+	Especialidad
+Negocios con Orientación en Hospitalidad
+	Maestría
+Negocios Financieros y Bancarios
+	Licenciatura
+Negocios Gastronómicos
+	Licenciatura
+Negocios Internacionales
+	Diplomado
+	Licenciatura
+	Maestría
+Negocios y Comercial Internacional
+	Post-Grado
+Negocios y Tecnologías de Información
+	Ingeniería
+Neonatología
+	Especialidad
+Neurolingüística
+	Licenciatura
+Neurología
+	Especialidad
+Neurología Pediátrica
+	Especialidad
+Nuevas Estrategias para la Enseñanza de los Estudios Judaicos
+	Diplomado
+Nutrición
+	Licenciatura
+Nutrición Clínica
+	Maestría
+Nutrición Deportiva
+	Maestría
+Nutrición y Bienestar Integral
+	Licenciatura
+Nutrición y Ciencia de los Alimentos
+	Licenciatura
+Nutriología Aplicada
+	Maestría
+Obesidad y comorbilidades
+	Especialidad
+Obtención de la Certificación ante el Instituto Mexicano de Contadores Públicos
+	Diplomado
+Odontología
+	Licenciatura
+	Maestría
+Odontología cosmética y restaurativa
+	Diplomado
+Odontología Legal y Forense
+	Maestría
+	Especialidad
+Odontopediatría
+	Diplomado
+	Especialidad
+Oftamología
+	Especialidad
+Orientación Educativa y Tutoría
+	Maestría
+Orientación Familiar
+	Diplomado
+Orientación Psicológica
+	Maestría
+Ortodoncia
+	Especialidad
+	Maestría
+Ortodoncia Avanzada
+	Diplomado
+Ortodoncia Básica
+	Diplomado
+Ortodoncia Orgánica
+	Diplomado
+Ortopedia Dentofacial
+	Diplomado
+Ortopedia Funcional de los Maxilares
+	Diplomado
+Pastelería y Panadería
+	Diplomado
+Pastoral Familiar
+	Diplomado
+Pastoral Urbana
+	Maestría
+Patrimonio Cultural de México
+	Diplomado
+Pedagogía
+	Licenciatura
+Pedagogía Catequética
+	Maestría
+Pedagogía Familiar
+	Maestría
+Pediatría
+	Especialidad
+Periodismo
+	Licenciatura
+Periodismo Cultural
+	Diplomado
+Periodismo de Espectáculos
+	Diplomado
+Periodismo de Espectáculos y Producción en Televisión
+	Diplomado
+Periodismo Económico
+	Post-Grado
+Periodismo en Fútbol Soccer
+	Diplomado
+Periodismo en Sector Justicia y Policíaco
+	Diplomado
+Periodismo narrativo y de investigación en prensa, radio y televisión
+	Diplomado
+Periodismo Político
+	Diplomado
+	Post-Grado
+Periodoncia
+	Especialidad
+Planeación Estratégica
+	Maestría
+Planeación y Desarrollo Turístico
+	Maestría
+Planeación y Gestión Educativa
+	Maestría
+Planeación, Programación y Presupuestación de la Construcción
+	Diplomado
+Política Criminal y Seguridad Pública
+	Maestría
+Políticas Públicas
+	Maestría
+Políticas Públicas con Perspectiva de Familia
+	Diplomado
+Posgrado
+	Post-Grado
+Preescolar
+	Diplomado
+Preescolar y Primaria
+	Licenciatura
+Preparatoria
+	Diplomado
+Presupuesto Público
+	Diplomado
+Prevención de Violencia Escolar y Familiar
+	Diplomado
+Problemática Contemporánea y Ética Social
+	Diplomado
+Procedimientos Clínicos y de Laboratorio con guardas oclusales
+	Diplomado
+Procuración, Administración de Justicia y Litigación Oral
+	Maestría
+Producción de Televisión
+	Licenciatura
+Producción Musical Digital
+	Ingeniería
+Productos Turísticos Sustentables
+	Especialidad
+Programación
+	Bachillerato
+Programador
+	Bachillerato
+Prostodoncia
+	Diplomado
+Protección Civil
+	Diplomado
+Prótesis Bucal
+	Especialidad
+Proyectos para el Desarrollo Urbano
+	Maestría
+Psicoanálisis y Arte
+	Maestría
+Psicología
+	Licenciatura
+	Maestría
+	Doctorado
+	Post-Grado
+Psicología Clínica
+	Licenciatura
+Psicología Clínica y de la Salud
+	Licenciatura
+Psicología Educativa
+	Licenciatura
+Psicología Organizacional
+	Licenciatura
+Psicología para Mamás
+	Licenciatura
+Psicología Social
+	Licenciatura
+Psicomotricidad
+	Maestría
+Psicopedagogía
+	Licenciatura
+	Maestría
+Psicoterapia
+	Maestría
+Psicoterapia de las Adicciones
+	Maestría
+Psicoterapia Familiar Sistémica
+	Maestría
+Psicoterapia Psicoanalítica
+	Maestría
+Psicoterapia Psicoanalítica con Niños y Adolescentes
+	Maestría
+Psicoterapia Psicoanalítica de Niños
+	Maestría
+Psicoterapia Psicoanalítica Individual
+	Maestría
+Psicoterapia Psicoanalítica Infantil
+	Maestría
+Psiquiatría
+	Especialidad
+Publicidad
+	Licenciatura
+	Especialidad
+Publicidad Corporativa
+	Especialidad
+Publicidad e Imagen
+	Especialidad
+Publicidad Integral
+	Maestría
+Publicidad y Comunicación de Mercados
+	Licenciatura
+Puericultura
+	Bachillerato
+Química
+	Ingeniería
+	Licenciatura
+Químico Administrador
+	Ingeniería
+Químico en Procesos Sustentables
+	Ingeniería
+Químico Farmacéutico Biólogo
+	Licenciatura
+Radiología e Imagen
+	Especialidad
+Recursos Humanos
+	Licenciatura
+	Maestría
+	Especialidad
+Redes de Computadoras
+	Diplomado
+Rehabilitación Oral y Odontología Estética
+	Diplomado
+Relaciones Internacionales
+	Licenciatura
+	Post-Grado
+Relaciones Públicas
+	Licenciatura
+Responsabilidad Social
+	Maestría
+Secretaria Ejecutiva con Computación e Ingles
+	
+Secretaria en Áreas Comerciales
+	Diplomado
+Secretaria en Español e Inglés
+	Diplomado
+Secretariado Ejecutivo
+	Bachillerato
+Secundaria
+	Diplomado
+Seguridad de Tecnologías de la Información
+	
+Seguridad e Higiene en el Trabajo
+	Diplomado
+Seguridad e Higiene Industrial
+	Maestría
+Seguridad Pública
+	Licenciatura
+Serigrafía Textil
+	
+Servicios Turísticos
+	
+Sistema Telemática
+	Licenciatura
+Sistemas Computacionales
+	Licenciatura
+	Maestría
+	Doctorado
+Sistemas de Calidad y Productividad
+	Maestría
+Sistemas de Computación Administrativa
+	Licenciatura
+	Ingeniería
+Sistemas de Información
+	Especialidad
+	Maestría
+Sistemas de Información (Administración de la Tecnología Informática)
+	Diplomado
+	Maestría
+Sistemas Digitales y Robótica
+	Ingeniería
+Sistemas Informáticos
+	Licenciatura
+Sistemas y Tecnologías de la Información
+	Licenciatura
+	Ingeniería
+	Maestría
+Social
+	Licenciatura
+Sociología
+	Maestría
+Supervisión de Construcción de Edificación
+	Diplomado
+Tanatología
+	Diplomado
+Tanatología y Cuidados Paliativos
+	Maestría
+Teatro y Actuación
+	Licenciatura
+Técnica de arco recto de fuerza diferencial con brackets TipEdge Plus
+	Diplomado
+Técnicas de Ortodoncia
+	Diplomado
+Tecnología de Información y Comunicaciones
+	Maestría
+Tecnología Educativa
+	Licenciatura
+	Maestría
+	Doctorado
+Tecnologías Avanzadas en Educación
+	Maestría
+Tecnologías Computacionales
+	Ingeniería
+Tecnologías de Cómputo y Telecomunicaciones
+	Licenciatura
+Tecnologías de Información y Administración
+	Maestría
+Tecnologías de Información y Electrónica
+	Especialidad
+	Maestría
+	Doctorado
+Tecnologías de la información
+	Licenciatura
+Tecnologías de la Información y Telecomunicaciones
+	Licenciatura
+Tecnologías Electrónicas
+	Ingeniería
+Telecomunicaciones
+	Ingeniería
+Telecomunicaciones y Sistemas Electrónicos
+	Ingeniería
+Teología
+	Licenciatura
+	Maestría
+Teología del Cuerpo
+	Diplomado
+Teología y Mundo Contemporáneo
+	Maestría
+Teoría de las Restricciones
+	Diplomado
+Teoría Económica
+	Maestría
+Terapia Dentofacial
+	Diplomado
+Terapia Física y Rehabilitación
+	Licenciatura
+Terminología
+	Especialidad
+Topografía y Geomática
+	Diplomado
+Traducción
+	Licenciatura
+Traducción Técnica
+	Especialidad
+Traducción Técnica Ingles Español
+	Especialidad
+Tráfico de Mercancías y Tramitación Aduanal
+	Especialidad
+Turismo
+	Bachillerato
+	Licenciatura
+Turismo Cultural
+	Maestría
+Turismo Cultural y Cultura Gastronómica
+	Licenciatura
+Turismo de Reuniones
+	Especialidad
+Turismo Internacional
+	Licenciatura
+Turismo Sustentable
+	Maestría
+Urología
+	Especialidad
+Valuación Inmobiliaria
+	Maestría
+	Especialidad
+Valuación Inmobiliaria e Industrial y de Bienes Nacionales
+	Maestría
+Ventas Inmobiliarias
+	Diplomado
+Ventas y Comercialización
+	Licenciatura
+Vida y pensamiento de Juan Pablo II
+	Diplomado
+Vinos
+	Diplomado
+Vinos y licores para la formación de Sommelier
+	Diplomado

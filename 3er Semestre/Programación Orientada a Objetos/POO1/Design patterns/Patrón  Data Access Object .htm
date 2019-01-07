@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- saved from url=(0055)http://www.proactiva-calidad.com/java/patrones/DAO.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Patrón "Data Access Object"</title>
+<meta name="author" content="Ramiro Lago">
+<meta name="organization" content="Ramiro Lago">
+<meta name="locality" content="Spain">
+<meta name="lang" content="es">
+<meta name="description" content="Patrones de dise&ntilde;o software">
+<meta name="keywords" content="patron de dise&ntilde;o">
+
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+</head>
+
+<body bgcolor="#FFFF9D"><font color="#000080" face="Arial,Helvetica,Times" size="2">
+<center><h3>Patrón "Data Access Object"</h3>Ramiro Lago (Abril 2007)</center>
+<hr>
+
+
+<font color="#6C3600"><h4>Descripción</h4></font>
+<p>El problema que viene a resolver este patrón es el de contar con diversas fuentes de datos (base de datos, archivos, 
+servicios externos, etc). De tal forma que se encapsula la forma de acceder a la fuente de datos. Este patrón surge históricamente
+de la necesidad de gestionar una diversidad de fuentes de datos, aunque su uso se extiende al problema de ancapsular no sólo
+la fuente de datos, sino además ocultar la forma de acceder a los datos. Se trata de que el
+software cliente se centre en los datos que necesita y se olvide de cómo se realiza el acceso a los datos o de
+cual es la fuente de almacenamiento.</p>
+<p><a href="http://java.sun.com/blueprints/corej2eepatterns/Patterns/index.html" target="_blank">Enlace a las páginas de SUN.</a></p>
+<p>Las aplicaciones pueden utilizar el API JDBC para acceder a los datos de una base de datos relacional. Este API permite una forma estándar 
+de acceder y manipular datos en una base de datos ralacional. El API JDBC permite a las aplicaciones J2EE utilizar sentencias SQL, que son 
+el método estándar para acceder a tablas y vistas. La idea de este patrón es ocultar la fuente de datos y la complejidad del uso 
+de JDBC a la capa de presentación o de negocio.</p>
+<p>Un DAO define la relación entre la lógica de presentación y empresa por una parte y por otra los datos. El DAO
+tiene un interfaz común, sea cual sea el modo y fuente de acceso a datos.</p>
+
+<center><img src="./Patrón  Data Access Object _files/dao.jpg"></center>
+
+<p>Algunas características:</p>
+<ul>
+	<li>No es imprescindible, pero en proyectos de cierta complejidad resulta util que el DAO implemente un interfaz. De 
+	esta forma los objetos cliente tienen una forma unificada de acceder a los DAO.</li>
+	<li>El DAO accede a la fuente de datos y la encapsula para los objetos clientes. Entendiendo que 
+	oculta tanto la fuente como el modo (JDBC) de acceder a ella.</li>
+	<li>El TransferObject encapsula una unidad de información de la fuente de datos. El ejemplo sencillo es entenderlo como 
+	un "bean de tabla", es decir, como una representación de una tabla de la base de datos, por lo que representamos las
+	columnas de la tabla como atributos del TransferObject. El DAO crea un TransferObject (o una colección de ellos) como 
+	consecuencia de una transacción contra la fuente de datos. Por ejemplo, una consulta sobre ventas debe crear tantos objetos
+	(TransferObject) de la clase Venta como registros de la consulta; el DAO devolverá la colección de TrasnferObject de la 
+	clase Venta al objeto Cliente. También puede ocurrir que el objeto Cliente mande un TransferObject para parametrizar una
+	consulta o actualización de datos por parte del DAO.</li>
+</ul>
+
+<p>En el siguiente gráfico se muestran las interacciones entre los elementos del patrón. En este gráfico el TransferObject se
+denomina ValueObject. Puede observarse las llamadas que recibe y genera el DAO para una consulta y actualización de datos:</p>
+<ol>
+	<li>El DAO es creado por el cliente (BusinessObject) (llamada 1 del gráfico).</li>
+	<li>A continuación el cliente solicita los datos al DAO (getData) (2).</li>
+	<li>El DAO responde a la llamada pidiendo los datos a la fuente de datos (2.1).</li>
+	<li>Para cada fila recibida, el DAO crea un TransferObjet (ValueObject del gráfico) (2.2).</li>
+	<li>El DAO devuelve al cliente el(los) TransferObject (2.3).</li>
+	<li>A continuación el cliente define un TransferObject mediante llamadas a setProperty. Por ejemplo, 
+	supongamos que buscamos personas de sexo varón y 36 años; para ello el BusinessObject define en el 
+	objeto de la clase Persona la edad y sexo que busca. Lo siguiete es fácil de imaginar: el 
+	BusinessObject invoca al DAO, pasando a la persona como argumento (3,4, y 5 del gráfico).</li>
+	<li>En DAO.setData() se solicita (5.1 y 5.2) al TransferObjet o ValueObject (nuestra persona 
+	del ejemplo) los datos (edad, sexo, etc.) para realizar el acceso a datos 
+	(dataSource.setData()), (5.3).</li>
+</ol>
+<center><img src="./Patrón  Data Access Object _files/dao2.gif"></center>
+
+<font color="#6C3600"><h4>Ejemplo de código: los bean (Transfer Object)</h4></font>
+
+<p>En el siguiente sencillo ejemplo tenemos dos tablas en nuestra base de datos. La tabla de 
+clientes incluye:</p>
+<ul>
+	<li>Codigo (clave primaria)</li>
+	<li>Nombre, apellido 1 y apellido 2</li>
+	<li>Edad</li>
+</ul>
+<p>En la tabla de ventas tenemos las ventas realizadas a cada cliente:</p>
+<ul>
+	<li>Id de la venta (clave primaria)</li>
+	<li>Codigo de cliente (clave externa)</li>
+	<li>Precio y coste de la venta</li>
+</ul>
+<p>Vamos a representar estas tablas en clases que de manera informal se conocen como "beans de tabla".
+Antes de crear estas tablas vamos a ver su interface común (<b>Bean.java</b>):</p>
+<pre><font color="#000000" face="monospace" size="2">
+package dao.bean;
+
+public interface Bean {
+	//// Me indica si los objetos corresponden al mismo registro de base de datos (identidad de clave primaria)
+	public boolean esIgual( Bean bean );
+}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+<p>A continuación escribimos los bean de tabla que implementan el interface anterior, empezamos por la
+calse <b>Cliente.java</b>:</p>
+<pre><font color="#000000" face="monospace" size="2">
+/****************************************************************************************
+ * Bean de tabla "cliente" 
+ ***************************************************************************************/
+public class Cliente implements Bean {
+	private String codigo = null;
+	private String nombre = null;
+	private String ape1 = null;
+	private String ape2 = null;
+	private Integer edad = null;
+	private Vector ventas = null;
+	
+	public Cliente( String codigo, String nombre, String ape1, String ape2, Integer edad ) {
+		setCodigo( codigo );
+		setNombre( nombre );
+		setApe1( ape1 );
+		setApe2( ape2 );
+		setEdad( edad );
+	}
+	
+	public Cliente(){}
+	
+	public String getApe1() {				return ape1; }
+	public void setApe1(String ape1) {		this.ape1 = ape1; }
+	
+	... Otros métodos set/get ...
+	
+	//// Me indica si los objetos corresponden al mismo registro (identidad de clave primaria)
+	public boolean esIgual( Bean bean ) {
+		Cliente cli = (Cliente) bean;
+		if ( cli.getCodigo().equals( this.getCodigo()) )
+			return true;
+		return false;
+	}
+	
+	public String toString() {
+		return (codigo + ", " + nombre + ", " + ape1 + ", " + ape2 + ", " + edad);
+	}
+}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+
+<p>En Cliente.java se puede observar que uno de los atributos es un vector de ventas. La utilidad de este
+Vector es representar en modo "objetos" una relación 1:N de tablas (cliente y ventas) de la base de 
+datos. Seguimos con la clase <b>Venta.java</b>:</p>
+<pre><font color="#000000" face="monospace" size="2">
+****************************************************************************************
+ * Bean de tabla "venta" 
+ ***************************************************************************************/
+public class Venta  implements Bean {
+	Integer idVenta = null;
+	String codigo = null;
+	Float precio = null;
+	Float coste = null;
+	Cliente cliente = null;
+	
+	public Venta(Integer idVenta, String codigo, Float precio, Float coste ) {
+		setIdVenta( idVenta );
+		setCodigo( codigo );
+		setPrecio( precio );
+		setCoste( coste );
+	}
+	public Venta() {}
+	
+	public Float getCoste() {					return coste; }
+	public void setCoste(Float coste) {			this.coste = coste; }
+	... Otros métodos set/get ...
+
+	//// Me indica si los objetos corresponden al mismo registro (identidad de clave primaria)
+	public boolean esIgual( Bean bean ) {
+		Venta ven = (Venta) bean;
+		if ( ven.getIdVenta().intValue() == this.getIdVenta().intValue() )
+			return true;
+		return false;
+	}
+		
+	public String toString() {
+		return (idVenta + ", " + codigo + ", " + precio + ", " + coste );
+	}	
+}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+
+<font color="#6C3600"><h4>Ejemplo de código: los DAOs</h4></font>
+
+<p>Hemos empezado por lo más sencillo, representar las tablas de nuestra base de datos. Dicho de otra
+forma <b>proyectar el modelo relacional sobre un modelo de objetos</b>. Ahora tenemos que implementar los
+DAOs, los componentes que encapsulan el acceso a la fuente de datos (la base de datos). Empezamos
+creando un interface (<b>InterfaceDAO.java</b>) que representa el comportamiento genérico de cualquier DAO:</p>
+
+<pre><font color="#000000" face="monospace" size="2">
+package dao.accesoDatos;
+
+import java.sql.SQLException;
+import java.util.Vector;
+import dao.bean.Bean;
+
+public interface InterfaceDAO {
+	public int insert( Bean bean ) throws SQLException;
+	public int update( Bean bean, String condicion ) throws SQLException;
+	public Bean find( String codigo ) throws SQLException;
+	public Vector select( String condicion ) throws SQLException; 
+	public int delete(String condicion) throws SQLException;
+}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+
+<p>A continuación y a modo de resumen, una parte de <b>DAOCliente.java</b>. Se puede ver que 
+implementa el interface anterior y que además hereda de <b>DAOGeneral</b>, una clase que 
+contiene servicios comunes, como por ejemplo getConexion(), cerrarConexion(Connection), etc:</p>
+<pre><font color="#000000" face="monospace" size="2">
+public class DAOCliente extends DAOGeneral implements InterfaceDAO {
+
+	/***********************************************************************************
+	 * Inserta cliente (argumento bean)
+	 ***********************************************************************************/
+	public int insert( Bean bean )  throws SQLException {
+		int numFilas = 0;
+		Cliente cli = (Cliente) bean;
+		Connection con = getConexion();
+		String orden = "INSERT INTO CLIENTE VALUES (" + 
+							(cli.getCodigo()==null? null: "'" + cli.getCodigo() + "' ") + 
+							", " + (cli.getNombre()==null? null: "'" + cli.getNombre() + "' ") + 
+							", "  + (cli.getApe1()==null? null: "'" + cli.getApe1() + "' ") +
+							", "  + (cli.getApe2()==null? null: "'" + cli.getApe2() + "' ") +
+							", " + cli.getEdad() + ")";
+		Statement sentencia = con.createStatement();
+		numFilas = sentencia.executeUpdate(orden);
+		sentencia.close();
+		cerrarConexion( con );
+		return numFilas;
+	}
+	....
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+<p>El método <b>insert()</b> recibe el Transfer Object (bean) que vamos a insertar, devolviendo el número
+de registros insertados (uno si ha ido bien, 0 en caso de no inserción). En el método <b>select()</b> recibimos
+la condición (claúsula WHERE) y devuelve un vector cuyos elementos son los clientes que cumplen 
+la condición. Podría también devolver un ArrayList, que resulta más eficiente, pero lo esencial es que 
+este método, al igual que el anterior, <b>oculta el uso de SQL y JDBC</b> a la clase que la llama 
+(presentación o BusinessObject):</p>
+<pre><font color="#000000" face="monospace" size="2">
+	public Vector select( String condicion ) throws SQLException {
+		Vector vecClientes = new Vector();
+		Cliente cli;
+		Connection con = getConexion();
+		
+		//// Si la condición es null o vacia, no hay parte WHERE
+	    String orden = "SELECT * FROM cliente c " +
+	    			(condicion==null || condicion.length()==0 ? "":"WHERE " + condicion) + 
+	    			" ORDER BY c.ape1, c.ape2, c.nombre";
+
+	    Statement sentencia = con.createStatement();
+	    ResultSet rs = sentencia.executeQuery( orden );
+
+	    while (rs.next()) {
+		    cli = new Cliente( rs.getString("codigo"), rs.getString("nombre"),
+					rs.getString( "ape1" ), rs.getString( "ape2" ),
+					(rs.getString( "edad" )==null ? null : new Integer(rs.getInt( "edad" ))));
+		    vecClientes.add( cli );
+	    }
+	    sentencia.close();
+		cerrarConexion( con );
+		return vecClientes;
+	}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+<p>En la siguiente figura se muestra la relación de las clases anteriores:</p>
+<center><img src="./Patrón  Data Access Object _files/dao_ejemplo.jpg"></center>
+
+<font color="#6C3600"><h4>Ejemplo de código: la factoria de DAOs</h4></font>
+<p>Aunque no resulta imprescindible, en proyectos de cierta envergadura necesitaremos una
+factoria de objetos DAO, que se responsabiliza de instanciar el DAO adecuado (en nuestro ejemplo
+DAOCliente.java o DAOVenta.java). <a href="http://www.proactiva-calidad.com/java/patrones/factoria.html">Enlace al patrón factoria.</a>
+En nuestro ejemplo hemos implementado una Factoria Simple (FactoriaDAO.java):</p>
+
+<pre><font color="#000000" face="monospace" size="2">
+package dao.accesoDatos;
+import java.io.*;
+
+/***********************************************************************************
+ * 
+ * Factoria que crea el DAO en función del argumento del método getDAO()
+ *
+ **********************************************************************************/
+public class FactoriaDAO {
+	// true=Carga de Properties desde archivo
+	private static boolean propiedadesCargadas = false;
+	
+	// Propiedades
+	private static java.util.Properties prop = new java.util.Properties();
+	
+	/***********************************************************************************
+	 * Crea y devuelve el DAO 
+	 **********************************************************************************/
+	public static InterfaceDAO getDAO( String nombre ) {
+		try {
+			
+			Class clase = Class.forName( getClase( nombre ) );	// La clase se consigue leyendo del archivo properties
+			return (InterfaceDAO) clase.newInstance();			// Creo una instancia
+		}
+		catch (ClassNotFoundException e) {		// No existe la clase
+			e.printStackTrace();
+			return null;
+		}
+		catch (Exception e) {					// No puedo instanciar la clase
+			e.printStackTrace();
+			return null;			
+		}
+	}
+	
+	/***********************************************************************************
+	 * Lee un archivo properties donde se indica la clase que debe ser instanciada 
+	 **********************************************************************************/
+	private static String getClase( String nombrePropiedad ) {
+		String nombreClase = null;
+		try {
+			//// Carga de propiedades desde archivo
+			if ( !propiedadesCargadas ) {
+				FileInputStream archivo = new FileInputStream( "src/dao/accesoDatos/propiedades.properties" );
+				prop.load( archivo );   	// Cargo propiedades
+				propiedadesCargadas = true;
+			}
+			
+			//// Lectura de propiedad
+			nombreClase = prop.getProperty( nombrePropiedad, "");
+			if ( nombreClase.length() == 0)
+				return null;
+		}
+		catch ( FileNotFoundException e) {	// No se puede encontrar archivo
+			e.printStackTrace();
+		}
+		catch ( IOException e) {			// Falla load()
+			e.printStackTrace();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return nombreClase;
+	}
+}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+
+<p>Esta clase lee un archivo properties donde asociamos una clave con una clase DAO.  Su contenido es
+sencillo:</p>
+<pre><font color="#000000" face="monospace" size="2">
+cliente=dao.accesoDatos.DAOCliente
+venta=dao.accesoDatos.DAOVenta
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+<p> El método <b>getClase()</b> recibe un String (la vlave: cliente o venta). Si no se ha cargado 
+el archivo properties en el atributo <b>'Properties prop'</b>, entonces lee archivo y carga las 
+propiedades en <i><b>prop</b></i>. getClase() devuelve el valor de la clave, por ejemplo, si
+recibe 'cliente' devuelve 'dao.accesoDatos.DAOCliente'. El método <b>getDAO()</b> llama a getClase()
+para saber la clase DAO que debe instanciar.</p>
+<p>Un aspecto importante es lo que devuelve <b>getDAO()</b>:
+el tipo InterfaceDAO. Al devolver el interface, estamos actuando con bástante generalidad: instanciamos 
+objetos concretos, un DAOCliente.java o un DAOVenta.java, pero lo esencial es que <b>usamos como tipo de
+referencia el interface que ambas clases implementan</b>. La factoria hace su trabajo de modo <b>genérico o 
+abstracto, ya que aunque tenga 15 clases de DAOs diferentes que instanciar, devuelve un tipo
+genérico, es decir, devuelve el interface que implementan todos los DAOs</b>.</p>
+
+<font color="#6C3600"><h4>Ejemplo de código: usando lo anterior</h4></font>
+
+<p>Vamos a ver un sencillo ejemplo de capa cliente, es decir, la capa (sea presentación o de negocio) que
+debe usar lo anterior (factoria, beans y DAOs). Este sencillo ejemplo destaca una de las ventajas de
+trabajar con los interface: obtenemos abstracción (y resuabilidad). Veamos el ejemplo:</p>
+<pre><font color="#000000" face="monospace" size="2">
+	condicion = Teclado.getCadena("Condición:");			// Obtengo condición por teclado
+	InterfaceDAO dao = FactoriaDAO.getDAO( nombreTabla );	// Obtengo el DAO de la factoria
+	Vector vec = dao.select( condicion );					// La Select devuelve Vector 
+   	Iterator it = vec.iterator();
+	while (it.hasNext()) {
+		bean = (Bean) it.next();
+		System.out.println( bean.toString());
+	}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+<p>La variable <b>nombreTabla</b> es un sencillo String que contiene la clave del archivo properties. 
+De esta forma la factoria sabe la clase DAO que debe instanciar. Lo primero que interesa destacar es que
+el DAO instanciado y devuelto por la factoria lo manejamos por medio del tipo interface (InterfaceDAO): 
+<b>sea la que sea la clase instanciada usamos un tipo genérico (el interface que implemnetan los DAO)</b>.
+Esto nos permite actuar con un alto grado de generalidad: <b>para cualquier tipo de DAO le 
+mandamos el mismo mensaje</b>: <i><b>dao.select( condicion )</b></i>. No nos vemos obligados a 
+realizar un código para DAOCliente, otro para DAOVenta, etc; sino que <b>con el mismo código manejamos
+diversos DAOs</b>. Este es un ejemplo de patrón estrategia: el código es el mismo (unificado) y
+la estrategia (el comportamiento específico) depende de los objetos (DAOs) utilizados.</p>
+<p>Un ejemplo final de abstracción es que los elementos del vector los manejamos con el 
+tipo <b>interface Bean</b> (que implementan las clases 'bean'). Esto permite que les mande a todos el
+<b>mismo mensaje, <i>bean.toString()</i></b>, y que cada bean (sea de la clase que sea) implemente su 
+comportamiento específico.</p>
+
+<p><a href="http://www.proactiva-calidad.com/java/servlets/servlet_jdbc.html">Otro ejemplo de aplicación del patrón DAO</a> con 
+servlets. En este ejemplo las clases DAO han cambiado ligeramente para soportar un 
+login y password diferentes en cada conexión.</p>
+
+<font color="#6C3600"><h4>Nota final</h4></font>
+
+<p>Evidentemente los DAOs deben implementar los métodos del interface (InterfaceDAO) que declaran. 
+Pero además pueden implementar otros métodos que no están en el interfaz (lo cual resta generalidad).
+En nuestro ejemplo hemos introducido un método que nos permite hacer un select de clientes con sus
+ventas correspondientes. Antes hemos visto que uno de los atributos del 'bean' <b>Cliente.java</b> es un
+<b>vector de ventas</b>:</p>
+<pre><font color="#000000" face="monospace" size="2">
+public class Cliente implements Bean {
+	...
+	private Vector ventas = null;
+	...
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+<p>Este vector nos permite <b>representar en nuestro modelo de objetos la relación 1:N de nuestras tablas</b>.
+El siguiente método de DAOCliente.java nos <b>devuelve un vector de clientes y cada cliente 
+contiene un vector de ventas</b>:</p>
+<pre><font color="#000000" face="monospace" size="2">
+/**********************************************************************************
+ * Consulta de clientes CON sus ventas
+ * Si condición es null o vacia, no se aplica en el WHERE
+**********************************************************************************/
+public Vector selectConVentas( String condicion ) throws SQLException {
+	Vector vecClientes = new Vector();
+	Venta ven;
+	Cliente cliAnterior = null, cliActual = null;
+		
+	Connection con = getConexion();
+
+	//// Si la condición es null o vacia, no hay parte WHERE
+	String orden = "SELECT c.codigo, c.nombre, c.ape1, c.ape2, c.edad, v.id_venta, v.precio, v.coste FROM cliente c, venta v " +
+	    			" WHERE c.codigo = v.codigo " + 
+	    			(condicion==null || condicion.length()==0 ? "":"AND " + condicion) + 
+	    			" ORDER BY c.ape1, c.ape2, c.nombre";
+
+	Statement sentencia = con.createStatement();
+	ResultSet rs = sentencia.executeQuery( orden );
+
+	//// Recorremos el ResultSet y guardamos los clientes en un vector. Cada cliente tiene su vector de ventas
+	while (rs.next()) {
+	    	
+		//// Obtengo cliente y venta
+		cliActual = new Cliente( rs.getString("c.codigo"), rs.getString("c.nombre"),
+					rs.getString( "c.ape1" ), rs.getString( "c.ape2" ),
+					(rs.getString( "c.edad" )==null ? null : new Integer(rs.getInt( "c.edad" ))));
+		ven = new Venta( rs.getInt("v.id_venta"), rs.getString("c.codigo"), 
+		    		rs.getFloat("v.precio"),  rs.getFloat("v.coste"));
+		    
+		//// SI ES NUEVO: Si es el primer cliente (cliAnterior==null) o es distinto que el anterior ...
+		if ( cliAnterior == null || !cliActual.esIgual( cliAnterior ) ) {
+		    	
+			//// El anterior es el actual
+			cliAnterior = cliActual;
+		    	
+			//// Inicializo vector de ventas del cliente actual y añado venta
+			cliActual.setVentas( new Vector());
+			cliActual.addVenta( ven );
+		    	
+			//// Añado cliente actual al vector
+			vecClientes.add( cliActual );
+		}
+		//// SI NO ES NUEVO CLIENTE: simplemente añado venta al cliente
+		else {
+			//// Añado venta al cliente actual
+			cliAnterior.addVenta( ven );
+		}
+		    	
+	}
+	sentencia.close();
+	cerrarConexion( con );
+	return vecClientes;
+}
+</font></pre><font color="#000000" face="monospace" size="2"></font>
+
+<br>
+<hr>
+<center><a href="http://www.proactiva-calidad.com/java/patrones/index.html#algunos_patrones">Volver al índice</a></center>
+</font>
+
+</body></html>

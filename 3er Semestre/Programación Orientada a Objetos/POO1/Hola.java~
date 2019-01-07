@@ -1,0 +1,15 @@
+import com.sun.j3d.utils.universe.*;
+import com.sun.j3d.utils.geometry.*;
+import javax.media.j3d.*;
+
+public class Hola {
+
+public Hola(){
+    SimpleUniverse universe = new SimpleUniverse();
+    BranchGroup group = new BranchGroup();
+    group.addChild(new ColorCube(0.3));
+    universe.getViewingPlatform().setNominalViewingTransform();
+    universe.addBranchGraph(group);   
+}
+public static void main( String[] args ) { new Hola(); }
+} 

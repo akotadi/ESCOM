@@ -1,0 +1,25 @@
+El método dibuja es abstracto porque se implementa diferente en cada subclase.
+
+figura // esta clase es abstracta
+	color
+	dibuja(...)
+
+	linea
+		x1
+		y1
+		x2
+		y2
+		dibuja()
+
+	circulo 
+		r
+		x()
+		y()
+		dibuja()
+
+	rectangulo
+		x
+		y
+		ancho
+		alto
+		dibuja()

@@ -1,0 +1,5 @@
+-Mary + 20 = Joe;
+-Rita + 6 = -Mary;
+-Rita - Ann = -2 Mary + 0.5 Joe;
+Joe - Rita + Tom = 60;
+-Rita + Tom = 52;

@@ -1,0 +1,1682 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Sockets_archivos/filelist.xml">
+<title>Sockets</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Roberto Tecla</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Roberto Tecla</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>142</o:TotalTime>
+  <o:LastPrinted>2001-10-31T19:58:00Z</o:LastPrinted>
+  <o:Created>2002-03-16T04:48:00Z</o:Created>
+  <o:LastSaved>2002-03-16T04:48:00Z</o:LastSaved>
+  <o:Pages>7</o:Pages>
+  <o:Words>1523</o:Words>
+  <o:Characters>8683</o:Characters>
+  <o:Company>Cinvestav</o:Company>
+  <o:Lines>72</o:Lines>
+  <o:Paragraphs>17</o:Paragraphs>
+  <o:CharactersWithSpaces>10663</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;
+	font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	layout-grid-mode:line;
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	mso-bidi-font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;
+	layout-grid-mode:line;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:139659475;
+	mso-list-type:simple;
+	mso-list-template-ids:2087342192;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:631864790;
+	mso-list-type:simple;
+	mso-list-template-ids:-1332341800;}
+@list l1:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1552422179;
+	mso-list-type:simple;
+	mso-list-template-ids:204776304;}
+@list l2:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1561211433;
+	mso-list-type:simple;
+	mso-list-template-ids:388931854;}
+@list l3:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:1632663276;
+	mso-list-type:simple;
+	mso-list-template-ids:598238288;}
+@list l4:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body lang=ES style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h3><span lang=ES-MX>Programación en Red en Java</span></h3>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>El paquete
+java.net contiene muchas herramientas que se usan para establecer
+conectividades de red. Dentro del paquete esta la clase URL (Uniform Resource
+Locator), la cual le permite leer un recurso URL<span style="mso-spacerun:
+yes">  </span>y escribirlo en un objeto. El URL es la dirección de un recurso
+en internet.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Para emplear
+un recurso en internet se crea un objeto URL que contenga la dirección del
+recurso deseado después se lee la información delobjeto URL usando el método
+openStream(), el cual hace que la lectura de información a través de una red
+sea tan fácil como leer de un flujo de entrada. </span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Ejemplo programa que muestra el código
+fuente de una pagina HTML usando un URL</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=ES-MX
+style='font-size:14.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=ES-MX
+style='font-size:14.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.io.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>public class VerFuente1{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>public static void main(String
+args[]){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>String linea;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>URL u;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>if(args.length&gt;0){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:3'>                  </span>try{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:4'>                        </span>u=new
+URL(args[0]);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:4'>                        </span>try{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:5'>                             </span>BufferedReader
+is=new BufferedReader(<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:5'>                             </span>new
+InputStreamReader(u.openStream()));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:5'>                             </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:6'>                                   </span>while((linea=is.readLine())!=null){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:7'>                                         </span>System.out.println(linea);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:6'>                                   </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:5'>                             </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:5'>                             </span>catch(Exception
+e){ System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:4'>                        </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:4'>                        </span>catch(Exception
+e){ System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:3'>                  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:3'>                  </span>catch(MalformedURLException
+e){ System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span></span><span lang=ES-MX
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<h4><span lang=ES-MX>Sockets</span></h4>
+
+<h1 style='text-align:justify'><span lang=ES-MX style='mso-ansi-language:ES-MX'>Un
+socket es un punto de comunicación por el cual un proceso puede emitir o
+recibir información. Los sockets son una innovación del UNIX de Berkeley. Estos
+permiten tratar una conexión a la red como otro flujo de bytes del que se puede
+leer o escribir. Históricamente los sockets son la extensión de una de las
+ideas más importantes de UNIX: que toda la entrada/salida debe parecerle
+entrada/salida de archivos al programador. Los sockets esconden del programador
+los detalles de bajo nivel de la red.<o:p></o:p></span></h1>
+
+<p class=MsoNormal><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>Un socket puede realizar siete operaciones básicas.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>- Conectarse a una maquina remota.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>- Enviar datos.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>- Recibir datos.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>- Cerrar una conexión.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>- Ligarse a un puerto.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>- Escuchar datos entrantes.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>- Aceptar conexiones de maquinas remotas en el puerto al que se ligo.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Sockets clientes</span></h2>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>Los sockets clientes se usan de la forma siguiente:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>1.- El nuevo socket es creado usando un constructor Socket().<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>2.- El socket intenta conectarse a un host remoto.<o:p></o:p></span></p>
+
+<p class=MsoBodyText2><span lang=ES-MX>3.- Una vez que la conexión es
+establecida los hosts local y remoto obtienen flujos de entrada y salida para
+el socket y usan esos flujos para enviarse datos uno a otro. Esta conexión es
+full-duplex, ambos hosts pueden enviar y recibir datos simultáneamente. Lo que
+significan los datos depende del protocolo. Normalmente se pondrían de acuerdo
+sobre algún handshaking antes de transmitir datos de uno a otro.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>4.- Cuando la transmision de datos esta completa, uno o ambos cierra la
+conexión.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText2><span lang=ES-MX>Como ejemplo usaremos uno de los
+protocolos más simples el llamado “dayTime”. En este protocolo el cliente abre
+un socket en el puerto 13 en el servidor dayTime; en respuesta el servidor
+envia el tiempo en un formato legible por las personas y cierra la conexión.</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.io.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>public class daytimeClient {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">  </span>public static void main(String[]
+args) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>Socket theSocket;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>String hostname;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>DataInputStream theTimeStream;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>if (args.length &gt; 0) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">      </span>hostname = args[0];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">      </span>hostname =
+&quot;localhost&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">      </span>theSocket = new
+Socket(hostname, 13);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">      </span>theTimeStream = new
+DataInputStream(theSocket.getInputStream());<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">      </span>String theTime =
+theTimeStream.readLine();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">      </span>System.out.println(&quot;It
+is &quot; + theTime + &quot; at &quot; + hostname);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>}<span style="mso-spacerun:
+yes">  </span>// end try<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>catch (UnknownHostException e)
+{ System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">    </span>catch (IOException e)
+{System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">  </span>}<span style="mso-spacerun:
+yes">  </span>// end main<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>} // end
+daytimeClient<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Como un ejemplo mas de cliente otro
+programa que muestra el código fuente de una pagina HTML, esta vez usando un
+socket.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.io.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>public class VerFuente {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>public static void main(String
+[] args){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>Socket cliente;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>PrintStream salida;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>BufferedReader entrada;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>String host
+=&quot;localhost&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>String
+userAgent=&quot;MiCliente&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>String
+accept=&quot;text/html,text/plain,*/*&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>String
+request=&quot;index.html&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>String linea=&quot;&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>int puerto=23;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>if(args.length&gt;1){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>host=args[0];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>request=args[1];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>cliente=new Socket(host,
+puerto) ;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>salida=new
+PrintStream(cliente.getOutputStream());<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US;layout-grid-mode:line'>entrada=new
+BufferedReader(new<span style="mso-spacerun: yes">            
+</span>InputStreamReader(cliente.getInputStream()));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>salida.print(&quot;GET
+&quot;+request+&quot;HTTP/1.0\r\n&quot;+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:3'>                  </span><span
+style="mso-spacerun: yes">     </span>&quot;User-Agent:
+&quot;+userAgent+&quot;\r\n&quot;+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:3'>                  </span><span
+style="mso-spacerun: yes">     </span>&quot;Accept:
+&quot;+accept+&quot;\r\n&quot;+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:3'>                  </span><span
+style="mso-spacerun: yes">    </span>&quot;\r\n&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>while((linea=entrada.readLine())!=null){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:3'>                  </span>System.out.println(linea);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style='mso-tab-count:1'>      </span>catch(IOException e){
+System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">  </span><span style='mso-tab-count:1'>    </span></span><span
+lang=ES-MX style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=ES-MX>Sockets para Servidores</span></h2>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:both'>La clase
+ServerSocket contiene todo lo que se necesita para escribir sockets en Java.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>El ciclo básico de vida de un servidor es:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>1.- Un ServerSocket nuevo es creado en un puerto particular usando el
+constructor ServerSocket().<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>2.- El ServerSocket() escucha los intentos de conexión entrantes en ese
+puerto usando su metodo accept(). Accept() se bloquea hasta que un cliente
+intenta realizar una conexión, en dicho punto accept() regresa un socket que conecta
+el cliente al servidor.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>3.- Dependiendo del tipo de servidor, el metodo getInputStream() o el
+metodo getOutputStrem del socket será llamado. Para obtener flujos de entrada y
+salida que comunican con el cliente.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>4.- El servidor y el cliente interactuan de acuerdo a un protocolo
+establecido hasta que es tiempo de cerrar la conexión.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>5.- El servidor el cliente, o ambos, cierran la conexión.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>6.- El servidor regresa al paso 2, y espera la siguiente conexión.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>El codigo siguiente es una implementación del servidor dayTime.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.io.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>import java.util.Date;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'>public class daytimeServer {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">  </span>public final static int
+daytimePort = 13;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">  </span>public static void main(String[]
+args) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">   </span>ServerSocket theServer;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">   </span>Socket theConnection;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">  </span><span style="mso-spacerun:
+yes"> </span>PrintStream p;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">   </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">     </span>theServer = new
+ServerSocket(daytimePort);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">     </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">       </span>while (true) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">         </span>theConnection =
+theServer.accept();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;layout-grid-mode:
+line'><span style="mso-spacerun: yes">         </span></span><span lang=ES-MX
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+layout-grid-mode:line'>p = new PrintStream(theConnection.getOutputStream());<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span>p.println(new Date());<span
+style="mso-spacerun: yes">        </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes">       
+</span>theConnection.close();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">       </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">     </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">     </span>catch (IOException e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">       </span>theServer.close();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">       </span>System.err.println(e);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">     </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>}<span style="mso-spacerun: yes"> 
+</span>// end try<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span>catch (IOException e) {
+System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>A continuación otro ejemplo de cliente-servidor: un tablero de gato
+distribuido. Primero se muestra el código del servidor.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import java.io.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.util.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class
+ServiByte implements Runnable<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>static Vector flujos= new Vector();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>Socket cliente;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public ServiByte(Socket cliente){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>this.cliente=cliente;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void run(){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>OutputStream
+salida=cliente.getOutputStream();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>InputStream
+entrada=cliente.getInputStream();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>handle(entrada,salida);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>catch (Exception
+ex){ex.printStackTrace();}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>finally {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>socket.close();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>catch(IOException ignorada){}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span lang=ES-MX
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+layout-grid-mode:line'>void handle(InputStream entrada, OutputStream salida)
+throws IOException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>synchronized(flujos){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>flujos.addElement(salida);<span
+style='mso-tab-count:4'>                     </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>procesaMensajes(entrada);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>finally {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>flujos.removeElement(salida);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>void procesaMensajes(InputStream entrada)
+throws IOException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>int msg=-1;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>boolean error=false;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>while(true){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>error=false;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>try
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span><span style='mso-tab-count:3'>               </span>msg=entrada.read();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>}
+catch ( IOException e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span><span style='mso-tab-count:3'>               </span>error=true;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>if(!error){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>broadcastMsg(msg);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>static void broadcastMsg(int msg)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>for(int i=0;
+i&lt;flujos.size();++i){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>OutputStream
+salida=(OutputStream)flujos.elementAt(i);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>salida.write(msg);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>salida.flush();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>catch(IOException ex){
+ex.printStackTrace();}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public static void main(String [] args)
+throws IOException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>ServerSocket serv=new
+ServerSocket(23);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>while(true){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>ServiByte gestor=new
+ServiByte(serv.accept());<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>new
+Thread(gestor).start();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>catch (IOException ex){
+ex.printStackTrace();}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1><span lang=ES-MX style='mso-ansi-language:ES-MX;layout-grid-mode:line'>Ahora
+se muestra el código del cliente<o:p></o:p></span></h1>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.applet.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.awt.event.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.awt.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import java.io.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class Gato
+extends Applet implements Runnable, ActionListener{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>Thread hilo;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>Socket cliente;<span style="mso-spacerun:
+yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span><span style='mso-tab-count:1'>    </span>OutputStream
+salida;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span><span style='mso-tab-count:1'>    </span>InputStream
+entrada;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span><span style='mso-tab-count:1'>    </span>Button
+botones[]=new Button[9];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>boolean turno = true;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>String host=&quot;localhost&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span><span style='mso-tab-count:1'>    </span>int
+puerto=23;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>Label etiq;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void init(){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>setLayout(new GridLayout(3,3));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>for(int i=0; i&lt;9; i++){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>add(botones[i]=new
+Button(&quot;&quot;+i));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>botones[i].addActionListener(this);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>bolean error=true;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>while(error)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>error=false;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>System.out.println(&quot;Esperando
+por el servidor . . .&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>try
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span><span style='mso-tab-count:3'>               </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>cliente=new Socket(host,
+puerto);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>}
+catch ( IOException e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span><span style='mso-tab-count:3'>                 </span>System.out.println(e);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">            </span><span style='mso-tab-count:3'>                 </span>error=true;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:3'>               </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>System.out.println(&quot;Connectado
+al servidor.&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>try
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span><span style='mso-tab-count:2'>          </span>salida=cliente.getOutputStream();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>}
+catch ( IOException e) {System.out.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>try
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span><span style='mso-tab-count:2'>          </span>entrada=cliente.getInputStream();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>}
+catch ( IOException e) { System.out.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>hilo
+= new Thread (this);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>hilo.start
+();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void run()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:7.1pt;text-indent:-7.1pt'><span
+lang=ES-MX style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+layout-grid-mode:line'><span style="mso-spacerun: yes">  </span><span
+style='mso-tab-count:1'>    </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>boolean error=false;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>int posicion=0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>while(true)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:2'>         </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>error=false;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>try
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span><span style='mso-tab-count:3'>               </span>posicion=entrada.read();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>}
+catch ( IOException e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">         </span><span style='mso-tab-count:3'>               </span>error=true;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes">   </span><span
+style='mso-tab-count:3'>              </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><span style='mso-tab-count:3'>              </span>if
+(!error) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>if(turno){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:5'>                             </span>botones[posicion].setLabel(&quot;X&quot;);<span
+style='mso-tab-count:1'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:5'>                             </span>etiq.setText(&quot;Es
+el turno de: el cero&quot;);<span style='mso-tab-count:2'>       </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:5'>                             </span>botones[posicion].setLabel(&quot;O&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:5'>                             </span>etiq.setText(&quot;Es
+el turno de: la equis&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>}<span style='mso-tab-count:
+2'>           </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>botones.[posicion]setEnabled(false);<span
+style='mso-tab-count:2'>           </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>turno=!turno;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void actionPerformed(ActionEvent e)
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span><span style='mso-tab-count:1'>    </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>Button btn=(Button)e.getSource();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>if(turno){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>btn.setLabel(&quot;X&quot;);<span
+style='mso-tab-count:1'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>etiq.setText(&quot;Es el turno
+de: el cero&quot;);<span style='mso-tab-count:2'>       </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>else {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>btn.setLabel(&quot;O&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>etiq.setText(&quot;Es el turno
+de: la equis&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<span style='mso-tab-count:2'>           </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>btn.setEnabled(false);<span
+style='mso-tab-count:2'>       </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>turno=!turno;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>for(int
+posicion=0;posicion&lt;9;posicion++)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>if(botones[posicion]==btn)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:5'>                             </span>salida.write(posicion);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>} catch (IOException
+ee){System.err.println(e);}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public static void main(String args[])<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>Gato g=new Gato();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>g.init();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>g.start();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>Frame f=new Frame(&quot;Gato&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>f.add(g, BorderLayout.CENTER);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>f.add(&quot;South&quot;, g.etiq=new
+Label(&quot;Es el turno de: la equis&quot;));<span style="mso-spacerun:
+yes">                          </span><span style="mso-spacerun:
+yes">       </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>f.setVisible(true);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}</span><span
+lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

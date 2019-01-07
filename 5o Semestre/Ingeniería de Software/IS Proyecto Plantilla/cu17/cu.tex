@@ -1,0 +1,70 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+	\begin{UseCase}{CU17}{Inscribir a Seminario}{
+		Ayudar a que los Estudiantes que están por terminar la carrera se puedan inscribir en un Seminario de titulación.
+	}
+		\UCitem{Versión}{0.1}
+		\UCitem{Actor}{Elumno}
+		\UCitem{Propósito}{Que el Estudiante se pueda inscribir a un seminario de titulación.}
+		\UCitem{Resumen}{
+		El sistema muestra los seminarios disponibles para que el Estudiante seleccione el seminario que desea inscribir, el sistema le muestra el monto a pagar y registra la inscripción.}
+		\UCitem{Entradas}{Seminario a inscribir.}
+		\UCitem{Salidas}{Seminarios registrados, horario actual del Estudiante, desglose del monto a pagar por la inscripción.}
+		\UCitem{Precondiciones}{El estudiante debe estar registrado en la universidad.}
+		\UCitem{Postcondiciones}{El estudiante quedará inscrito en el Seminario seleccionado si es elegible y hay cupo en el Seminario en cuestión.}
+		\UCitem{Autor}{Ulises Vélez Saldaña.}
+	\end{UseCase}
+
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Introduce su Número de Boleta y Contraseña en el sistema vía la  \IUref{UI23}{Pantalla de Control de Acceso}\label{CU17Login}.
+		\UCpaso Verifica que el Estudiante sea elegible para inscribirse al Seminario con base en la regla \BRref{BR129}{Determinar si un Estudiante puede inscribir Seminario.} \Trayref{A}.
+		\UCpaso Despliega la \IUref{UI32}{Pantalla de Selección de Seminario} con la lista de Seminarios Disponibles.
+		\UCpaso[\UCactor] Selecciona el Seminario en el que desea inscribirse \Trayref{B}\label{CU17SeleccionarSeminario}.
+		\UCpaso Verifica que el Estudiante sea elegible para inscribirse al seminario seleccionado con base en la regla \BRref{BR130}{Determinar si un Estudiante puede inscribirse en un Seminario} \Trayref{C}.
+		\UCpaso Verifica que el horario del Seminario concuerde con el horario del Estudiante con base en la regla \BRref{BR143}{Validar el horario del estudiante} \Trayref{D}.
+		\UCpaso Calcula el costo del Seminario basado en el costo publicado en el catálogo de cursos, los costos aplicables al alumno y los impuestos aplicables, con base en las reglas \BRref{BR180}{Calcular costos del Estudiante} y \BRref{BR45}{Calcular impuestos por seminario}.
+		\UCpaso Despliega el desglose de costos en la \IUref{UI33}{Pantalla Mostrar costos por seminario}.
+		\UCpaso Pide al Estudiante que confirme la inscripción alSeminario.
+		\UCpaso[\UCactor] Confirma la inscripción al Seminario.
+		\UCpaso Inscribe al Estudiante en el Seminario seleccionado.
+		\UCpaso Informa que la inscripción se realizó exitosamente vía la \IUref{UI88}{Pantalla de resumen de inscripción al Seminario}. 
+		\UCpaso Imprime el recibo de pago con base en la regla \BRref{BR100}{Recibo del Estudiante por inscripción a Seminario.}.
+		\UCpaso Pregunta al estudiante si desea imprimir un comprobante de la inscripción.
+		\UCpaso[\UCactor] Indica que desea imprimir el comprobante de la inscripción.
+		\UCpaso Imprime el comprobante de la inscripción \IUref{UI189}{Reporte de inscripción a Seminario}.		
+	\end{UCtrayectoria}
+		
+		\begin{UCtrayectoriaA}{A}{El Estudiante no puede inscribir un Seminario}
+			\UCpaso Muestra el Mensaje {\bf MSG1-}``El Estudiante [{\em Número de Boleta}] aun no puede inscribirse al seminario.''.
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{Aceptar}.
+			\UCpaso[] Termina el caso de uso.
+		\end{UCtrayectoriaA}
+		
+		\begin{UCtrayectoriaA}{B}{El Estudiante abandona la operación}
+			\UCpaso El Estudiante revisa la lista de Seminarios y no encuentra el Seminario que desea.
+			\UCpaso[\UCactor] Oprime el botón \IUbutton{Salir}.
+			\UCpaso Cierra la sesión del usuario.
+			\UCpaso Continua en el paso \ref{CU17Login} del \UCref{CU17}.
+		\end{UCtrayectoriaA}
+
+		\begin{UCtrayectoriaA}{C}{El estudiante no cumple con los prerrequicitos}
+			\UCpaso Muestra el Mensaje {\bf MSG2-}``El Estudiante [{\em Número de Boleta}] no cumple con los requisitos para inscribirse al Seminario [{\em Nombre del Seminario seleccionado}].''.
+			\UCpaso Muestra los requisitos que el Seminario seleccionado solicita.
+			\UCpaso Continúa en el paso \ref{CU17SeleccionarSeminario} del \UCref{CU17}.
+		\end{UCtrayectoriaA}
+
+		\begin{UCtrayectoriaA}{D}{El horario es incompatible.}
+			\UCpaso Muestra el Mensaje {\bf MSG3-}``El horario del [{\em Nombre del Seminario seleccionado}] no es compatible con el horario del curso [{\em Nombre de la materia y grupo del curso con el que choca el horario}].''.
+			\UCpaso Continúa en el paso \ref{CU17SeleccionarSeminario} del \UCref{CU17}.
+		\end{UCtrayectoriaA}
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

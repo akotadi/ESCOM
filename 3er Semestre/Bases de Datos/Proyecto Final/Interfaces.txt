@@ -1,0 +1,54 @@
+Dueño:
+	actualizar_bascula
+	actualizar_empleado
+	actualizar_local
+	actualizar_refri
+	agreg_bascula
+	agreg_empleado
+	agreg_local
+	agreg_refri
+	borrar_bascula
+	borrar_empleado
+	borrar_local
+	borrar_refri
+	listar_local
+
+Gerente:
+	actualizar_cliente
+	actualizar_mostrador
+	agreg_cliente
+	agreg_merma
+	agreg_product
+	agreg_pedido
+	agreg_prov
+	borrar_merma
+	borrar_cliente
+	borrar_mostrador
+	borrar_venta
+	borrar_proveedor
+	borrar_product
+	borrar_pedido
+	buscar_pedido
+	buscar_empleado
+	buscar_cliente
+	buscar_venta
+	buscar_producto_prov
+	listar_empleado
+	listar_bascula
+	listar_mostrador
+	listar_pedido
+	listar_merma
+	listar_gerentes
+	listar_prov
+	listar_refri
+	listar_reg_venta	
+
+Mostrador:
+	agreg_prod_ped
+	agreg_venta
+	buscar_cliente
+	buscar_pedido
+	buscar_product_rango
+	buscar_producto_exis
+	lista_product
+	listar_clientes

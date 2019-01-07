@@ -1,0 +1,359 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/11/2016, 06:27:12 PM
+    Author     : Brandon
+*/
+
+/******************************BUZON***/
+
+@-moz-keyframes rotatebox /*--for firefox--*/{
+    from{
+        -moz-transform:rotate(0deg);
+    }       
+    to{
+        -moz-transform:rotate(360deg);
+    }                       
+
+}
+
+@-webkit-keyframes rotatebox /*--for webkit--*/{
+    from{
+        -webkit-transform:rotate(0deg);
+    }       
+    to{
+        -webkit-transform:rotate(360deg);
+    }                       
+
+}
+.retuit{
+    cursor: pointer;
+    position:absolute;
+    padding:1%;
+    padding-left: 1.7%;
+    padding-right: 1.7%;
+    margin:0;
+    top:0;
+    right: 0;
+    background: transparent;
+    border:1px solid #ccc;
+    border-top:0;
+    border-right: 0;
+    color:#666;
+}
+.retuit:hover{
+    transition:0.5s;
+    border-bottom:1.5px solid #333;
+    color:#333;
+}
+.response{
+    color:#555555;
+    font-family: arial;
+    font-size: 19px;
+    text-align:center;
+    margin-top:32.5%;
+}
+.buzon .cab{
+    position: relative;
+    background-color:#fafafa;
+    border:1px solid #ccc;
+    border-top:0;
+    width:95%;
+    margin:0 auto;
+    padding:2.2%;
+    font-family:arial;
+}
+.buzon form textarea{
+    margin:0;
+    margin-top:18px;
+    width:98%;
+    height:70px;
+    border: 2px solid #048bca;
+    border-radius:5.5px;
+    border-bottom-left-radius: 0px;
+    background:#f1f7fb; 
+    resize:none;
+    font-size: 14px;
+    color:#252525;
+    padding:4px;
+    font-family: arial;
+}
+.buzon form textarea:focus{
+    transition: 0.5s;
+    background:#fafafa;
+}
+.buzon form input[type=submit]{
+    background: #048bca;
+    width:100px;
+    color:#fafafa;
+    font-family: arial;
+    padding:1%;
+    margin:0;
+    cursor:pointer;
+    border:1px solid #048bca;
+    border-bottom-right-radius: 5.5px;
+    font-family:arial;
+    font-size:16px;
+    color:#f8f8f8;
+    margin-bottom:18px;
+}
+.buzon form input[type=submit]:hover{
+    background: #fafafa;
+    color: #048bca;
+    transition-duration: 0.45s;
+}
+.buzon .act{
+    border-top-left-radius:6.5px;
+    border-top-right-radius:6.5px;
+    width:100%;
+    cursor:pointer;
+    padding:1%;
+    background-color: #666;
+    font-family:arial;
+    font-size:16px;
+    border:1px solid #ccc;
+    color:#f8f8f8;
+}
+.buzon .act:hover{
+    background: #fafafa;
+    color: #666;
+    transition-duration: 0.45s;
+}
+.buzon .cab div{
+    color:#444;
+    font-size:12px;
+}
+.buzon .cab div img{
+    width: 45px;
+    height: 45px;
+    border-radius:3px;
+    float:left;
+    margin-right: 2.2%;
+}
+.buzon .cab div form input[type=submit]{
+    margin:0;
+    margin-bottom:1.5%;
+    padding:0;
+    font-weight: bold;
+    font-family:arial;
+    font-size:15px;
+    text-align: left;
+    cursor: pointer;
+    border:0;
+    background: none;
+    color:#444;
+}
+
+.buzon .cab .text{
+    margin-top:3%;
+    font-size: 14px;
+    color:#252525;
+}
+
+/***********************************/
+.foto form input[type=text], .buzon .cab div form input[type=text], .invisible{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0.8;
+    width: 1px;
+    height: 1px;
+    display:none;
+}
+
+.foto form input[type=submit], #ntuits{
+    border:0px;
+    background:none;
+    margin-bottom:10px;
+    margin-left: 15%;
+    color:#0482BC;
+    font-family:arial;
+    font-size:16px;
+    cursor:pointer;
+}
+.foto form input[type=submit]:hover{
+    color:#036593;
+    text-shadow:0px 0px 0.3px #036593;
+    transition:0.4s;
+}
+.content{
+    position:relative;
+    width: 920px; /*60%*/
+    margin:2 auto;
+    margin-top: 58px;
+}
+.foto{
+    float:left;
+    width:35%;
+}
+.foto img{
+    width: 180px;
+    height: 180px;
+    border-radius:3px;
+    margin-top:20%;
+    margin-bottom:20%;
+    border:4px solid #666;
+    box-shadow:1.5px 1.5px 1px #999;
+}
+.fotoname{
+    text-align:center;
+    color: #555;
+    font-family:arial;
+    font-size:20px;
+    margin:0;
+    margin-bottom: 10%;
+}
+.buzon{
+    margin-left:35%;
+    width: 65%;
+}
+.login{
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+    background-color:#B0E0E6;
+    margin: 0;
+}
+.login img{
+    width:355px;
+    height: 145px;
+    margin: 2%;
+}
+.alink{
+    color:#048bca;
+    text-decoration: none;
+    cursor:pointer;
+}
+.alink:hover{
+    text-decoration: underline;
+}
+body{
+    background-color: #DFE9F7;
+}
+.logoinicio{
+   position:fixed;
+   top:25.5px;
+   left:65px;
+}
+.logoinicio img{
+    width: 50px;
+    height: 50px;
+}
+.menu{
+    background-color:#048bca;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding:20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: 1px solid #aaa;
+}
+.menu div{
+    margin-left:14.4%;
+}
+.menu div a{
+    text-decoration: none;
+    color:#ddd;
+    font-family: arial;
+    font-size:15px;
+    margin-right: 60px;
+}
+.menu div a:hover {
+    color:#fafafa;
+    text-shadow: 0px 0px 1px #fff;
+    transition-duration: 0.4s;
+}
+
+.menu form{
+    width:100%;
+    color:#f8f8f8;
+    font-family:arial;
+    font-size:15px;
+}
+.menu form input, .menu form select {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 29.9%;
+    margin:13px;
+    margin-left:44.9%;
+    color:#666;
+    padding: 8px 18px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+.menu form input, .menu form select{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius:0px;
+}
+.menu form input[type=submit], .menu form input[type=button]{
+    
+    margin:12px;
+    margin-left:75%;
+    width: 7%;
+    background-color: #666;
+    font-family:arial;
+    font-size:14px;
+    color:#f8f8f8;
+    padding: 9px;
+    border: none;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius:0px;
+    cursor: pointer;
+}
+.menu form input[type=submit]:hover, .menu form input[type=button]:hover{
+    background: #fafafa;
+    color: #666;
+    transition-duration: 0.45s;
+}
+
+#follown .seguir, #follown .unseguir{
+	background-color:#666;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:2px solid #048bca;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:10px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+#follown .seguir:hover {
+	background-color:#5cbf2a;
+}
+#follown .seguir:active, #follown .unseguir:active{
+	position:relative;
+	top:1px;
+}
+#follown .unseguir:hover{
+    background-color:red;
+}
+.notuit{
+    border-bottom-left-radius:6.5px;
+    border-bottom-right-radius:6.5px;
+    width:96.6%;
+    padding:1.5%;
+    margin:0;
+    font-family:arial;
+    font-size:14px;
+    border:1px solid #ccc;
+    background: #fafafa;
+    
+    color:#333;
+    text-align:center;
+    border-top:0;
+}

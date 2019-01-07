@@ -1,0 +1,17 @@
+import java.io.Serializable;
+
+public class InfoPlanet implements Serializable {
+	String nombre;
+	public InfoPlanet(String nombre, int turno)
+	{
+		this.nombre=nombre;	
+	}
+        public String getNombre(){
+               return nombre;
+	}
+	public String setNombre(){
+		this.nombre=nombre;
+	}
+}
+
+

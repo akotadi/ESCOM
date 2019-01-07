@@ -1,0 +1,18 @@
+ENTITY compuertas IS
+    PORT (
+	a1 : in std_logic  ; 
+	a2 : in std_logic  ; 
+	a3 : in std_logic  ; 
+	a4 : in std_logic  ; 
+	b1 : in std_logic  ; 
+	b2 : in std_logic  ; 
+	b3 : in std_logic  ; 
+	b4 : in std_logic  ; 
+	sel : in std_logic  ; 
+	cout : inout std_logic  ; 
+	s1 : inout std_logic  ; 
+	s2 : inout std_logic  ; 
+	s3 : inout std_logic  ; 
+	s4 : inout std_logic 
+    ) ;
+END compuertas ;

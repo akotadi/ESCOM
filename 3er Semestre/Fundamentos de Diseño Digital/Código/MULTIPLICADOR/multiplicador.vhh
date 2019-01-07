@@ -1,0 +1,7 @@
+ENTITY suma IS
+    PORT (
+	a : in std_logic_vector (1 downto 0) ; 
+	b : in std_logic_vector (1 downto 0) ; 
+	p : inout std_logic_vector (3 downto 0)
+    ) ;
+END suma ;

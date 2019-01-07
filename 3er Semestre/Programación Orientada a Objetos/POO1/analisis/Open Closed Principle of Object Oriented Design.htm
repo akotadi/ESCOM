@@ -1,0 +1,314 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+a            { text-decoration: none }
+</style>
+
+<meta name="description" content="Software entities like classes, modules and functions should be open for extension but closed for modifications">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="keywords" content="open closed principle, object oriented design, oo design">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Open Closed Principle of Object Oriented Design</title>
+<!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/eventhelix/even1000.css"><meta name="Microsoft Theme" content="eventhelix 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body topmargin="0" marginheight="0" leftmargin="0" marginwidth="0"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table1" background="../../EventStudio/image1/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bordercolor="#808080" width="1141">
+			<a title="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design" href="../../">
+			<img border="0" src="../../EventStudio/_borders/event_helix.jpg" width="242" height="92" alt="EventHelix.com: CASE Tools; Real-time and Embedded System Design; Object Oriented Design"></a>
+			<a name="top"></a></td>
+			<td bordercolor="#808080" width="238" nowrap>
+			<div align="center">
+				<table border="0" cellspacing="1" width="74%" id="table4" background="../../EventStudio/image1/w2gh.gif" align="left" height="36">
+					<tr>
+						<td width="20" style="text-align: center">
+						<a title="EventStudio 2.5: System Engineering CASE Tool" href="../../EventStudio">
+						<img border="0" src="../../EventStudio/eventstudio_icon.gif" width="32" height="32" alt="EventStudio 2.5: Sequence diagram based modeling"></a></td>
+						<td style="text-align: left" valign="top">
+						<span style="color: navy; font-weight: 700">
+						<font size="2">
+						<a title="Generate Sequence Diagrams, Message Sequence Charts and Collaboration Diagrams" href="../../EventStudio">
+						<font color="#000080">EventStudio 4.0</font></a></font></span><br>
+						<a title="System Architecture and System Engineering CASE Tool" href="../../EventStudio">
+						<font size="1" color="#707070">Sequence diagram based 
+						system design and modeling</font></a></td>
+					</tr>
+				</table>
+			</div>
+			<p>&nbsp;</td>
+		</tr>
+		<tr>
+			<td bgcolor="#E0E0E0" bordercolor="#808080" align="left" colspan="2" width="1270" valign="top" nowrap>
+			<font color="#000080" size="2" face="Arial">&nbsp;<b> </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b>
+			<font color="#666666" face="Arial" size="2">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<h1><font size="2">
+<a href="../../default.htm" style="text-decoration: none">Home</a> &gt; 
+<a href="../../RealtimeMantra">Real-time Mantra</a> &gt;<a href="../Object_Oriented"> Object Oriented Design</a><font color="#000000"> 
+&gt; The Open Closed Principle<br>
+</font>
+</font>The Open Closed Principle</h1>
+<p>The open closed principle of object oriented design states:</p>
+<p><font color="#000080"><b><i>Software entities like classes, modules and functions should be
+open for extension but closed for modifications.</i></b></font></p>
+The Open Close Principle encourages software developers to design and write code
+in a fashion that adding new functionality would involve minimal changes to
+existing code. Most changes will be handled as new methods and new classes.
+Designs following this principle would result in resilient code which does not
+break on addition of new functionality.
+<p>In this article, we will explore the the open closed principle via an example
+of a resource allocator.</p>
+<h2>Original Code (Violates the Open Closed Principle)</h2>
+<p>The code below shows a resource allocator. The resource allocator currently
+handles timeslot and spaceslot resource allocation. It is clear from the code
+below that it does not follow the Open Closed Principle. The code of the
+resource allocator will have to be modified for every new resource type that
+needs to be supported. This has several disadvantages:</p>
+<ul>
+  <li>The resource allocator code needs to be unit tested whenever a new
+    resource type is added.</li>
+  <li>Adding a new resource type introduces considerable risk in the design as
+    almost all aspects of resource allocation have to be modified.</li>
+  <li>Developer adding a new resource type has to understand the inner workings
+    for the resource allocator.</li>
+</ul>
+<p>Thus we can say that extending the design involves considerable code change.</p>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Resource
+      Allocator (Violates Open Closed Principle)</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class <b>ResourceAllocator</b>
+{
+public:
+
+   <b> int Allocate(int resourceType)</b>
+    {  
+       int resourceId;
+        
+       switch (resourceType)
+       {
+       case TIME_SLOT:          
+           resourceId = FindFreeTimeslot();
+           MarkTimeslotBusy(resourceId);
+           break;
+           
+      case SPACE_SLOT:
+           resourceId = FindFreeSpaceSlot();
+           MarkSpaceslotBusy(resourceId);
+           break;
+           
+      default:
+           Trace(ERROR, &quot;Attempted to allocate invalid resource\n&quot;);
+           break;     
+       }
+    }
+    
+    
+   <b> int Free(int resourceType, int resourceId)</b>
+    {   
+       switch (resourceType)
+       {
+       case TIME_SLOT:          
+           MarkTimeslotFree(resourceId);
+           break;
+           
+      case SPACE_SLOT:
+            MarkSpaceslotFree(resourceId);
+           break;
+           
+      default:
+           Trace(ERROR, &quot;Attempted to allocate invalid resource\n&quot;);
+           break;     
+       }
+    }
+    
+};</code></font></pre></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h2>Code Modified to Support Open Closed Principle</h2>
+<p>The problems with the above design is that it violates the Open Closed
+Principle. The following code presents a new design where the resource allocator
+is completely transparent to the actual resource types being supported. This is
+accomplished by adding a new abstraction, resource pool. The resource allocator
+directly interacts with the abstract class resource pool.&nbsp;</p>
+<p> This has several advantages:</p>
+<ul>
+  <li>The resource allocator code need not be unit tested whenever a new
+    resource type is added.</li>
+  <li>Adding a new resource type is fairly low risk as adding a new resource
+    type does not involve changes to the resource allocator.</li>
+  <li>Developer adding a new resource type does not need understand the inner workings
+    for the resource allocator</li>
+  <li>Further abstractions can be developed to group together resources that use
+    similar algorithms to allocate resources. A few examples are:
+  <ul>
+    <li><font color="#000080">FreeQueueResourcePool: </font>Base class for all
+        resource pools that are implemented with free/busy queue.</li>
+    <li><font color="#000080">BookingResourcePool: </font>Base class for all
+        resource pools that are implemented as timebound bookings (similar to
+        ticket booking in a movie theater).</li>
+  </ul>
+    <p>&nbsp;</li>
+</ul>
+<table border="0" width="589" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="587" align="left" bgcolor="#E0E0E0"><b><font color="#000080">Resource
+      Allocator (Follows Open Closed Principle)</font></b></td>
+  </tr>
+  <tr>
+    <td width="587" align="left" valign="top" bgcolor="#F0F0F0"><pre><font color="#000080"><code>class <b>ResourceAllocator</b>
+{
+    ResourcePool *m_pResourcePool[MAX_RESOURCE_POOLS];
+    
+public:
+
+   <b> int Allocate(int resourceType)</b>
+    {    
+       int resourceId;        
+       resourceId = m_pResourcePool[resourceType]-&gt;FindFree();
+       m_pResourcePool[resourceType]-&gt;MarkBusy(resourceId]; 
+    }
+        
+   <b> int Free(int resourceType, int resourceId)</b>
+    {        
+        m_pResourcePool[resourceType]-&gt;MarkBusy(resourceId];       
+    }
+    
+    void AddResourcePool(int resourceType, ResourcePool *pPool)
+    {
+        m_pResourcePool[resourceType] = pPool;
+    }
+    
+};
+
+class <b>ResourcePool</b>
+{
+public:
+    virtual int FindFree() = 0;
+    virtual int MarkBusy() = 0;
+    virtual Free(int resourceId) = 0;    
+};
+
+class <b>TimeslotPool</b> : public ResourcePool
+{
+public:
+    int FindFree();
+    int MarkBusy();
+    Free(int resourceId);    
+};
+
+class <b>SpaceslotPool</b> : public ResourcePool
+{
+public:
+    int FindFree();
+    int MarkBusy();
+    Free(int resourceId);    
+};</code></font></pre></td>
+  </tr>
+</table>
+<h2>Open and Closed</h2>
+<p>The above design follows the open and closed principle. The Resource Pool is
+open for extension as new resource pools can be added without much impact on the
+rest of the system. The Resource Allocator is closed for change, as no changes
+need to be made to it for enhancing the system.</p>
+<p>As you can see the above has been achieved by using two techniques:</p>
+<ul>
+  <li>A base class was defined for Resource Pool. This base class captures the
+    high level interfaces.</li>
+  <li>An array of Resource Pool pointers was defined in the Resource Allocator.
+    This array is indexed by the resource id.</li>
+</ul>
+<p>If this principle is followed during the design, most changes to the system
+would be in terms of adding new classes/methods. Changes to existing
+classes/methods would be minimized.</p>
+<table border="0" width="553" cellspacing="0" cellpadding="0" bgcolor="#C0C0C0">
+  <tr>
+    <td width="422" align="left" bgcolor="#E0E0E0">&nbsp;<font color="#000080"><b>Related
+      Links</b></font></td>
+  </tr>
+  <tr>
+    <td width="422" align="left" valign="top" bgcolor="#F0F0F0">
+    <ul>
+      <li><a href="object_design_tips.htm">Object Oriented Tips I</a></li>
+      <li><a href="object_design_tips_2.htm">Object Oriented Tips II</a></li>
+      <li><a href="RealtimeMantra/PatternCatalog/message_factory_and_interface_pattern.htm">Message
+          Factory (Example of Open Closed Principle)</a></li>
+    </ul>
+    </td>
+</table>
+<p>&nbsp;</p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<table border="0" width="100%" style="border-collapse: collapse" cellpadding="0" id="table7" background="../../EventStudio/images/hg.gif">
+	<thead>
+		<tr>
+			<td valign="top" bgcolor="#E0E0E0" bordercolor="#808080" align="left" width="1270" nowrap>
+			<font color="#000080" face="Arial" size="2"><b>&nbsp; </b></font><b>
+			<font color="#000080" face="Arial" size="2"><a href="../../">
+			<font color="#666666">Home</font></a></font><font face="Arial" size="2" color="#666666">&nbsp;
+			</font></b><font face="Arial" size="2" color="#666666">|</font><font face="Arial"><font color="#666666" size="2"><b>&nbsp;
+			</b></font><font size="2"><b><font color="#666666">
+			<a href="../../EventStudio/"><font color="#666666">EventStudio System 
+			Designer 4.0</font></a></font></b></font><b><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|<b>&nbsp; </b></font><b>
+			<font size="2"><span style="color: #000080">
+			<a href="../../VisualEther"><font color="#666666">VisualEther Protocol 
+			Analyzer 1.0</font></a></span></font><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|&nbsp; </font><b>
+			<font size="2"><a href="../../RealtimeMantra">
+			<span style="color: #666666">Real-time Mantra</span></a><font color="#666666">&nbsp;
+			</font></font></b><font size="2" color="#666666">|&nbsp;<b> </b></font>
+			<b><a href="../../contact_us.htm"><span style="color: #666666">
+			<font size="2">Contact Us</font></span></a><font color="#666666" size="2">&nbsp;
+			</font></b><font size="2" color="#666666">|</font></font><b><font face="Arial" size="2"><font color="#666666">&nbsp;
+			</font><a href="../../WhatsNews.htm"><span style="color: #666666">
+			What's New</span></a></font></b></td>
+		</tr>
+	</thead>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-padding-alt: 0in 5.4pt 0in 5.4pt; margin-left: -3.85pt" width="100%">
+	<thead>
+		<tr>
+			<td width="100%" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in" background="../../EventStudio/images/hg.gif">
+			<small><font color="#666666">Copyright © 2000-2007 EventHelix.com 
+			Inc. All Rights Reserved.</font></small></td>
+		</tr>
+	</thead>
+</table>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>

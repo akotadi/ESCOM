@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  cdtBook.sty                                                    %
+%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cdtBook}[2010/05/30, v1.0 CDT-ESCOM-IPN Plantilla para reportes de la Coordinación]
+
+\usepackage[utf8]{inputenc}                      % Codificación de caracteres en UTF-8.
+\usepackage[spanish]{babel}                      % Cambia las variables del documento a español.
+\usepackage{cmbright}                            % Fuente de letras, tras opciones: arev, cmbright, pxfonts.
+\usepackage{graphicx}	                            % Manejo de imágenes.
+\usepackage[usenames,dvipsnames]{color}          % Para usar y definir colores.
+\usepackage{wallpaper}                           % Colocar imágenes en el fondo del documento.
+\usepackage{fancyhdr}                            % Manejo de encabezados.
+\usepackage[hmargin=3cm,vmargin=3.5cm]{geometry} % Manejo de márgenes del documento.
+\usepackage[Sonny]{fncychap}                     % Manejo de capítulos: Sonny, Lenny, Glenn, Conny, Rejne and Bjarne.
+\usepackage{marvosym}                            % Algunos símbolos.
+%\usepackage{minitoc}
+
+%=====================================================
+% Definición de colores
+\definecolor{titleColor}{rgb}{0.3, 0.3, 0.3}
+\definecolor{subTitleColor}{rgb}{0.45, 0.45, 0.45}
+\definecolor{authorColor}{rgb}{0.1, 0.3, 0.7}
+\definecolor{sectionColor}{rgb}{0.1, 0.3, 0.7}
+\definecolor{subsectionColor}{rgb}{0.1, 0.3, 0.7}
+\definecolor{instruccionesColor}{rgb}{0.5, 0.5, 0.5}
+
+
+%=====================================================
+\pagestyle{fancy}
+\fancyhead[LE]{\includegraphics[height=35pt]{images/headerPar}} 
+\fancyhead[RO]{\includegraphics[height=35pt]{images/headerInp}} 
+\fancyhead[RE]{} 
+\fancyhead[LO]{} 
+
+\addtolength{\headheight}{2\baselineskip} 
+\fancyfoot[CO,CE]{{\tiny\color{subTitleColor}\em Av. Juan de Dios Bátiz esq. Miguel Othón de Mendizabal S/N Col. Lindavista, GAM, D. F. {\color{sectionColor}\Telefon} 57296000 Ext. 52005 {\color{sectionColor}\Letter} ulises.velez@gmail.com}}
+\fancyfoot[RO,LE]{\footnotesize\thepage}
+
+
+
+
+%=====================================================
+
+\newcommand{\varSubTitle}{}
+\newcommand{\subtitle}[1]{\renewcommand{\varSubTitle}{#1}}
+
+\newcommand{\varTitle}[1]{}
+\let\varTitle=\title
+\renewcommand{\title}[1]{%	
+	\varTitle{{\Huge\color{titleColor}#1}%
+	\\{\LARGE \color{subTitleColor}\varSubTitle}~{}\bigskip\\\color{authorColor}\rule{\textwidth}{1mm}}%
+}
+
+\newcommand{\varOrganization}{Escuela Superior de Cómputo, IPN}
+\newcommand{\organization}[1]{\renewcommand{\varOrganization}{#1}}
+
+
+\newcommand{\varAuthor}[1]{}
+\let\varAuthor=\author
+\renewcommand{\author}[1]{%
+	\varAuthor{\color{authorColor}#1\\\color{subTitleColor}\varOrganization}%
+}
+
+\renewcommand{\labelitemi}{\color{sectionColor}\textbullet}
+
+%=====================================================
+
+\newcommand{\varPart}[1]{}
+\let\varPart=\part
+\renewcommand{\part}[1]{{\color{sectionColor}\ThisLRCornerWallPaper{0.5}{images/agua.png}\varPart{#1}}}
+
+
+\newcommand{\varSection}[1]{}
+\let\varSection=\section
+\renewcommand{\section}[1]{{\color{sectionColor}\varSection{#1}}}
+
+\newcommand{\varSubSection}[1]{}
+\let\varSubSection=\subsection
+\renewcommand{\subsection}[1]{{\color{subsectionColor}\varSubSection{#1}}}
+
+\ChTitleVar{\Large\sf\color{titleColor}}
+\ChNumVar{\Huge\color{subTitleColor}}
+\ChNameVar{\Large\sf\color{subTitleColor}}
+
+
+%=====================================================
+\newcommand{\Instrucciones}[1]{}
+\newcommand{\varInstrucciones}[1]{{\em\color{instruccionesColor}#1}}
+%\let\varIstrucciones=\Instrucciones
+%\renewcommand{\Instrucciones}[1]{}
+\newcommand{\showInstrucciones}{%
+	\let\Instrucciones=\varInstrucciones%
+}
+
+

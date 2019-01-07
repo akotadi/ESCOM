@@ -1,0 +1,179 @@
+Cargar el script
+	create database tt;
+	use tt;
+	source ...;
+
+Resolver las siguientes consultas
+
+	1. Concoer el no de tt, de aquellos tts que ha dirigido el dr.
+
+		Select d.noTT 
+		from dirige d, profesor p
+		where d.idProf=p.idProf
+		and p.nombre like "Andr_s%"
+		and p.apPaterno like "Orti%"
+		order by 1;
+
+	2. Cuántos tts ha dirigido Dr. Flavio.
+
+		Select COUNT(*)
+		from dirige d, profesor p
+		where d.idProf=p.idProf
+		and p.nombre like "Flavio%"
+		and p.apPaterno like "S_nc%"
+		order by 1; 
+
+		Select COUNT(*)
+		from dirige d, profesor p
+		where d.idProf=p.idProf
+		and p.nombre like "Idalia%"
+		and p.apPaterno like "Maldon%"
+		order by 1; 		
+
+	3. Cuál es el título de los tts de la consulta anterior.
+
+		Select t.titulo
+		from dirige d, profesor p, tt t
+		where d.idProf=p.idProf
+		and d.nott=t.nott
+		and p.nombre like "Flavio%"
+		and p.apPaterno like "S_nc%"
+		order by 1; 
+
+		Select t.titulo
+		from dirige d, profesor p, tt t
+		where d.idProf=p.idProf
+		and d.nott=t.nott
+		and p.nombre like "Ignacio%"
+		and p.apPaterno like "R_os%"
+		order by 1; 
+
+	4. Qué número de tt tienen aquellos tts que se han presentado en el año 2008.
+
+		Select noTT, fecha
+		from presentacion
+		where fecha between "2008-01-01" and "2008-12-31"
+		order by 2, 1;
+
+	5. Mostrar el tipo de tt que ha dirigido Euler.
+
+		select t.nott, x.tipo
+		from tt t, dirige d, presentacion x, profesor p
+		where x.nott=t.nott
+		and t.nott=d.nott
+		and d.idProf=p.idProf
+		and p.nombre like "Euler%"
+		and p.apPaterno like "Hern%"
+		order by 2, 1;
+
+	6. Qué grado de estudios tienen los profesores que se apellidan García.
+
+		Select p.*, ge.descripcion
+		from profesor p, gradoProf gp, gradoEstudios ge
+		where p.idProf=gp.idProf
+		and gp.idGrado=ge.idGrado
+		and (p.apPaterno like "Garc_a%" or p.apMaterno like "Garc_a%")
+		order by p.apPaterno;
+
+	7. Qué profesores han hecho estudios en la UNAM.
+
+		Select p.*, gp.institucion
+		from profesor p, gradoProf gp
+		where p.idProf=gp.idProf
+		and gp.institucion like "UNAM%"
+		order by p.apPaterno;
+
+	8. Mostrar el no. de tt y el tipo, además del dictamen de aquellos tts, donde la Dra. Lorena Chavarria ha sido sinodal.
+
+		Select t.nott, x.tipo
+		from presentacion x, tt t, sinodalia s, profesor p
+		where x.nott=t.nott
+		and t.nott=s.nott
+		and (s.s1=p.idprof
+		or s.s2=p.idprof
+		or s.s3=p.idprof)
+		and p.nombre like "Euler%"
+		and p.apPaterno like "Hern%"
+		order by 2, 1;
+
+	9. Mostrar el no. de tt y la fecha de presentación de aquellos tts que incluyen la palabra "redes neuronales".
+
+		Select p.nott, p.fecha, t.titulo
+		from presentacion p, tt t
+		where p.nott=t.nott
+		and t.titulo like "%redes neuronales%"
+		order by 2, 1;
+
+	10. Mostrar el no. de tt y el nombre de los directores que han dirigido tts remediales.
+
+		Select t.nott, x.tipo, p.nombre, p.apPaterno, p.apMaterno
+		from presentacion x, tt t, dirige d, profesor p
+		where x.nott=t.nott
+		and t.nott=d.nott
+		and d.idProf=p.idProf
+		and x.tipo like "%R%"
+		order by p.apPaterno, 1;
+
+	11. Mostrar la cédulo profesional y la institución de aquellos profesores que tienen grado de maestría
+
+		Select gp.cedula, ge.descripcion, gp.institucion
+		from gradoProf gp, gradoEstudios ge
+		where gp.idGrado=ge.idGrado
+		and ge.descripcion like "%maestr_a%"
+		order by 1;
+
+	12. Mostrar el no. de tt, la calificación de los sinodales, donde el revisor ha sido la Dra. Fabiola Ocampo
+
+		Select t.nott, x.califSinodales, p.nombre, p.apPaterno
+		from presentacion x, tt t, sinodalia s, profesor p
+		where x.nott=t.nott
+		and t.nott=s.nott
+		and s.revisor=p.idProf
+		and p.nombre like "Fabiola%"
+		and p.apPaterno like "Ocampo%"
+		order by 2, 1;
+
+	13. Mostrar los sinodales que han tenido los siguientes tts 2000-0209, 06-1-0174
+
+		Select p.nombre, p.apPaterno, p.apMaterno, s.noTT
+		from profesor p, sinodalia s
+		where (s.s1=p.idprof
+		or s.s2=p.idprof
+		or s.s3=p.idprof)
+		and s.nott in ("2000-0209","06-1-0174")
+		order by s.noTT, p.apPaterno;
+
+		Select p.nombre, p.apPaterno, p.apMaterno, s.noTT
+		from profesor p, sinodalia s
+		where (s.s1=p.idprof
+		or s.s2=p.idprof
+		or s.s3=p.idprof)
+		and (s.nott="2000-0209" or s.nott="06-1-0174")
+		order by s.noTT, p.apPaterno;
+
+		Select p.nombre, p.apPaterno, p.apMaterno, s.noTT
+		from profesor p, sinodalia s
+		where s.revisor=p.idProf
+		and s.nott in("09-2-0277")
+		order by s.noTT, p.apPaterno;
+
+	14. Quién fue el revisor del tt que ha dirigido Idalia Maldonado
+
+		Select d.nott, p.*
+		from dirige d, profesor p, sinodalia s
+		where s.revisor=p.idprof
+		and (Select idProf from profesor where nombre like "Euler%" and appaterno like "Hern%") = d.idprof
+		group by s.nott;
+
+	15. Cuál es la fecha de presentación de aquellos tts que ha sido sinodal el profesor Ulises Vélez
+
+		Select x.fecha, t.nott, p.nombre, p.apPaterno
+		from presentacion x, tt t, sinodalia s, profesor p
+		where x.nott=t.nott
+		and t.nott=s.nott
+		and (s.s1=p.idProf 
+		or s.s2=p.idProf 
+		or s.s3=p.idProf)
+		and p.nombre like "Ulises%"
+		and p.apPaterno like "V_lez%"
+		order by 2, 1;

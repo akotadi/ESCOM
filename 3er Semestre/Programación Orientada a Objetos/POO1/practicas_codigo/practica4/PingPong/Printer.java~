@@ -1,0 +1,29 @@
+/Printer.java
+public class Printer implements Runnable {
+	Thread printerThread;
+	String string;
+	int count;
+	int sleepTime;
+
+public Printer(String s, int howMany, int sleep){
+		count=howMany;
+		string=s;
+		sleepTime=sleep;
+		printerThread=new Thread(this);
+		printerThread.start();
+	}
+	public void run(){
+		while(count-- >0){
+			System.out.println(string);
+try{
+				Thread.sleep(sleepTime);
+			} catch (Exception e) {
+				return;
+			}
+		}
+	}
+	public static void main(String args[]){
+		new Printer("Ping", 5, 300);
+		new Printer("Pong", 5, 500);
+	}
+}

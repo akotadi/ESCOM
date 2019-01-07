@@ -1,0 +1,37 @@
+Evaluacion Estructura de Datos
+
+1er y 2o departamental
+50% examenes
+40% practicas
+10% tareas
+
+3er departamental
+40% examenes
+50% proyecto equipo (maximo 4 personas)
+10% tareas
+
+
+tareas y reportes de practicas (individuales para entregar impresos)
+Portada 
+  nombre
+  tema
+  numero
+  fecha
+  grupo
+  materia
+
+
+Bibliografia
+El lenguaje de programación C
+Dennis Ritchie y Brian Kernighan
+Prentice Hall
+
+Algorithms and Data Structures
+Niklaus Wirth
+Prentice Hall
+
+Algorithms in C
+Robert Sedgewick
+Addison-Wesley
+
+

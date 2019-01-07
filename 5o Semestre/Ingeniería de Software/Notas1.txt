@@ -1,0 +1,83 @@
+Plantear y resolver de manera general problemas aleatorios involucrados con los sistemas computacionales, de
+manera particular y de forma interdisciplinaria; mediante el manejo de los conceptos de probabilidad y estadística,
+de software estadístico y de la realización de programas de cómputo, con el fin de realizar el análisis de resultados
+como un elemento más de juicio en la toma de decisiones sobre los problemas a tratar.
+
+Elaborar prácticas que confronten al estudiante con el desarrollo de un proyecto, a fin de que identifique la
+necesidad del análisis y diseño previo a la elaboración de un sistema. Identificará los problemas derivados del
+desarrollo en equipo y sus probables causas a fin de fomentar el trabajo en equipo, la responsabilidad para con
+los demás estudiantes y la comunicación y discusión de ideas.
+Abordar los temas por medio de exposiciones e investigación bibliográfica por parte del estudiante con la finalidad
+de identificar las principales técnicas, herramientas y procedimientos utilizados en el paradigma Orientado a
+Objetos. Facilitar las fuentes y guías necesarias para dirigir el correcto abordaje del tema. Por medio de esta
+técnica se pretende fomentar la expresión oral y escrita, mejorar el uso del lenguaje, aplicar el lenguaje técnico
+apropiadamente, el intercambio de ideas, saber sustentar los argumentos expuestos y escuchar los argumentos
+de otros para emitir conclusiones acertadas. Facilitar los mecanismos necesarios para que el estudiante aplique
+las técnicas en el desarrollo del proyecto y pueda documentar sus experiencias sobre las mejoras y dificultades al
+momento de utilizar las herramientas. Guiar y complementar las exposiciones con preguntas y un proyecto de
+ejemplo, además de advertir sobre los peligros y riesgos derivados de la aplicación de dichas herramientas.
+La calidad de los sistemas se discutirá en mesas de trabajo para definir los atributos y las métricas a utilizar en
+cada caso. Las cuales deberán ser investigadas por los alumnos y discutidas en clase. Cada equipo deberá
+intentar conseguir las metas de calidad planteadas en su proyecto. Se le presentarán análisis y diseños de
+sistemas al estudiante, a fin de que aplique su experiencia y las técnicas adquiridas en clase para que emita un
+veredicto sobre la calidad y la utilización del documento de análisis y diseño.
+
+teórico-práctica
+
+Republica Democratica del Congo.
+Emiratos Árabes Unidos
+ISBN: 9789702609360
+
+Métodos cuantitativos para la toma de decisiones
+
+
+
+Área central
+Responsable del área de programas académicos
+Elia
+
+-----------------------------------------------
+
+5 - 8 - 2 - 12
+7 - 5 - 12 - 10
+2 - 11 - 5 - 3
+12 - 4 - 7 - 5
+15 (20) - 22 - 27 - 28/29 - 30
+
+
+
+
+Modelo ER - Escrito de generación de base de datos
+Modelo MVC (java server faces, stoodwork, django) / Capas
+
+
+
+
+Operación transaccional: se requiere para seguir funcionando
+
+Casos de uso
+	Estado
+	Observaciones
+
+Catálogo de mensajes (base de datos o properties, no en código duro)
+	Se pone en properties para modificar más fácilmente (lenguaje, errores) - Buena práctica
+
+Trayectoria alternativa
+	No se cumple regla de negocios
+	Se tienen opciones
+	Botón = include o extend (usualmente es éste)
+
+Tipo
+Un catálogo no puede estar vacío - Error (no puedo mostrar la interfaz como alternativa)
+
+
+
+
+
+
+
+El objetivo del diseño es que el programador sepa qué queremos que haga, a los dibujos se les llama perspectivas
+
+	Diagrama de secuencia
+	Diagrama de estados
+	Diagrama de clases

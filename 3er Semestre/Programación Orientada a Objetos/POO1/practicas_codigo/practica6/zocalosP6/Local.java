@@ -1,0 +1,29 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.*;
+//import java.io.*;
+public class Local extends JFrame implements LeeRed {
+ Vector <String> nombres=new Vector<String>();
+ Panel p;
+ ImageIcon iconos[];
+ JLabel jlimg;
+ Red r;
+ public Local() {
+	super("Marco");
+    	nombres.addElement("conejo.jpg");
+   	p=new Panel(); 
+	jlimg=new JLabel("ima", JLabel.CENTER);    
+   	p.add(jlimg);
+    	Container content = getContentPane();
+    	content.add(p, BorderLayout.CENTER);
+    	setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); 
+        setSize(400, 300);
+    	setVisible(true);
+        r=new Red(this);
+ }
+public void leeRed(Object obj){
+ 	if(obj instanceof ImageIcon) jlimg.setIcon((ImageIcon)obj);
+}
+ public static void main(String[] args) { new Local(); }
+}

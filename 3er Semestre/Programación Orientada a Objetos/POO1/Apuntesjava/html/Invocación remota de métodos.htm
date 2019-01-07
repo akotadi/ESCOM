@@ -1,0 +1,1283 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./Invocación%20remota%20de%20métodos_archivos/filelist.xml">
+<link rel=Edit-Time-Data
+href="./Invocación%20remota%20de%20métodos_archivos/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Invocación remota de métodos (RMI)</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Roberto Tecla</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Roberto Tecla</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>103</o:TotalTime>
+  <o:LastPrinted>2001-11-07T20:27:00Z</o:LastPrinted>
+  <o:Created>2002-03-16T04:51:00Z</o:Created>
+  <o:LastSaved>2002-03-16T04:51:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>1144</o:Words>
+  <o:Characters>6524</o:Characters>
+  <o:Company>Cinvestav</o:Company>
+  <o:Lines>54</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>8011</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:ES-MX;
+	layout-grid-mode:line;
+	font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-MX;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ES style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=ES-MX
+style='font-size:14.0pt;mso-bidi-font-size:10.0pt'>Invocación remota de métodos
+(RMI)<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>La interface
+RMI permite que objetos Java en diferentes hosts se comuniquen unos con otros.
+Cada objeto remoto implementa una interfaz remota que especifica cuales de sus métodos
+pueden ser invocados por los clientes. Los clientes pueden invocar los métodos
+del objeto remoto casi exactamente como invocan los métodos locales.</span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Desde el punto
+de vista del programador, los objetos remotos y métodos remotos trabajan como
+los objetos locales y métodos locales a los que esta acostumbrado. Solo tiene
+que importar un paquete, buscar el objeto remoto en un registro, y asegurarse
+de manejar las excepciones remotas (RemoteExceptions) cuando se llaman los métodos
+del objeto remoto. De ese punto en adelante, se puede usar el objeto remoto
+casi tan libre y fácilmente como se usa un objeto ejecutándose en el sistema
+local.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>Bajo
+cubierta<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><!--[if gte vml 1]><v:shapetype id="_x0000_t202"
+ coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t202" style='position:absolute;
+ margin-left:66.15pt;margin-top:89.75pt;width:93.6pt;height:21.6pt;z-index:1;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Nivel de transporte<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1027" type="#_x0000_t202" style='position:absolute;
+ margin-left:303.75pt;margin-top:89.75pt;width:93.6pt;height:21.6pt;z-index:2;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Nivel de transporte<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1028" type="#_x0000_t202" style='position:absolute;
+ margin-left:66.15pt;margin-top:60.05pt;width:93.6pt;height:28.8pt;z-index:3;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Nivel de referencia<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>remota<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1029" type="#_x0000_t202" style='position:absolute;
+ margin-left:303.75pt;margin-top:60.05pt;width:93.6pt;height:28.8pt;z-index:4;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Nivel de referencia<o:p></o:p></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>remota<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1030" type="#_x0000_t202" style='position:absolute;
+ margin-left:66.15pt;margin-top:37.55pt;width:93.6pt;height:21.6pt;z-index:5;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Stub<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1031" type="#_x0000_t202" style='position:absolute;
+ margin-left:303.75pt;margin-top:37.55pt;width:93.6pt;height:21.6pt;z-index:6;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Esqueleto<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1032" type="#_x0000_t202" style='position:absolute;
+ margin-left:66.15pt;margin-top:15.5pt;width:93.6pt;height:21.6pt;z-index:7;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Programa servidor<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1033" type="#_x0000_t202" style='position:absolute;
+ margin-left:303.75pt;margin-top:15.5pt;width:93.6pt;height:21.6pt;z-index:8;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>Programa cliente<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1034" type="#_x0000_t202" style='position:absolute;
+ margin-left:159.75pt;margin-top:89.75pt;width:2in;height:21.6pt;z-index:9;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='mso-ansi-language:EN-US'>El internet<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1035" style='position:absolute;z-index:10;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ from="159.75pt,30.35pt" to="303.75pt,30.35pt" o:allowincell="f">
+ <v:stroke startarrow="block" endarrow="block"/>
+</v:line><v:shape id="_x0000_s1036" type="#_x0000_t202" style='position:absolute;
+ margin-left:188.55pt;margin-top:7.85pt;width:93.6pt;height:21.6pt;z-index:11;
+ mso-position-horizontal-relative:text;mso-position-vertical-relative:text'
+ o:allowincell="f" stroked="f">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=ES-MX>Trayectoria lógica</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=88 height=10></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=445 height=141
+  src="./Invocación%20remota%20de%20métodos_archivos/image001.gif" v:shapes="_x0000_s1026 _x0000_s1027 _x0000_s1028 _x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033 _x0000_s1034 _x0000_s1035 _x0000_s1036"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=ES-MX>El
+modelo de capas de rmi</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Para asegurar
+la compatibilidad con los programas y las implementaciones java existentes, y para
+hacer el proceso tan transparente como sea posible para el programador, la
+comunicación entre un cliente y un servidor de un objeto remoto es implementada
+como una serie de niveles como se muestra en la figura de arriba.</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=ES-MX>Ejemplos
+de programas RMI<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><i style='mso-bidi-font-style:normal'><span lang=ES-MX>Ejemplo
+1<o:p></o:p></span></i></p>
+
+<p class=MsoBodyText><i style='mso-bidi-font-style:normal'><span lang=ES-MX>El
+lado del servidor<o:p></o:p></span></i></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Para crear un
+objeto remoto, se debe definir primero una interfaz que extienda la interfaz
+java.rmi.Remote. Esta subclase de Remote determina cuales métodos del objeto
+remoto que se esta creando pueden ser llamados por clientes.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>//la interface hello</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public interface
+Hello extends Remote {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public String sayHello() throws
+java.rmi.RemoteException;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Cada método en
+la sub-interfaz debe declarar que este lanza una excepción de la clase
+RemoteException.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Después de
+definir una interfaz remota, se debe definir una clase que implemente la
+interfaz remota.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.server.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class
+HelloImpl extends UnicastRemoteObject implements Hello {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public HelloImpl() throws RemoteException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>super();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public String sayHello() throws
+RemoteException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>return &quot;Hola, Mundo!&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public static void main(String args[]) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>HelloImpl h = new HelloImpl();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>Naming.rebind(&quot;hello&quot;, h);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes">    
+</span>System.out.println(&quot;Servidor Hello listo.&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">     </span>catch (RemoteException re) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println(&quot;Exception in
+HelloImpl.main: &quot; + re);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>catch (MalformedURLException e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println(&quot;MalformedURLException
+en HelloImpl.main: &quot; + e);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Para generar
+los stubs (del lado del cliente) y los esqueletos (lado del servidor) para el
+objeto remoto de la clase HelloImpl, ejecute rmic en el archivo<span
+style="mso-spacerun: yes">  </span>.class(punto class). Por ejemplo</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>%rmic HelloImpl</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Con el comando
+ls (de unix) podemos ver los nombres de los archivos que rmic genero (HelloImpl_Skel.class
+y HelloImpl_Stub.class)</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>%ls Hel*</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Hello.class<span style='mso-tab-count:
+1'>       </span>HelloImpl.class<span style='mso-tab-count:1'> </span>HelloImpl_Skel.class</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Hello.java<span style='mso-tab-count:
+1'>        </span>HelloImpl.java<span style='mso-tab-count:1'>  </span>HelloImpl_Stub.class</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Para que el
+servidor pueda registrarse con el registro de nombres, se debe iniciar dicho
+registro así:</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>%rmiregistry &amp; (en unix)</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>o</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>c:&gt;start rmiregistry (en windows)</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Para ejecutar el servidor</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>%java HelloImpl &amp;</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>Servidor hello Listo</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><i style='mso-bidi-font-style:normal'><span lang=ES-MX>Del
+lado del cliente<o:p></o:p></span></i></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Antes de que
+un cliente pueda llamar a un método remoto, este necesita obtener una
+referencia remota al objeto remoto. Un programa obtiene una referencia remota
+solicitando un registro en el servidor para el objeto remoto. Dicho programa lo
+solicita llamando el método lookup(String url).</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX>//listado del cliente</span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class
+HelloClient {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>public static void main(String args[]) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">        </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>System.setSecurityManager(new
+RMISecurityManager());<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>Hello h = (Hello)
+Naming.lookup(&quot;hello&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>String message = h.sayHello();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println(&quot;HelloClient:
+&quot; + message);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>catch (Exception e) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">      </span>System.out.println(&quot;Exception in
+main: &quot; + e);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;layout-grid-mode:line'>el cliente se ejecuta con <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;layout-grid-mode:line'>%java HelloClient<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX style='layout-grid-mode:line'>HelloClient:
+Hola, Mundo!</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>A continuación
+se muestra (como ejemplo) el juego de gato en red implementado ahora usando rmi
+para esto usaremos dos tipos de objetos remotos, un tipo lleva el control de
+las jugadas (el objeto remoto que hace de servidor) y otro para los jugadores
+(estos son los objetos que hacen el papel de jugadores del gato y también el
+papel de clientes del servidor del gato).</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX>Empezamos por la
+interfaz que extiende la interfaz java.rmi.Remote (la cual contiene los métodos
+que se pueden llamar de manera remota). Esta interfaz la usa el objeto que
+contola las jugadas.</span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public interface
+GatoServer extends Remote {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void addPlayer (GamePlayer gp)
+throws RemoteException;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void<span style="mso-spacerun:
+yes">  </span>broadCast(GamePlayer gp, int pos) throws RemoteException;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1><span lang=ES-MX>Después seguimos con la clase que implementa dicha
+interfaz remota</span></h1>
+
+<p class=MsoNormal><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.server.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.util.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class
+GatoServerImpl extends UnicastRemoteObject implements GatoServer {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>private Vector players=new Vector();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public GatoServerImpl() throws
+RemoteException {}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public static void main(String [] args){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>GatoServerImpl gatoS=new
+GatoServerImpl();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>Naming.rebind(&quot;GatoServer&quot;,
+gatoS);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>catch(Exception ex){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void addPlayer(GamePlayer gp)
+throws RemoteException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>players.addElement(gp);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public synchronized void
+broadCast(GamePlayer gp, int pos)throws RemoteException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>for(int i=0; i&lt; players.size();
+i++){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>GamePlayer
+g=(GamePlayer)(players.elementAt(i));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>if(!g.equals(gp)){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>g.mueve(pos);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span><span style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1><span lang=ES-MX>Luego viene la interfaz que extiende la interfaz
+java.rmi.Remote para el jugador</span></h1>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public interface
+GamePlayer extends Remote {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void mueve(int pos) throws
+RemoteException;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>Y después la
+clase que implementa la interfaz anterior<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.server.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class
+GamePlayerImpl extends UnicastRemoteObject implements GamePlayer {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>private GameClient gameClient=null;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public GamePlayerImpl(GameClient gc)
+throws RemoteException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>this.gameClient=gc;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void mueve(int pos)throws
+RemoteException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>gameClient.mueve(pos);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-align:justify'><span lang=ES-MX
+style='layout-grid-mode:line'>Y finalmente una clase auxiliar que se ocupa de
+la interfaz gráfica y del crear el objeto remoto que hace el papel del jugador.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.awt.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import java.awt.event.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.applet.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.net.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.rmi.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>import
+java.util.*;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'>public class
+GameClient extends Applet implements ActionListener{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>private GamePlayer gamePlayer;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>private GatoServer gatoServer;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>private Button botones[];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>private boolean turno=true;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>private String
+hostname=&quot;localhost&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void mueve(int pos){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>String s=&quot;&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>if(turno) s=&quot;X&quot;; else
+s=&quot;O&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>botones[pos].setLabel(s);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>botones[pos].setEnabled(false);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>turno=!turno;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void init(){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>setLayout(new GridLayout(3,3));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>botones=new Button[9];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>for(int i=0;i&lt;9;i++){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>add(botones[i]=new
+Button(&quot;&quot;+i));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>botones[i].addActionListener(this);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>gamePlayer=new
+GamePlayerImpl(this);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>connect();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>catch(Exception ex){
+System.err.println(ex); }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span lang=ES-MX
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+layout-grid-mode:line'>protected void connect() throws RemoteException, <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>MalformedURLException, NotBoundException {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>gatoServer=(GatoServer)Naming.lookup<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>(&quot;//&quot;+hostname+&quot;/GatoServer&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>gatoServer.addPlayer(gamePlayer);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public void actionPerformed(ActionEvent
+e){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>String s=&quot;&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>Button b=(Button)e.getSource();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>if(turno) s=&quot;X&quot;; else
+s=&quot;O&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>b.setLabel(s);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>b.setEnabled(false);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>turno=!turno;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>for(int i=0; i&lt;9;i++)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span>if(botones[i]==b)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span><span style="mso-spacerun:
+yes">  </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>gatoServer.broadCast(gamePlayer,
+i);<span style='mso-tab-count:2'>           </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span><span style="mso-spacerun:
+yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span><span style="mso-spacerun:
+yes">  </span>catch(RemoteException re){ <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:4'>                        </span>System.err.println(re);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:3'>                  </span><span style="mso-spacerun:
+yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>public static void main(String args[]){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>GameClient g=new GameClient();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>g.init();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>g.start();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>Frame f=new Frame(&quot;Gato&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>f.add(&quot;Center&quot;, g);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:2'>            </span>f.pack();f.show();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><span
+style='mso-tab-count:1'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=ES-MX style='font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";layout-grid-mode:line'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=ES-MX><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=ES-MX
+style='font-size:14.0pt;mso-bidi-font-size:10.0pt'><span style="mso-spacerun:
+yes"> </span><o:p></o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>

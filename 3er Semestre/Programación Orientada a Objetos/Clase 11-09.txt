@@ -1,0 +1,34 @@
+Escena se representa mediante un grafo
+	-objetos que ver
+	-luz
+	-observador con
+		-ángulo de visión (hacia dónde mira/vector)
+		-posición
+
+Representación mediante grafo
+	mesa
+		tele
+			florero
+				flor 1
+				flor 2
+				flor 3
+				flor 4
+
+Transformaciones a un objeto
+	-Trasladar
+	-Rotar
+	-Escalar
+
+Mapeo de textura
+	Crear cilindro
+	Imagen de etiqueta
+	Mapeo matemático para colocar la etiqueta alrededor del cilindro
+
+Si un import empieza con: 
+	java - son parte del núcleo de java
+	javax - extensión del núcleo
+	com(compañía).sun(creadora de java) - Hay más de una librería para 3a dimensión, no hay oficial
+
+En 3d podemos usar
+	jogl (Open GL)
+	java3d * ()

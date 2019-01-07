@@ -1,0 +1,79 @@
+JDBC(Java Data Base Connectivity)
+Base de datos relacional (API)
+
+Esquemáticamente, una base de datos es:
+	BD:
+		TABLA1
+			REGISTRO1
+				CAMPO1
+				CAMPO2
+				...
+			REGISTRO2
+				CAMPO1
+				CAMPO2
+				...
+			...
+		TABLA2
+			REGISTRO1
+				CAMPO1
+				CAMPO2
+				...
+			REGISTRO2
+				CAMPO1
+				CAMPO2
+				...
+			...
+		...
+
+Una base de datos relacional es un conjunto de tablas que se relacionan entre si, éstas están hechos de registros (tuplas), 
+que a su vez están compuestos de campos (atributos).
+
+	Datos:						Metadatos:
+		Juan Perez					Nombre
+		Av Olmo 74					Dirección
+		55 66 77 88					Teléfono
+
+Agenda (Nombre,Dirección,Teleéfono)
+	-> Esquema
+	-> ... 
+	-> Conjunto de esquemas es un Diccionario de datos
+
+SQL (Structured Query Language)
+
+
+
+import java.sql.*;
+import java.util.*;
+
+// java -cp .:mysqlcon.jar ResultApp
+
+class ResultApp{
+	public static void main(String arg[]){
+		try{
+			string url="Jdbc:mysql://localhost:3306/",	dbName="test";					// URL = Uniform Resource Location
+					//	Protocolo:subprotocolo://nombre dominio/
+			Class.forName("com.mysql.Jdbc.Driver");  									// metaclase
+			Connection conex=DriverManager.getConnection(url+dbName,"root","root");
+															//		login,password
+			Statement stmt=conex.createStatement();
+			String sql="SELECT * From cursos";											// Da todos los registros
+			ResultSet result = stmt.executeQuery(sql);				
+			displayResults(result);
+			conex.close();
+		}
+		catch(Exception e){
+			System.exit(0);
+		}
+	}
+
+	static void displayResults(ResultSet r) throws SQLException{
+						//		Tabla
+		ResultSetMetaData rmeta=r.getMetaData();  										// 
+		int numCols=rmeta.getColumnCount();
+		for(int i=1; i<=numCols; i++)
+			System.out.print(rmeta.getColumnName(i)+"");
+		while(r.next())
+			for(int i=1; i<=numCols; i++)
+				System.out.println(r.getString(i)+"");
+	}
+}

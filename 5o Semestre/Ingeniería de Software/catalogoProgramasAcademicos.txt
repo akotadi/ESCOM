@@ -1,0 +1,94 @@
+ESCOLARIZADO
+
+Ingeniería Ambiental UPIBI 
+Ingeniería Ambiental UPIIZ Campus Zacatecas
+Ingeniería Biomédica UPIBI
+Ingeniería Biónica UPIITA
+Ingeniería Bioquímica ENCB
+Ingeniería Biotecnológica UPIBI
+Ingeniería Biotecnológica UPIIG Campus Guanajuato
+Ingeniería Civil ESIA Unidad Zacatenco
+Ingeniería Eléctrica ESIME Unidad Zacatenco
+Ingeniería en Aeronáutica ESIME Unidad Ticomán
+Ingeniería en Aeronáutica UPIIG Campus Guanajuato
+Ingeniería en Alimentos UPIBI 
+Ingeniería en Alimentos UPIIZ Campus Zacatecas
+Ingeniería en Computación ESIME Unidad Culhuacán
+Ingeniería en Comunicaciones y Electrónica ESIME Unidad Zacatenco
+Ingeniería en Comunicaciones y Electrónica ESIME Unidad Culhuacán
+Ingeniería en Control y Automatización ESIME Unidad Zacatenco
+Ingeniería en Informática UPIICSA
+Ingeniería en Metalurgia y Materiales ESIQIE
+Ingeniería en Metalurgia y Materiales UPIIZ Campus Zacatecas
+Ingeniería en Robótica Industrial ESIME Unidad Zacatenco 
+Ingeniería en Robótica Industrial ESIME Unidad Azcapotzalco
+Ingeniería en Sistemas Ambientales ENCB
+Ingeniería en Sistemas Automotrices ESIME Unidad Zacatengo  
+Ingeniería en Sistemas Automotrices ESIME Unidad Azcapotzalco
+Ingeniería en Sistemas Automotrices ESIME Unidad Culhuacán
+Ingeniería en Sistemas Automotrices ESIME Unidad Ticomán
+Ingeniería en Sistemas Automotrices UPIIG Campus Guanajuato 
+Ingeniería en Sistemas Automotrices UPIIH Campus Hidalgo
+Ingeniería en Sistemas Computacionales ESCOM
+Ingeniería en Sistemas Computacionales UPIIZ Campus Zacatecas
+Ingeniería en Transporte UPIICSA
+Ingeniería Farmacéutica UPIBI
+Ingeniería Farmacéutica UPIIG Campus Guanajuato
+Ingeniería Geofísica ESIA Unidad Ticomán
+Ingeniería Geológica ESIA Unidad Ticomán
+Ingeniería Industrial UPIIG Campus Guanajuato 
+Ingeniería Industrial UPIICSA
+Ingeniería Matemática ESFM
+Ingeniería Mecánica ESIME Unidad Azcapotzalco 
+Ingeniería Mecánica ESIME Unidad Culhuacán
+Ingeniería Mecatrónica UPIIZ Campus Zacatecas
+Ingeniería Mecatrónica UPIIH Campus Hidalgo
+Ingeniería Mecatrónica UPIITA
+Ingeniería Petrolera ESIA Unidad Ticomán
+Ingeniería Química Industrial ESIQIE
+Ingeniería Química Petrolera ESIQIE
+Ingeniería Telemática UPIITA
+Ingeniería Textil ESIT
+Ingeniería Topográfica y Fotogramétrica ESIA Unidad Ticomán
+Ingeniero Arquitecto ESIA Unidad Tecamachalco
+Licenciatura en Ciencias de la Informática UPIICSA
+Licenciatura en Física y Matemáticas ESFM
+Licenciado en Nutrición 
+CICS Unidad Milpa Alta
+Licenciado en Optometría CICS Unidad Santo Tomás
+Licenciado en Optometría CICS Unidad Milpa Alta
+Licenciado en Psicología CICS Unidad Santo Tomás
+Licenciatura en Biología ENCB
+Licenciatura en Enfermería 
+CICS Unidad Milpa Alta
+Licenciatura en Enfermería ESEO
+Licenciatura en Enfermería y Obstetricia ESEO
+Licenciatura en Odontología CICS Unidad Milpa Alta
+Licenciatura en Odontología CICS Unidad Santo Tomás
+Licenciatura en Trabajo Social CICS Unidad Milpa Alta
+Médico Cirujano y Homeópata ENMyH
+Médico Cirujano y Partero ENMyH
+Médico Cirujano y Partero CICS Unidad Milpa Alta
+Médico Cirujano y Partero ESM
+Químico Bacteriólogo y Parasitólogo ENCB
+Quimico Farmacéutico Industrial ENCB
+Contador Público ESCA Unidad Tepepan
+Contador Público ESCA Unidad Santo Tomás
+Licenciatura en Administración y Desarrollo Empresarial ESCA Unidad Santo Tomás
+Licenciatura en Economía ESE
+Licenciatura en Negocios Internacionales ESCA Unidad Tepepan
+Licenciatura en Negocios Internacionales ESCA Unidad Santo Tomás
+Licenciatura en Relaciones Comerciales ESCA Unidad Santo Tomás
+Licenciatura en Relaciones Comerciales ESCA Unidad Tepepan
+Licenciatura en Turismo EST
+
+NO ESCOLARIZADA
+
+Contador Público ESCA Unidad Santo Tomás
+Contador Público ESCA Unidad Tepepan
+Licenciatura en Administración y Desarrollo Empresarial ESCA Unidad Santo Tomás
+Licenciatura en Comercio Internacional ESCA Unidad Santo Tomás
+Licenciatura en Negocios Internacionales ESCA Unidad Tepepan 
+Licenciatura en Negocios Internacionales ESCA Unidad Santo Tomás
+Licenciatura en Relaciones Comerciales ESCA Unidad Tepepan
+Licenciatura en Relaciones Comerciales ESCA Unidad Santo Tomás

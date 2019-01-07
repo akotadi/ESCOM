@@ -1,0 +1,16 @@
+AFD
+#alfabeto
+"0..9"
+"."
+#estados
+4
+#reglas
+0,0,1
+1,0,1
+1,1,2
+2,0,3
+3,0,3
+#finales
+1,entero
+3,real
+#fin
