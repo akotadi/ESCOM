@@ -1,0 +1,9 @@
+Los sistemas distribuidos se organizan a menudo en términos de una capa de software:
+	-  Una capa de alto nivel (usuario sy aplicaciones)
+
+El objetivo de un sistema distribuido es compartir recursos para que sean fácilmente accesibles, debe ocultar el hecho de que están distribuidos por toda la red, debe ser abierto y debe ser escalable.
+	Para ser abierto debe basarse en protocolos estándar.
+
+Recurso más claro de sistema distribuido es la World Wide Web, tiene una representación (metadata, código) y una representación (URI / URL).
+
+Escalabilidad administrativa implica darle otro rol al componente del sistema, o ver cómo dividir las de otro componente, etc.

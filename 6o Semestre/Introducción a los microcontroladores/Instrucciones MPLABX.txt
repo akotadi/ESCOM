@@ -1,0 +1,6 @@
+Creación de un proyecto en MPLABX
+
+Para crear un proyecto en MPLAB necesitamos 3 tipos de archivos:
+	1. Archivos fuente (.c, .s). Estos archivos tienen el código fuente de la aplicación, la cual puede codificarse en lenguaje C, ensamblador o ambos.
+	2. Archivos de cabecera (.h, .inc). Estos archivos tienen definidos TODOS los registros del procesador y TODOS los bits de cada registro. También tienen las opciones de configuración del oscilador, reset, "power on reset", "brown out reset" y protección de código.
+	3. Archivo .GLD. Este archivo tiene definidos los mapas de memoria del procesador y los nombres de los ISR's de cada periférico.
