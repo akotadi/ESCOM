@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 
 	int n, m, k;
 	cin >> n >> m >> k;
-	vector<int> armies(n, 0);
+	vector<int> armies(m, 0);
 	for (int i = 0; i < m; ++i)
 	{
 		cin >> armies[i];
@@ -22,9 +22,8 @@ int main(int argc, char const *argv[])
 		int counter = 0;
 		int process = (armies[i] xor value);
 		bool flag = true;
-		for (int j = 0; j < n; ++j)
-		{
-			if (process & (1 << j))
+		while(process){
+			if (process & 1)
 			{
 				counter++;
 			}
@@ -33,6 +32,7 @@ int main(int argc, char const *argv[])
 				flag = false;
 				break;
 			}
+			process>>=1;
 		}
 		if (flag)
 		{

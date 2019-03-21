@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rrd SYSTEM "http://oss.oetiker.ch/rrdtool/rrdtool.dtd">
+<!-- Round Robin Database Dump -->
+<rrd>
+	<version>0003</version>
+	<step>300</step> <!-- Seconds -->
+	<lastupdate>920808900</lastupdate> <!-- 1999-03-07 06:15:00 CST -->
+
+	<ds>
+		<name> speed </name>
+		<type> COUNTER </type>
+		<minimal_heartbeat>600</minimal_heartbeat>
+		<min>NaN</min>
+		<max>NaN</max>
+
+		<!-- PDP Status -->
+		<last_ds>12423</last_ds>
+		<value>0.0000000000e+00</value>
+		<unknown_sec> 0 </unknown_sec>
+	</ds>
+
+	<!-- Round Robin Archives -->
+	<rra>
+		<cf>AVERAGE</cf>
+		<pdp_per_row>1</pdp_per_row> <!-- 300 seconds -->
+
+		<params>
+		<xff>5.0000000000e-01</xff>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>3.3333333333e-03</primary_value>
+			<secondary_value>0.0000000000e+00</secondary_value>
+			<value>NaN</value>
+			<unknown_datapoints>0</unknown_datapoints>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 1999-03-07 04:20:00 CST / 920802000 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:25:00 CST / 920802300 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:30:00 CST / 920802600 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:35:00 CST / 920802900 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:40:00 CST / 920803200 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:45:00 CST / 920803500 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:50:00 CST / 920803800 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:55:00 CST / 920804100 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 05:00:00 CST / 920804400 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 05:05:00 CST / 920804700 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 05:10:00 CST / 920805000 --> <row><v>4.0000000000e-02</v></row>
+			<!-- 1999-03-07 05:15:00 CST / 920805300 --> <row><v>2.0000000000e-02</v></row>
+			<!-- 1999-03-07 05:20:00 CST / 920805600 --> <row><v>0.0000000000e+00</v></row>
+			<!-- 1999-03-07 05:25:00 CST / 920805900 --> <row><v>0.0000000000e+00</v></row>
+			<!-- 1999-03-07 05:30:00 CST / 920806200 --> <row><v>3.3333333333e-02</v></row>
+			<!-- 1999-03-07 05:35:00 CST / 920806500 --> <row><v>3.3333333333e-02</v></row>
+			<!-- 1999-03-07 05:40:00 CST / 920806800 --> <row><v>3.3333333333e-02</v></row>
+			<!-- 1999-03-07 05:45:00 CST / 920807100 --> <row><v>2.0000000000e-02</v></row>
+			<!-- 1999-03-07 05:50:00 CST / 920807400 --> <row><v>2.0000000000e-02</v></row>
+			<!-- 1999-03-07 05:55:00 CST / 920807700 --> <row><v>2.0000000000e-02</v></row>
+			<!-- 1999-03-07 06:00:00 CST / 920808000 --> <row><v>1.3333333333e-02</v></row>
+			<!-- 1999-03-07 06:05:00 CST / 920808300 --> <row><v>1.6666666667e-02</v></row>
+			<!-- 1999-03-07 06:10:00 CST / 920808600 --> <row><v>6.6666666667e-03</v></row>
+			<!-- 1999-03-07 06:15:00 CST / 920808900 --> <row><v>3.3333333333e-03</v></row>
+		</database>
+	</rra>
+	<rra>
+		<cf>AVERAGE</cf>
+		<pdp_per_row>6</pdp_per_row> <!-- 1800 seconds -->
+
+		<params>
+		<xff>5.0000000000e-01</xff>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>2.3333333333e-02</primary_value>
+			<secondary_value>1.3333333333e-02</secondary_value>
+			<value>2.6666666667e-02</value>
+			<unknown_datapoints>0</unknown_datapoints>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 1999-03-07 01:30:00 CST / 920791800 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 02:00:00 CST / 920793600 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 02:30:00 CST / 920795400 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 03:00:00 CST / 920797200 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 03:30:00 CST / 920799000 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:00:00 CST / 920800800 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 04:30:00 CST / 920802600 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 05:00:00 CST / 920804400 --> <row><v>NaN</v></row>
+			<!-- 1999-03-07 05:30:00 CST / 920806200 --> <row><v>1.8666666667e-02</v></row>
+			<!-- 1999-03-07 06:00:00 CST / 920808000 --> <row><v>2.3333333333e-02</v></row>
+		</database>
+	</rra>
+</rrd>
