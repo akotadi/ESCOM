@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rrd SYSTEM "http://oss.oetiker.ch/rrdtool/rrdtool.dtd">
+<!-- Round Robin Database Dump -->
+<rrd>
+	<version>0003</version>
+	<step>40</step> <!-- Seconds -->
+	<lastupdate>1553542379</lastupdate> <!-- 2019-03-25 13:32:59 CST -->
+
+	<ds>
+		<name> outoctets </name>
+		<type> COUNTER </type>
+		<minimal_heartbeat>300</minimal_heartbeat>
+		<min>NaN</min>
+		<max>NaN</max>
+
+		<!-- PDP Status -->
+		<last_ds>120430</last_ds>
+		<value>4.5262313732e+03</value>
+		<unknown_sec> 0 </unknown_sec>
+	</ds>
+
+	<!-- Round Robin Archives -->
+	<rra>
+		<cf>AVERAGE</cf>
+		<pdp_per_row>1</pdp_per_row> <!-- 40 seconds -->
+
+		<params>
+		<xff>5.0000000000e-01</xff>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>2.1865934357e+02</primary_value>
+			<secondary_value>0.0000000000e+00</secondary_value>
+			<value>NaN</value>
+			<unknown_datapoints>0</unknown_datapoints>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 2019-03-25 13:26:40 CST / 1553542000 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:27:20 CST / 1553542040 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:00 CST / 1553542080 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:40 CST / 1553542120 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:29:20 CST / 1553542160 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:30:00 CST / 1553542200 --> <row><v>1.9323945275e+02</v></row>
+			<!-- 2019-03-25 13:30:40 CST / 1553542240 --> <row><v>1.9807215439e+02</v></row>
+			<!-- 2019-03-25 13:31:20 CST / 1553542280 --> <row><v>2.0709949470e+02</v></row>
+			<!-- 2019-03-25 13:32:00 CST / 1553542320 --> <row><v>2.0563174096e+02</v></row>
+			<!-- 2019-03-25 13:32:40 CST / 1553542360 --> <row><v>2.1865934357e+02</v></row>
+		</database>
+	</rra>
+	<rra>
+		<cf>HWPREDICT</cf>
+		<pdp_per_row>1</pdp_per_row> <!-- 40 seconds -->
+
+		<params>
+		<hw_alpha>1.0000000000e-01</hw_alpha>
+		<hw_beta>3.5000000000e-03</hw_beta>
+		<dependent_rra_idx>2</dependent_rra_idx>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>1.9650159494e+02</primary_value>
+			<secondary_value>0.0000000000e+00</secondary_value>
+			<intercept>1.9746996603e+02</intercept>
+			<last_intercept>1.9524718109e+02</last_intercept>
+			<slope>1.4765282677e-02</slope>
+			<last_slope>7.0100706571e-03</last_slope>
+			<nan_count>1</nan_count>
+			<last_nan_count>1</last_nan_count>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 2019-03-25 13:00:00 CST / 1553540400 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:00:40 CST / 1553540440 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:01:20 CST / 1553540480 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:02:00 CST / 1553540520 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:02:40 CST / 1553540560 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:03:20 CST / 1553540600 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:04:00 CST / 1553540640 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:04:40 CST / 1553540680 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:05:20 CST / 1553540720 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:06:00 CST / 1553540760 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:06:40 CST / 1553540800 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:07:20 CST / 1553540840 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:08:00 CST / 1553540880 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:08:40 CST / 1553540920 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:09:20 CST / 1553540960 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:10:00 CST / 1553541000 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:10:40 CST / 1553541040 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:11:20 CST / 1553541080 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:12:00 CST / 1553541120 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:12:40 CST / 1553541160 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:13:20 CST / 1553541200 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:14:00 CST / 1553541240 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:14:40 CST / 1553541280 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:15:20 CST / 1553541320 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:16:00 CST / 1553541360 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:16:40 CST / 1553541400 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:17:20 CST / 1553541440 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:18:00 CST / 1553541480 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:18:40 CST / 1553541520 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:19:20 CST / 1553541560 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:20:00 CST / 1553541600 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:20:40 CST / 1553541640 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:21:20 CST / 1553541680 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:22:00 CST / 1553541720 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:22:40 CST / 1553541760 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:23:20 CST / 1553541800 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:24:00 CST / 1553541840 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:24:40 CST / 1553541880 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:25:20 CST / 1553541920 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:26:00 CST / 1553541960 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:26:40 CST / 1553542000 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:27:20 CST / 1553542040 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:00 CST / 1553542080 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:40 CST / 1553542120 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:29:20 CST / 1553542160 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:30:00 CST / 1553542200 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:30:40 CST / 1553542240 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:31:20 CST / 1553542280 --> <row><v>1.9323945275e+02</v></row>
+			<!-- 2019-03-25 13:32:00 CST / 1553542320 --> <row><v>1.9946300960e+02</v></row>
+			<!-- 2019-03-25 13:32:40 CST / 1553542360 --> <row><v>1.9650159494e+02</v></row>
+		</database>
+	</rra>
+	<rra>
+		<cf>SEASONAL</cf>
+		<pdp_per_row>1</pdp_per_row> <!-- 40 seconds -->
+
+		<params>
+		<seasonal_gamma>1.0000000000e-01</seasonal_gamma>
+		<seasonal_smooth_idx>0</seasonal_smooth_idx>
+		<dependent_rra_idx>1</dependent_rra_idx>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>3.2416011525e+00</primary_value>
+			<secondary_value>0.0000000000e+00</secondary_value>
+			<seasonal>5.3878874682e+00</seasonal>
+			<last_seasonal>1.2474037760e+00</last_seasonal>
+			<init_flag>4</init_flag>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 2019-03-25 13:32:00 CST / 1553542320 --> <row><v>5.3878874682e+00</v></row>
+			<!-- 2019-03-25 13:32:40 CST / 1553542360 --> <row><v>3.2416011525e+00</v></row>
+		</database>
+	</rra>
+	<rra>
+		<cf>DEVSEASONAL</cf>
+		<pdp_per_row>1</pdp_per_row> <!-- 40 seconds -->
+
+		<params>
+		<seasonal_gamma>1.0000000000e-01</seasonal_gamma>
+		<seasonal_smooth_idx>0</seasonal_smooth_idx>
+		<dependent_rra_idx>1</dependent_rra_idx>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>1.4689812623e+01</primary_value>
+			<secondary_value>0.0000000000e+00</secondary_value>
+			<seasonal>6.1687313504e+00</seasonal>
+			<last_seasonal>1.3860041955e+01</last_seasonal>
+			<init_flag>4</init_flag>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 2019-03-25 13:32:00 CST / 1553542320 --> <row><v>6.1687313504e+00</v></row>
+			<!-- 2019-03-25 13:32:40 CST / 1553542360 --> <row><v>1.4689812623e+01</v></row>
+		</database>
+	</rra>
+	<rra>
+		<cf>DEVPREDICT</cf>
+		<pdp_per_row>1</pdp_per_row> <!-- 40 seconds -->
+
+		<params>
+		<dependent_rra_idx>3</dependent_rra_idx>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>1.3860041955e+01</primary_value>
+			<secondary_value>0.0000000000e+00</secondary_value>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 2019-03-25 13:00:00 CST / 1553540400 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:00:40 CST / 1553540440 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:01:20 CST / 1553540480 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:02:00 CST / 1553540520 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:02:40 CST / 1553540560 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:03:20 CST / 1553540600 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:04:00 CST / 1553540640 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:04:40 CST / 1553540680 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:05:20 CST / 1553540720 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:06:00 CST / 1553540760 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:06:40 CST / 1553540800 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:07:20 CST / 1553540840 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:08:00 CST / 1553540880 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:08:40 CST / 1553540920 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:09:20 CST / 1553540960 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:10:00 CST / 1553541000 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:10:40 CST / 1553541040 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:11:20 CST / 1553541080 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:12:00 CST / 1553541120 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:12:40 CST / 1553541160 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:13:20 CST / 1553541200 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:14:00 CST / 1553541240 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:14:40 CST / 1553541280 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:15:20 CST / 1553541320 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:16:00 CST / 1553541360 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:16:40 CST / 1553541400 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:17:20 CST / 1553541440 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:18:00 CST / 1553541480 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:18:40 CST / 1553541520 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:19:20 CST / 1553541560 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:20:00 CST / 1553541600 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:20:40 CST / 1553541640 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:21:20 CST / 1553541680 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:22:00 CST / 1553541720 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:22:40 CST / 1553541760 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:23:20 CST / 1553541800 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:24:00 CST / 1553541840 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:24:40 CST / 1553541880 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:25:20 CST / 1553541920 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:26:00 CST / 1553541960 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:26:40 CST / 1553542000 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:27:20 CST / 1553542040 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:00 CST / 1553542080 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:40 CST / 1553542120 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:29:20 CST / 1553542160 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:30:00 CST / 1553542200 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:30:40 CST / 1553542240 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:31:20 CST / 1553542280 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:32:00 CST / 1553542320 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:32:40 CST / 1553542360 --> <row><v>1.3860041955e+01</v></row>
+		</database>
+	</rra>
+	<rra>
+		<cf>FAILURES</cf>
+		<pdp_per_row>1</pdp_per_row> <!-- 40 seconds -->
+
+		<params>
+		<delta_pos>2.0000000000e+00</delta_pos>
+		<delta_neg>2.0000000000e+00</delta_neg>
+		<window_len>1</window_len>
+		<failure_threshold>1</failure_threshold>
+		<dependent_rra_idx>3</dependent_rra_idx>
+		</params>
+		<cdp_prep>
+			<ds>
+			<primary_value>0.0000000000e+00</primary_value>
+			<secondary_value>0.0000000000e+00</secondary_value>
+			<history>0</history>
+			</ds>
+		</cdp_prep>
+		<database>
+			<!-- 2019-03-25 13:25:20 CST / 1553541920 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:26:00 CST / 1553541960 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:26:40 CST / 1553542000 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:27:20 CST / 1553542040 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:00 CST / 1553542080 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:28:40 CST / 1553542120 --> <row><v>NaN</v></row>
+			<!-- 2019-03-25 13:29:20 CST / 1553542160 --> <row><v>0.0000000000e+00</v></row>
+			<!-- 2019-03-25 13:30:00 CST / 1553542200 --> <row><v>0.0000000000e+00</v></row>
+			<!-- 2019-03-25 13:30:40 CST / 1553542240 --> <row><v>0.0000000000e+00</v></row>
+			<!-- 2019-03-25 13:31:20 CST / 1553542280 --> <row><v>0.0000000000e+00</v></row>
+			<!-- 2019-03-25 13:32:00 CST / 1553542320 --> <row><v>0.0000000000e+00</v></row>
+			<!-- 2019-03-25 13:32:40 CST / 1553542360 --> <row><v>0.0000000000e+00</v></row>
+		</database>
+	</rra>
+</rrd>

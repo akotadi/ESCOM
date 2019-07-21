@@ -25,10 +25,10 @@ last_read = int(rrdtool.last(archivo + '.rrd'))
 # print('Insert Go')
 # nGo = input()
 
-def detectar(archivo = 'source3', nDate = 1539659123, nReady = 70, nSet = 80, nGo = 90):
+def detectar(archivo = 'source3', nDate = 1539659123, nReady = 50, nSet = 65, nGo = 80):
     ret = rrdtool.graphv( "../IMG/"+archivo+".png",
                      "--start", str(nDate),
-                    "--end", str(1539659123 + 15000),
+                    "--end", str(nDate + 7600),
 
                     # Image settings
                     '--title', "CPU Usage",
@@ -70,11 +70,11 @@ def detectar(archivo = 'source3', nDate = 1539659123, nReady = 70, nSet = 80, nG
                     'VDEF:maxabc2=abc2,LAST',
 
                     # Prediction output
-                    "AREA:abc2#FFBB0077",
-                    "LINE2:abc2#FFBB00",
-                    "LINE1:avg2#ef0078:Trend since October 15 2018 22\\:05\\:23 :dashes=10",
-                    "GPRINT:minabc2: Reach 90% @ %c :strftime",
-                    "GPRINT:maxabc2: Reach 100% @ %c :strftime",
+                    # "AREA:abc2#FFBB0077",
+                    # "LINE2:abc2#FFBB00",
+                    # "LINE1:avg2#ef0078:Trend since October 15 2018 22\\:05\\:23 :dashes=10",
+                    # "GPRINT:minabc2: Reach 90% @ %c :strftime",
+                    # "GPRINT:maxabc2: Reach 100% @ %c :strftime",
                     "COMMENT: \\n",
 
                     # Base line

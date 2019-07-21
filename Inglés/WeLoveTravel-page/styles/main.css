@@ -1,0 +1,59 @@
+#intro {
+  background: url("../img/panorama-3094696_1920.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.top-nav-collapse {
+  background-color: #3949ab !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #3949ab !important;
+  }
+}
+
+#intro .h6 {
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.hm-gradient .full-bg-img {
+  background: rgba(42, 27, 161, 0.7);
+  background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+}
+
+@media (max-width: 450px) {
+  .margins {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+#food .lead {
+  opacity: 0.7;
+}
+
+#food .card-image-torta {
+  background: url("../img/torta.jpg") no-repeat center center;
+}
+
+#food .card-image-jericalla {
+  background: url("../img/jericalla.jpg") no-repeat center center;
+}
+
+#food .card-image-birria {
+  background: url("../img/birria.jpg") no-repeat center center;
+}
+
+#food .card-image-capirotada {
+  background: url("../img/capirotada.jpg") no-repeat center center;
+}
+
+#food ul li {
+  font-size: 1.1em;
+}
