@@ -1,0 +1,53 @@
+$date
+  Thu Sep  5 13:34:22 2019
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module tb_sum_res $end
+$var reg 1 ! binvert $end
+$var reg 1 " cn $end
+$var reg 4 # a[3:0] $end
+$var reg 4 $ b[3:0] $end
+$var reg 4 % s[3:0] $end
+$scope module registro $end
+$var reg 4 & a[3:0] $end
+$var reg 4 ' b[3:0] $end
+$var reg 1 ( binvert $end
+$var reg 4 ) s[3:0] $end
+$var reg 1 * cn $end
+$var reg 5 + c[4:0] $end
+$var reg 4 , eb[3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+b0101 #
+b0011 $
+b1000 %
+b0101 &
+b0011 '
+0(
+b1000 )
+0*
+b01110 +
+b0011 ,
+#100000000
+1!
+1"
+b0010 %
+1(
+b0010 )
+1*
+b11011 +
+b1100 ,
+#200000000

@@ -1,0 +1,7 @@
+v 4
+file . "sum_res.vhd" "5d29dd5c4ebc874911f844331dc926784dfc594c" "20190905183004.658":
+  entity sum_res at 1( 0) + 0 on 11;
+  architecture programa of sum_res at 14( 252) + 0 on 12;
+file . "tb_sum_res.vhd" "70e193e42270026411ac665e4a0bb5bfd6bf2af9" "20190905183418.406":
+  entity tb_sum_res at 1( 0) + 0 on 15;
+  architecture try of tb_sum_res at 8( 83) + 0 on 16;

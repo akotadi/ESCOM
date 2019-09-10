@@ -1,0 +1,56 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY sum_res_forloop IS
+	GENERIC (
+		N : INTEGER :=4
+	);
+
+	Port ( 
+		A : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+		B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+		BINVERT : IN STD_LOGIC;
+		S : OUT STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+		Cn : OUT STD_LOGIC
+	);
+END sum_res_forloop;
+
+ARCHITECTURE PROGRAMA OF sum_res_forloop IS
+
+	BEGIN
+
+		PUA :PROCESS(A, B, BINVERT)
+		VARIABLE C : STD_LOGIC_VECTOR(N DOWNTO 0) := "00000";
+		VARIABLE EB, P, G : STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+		VARIABLE PK, T2, T3 : STD_LOGIC;
+		BEGIN
+			C(0) := BINVERT;
+
+			FOR I IN 0 TO N-1 LOOP
+				EB(I) := B(I) XOR BINVERT;
+				P(I) := A(I) XOR EB(I);
+				G(I) := A(I) AND EB(I);
+				S(I) <= A(I) XOR EB(I) XOR C(I);
+
+				T2 := '0';
+				FOR J IN 0 TO I-1 LOOP
+					PK := '1';
+					FOR K IN J+1 TO I LOOP
+						PK := PK AND P(K);
+					END LOOP;
+					T2 := T2 OR (G(J) AND PK);
+				END LOOP;
+
+				T3 := '1';
+				FOR L IN 0 TO I LOOP
+					T3 := T3 AND P(L);
+				END LOOP;
+				T3 := T3 OR C(0);
+
+				C(I+1) := G(I) OR T2 OR T3;
+			END LOOP;
+
+			Cn <= C(N);
+		END PROCESS PUA;
+
+END PROGRAMA;
