@@ -45,7 +45,7 @@ ARCHITECTURE PROGRAMA OF sum_res_forloop IS
 				FOR L IN 0 TO I LOOP
 					T3 := T3 AND P(L);
 				END LOOP;
-				T3 := T3 OR C(0);
+				T3 := T3 AND C(0);
 
 				C(I+1) := G(I) OR T2 OR T3;
 			END LOOP;
