@@ -1,0 +1,38 @@
+\documentclass[letterpaper,12pt]{report}
+\usepackage{templates/reportstyle}
+
+\usepackage[nottoc]{tocbibind}
+\usepackage{textgreek}
+\usepackage{enumitem}
+%\setboolean{@twoside}{false}
+
+%Nota: En caso de que requieran poner código en algunas de las secciones, favor de ubicar su código en la carpeta src para poder incluirlo y de esa forma no mezclar código de porgrama con el de LaTex.
+\begin{document}
+    %Portada del documento
+    \input{titlePage.tex}
+    % \input{portada2.tex}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %TABLA DE CONTENIDOS / INDICE
+	\tableofcontents 
+	\label{sec:Index}
+	\pagebreak
+	\setcounter{page}{1}
+	\pagestyle{fancy}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %Introducción del documento
+    \chapter{Introducción}
+    \input{content/introduction.tex}
+    
+    %Desarrollo del documento
+    \chapter{Desarrollo}
+    \input{content/development.tex}
+
+    %Conclusión
+    \chapter{Conclusión}
+    \input{content/conclusions.tex}
+    
+    %Bibliografía
+    \input{content/bibliography.tex}
+\end{document}

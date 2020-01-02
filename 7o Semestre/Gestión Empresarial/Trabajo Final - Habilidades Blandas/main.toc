@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Desarrollo}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Globalización}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Retos del Ingeniero en Sistemas Computacionales}{4}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Retos a nivel mundial}{4}{subsection.2.2.1}% 
+\contentsline {subsubsection}{ONU}{5}{subsubsection*.2}% 
+\contentsline {subsubsection}{NAE}{5}{subsubsection*.3}% 
+\contentsline {subsubsection}{UNESCO}{5}{subsubsection*.4}% 
+\contentsline {subsubsection}{OCDE}{5}{subsubsection*.5}% 
+\contentsline {section}{\numberline {2.3}\textit {Habilidades Blandas} en un mundo técnico}{6}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}Conclusión}{8}{chapter.3}% 
+\contentsline {chapter}{Bibliograf\'{\i }a}{9}{chapter*.6}% 

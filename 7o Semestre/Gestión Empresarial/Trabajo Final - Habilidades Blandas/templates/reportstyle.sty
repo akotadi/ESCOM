@@ -1,0 +1,145 @@
+%REPORTSTYLE
+%Descripción: Documento donde se ubican los estilos, comandos y paquetes requeridos por el documento, debido a que solamente es un reporte sencillo se hace uso de una sola capa de estilos llamada reportstyle.
+
+% Estilo de capítulos %
+\usepackage[T1]{fontenc}
+\usepackage{titlesec, blindtext, color}
+%\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}    
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray}{|}\hsp}{0pt}{\Huge\bfseries}
+
+% Mapas mentales %
+\usepackage{filecontents}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{scrextend}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+
+% Viñetas y enumeraciones %
+\usepackage{enumerate} 
+%% usepackage{scrextend}
+\usepackage{pdfpages}
+%Indica qué codificación se está usando ISO-8859-1(latin1)  o utf8  
+\usepackage[utf8]{inputenc} 
+%Indica que escribiermos en español
+\usepackage[spanish]{babel} 
+
+% Citar usando biblatex package
+% \usepackage[
+%     backend=biber,
+%     style=ieee,
+%     sortlocale=es_ES,
+%     natbib=true,
+%     url=true, 
+%     doi=true,
+%     eprint=false
+% ]{biblatex}
+% \usepackage{csquotes}
+% \addbibresource{bibliographies/jobname.bib}
+
+% Comandos extras para matemáticas (cajas para ecuaciones,etc)
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+% Simbolos matematicos (por lo tanto)
+\usepackage{graphicx} 
+% Incluir imágenes en LaTeX
+\usepackage{color} 
+% Para colorear texto
+\usepackage{subfigure} 
+% subfiguras
+\usepackage{float} 
+%Podemos usar el especificador [H] en las figuras para que se queden donde queramos
+\usepackage{capt-of} 
+% Permite usar etiquetas fuera de elementos flotantes (etiquetas de figuras)
+\usepackage{sidecap} 
+% Para poner el texto de las imágenes al lado
+\sidecaptionvpos{figure}{c} 
+% Para que el texto se alinie al centro vertical
+\usepackage{caption} 
+% Para poder quitar numeracion de figuras
+\usepackage{commath} 
+% para cancelar expresiones (\cancelto{0}{x})
+\usepackage{cancel} 
+% Para personalizar el ancho de  los márgenes
+\usepackage{anysize} 					
+\usepackage{appendix}
+% Para agregar encabezado y pie de página
+\usepackage{fancyhdr} 
+\usepackage{listings} % Para usar código fuente
+% BACKGROUND IAMGE
+\usepackage{graphicx}
+\usepackage{enumitem}
+%Esto es para habilitar la marca de agua
+\usepackage{watermark}
+\graphicspath{ {graphics/} }
+
+% Izquierda, derecha, arriba, abajo
+\marginsize{2cm}{2cm}{1cm}{2cm} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Retos del Ingeniero en Sistemas Computacionales y la Globalizaci\'on} %encabezado izquierda
+\fancyhead[R]{\footnotesize \hyperref[sec:Index]{Ir a \'indice}}   % derecha
+\fancyfoot[L]{\footnotesize ESCOM}  % Pie izquierda
+\fancyfoot[C]{\thepage}  % centro
+\fancyfoot[R]{\footnotesize IPN}  %derecha
+\definecolor{dkgreen}{rgb}{0,0.6,0} % Definimos colores para usar en el código
+\definecolor{gray}{rgb}{0.5,0.5,0.5} 
+% configuración para el lenguaje que queramos utilizar
+\lstset{language=Matlab,
+	keywords={break,case,catch,continue,else,elseif,end,for,function,
+		global,if,otherwise,persistent,return,switch,try,while},
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue},
+	commentstyle=\color{red},
+	stringstyle=\color{dkgreen},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	stepnumber=1,
+	numbersep=10pt,
+	backgroundcolor=\color{white},
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false}
+
+\renewcommand{\appendixname}{Ap\'endices}
+\renewcommand{\appendixtocname}{Ap\'endices}
+\renewcommand{\appendixpagename}{Ap\'endices} 
+\renewcommand{\footrulewidth}{0.4pt}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}	
+% Variables
+\newcommand{\Asignatura}{Gesti\'on Empresarial}
+% Definimos el comando \sen para el seno en español
+%$\newcommand{\sen}{\operatorname{\sen}}	
+% Variavbles 
+\newcommand{\escuela}{Escuela Superior de C\'omputo}
+\newcommand{\universidad}{Instituto Polit\'ecnico Nacional}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}

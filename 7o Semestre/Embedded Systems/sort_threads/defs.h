@@ -22,7 +22,7 @@
 #define DEFS_H
 
 #define NUM_THR 6
-#define N 32
+#define N 4096
 #define MAX_RAND 256
 
 #endif
